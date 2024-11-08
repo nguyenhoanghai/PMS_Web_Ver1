@@ -1,0 +1,93 @@
+﻿@{
+    ViewBag.Title = "sản lượng công đoạn";
+    Layout = "~/Views/Shared/_NewLayout.cshtml";
+}
+
+<style>
+    
+        table tfoot {
+            background-color: #337ab7;
+            color: white;
+            font-weight: bold;
+        }
+         table thead th{
+             padding:5px
+         }
+        table tbody td,
+        table tfoot td{padding:5px}
+</style>
+
+<div class="panel panel-primary" style="margin-top:20px">
+    <div class="panel-heading">Nhập sản lượng giao hoàn thành</div>
+    <div class="panel-body" style=" padding-bottom: 0;">
+        <div class="row" style=" margin-bottom: 0;">
+            <div class="input-field col m3 s12">
+                <select id="line"></select>
+                <label for="line">Chọn Chuyền</label>
+            </div>
+            <div class="input-field col m3 s12">
+                <select id="product"> </select>
+                <label for="product">Chọn Phân công</label>
+            </div>
+            <div class="input-field col m3 s12">
+                <select id="phaseType">
+                    <option value="1">BTP hoàn chỉnh</option>
+                    <option value="2">Hoàn thành</option>
+                </select>
+                <label for="product">Loại sản lượng</label>
+            </div>
+            <div class="input-field col m3 s12"> 
+                <select id="Phase" dongthungid="@(System.Configuration.ConfigurationManager.AppSettings["DongThungId"].ToString())"></select>
+                 <label for="Phase">Chọn Công đoạn</label>
+            </div>
+            <div class="input-field col m2 s12">
+                <input id="quantity" type="number" min="1" oninput="" value="1" class="validate">
+                <label for="quantity">Sản lượng</label>
+            </div>
+            <div class="input-field col m2 s12">
+                <select id="ht">
+                    <option value="4">Tăng </option>
+                    <option value="5">Giảm </option>
+                </select>
+                <label for="last_name">Hình thức</label>
+            </div>
+            <div class="input-field col m2 s12">
+                <input id="lk" type="number" disabled value="0">
+                <label for="lk">Lũy kế công đoạn</label>
+            </div>
+            <div class="input-field col m2 s12">
+                <input id="lkkcs" type="number" disabled value="0">
+                <label for="lkkcs">Lũy kế kiểm đạt</label>
+            </div>
+            <div class="input-field col m1 s12">
+                <a save class="waves-effect waves-light btn">Lưu lại</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">Thông tin sản lượng trong ngày</div>
+    <div class="panel-body">
+        <table id="tbsl" class="centered">
+            <thead>
+                <tr>
+                    <th>Ngày</th>
+                    <th>Chuyền</th>
+                    <th>Sản lượng</th>
+                    <th>Hình thức</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2" style="text-align:right">Tổng sản lượng công đoạn trong ngày</td>
+                    <td style="text-align:center" id="total">0</td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+
+<script src="~/Scripts/QLNS/PhaseQuantityDaily/PhaseQuantityDaily.js"></script>

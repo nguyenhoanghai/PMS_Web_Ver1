@@ -1,0 +1,401 @@
+﻿@{
+    ViewBag.Title = "LCDShow";
+}
+<link href="~/Font/css/font-awesome.css" rel="stylesheet" />
+<link href="~/Content/ShowLCD/LCDcss.css" rel="stylesheet" />
+<link href="~/Scripts/jqwidgets-ver3.8.0/jqwidgets/styles/jqx.base.css" rel="stylesheet" />
+<link href="~/Scripts/jqwidgets-ver3.8.0/jqwidgets/styles/jqx.orange.css" rel="stylesheet" />
+<script src="~/Scripts/jqwidgets-ver3.8.0/jqwidgets/jqx-all.js"></script>
+<script src="~/Scripts/SlideJs/jquery.cycle.all.js"></script>
+<script src="~/Scripts/TotemTicker/jquery.totemticker.js"></script>
+<script src="~/Scripts/FullScreen_plugin/jquery.fullscreen.js"></script>
+<script src="~/Scripts/QLNS/cookie.js"></script>
+<link href="~/Content/LCDShow.css" rel="stylesheet" />
+
+<script src="~/Scripts/QLNS/ShowLCDNS/LCDTongHopN.js"></script>
+
+
+<style>
+    #tbKB #KanBan_Ticker,
+    #tbKB #KanBan_Ticker ul {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+        #tbKB #KanBan_Ticker li,
+        #tbKB #KanBan_Ticker ul li {
+            list-style: none;
+            text-align: center;
+        }
+
+        #tbKB #KanBan_Ticker ul {
+            border-bottom: 2px solid #eee;
+        }
+
+            #tbKB #KanBan_Ticker ul li {
+                float: left;
+            }
+
+    .value1,
+    .value2,
+    .value3,
+    .value4,
+    .value5,
+    .value6,
+    .value7,
+    .value8 {
+        border-right: 2px solid #eee;
+        overflow: hidden !important;
+    }
+
+    #tbKB #KanBan_Ticker ul li:last-child {
+        border: none;
+    }
+
+    #tbKB .label1,
+    #tbKB .label2,
+    #tbKB .label3,
+    #tbKB .label4,
+    #tbKB .label5,
+    #tbKB .label6,
+    #tbKB .label7,
+    #tbKB .label8 {
+        text-transform: uppercase;
+    }
+
+    .ĐỎ {
+        background-color: red !important;
+        color: white !important;
+        border-bottom-color: #ccc !important;
+    }
+
+    .VÀNG {
+        background-color: yellow !important;
+        color: darkblue !important;
+        border-bottom-color: black !important;
+    }
+
+    .XANH {
+        background-color: blue !important;
+        color: white !important;
+        border-bottom-color: #ccc !important;
+    }
+
+    #tbKB #KanBan_Ticker .value1 ,
+    #tbKB #header .label1 {
+        width: 5% !important;
+    }
+
+    #tbKB #KanBan_Ticker .value2 ,
+    #tbKB #header .label2 {
+        width: 15% !important;
+    }
+
+    #tbKB #header .label3 ,
+    #tbKB #KanBan_Ticker .value3 {
+        width: 15% !important;
+    }
+
+    #tbKB #header .label4 ,
+    #tbKB #KanBan_Ticker .value4 {
+        width: 15% !important;
+    }
+
+    #tbKB #header .label5 ,
+    #tbKB #KanBan_Ticker .value5 {
+        width: 15% !important;
+    }
+
+    #tbKB #header .label6 ,
+    #tbKB #KanBan_Ticker .value6 {
+        width: 20% !important;
+    }
+
+    #tbKB #header .label7 ,
+    #tbKB #KanBan_Ticker .value7 {
+        width: 7% !important;
+    }
+
+    #tbKB #header .label8 ,
+    #tbKB #KanBan_Ticker .value8 {
+        width: 6% !important;
+        border-right:none
+    }
+
+    #tbKB #KanBan_Ticker .title{
+        font-size:20px !important
+    }
+    #tbKB #KanBan_Ticker .value{
+        font-size:25px !important
+    }
+</style>
+
+
+<a style="display:none" height>@ViewData["Height"]</a>
+<input type="hidden" value="@ViewBag.jGroup" id="jgroup" interval="@ViewData["IntervalShow"]" />
+<div id="fullscreen" class="slide">
+    <div class="full-box">
+        @*<a class="btn btn-primary" id="full"> *@
+        <a id="request-full" class="btn btn-primary">
+            <i class="fa fa-expand "></i>
+        </a>
+        <a class="btn btn-primary" onclick="fullScreenApi.cancelFullScreen(document.documentElement)" style="display:none">
+            <i class="fa fa-compress "> </i>
+        </a>
+    </div>
+
+    <div id="vtemslideshow_wapper">
+        <table id="tbKB">
+            <tbody>
+                <tr class="header">
+                    <td>
+                        <table id="header">
+                            <tbody>
+                                <tr class="title">
+                                    <td rowint="1" class="label1">Chuyền/Mã Hàng</td>
+                                    <td rowint="2" class="label2">NĂNG SUẤT (TH/ĐM)</td>
+                                    <td rowint="3" class="label3">NHỊP CHUYỀN ( TT / SX )</td>
+                                    <td rowint="4" class="label4">LK KIỂM ĐẠT / SL CÒN LẠI</td>
+                                    <td rowint="5" class="label5">LEAN / BTP TRÊN CHUYỀN</td>
+                                    <td rowint="6" class="label6">NS HIỆN TẠI</td>
+                                    <td rowint="7" class="label6">NS HIỆN TẠI</td>
+                                    <td rowint="8" class="label6">NS HIỆN TẠI</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr class="content">
+                    <td>
+                        @*<ul id="KanBan_Ticker"> </ul>
+
+                            <div id="vtemslideshow_wapper">
+                                <div id="slideTongHop" class="vtem_main_slideshow" style="background:white">
+
+                                </div>
+                            </div>*@
+                        <div id="vtemslideshow1" class="vtem_main_slideshow" style="background:black">
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+    </div>
+
+</div>
+
+<div style="display:none">
+    <span id="6_stop"></span>
+    <span id="6_start"></span>
+    <span id="kb_stop"></span>
+    <span id="kb_start"></span>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        @*var a= setInterval(function(){
+            $('#vtemslideshow1').cycle({
+                fx: 'blindY,blindY',
+                //fx: 'all',
+                easing: 'easeOutBack',
+                timeout: 1000,
+                speed: 2500,
+                next: '#cycle_next',
+                prev: '#cycle_prev',
+                pager: '#vtemnav',
+                pagerEvent: 'click',
+                pagerAnchorBuilder: pagerFactory,
+                startingSlide: 0,
+                fit: true,
+                height: @ViewData["Height"].ToString() ,
+                //width: true
+            });
+            clearInterval(a);
+        },2000);*@
+
+
+        function pagerFactory(idx, slide) {
+            return '#vtemnav a:eq(' + idx + ') span';
+        };
+    });
+
+    function goFullscreen(id) {
+        var element = document.getElementById(id);
+        if (element.mozRequestFullScreen) {
+            element.mozRequestFullScreen();
+        } else if (element.webkitRequestFullScreen) {
+            element.webkitRequestFullScreen();
+        }
+    }
+
+    $(function () {
+        $('#full').click(function () {
+            var element = document.getElementById('fullscreen');
+
+            if (element.mozRequestFullScreen) {
+                element.mozRequestFullScreen();
+            } else if (element.webkitRequestFullScreen) {
+                element.webkitRequestFullScreen();
+            }
+        });
+
+        // exit fullscreen
+        $('#dis-full').click(function () {
+            $.fullscreen.exit();
+            $('#full').show();
+            $('#dis-full').hide();
+            return false;
+        });
+
+        // document's event
+        $(document).bind('fscreenchange', function (e, state, elem) {
+            // if we currently in fullscreen mode
+            if ($.fullscreen.isFullScreen()) {
+                $('#fullscreen .requestfullscreen').hide();
+                $('#fullscreen .exitfullscreen').show();
+            } else {
+                $('#fullscreen .requestfullscreen').show();
+                $('#fullscreen .exitfullscreen').hide();
+            }
+
+            $('#state').text($.fullscreen.isFullScreen() ? '' : 'not');
+        });
+    });
+
+    (function () {
+        var
+            fullScreenApi = {
+                supportsFullScreen: false,
+                nonNativeSupportsFullScreen: false,
+                isFullScreen: function () { return false; },
+                requestFullScreen: function () { },
+                cancelFullScreen: function () { },
+                fullScreenEventName: '',
+                prefix: ''
+            },
+            browserPrefixes = 'webkit moz o ms khtml'.split(' ');
+
+        // check for native support
+        if (typeof document.cancelFullScreen != 'undefined') {
+            fullScreenApi.supportsFullScreen = true;
+        } else {
+            // check for fullscreen support by vendor prefix
+            for (var i = 0, il = browserPrefixes.length; i < il; i++) {
+                fullScreenApi.prefix = browserPrefixes[i];
+
+                if (typeof document[fullScreenApi.prefix + 'CancelFullScreen'] != 'undefined') {
+                    fullScreenApi.supportsFullScreen = true;
+                    break;
+                }
+            }
+        }
+
+        // update methods to do something useful
+        if (fullScreenApi.supportsFullScreen) {
+            fullScreenApi.fullScreenEventName = fullScreenApi.prefix + 'fullscreenchange';
+
+            fullScreenApi.isFullScreen = function () {
+                switch (this.prefix) {
+                    case '':
+                        return document.fullScreen;
+                    case 'webkit':
+                        return document.webkitIsFullScreen;
+                    default:
+                        return document[this.prefix + 'FullScreen'];
+                }
+            }
+            fullScreenApi.requestFullScreen = function (el) {
+                return (this.prefix === '') ? el.requestFullScreen() : el[this.prefix + 'RequestFullScreen']();
+            }
+            fullScreenApi.cancelFullScreen = function (el) {
+                return (this.prefix === '') ? document.cancelFullScreen() : document[this.prefix + 'CancelFullScreen']();
+            }
+        }
+        else if (typeof window.ActiveXObject !== "undefined") { // IE.
+            fullScreenApi.nonNativeSupportsFullScreen = true;
+            fullScreenApi.requestFullScreen = fullScreenApi.requestFullScreen = function (el) {
+                var wscript = new ActiveXObject("WScript.Shell");
+                if (wscript !== null) {
+                    wscript.SendKeys("{F11}");
+                }
+            }
+            fullScreenApi.isFullScreen = function () {
+                return document.body.clientHeight == screen.height && document.body.clientWidth == screen.width;
+            }
+        }
+
+        // jQuery plugin
+        if (typeof jQuery != 'undefined') {
+            jQuery.fn.requestFullScreen = function () {
+
+                return this.each(function () {
+                    if (fullScreenApi.supportsFullScreen) {
+                        fullScreenApi.requestFullScreen(this);
+                    }
+                });
+            };
+        }
+
+        // export api
+        window.fullScreenApi = fullScreenApi;
+    })();
+
+    function check() {
+        if (!fullScreenApi.isFullScreen())
+            fullScreenApi.requestFullScreen(document.documentElement);
+        else
+            fullScreenApi.cancelFullScreen(document.documentElement);
+    }
+
+    $('#request-full').click(function () {
+        check();
+    });
+
+
+</script>
+<script>
+    function launchFullscreen(element) {
+        window.scrollTo(0, 1);
+    }
+
+    function exitFullscreen() {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.mozCancelFullScreen) {
+            document.mozCancelFullScreen();
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+
+    function dumpFullscreen() {
+        console.log("document.fullscreenElement is: ", document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement || document.msFullscreenElement);
+        console.log("document.fullscreenEnabled is: ", document.fullscreenEnabled || document.mozFullScreenEnabled || document.webkitFullscreenEnabled || document.msFullscreenEnabled);
+    }
+
+    // Events
+    document.addEventListener("fullscreenchange", function (e) {
+        console.log("fullscreenchange event! ", e);
+    });
+    document.addEventListener("mozfullscreenchange", function (e) {
+        console.log("mozfullscreenchange event! ", e);
+    });
+    document.addEventListener("webkitfullscreenchange", function (e) {
+        console.log("webkitfullscreenchange event! ", e);
+    });
+    document.addEventListener("msfullscreenchange", function (e) {
+        console.log("msfullscreenchange event! ", e);
+    });
+
+    // Add different events for fullscreen
+</script>
+<style>
+    .size_110 {
+        font-size: 110px !important;
+    }
+</style>

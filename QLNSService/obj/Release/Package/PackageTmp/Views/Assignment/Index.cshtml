@@ -1,0 +1,62 @@
+﻿@{
+    ViewBag.Title = "Phân công sản xuất";
+    Layout = "~/Views/Shared/_NewLayout.cshtml";
+}
+
+<h4>Quản lý phân công</h4>
+<hr />
+<div class="row">
+    <div class="col input-field m4">
+        @Html.DropDownList("txtLine", (SelectList)ViewBag.Lines)
+        <label for="txtLine">Chuyền</label>
+    </div>
+    <table id="tbAssignments" width="100%" class="table striped highlight centered"></table>
+</div>
+
+<div class="table-responsive">
+   
+    
+</div>
+
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+    <div class="modal-content" style=" padding-bottom:0">
+        <h4>Thông tin phân công</h4>
+        <hr />
+        <div class="row" style=" margin-bottom:0">
+            <div class="col input-field m6"> 
+                @Html.DropDownList("txtProduct", (SelectList)ViewBag.Products)
+                <label for="txtLine">Sản phẩm</label>
+            </div>
+            <div class="col input-field m3">
+                <input class="" type="number" id='txtstt' />
+                <label for="txtstt">Thứ tự SX</label>
+            </div>             
+            <div class="col input-field m3">
+                <input class="" type="number" id='txtSLKH' />
+                <label for="txtSLKH">Sản lượng kế hoạch</label>
+            </div> 
+        </div>
+    </div>
+    <hr />
+    <div class="modal-footer">
+        <button id="btnSave" class=" waves-light btn ">Lưu lại</button>
+        <button id="btnCancel" class="modal-close  grey btn ">Hủy bỏ</button>
+    </div>
+</div>
+
+ 
+<script src="~/Scripts/QLNS/Assignment/Assignment.js"></script>
+<script>
+
+    var assign = new GPRO.Assignment();
+    assign.Init();
+    function Edit(Id) {
+        assign.Edit(Id);
+    }
+
+    function Delete(Id) {
+        assign.Delete(Id);
+    }
+
+</script>

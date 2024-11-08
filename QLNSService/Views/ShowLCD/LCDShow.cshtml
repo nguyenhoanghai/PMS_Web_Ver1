@@ -1,0 +1,569 @@
+﻿@{
+    ViewBag.Title = "LCDShow";
+}
+<link href="~/Font/css/font-awesome.css" rel="stylesheet" />
+<link href="~/Content/ShowLCD/LCDcss.css" rel="stylesheet" />
+<link href="~/Scripts/jqwidgets-ver3.8.0/jqwidgets/styles/jqx.base.css" rel="stylesheet" />
+<link href="~/Scripts/jqwidgets-ver3.8.0/jqwidgets/styles/jqx.orange.css" rel="stylesheet" />
+<script src="~/Scripts/jqwidgets-ver3.8.0/jqwidgets/jqx-all.js"></script>
+<script src="~/Scripts/SlideJs/jquery.cycle.all.js"></script>
+<script src="~/Scripts/TotemTicker/jquery.totemticker.js"></script>
+<script src="~/Scripts/FullScreen_plugin/jquery.fullscreen.js"></script>
+<script src="~/Scripts/QLNS/cookie.js"></script>
+<link href="~/Content/LCDShow.css" rel="stylesheet" />
+<link href="~/Content/VideoJS/video-js.css" rel="stylesheet" />
+<script src="~/Content/VideoJS/video.js"></script>
+
+
+<a style="display:none" height>@ViewData["Height"]</a>
+<input type="hidden" value="@ViewBag.jGroup" id="jgroup" interval="@ViewData["IntervalShow"]" />
+<style>
+    .slide-image{width:100% !important}
+</style>
+<div id="fullscreen" class="slide">
+    <div class="full-box">
+        @*<a class="btn btn-primary" id="full">
+        *@
+        <a id="request-full" class="btn btn-primary">
+            <i class="fa fa-expand "></i>
+        </a>
+        <a class="btn btn-primary" onclick="fullScreenApi.cancelFullScreen(document.documentElement)" style="display:none">
+            <i class="fa fa-compress "> </i>
+        </a>
+    </div>
+
+    <div id="vtemslideshow_wapper">
+        <div id="vtemslideshow1" class="vtem_main_slideshow" style="background:white">
+
+            @if (ViewBag.ListTableTypeId != null && ViewBag.ListTableTypeId.Count > 0)
+            {
+                foreach (string tableTypeId in ViewBag.ListTableTypeId)
+                {
+                    switch (tableTypeId)
+                    {
+                        case "1":
+                            <div class="slide-image">
+                                @Html.Action("LCDNS_Partial", "Productivity")
+                            </div>
+                            break;
+                        case "2":
+                        <div class="slide-image">
+                            @Html.Action("LCDError_Partial", "Error")
+                        </div>
+                            break;
+                        case "3":
+                        <div class="slide-image ">
+                            @*  @Html.Action("LCDNS_Collection_Partial", "Productivity")*@
+                            @Html.Action("LCDTongHopN_Partial", "Productivity")
+                        </div>
+                            break;
+                        case "4":
+                        <div class="slide-image">
+                            @Html.Action("LCDKanBan_Partial", "Productivity")
+                        </div>
+                            break;
+                        case "5":
+                        <div class="slide-image">
+                            @Html.Action("LCDCompletion_Partial", "Productivity")
+                        </div>
+                            break;
+                        case "6":
+                        <div class="slide-image">
+                            @Html.Action("ProOfLineEachHours_Partial", "Productivity")
+                        </div>
+                            break;
+                        case "7":
+                        <div class="slide-image">
+                            @Html.Action("ProOfLineOfDay_Partial", "Productivity")
+                        </div>
+                            break;
+                        case "8":
+                        <div class="slide-image">
+                            @Html.Action("ProOfLineEachHours_Output_Partial", "Productivity")
+                        </div>
+                            break;
+                        case "9":
+                        <div class="slide-image ">
+                            @Html.Action("ProOfLineOfDay_Output_Partial", "Productivity")
+                        </div>
+                            break;
+                        case "10":
+                        <div class="slide-image">
+                            @Html.Action("ErrorOfLineEachHours_Partial", "Error")
+                        </div>
+                            break;
+                        case "11":
+                        <div class="slide-image">
+                            @Html.Action("ErrorOfLineOfDay_Partial", "Error")
+                        </div>
+                            break;
+                        case "12":
+                        <div class="slide-image">
+                            @Html.Action("CollectionPage_Partial", "CheckList")
+                        </div>
+                            break;
+                        case "13":
+                        <div class="slide-image">
+                            @Html.Action("StaplePartial", "CheckList")
+                        </div>
+                            break;
+                        case "14":
+                        <div class="slide-image">
+                            @Html.Action("LCDNS_New_Partial", "Productivity")
+                        </div>
+                            break;
+                        case "15":
+                        <div class="slide-image"> 
+                            @Html.Action("HoanTatLCD1", "Productivity" )
+                        </div>
+                            break;
+                        case "16":
+                        <div class="slide-image">
+                            @Html.Action("HoanTatLCD2", "Productivity" )
+                        </div>
+                            break;
+                        case "17":
+                        <div class="slide-image">
+                            @Html.Action("HoanTatLCD3", "Productivity" )
+                        </div>
+                            break;
+                    }
+                }
+            }
+        </div>
+    </div>
+
+    <div id="box_video" line="0" style="width:100%;display:none; height:@ViewData["Height"]px; ">
+        <video id="video" class="video-js" src=" " controls preload="auto" width="640" height="264" poster="MY_VIDEO_POSTER.jpg" data-setup="{}"></video>
+        <select id="video_list" currentid="0" style="display:none"> </select>
+        @*<button id="btn" onclick="goFullscreen('video'); return false">
+                View Fullscreen!
+            </button>*@
+    </div>
+</div>
+
+<div style="display:none">
+    <span id="6_stop"></span>
+    <span id="6_start"></span>
+    <span id="kb_stop"></span>
+    <span id="kb_start"></span>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#vtemslideshow1').cycle({
+            // fx: 'scrollDown,custom,turnUp,turnDown,fade,turnLeft,turnRight,curtainX',blindX
+            fx: 'blindY,blindY',
+            //fx: 'all',
+            easing: 'easeOutBack',
+            timeout:  @ViewData["timeChangeLCD"].ToString() ,
+            speed: 500,
+            next: '#cycle_next',
+            prev: '#cycle_prev',
+            pager: '#vtemnav',
+            pagerEvent: 'click',
+            pagerAnchorBuilder: pagerFactory,
+            startingSlide: 0,
+            fit: true,
+            height: @ViewData["Height"].ToString() ,
+            //width: true
+        });
+        function pagerFactory(idx, slide) {
+            return '#vtemnav a:eq(' + idx + ') span';
+        };
+    });
+
+    var myVar = setInterval(function () { GetTime();  }, 1000);
+    var addd = setInterval(function(){   GetVideoSchedule(); clearInterval(addd); },2000);
+
+    function GetTime() {
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth() + 1;
+        var yyyy = today.getFullYear();
+
+        var date =  (dd < 10? '0'+dd:dd) + '-' + (mm < 10 ? '0'+mm:mm) + '-' + yyyy;
+
+        var hours = today.getHours();
+        var minutes = today.getMinutes();
+        var second = today.getSeconds();
+        var time = (hours < 10 ? '0' + hours : hours) + ':' + (minutes < 10 ? '0' + minutes : minutes) + ':' + (second < 10 ? '0' + second : second);
+
+        $('[date]').html(date);
+        $('[time]').html(time);
+    }
+
+    function GetVideoSchedule() {
+        $.ajax({
+            url: '/VideoSchedule/GetVideoSchedule',
+            type: 'POST',
+            data: JSON.stringify({ 'lineId':  $('#box_video').attr('line') }),
+            contentType: 'application/json charset=utf-8',
+            success: function (data) {
+                var videoPlayer = document.getElementById("video_html5_api");
+                if (data.Data != null ) {
+                    var today = new Date();
+                    var hours = today.getHours();
+                    var minutes = today.getMinutes();
+
+                    if ((minutes <= data.Data.TimeEnd.Minutes || data.Data.TimeEnd.Hours > hours ))
+                    {
+                        $('#vtemslideshow_wapper').css('display','none');
+                        $('#box_video').css('display','block');
+                        if( data.Data.Id != parseInt($('#video_list').attr('currentId'))){
+                            $('#video_list').attr('currentId',data.Data.Id);
+                            if(data.Data.Detail.length > 0 ){
+                                var str = '';
+                                var src='';
+                                $.each(data.Data.Detail, function(i, item){
+                                    str += '<option value="'+item.Path+'">'+item.Name+'</option>';
+                                    src+='<source src="/Media/'+item.Path+'" type="video/mp4">';
+                                });
+                                $('#video_list').empty().append(str);
+                                $('#video_list option').eq(0).prop('selected', true);
+                                //  $('#video').empty().append(src);
+
+                                $('#video_html5_api').attr('src',"/Media/"+$('#video_list').val());
+                                $('#video_html5_api').attr('autoplay','autoplay');
+
+                                var myPlayer =  videojs('video_html5_api');
+
+                                $('#btn').click();
+
+                                videoPlayer.addEventListener("ended", function () {
+                                    var i= $('#video_list').prop('selectedIndex');
+                                    if($('#video_list option').length > (i+1))
+                                    {  $('#video_list option').eq((i+1)).prop('selected', true);
+                                        videoPlayer.src = "/Media/"+$('#video_list').val() ;
+                                        videoPlayer.autoplay = "autoplay";
+                                    }
+                                });
+                            }
+                        }
+                    }
+                    else
+                    {
+                        $('#box_video').css('display','none');
+                        $('#vtemslideshow_wapper').css('display','block');
+                        videoPlayer.pause();
+                        $('#video_list').attr('currentId',0);
+                    }
+                }
+                else
+                {
+                    $('#box_video').css('display','none');
+                    $('#vtemslideshow_wapper').css('display','block');
+                    videoPlayer.pause();
+                    $('#video_list').attr('currentId',0);
+                }
+            }
+        });
+    }
+
+    function goFullscreen(id) {
+        var element = document.getElementById(id);
+        if (element.mozRequestFullScreen) {
+            element.mozRequestFullScreen();
+        } else if (element.webkitRequestFullScreen) {
+            element.webkitRequestFullScreen();
+        }
+    }
+
+    function SetAutoScroll(rows, paging, tick , type) {
+        switch (type) {
+            case 1:
+                if (rows > paging) {
+                    $('#LCDTH_ticker').totemticker({
+                        row_height: $('#tb_pro_collec #LCDTH_ticker ul li').css('height'),
+                        mousestop: false,
+                        speed: 800,
+                        interval: tick,
+                        max_items: paging,
+                        row_move: 1,
+                        type: 'ul'
+                    });
+                }
+                break;
+            case 2:
+                if (rows > paging) {
+                    $('#KanBan_Ticker').totemticker({
+                        row_height: $('#KanBan_Ticker ul li').css('height'),
+                        mousestop: false,
+                        speed: 800,
+                        interval: parseInt(tick),
+                        max_items: parseInt(paging),
+                        row_move: 1,
+                        type: 'ul',
+                        stop : '#kb_stop',
+                        start : '#kb_start',
+                    });
+                }
+                break;
+            case 3:
+                if (rows > paging) {
+                    $('#LCDTH_CL_ticker').totemticker({
+                        row_height: $('#LCDTH_CL_ticker ul li').css('height'),
+                        mousestop: false,
+                        speed: 800,
+                        interval: parseInt(tick),
+                        max_items: parseInt(paging),
+                        row_move: 1,
+                        type: 'ul'
+                    });
+                }
+                break;
+            case 4:
+                if (rows > paging) {
+                    $('#LCDCT_CL_ticker').totemticker({
+                        row_height: $('#LCDCT_CL_ticker ul li').css('height'),
+                        mousestop: false,
+                        speed: 800,
+                        interval: parseInt(tick),
+                        max_items: parseInt(paging),
+                        row_move: 1,
+                        type: 'ul'
+                    });
+                }
+                break;
+            case 5:
+                if (rows > paging) {
+                    $('#LCD_NS_New_ticker').totemticker({
+                        row_height: $('#LCD_NS_New_ticker li').css('height'),
+                        mousestop: false,
+                        speed: 800,
+                        interval: parseInt(tick),
+                        max_items: parseInt(paging),
+                        row_move: 1,
+                        type: 'ul'
+                    });
+                }
+                break;
+            case 6:
+                if (rows > paging) {
+                    $('#LCD_Complete_ticker').totemticker({
+                        row_height: $('#LCD_Complete_ticker li').css('height'),
+                        mousestop: false,
+                        speed: 800,
+                        interval: parseInt(tick),
+                        max_items: parseInt(paging),
+                        row_move: 1,
+                        type: 'ul',
+                        stop        :   '#6_stop',
+                        start       :   '#6_start',
+                    });
+                }
+
+
+                break;
+        }
+
+    }
+
+    function callSlide(){
+        $('#slideTongHop').cycle({
+            fx: 'blindX ',
+            easing: 'easeOutBack',
+            timeout: 1000,
+            speed:800,
+            startingSlide: 0,
+            fit: true,
+            height:500 ,
+        });
+    }
+
+
+
+
+    $(function() {
+        // check native support
+        //    $('#support').text($.fullscreen.isNativelySupported() ? 'supports' : 'doesn\'t support');
+
+        // open in fullscreen
+        $('#full').click(function() {
+            //$('#slide').fullscreen();
+            //$('#full').hide();
+            //$('#dis-full').show();
+            //return false;
+
+
+            var element = document.getElementById('fullscreen');
+
+            // These function will not exist in the browsers that don't support fullscreen mode yet,
+            // so we'll have to check to see if they're available before calling them.
+
+            if (element.mozRequestFullScreen) {
+                // This is how to go into fullscren mode in Firefox
+                // Note the "moz" prefix, which is short for Mozilla.
+                element.mozRequestFullScreen();
+            } else if (element.webkitRequestFullScreen) {
+                // This is how to go into fullscreen mode in Chrome and Safari
+                // Both of those browsers are based on the Webkit project, hence the same prefix.
+                element.webkitRequestFullScreen();
+            }
+        });
+
+        // exit fullscreen
+        $('#dis-full').click(function() {
+            $.fullscreen.exit();
+            $('#full').show();
+            $('#dis-full').hide();
+            return false;
+        });
+
+        // document's event
+        $(document).bind('fscreenchange', function(e, state, elem) {
+            // if we currently in fullscreen mode
+            if ($.fullscreen.isFullScreen()) {
+                $('#fullscreen .requestfullscreen').hide();
+                $('#fullscreen .exitfullscreen').show();
+            } else {
+                $('#fullscreen .requestfullscreen').show();
+                $('#fullscreen .exitfullscreen').hide();
+            }
+
+            $('#state').text($.fullscreen.isFullScreen() ? '' : 'not');
+        });
+    });
+
+    (function() {
+        var
+            fullScreenApi = {
+                supportsFullScreen: false,
+                nonNativeSupportsFullScreen: false,
+                isFullScreen: function() { return false; },
+                requestFullScreen: function() {},
+                cancelFullScreen: function() {},
+                fullScreenEventName: '',
+                prefix: ''
+            },
+            browserPrefixes = 'webkit moz o ms khtml'.split(' ');
+
+        // check for native support
+        if (typeof document.cancelFullScreen != 'undefined') {
+            fullScreenApi.supportsFullScreen = true;
+        } else {
+            // check for fullscreen support by vendor prefix
+            for (var i = 0, il = browserPrefixes.length; i < il; i++ ) {
+                fullScreenApi.prefix = browserPrefixes[i];
+
+                if (typeof document[fullScreenApi.prefix + 'CancelFullScreen' ] != 'undefined' ) {
+                    fullScreenApi.supportsFullScreen = true;
+                    break;
+                }
+            }
+        }
+
+        // update methods to do something useful
+        if (fullScreenApi.supportsFullScreen) {
+            fullScreenApi.fullScreenEventName = fullScreenApi.prefix + 'fullscreenchange';
+
+            fullScreenApi.isFullScreen = function() {
+                switch (this.prefix) {
+                    case '':
+                        return document.fullScreen;
+                    case 'webkit':
+                        return document.webkitIsFullScreen;
+                    default:
+                        return document[this.prefix + 'FullScreen'];
+                }
+            }
+            fullScreenApi.requestFullScreen = function(el) {
+                return (this.prefix === '') ? el.requestFullScreen() : el[this.prefix + 'RequestFullScreen']();
+            }
+            fullScreenApi.cancelFullScreen = function(el) {
+                return (this.prefix === '') ? document.cancelFullScreen() : document[this.prefix + 'CancelFullScreen']();
+            }
+        }
+        else if (typeof window.ActiveXObject !== "undefined") { // IE.
+            fullScreenApi.nonNativeSupportsFullScreen = true;
+            fullScreenApi.requestFullScreen = fullScreenApi.requestFullScreen = function (el) {
+                var wscript = new ActiveXObject("WScript.Shell");
+                if (wscript !== null) {
+                    wscript.SendKeys("{F11}");
+                }
+            }
+            fullScreenApi.isFullScreen = function() {
+                return document.body.clientHeight == screen.height && document.body.clientWidth == screen.width;
+            }
+        }
+
+        // jQuery plugin
+        if (typeof jQuery != 'undefined') {
+            jQuery.fn.requestFullScreen = function() {
+
+                return this.each(function() {
+                    if (fullScreenApi.supportsFullScreen) {
+                        fullScreenApi.requestFullScreen(this);
+                    }
+                });
+            };
+        }
+
+        // export api
+        window.fullScreenApi = fullScreenApi;
+    })();
+
+    function check(){
+        if(!fullScreenApi.isFullScreen())
+            fullScreenApi.requestFullScreen(document.documentElement);
+        else
+            fullScreenApi.cancelFullScreen(document.documentElement);
+    }
+
+    $('#request-full').click(function(){
+        check();
+    });
+
+
+</script>
+<script>
+    // Find the right method, call on correct element
+    function launchFullscreen(element) {
+        //if(element.requestFullscreen) {
+        //    element.requestFullscreen();
+        //} else if(element.mozRequestFullScreen) {
+        //    element.mozRequestFullScreen();
+        //} else if(element.webkitRequestFullscreen) {
+        //    element.webkitRequestFullscreen();
+        //} else if(element.msRequestFullscreen) {
+        //    element.msRequestFullscreen();
+        //}
+        window.scrollTo(0,1);
+    }
+
+    function exitFullscreen() {
+        if(document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if(document.mozCancelFullScreen) {
+            document.mozCancelFullScreen();
+        } else if(document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+
+    function dumpFullscreen() {
+        console.log("document.fullscreenElement is: ", document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement || document.msFullscreenElement);
+        console.log("document.fullscreenEnabled is: ", document.fullscreenEnabled || document.mozFullScreenEnabled || document.webkitFullscreenEnabled || document.msFullscreenEnabled);
+    }
+
+    // Events
+    document.addEventListener("fullscreenchange", function(e) {
+        console.log("fullscreenchange event! ", e);
+    });
+    document.addEventListener("mozfullscreenchange", function(e) {
+        console.log("mozfullscreenchange event! ", e);
+    });
+    document.addEventListener("webkitfullscreenchange", function(e) {
+        console.log("webkitfullscreenchange event! ", e);
+    });
+    document.addEventListener("msfullscreenchange", function(e) {
+        console.log("msfullscreenchange event! ", e);
+    });
+
+    // Add different events for fullscreen
+</script>
+<style>
+    .size_110 {
+        font-size: 110px !important;
+    }
+</style>

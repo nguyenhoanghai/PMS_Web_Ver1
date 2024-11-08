@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/profile.css" rel="stylesheet" />
+    <link href="~/Content/Bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/Bootstrap/css/bootstrap-responsive.css" rel="stylesheet" />
+
+    <link href="~/Content/Controll.css" rel="stylesheet" />
+    <link href="~/Content/MasterPage/MasterPage.css" rel="stylesheet" />
+    <link href="~/Content/Bootstrap/css/customizebootstrap.css" rel="stylesheet" />
+    <link href="~/Content/Jquery.alerts/jquery.alerts.css" rel="stylesheet" />
+
+    <script src="~/Scripts/QLNS/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="~/Scripts/QLNS/Boostrap/bootstrap.js"></script>
+    <script src="~/Scripts/QLNS/jquery.alerts.js"></script>
+    <script src="~/Scripts/QLNS/common.js"></script>
+    <script src="~/Scripts/QLNS/cookie.js"></script>
+    <script src="~/Scripts/accounting.js"></script>
+    <script src="~/Scripts/QLNS/Common_Hai.js"></script>
+    <link href="~/Content/Modal_Custom_Css_H.css" rel="stylesheet" />
+
+    <script src="~/Scripts/TotemTicker/jquery.totemticker.js"></script>
+</head>
+<body>
+    @RenderBody()
+    <div id="loading" style="display:none">
+        <img src="~/Content/MasterPage/Images/loading%20(1).gif" />
+    </div>
+    <style>
+        #loading {
+            z-index: 9999;
+            position: fixed;
+            text-align: center;
+            padding: 20% 0 25% 0;
+            background: rgba(220, 220, 220, 0.29);
+            top: 0 !important;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+
+            if (navigator.userAgent.match(/Android/i)) {
+                window.scrollTo(0, 0); // reset in case prev not scrolled  
+                var nPageH = $(document).height();
+                var nViewH = window.outerHeight;
+                if (nViewH > nPageH) {
+                    nViewH -= 250;
+                    $('BODY').css('height', nViewH + 'px');
+                }
+                window.scrollTo(0, 1);
+            }
+
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+﻿<style>
+    #tb-nguyenlieu {
+        width: 100%;
+        height: 550px;
+        font-weight: bold;
+        font-family: verdena;
+        text-align: center;
+    }
+
+        #tb-nguyenlieu caption,
+        #tb-nguyenlieu thead tr td {
+            border: 2px solid #eee;
+            height: 15%;
+            font-size: 35px;
+            line-height: 70px;
+            color: red;
+        }
+
+        #tb-nguyenlieu caption {
+            background: white !important;
+        }
+
+        #tb-nguyenlieu thead tr td {
+            font-size: 25px;
+            border-right: none;
+            border-top: none;
+            background: blue;
+            color: #eee;
+            height: 5%;
+            line-height: 35px;
+            width: 14.2%;
+        }
+
+            #tb-nguyenlieu thead tr td:last-child {
+                border: 2px solid #eee;
+            }
+
+        #tb-nguyenlieu tbody tr td {
+            border: 2px solid black;
+            font-size: 30px;
+            text-transform: uppercase;
+            background: #eee;
+            line-height: 35px;
+        }
+
+    .col1 {
+        background: #ddd !important;
+    }
+
+    .col-ok {
+        background: green !important;
+        color: #eee !important;
+    }
+
+    .col-process {
+        background: yellow !important;
+    }
+
+    .col-error {
+        background: red !important;
+        color: #eee !important;
+    }
+</style>
+
+<table id="tb-nguyenlieu">
+    <caption>CheckList Đơn Hàng Nguyên Liệu</caption>
+    <thead>
+        <tr>
+            <td>Mã Hàng</td>
+            <td>Khách hàng</td>
+            <td>Vải Chính</td>
+            <td>Vải Lót</td>
+            <td>Vải Phối </td>
+            <td>Keo Dựng</td>
+            <td>Keo Tan</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>AS#0101</td>
+            <td>ASMARA</td>
+            <td class="col-ok">100%</td>
+            <td class="col-ok">100%</td>
+            <td class="col-ok">100%</td>
+            <td class="col-ok">100%</td>
+            <td class="col-ok">100%</td>
+        </tr>
+        <tr class="col1">
+            <td>03280_C5</td>
+            <td>OWEN</td>
+            <td class="col-ok">100%</td>
+            <td class="col-ok">100%</td>
+            <td class="col-ok">100%</td>
+            <td class="col-process">70%</td>
+            <td class="col-process">0%</td>
+        </tr>
+        <tr>
+            <td>6BD12_C1</td>
+            <td>ASMARA</td>
+            <td class="col-ok">100%</td>
+            <td class="col-ok">100%</td>
+            <td class="col-ok">100%</td>
+            <td class="col-error">Lỗi</td>
+            <td class="col-process">0%</td>
+        </tr>
+    </tbody>
+</table>

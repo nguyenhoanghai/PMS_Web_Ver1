@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProjectManagementModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ProManaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="P_Config" EntityType="ProjectManagementModel.P_Config" />
+    <EntitySet Name="P_DataCenter" EntityType="ProjectManagementModel.P_DataCenter" />
+    <EntitySet Name="P_Job" EntityType="ProjectManagementModel.P_Job" />
+    <EntitySet Name="P_JobGroup" EntityType="ProjectManagementModel.P_JobGroup" />
+    <EntitySet Name="P_PM_EmployeeReference" EntityType="ProjectManagementModel.P_PM_EmployeeReference" />
+    <EntitySet Name="P_PM_Job" EntityType="ProjectManagementModel.P_PM_Job" />
+    <EntitySet Name="P_PM_JobDetail" EntityType="ProjectManagementModel.P_PM_JobDetail" />
+    <EntitySet Name="P_PM_JobGroup" EntityType="ProjectManagementModel.P_PM_JobGroup" />
+    <EntitySet Name="P_ProManagement" EntityType="ProjectManagementModel.P_ProManagement" />
+    <AssociationSet Name="FK_P_PM_Job_P_Job" Association="ProjectManagementModel.FK_P_PM_Job_P_Job">
+      <End Role="P_Job" EntitySet="P_Job" />
+      <End Role="P_PM_Job" EntitySet="P_PM_Job" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_PM_JobGroup_P_JobGroup" Association="ProjectManagementModel.FK_P_PM_JobGroup_P_JobGroup">
+      <End Role="P_JobGroup" EntitySet="P_JobGroup" />
+      <End Role="P_PM_JobGroup" EntitySet="P_PM_JobGroup" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_PM_EmployeeReference_P_PM_Job" Association="ProjectManagementModel.FK_P_PM_EmployeeReference_P_PM_Job">
+      <End Role="P_PM_Job" EntitySet="P_PM_Job" />
+      <End Role="P_PM_EmployeeReference" EntitySet="P_PM_EmployeeReference" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_PM_Job_P_PM_JobGroup" Association="ProjectManagementModel.FK_P_PM_Job_P_PM_JobGroup">
+      <End Role="P_PM_JobGroup" EntitySet="P_PM_JobGroup" />
+      <End Role="P_PM_Job" EntitySet="P_PM_Job" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_PM_JobDetail_P_PM_Job" Association="ProjectManagementModel.FK_P_PM_JobDetail_P_PM_Job">
+      <End Role="P_PM_Job" EntitySet="P_PM_Job" />
+      <End Role="P_PM_JobDetail" EntitySet="P_PM_JobDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_PM_JobGroup_P_ProManagement" Association="ProjectManagementModel.FK_P_PM_JobGroup_P_ProManagement">
+      <End Role="P_ProManagement" EntitySet="P_ProManagement" />
+      <End Role="P_PM_JobGroup" EntitySet="P_PM_JobGroup" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="P_Config">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Code" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Value" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Note" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyId" Type="Int32" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="P_DataCenter">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ModuleName" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="TableName" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ObjectId" Type="Int32" Nullable="false" />
+    <Property Name="ParentId" Type="Int32" />
+    <Property Name="JsonString" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyId" Type="Int32" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedUser" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUser" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedUser" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="P_Job">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyId" Type="Int32" />
+    <Property Name="IsShow" Type="Boolean" Nullable="false" />
+    <Property Name="OrderIndex" Type="Int32" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedUser" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUser" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedUser" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="P_PM_Job" Relationship="ProjectManagementModel.FK_P_PM_Job_P_Job" FromRole="P_Job" ToRole="P_PM_Job" />
+  </EntityType>
+  <EntityType Name="P_JobGroup">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyId" Type="Int32" />
+    <Property Name="IsShow" Type="Boolean" Nullable="false" />
+    <Property Name="OrderIndex" Type="Int32" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedUser" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUser" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedUser" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="P_PM_JobGroup" Relationship="ProjectManagementModel.FK_P_PM_JobGroup_P_JobGroup" FromRole="P_JobGroup" ToRole="P_PM_JobGroup" />
+  </EntityType>
+  <EntityType Name="P_PM_EmployeeReference">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PM_JobId" Type="Int32" Nullable="false" />
+    <Property Name="Index" Type="Int32" Nullable="false" />
+    <Property Name="EmployeeId" Type="Int32" Nullable="false" />
+    <Property Name="ReminderDate" Type="DateTime" Precision="3" />
+    <Property Name="IsStopAlarm" Type="Boolean" Nullable="false" />
+    <Property Name="CompanyId" Type="Int32" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedUser" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUser" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedUser" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="P_PM_Job" Relationship="ProjectManagementModel.FK_P_PM_EmployeeReference_P_PM_Job" FromRole="P_PM_EmployeeReference" ToRole="P_PM_Job" />
+  </EntityType>
+  <EntityType Name="P_PM_Job">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PM_JobGroupId" Type="Int32" Nullable="false" />
+    <Property Name="JobId" Type="Int32" Nullable="false" />
+    <Property Name="OrderIndex" Type="Int32" Nullable="false" />
+    <Property Name="TimeStart" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TimeEnd" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="RealTimeEnd" Type="DateTime" Precision="3" />
+    <Property Name="ReminderDate" Type="DateTime" Precision="3" />
+    <Property Name="EmployeeId" Type="Int32" Nullable="false" />
+    <Property Name="StatusId" Type="Int32" Nullable="false" />
+    <Property Name="PercentComplete" Type="Int32" Nullable="false" />
+    <Property Name="ErrorMessage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UserMessage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RequiredApprove" Type="Boolean" Nullable="false" />
+    <Property Name="IsApprove" Type="Boolean" Nullable="false" />
+    <Property Name="ApproveMessage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsStopAlarm" Type="Boolean" Nullable="false" />
+    <Property Name="CompanyId" Type="Int32" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedUser" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUser" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedUser" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="P_Job" Relationship="ProjectManagementModel.FK_P_PM_Job_P_Job" FromRole="P_PM_Job" ToRole="P_Job" />
+    <NavigationProperty Name="P_PM_EmployeeReference" Relationship="ProjectManagementModel.FK_P_PM_EmployeeReference_P_PM_Job" FromRole="P_PM_Job" ToRole="P_PM_EmployeeReference" />
+    <NavigationProperty Name="P_PM_JobGroup" Relationship="ProjectManagementModel.FK_P_PM_Job_P_PM_JobGroup" FromRole="P_PM_Job" ToRole="P_PM_JobGroup" />
+    <NavigationProperty Name="P_PM_JobDetail" Relationship="ProjectManagementModel.FK_P_PM_JobDetail_P_PM_Job" FromRole="P_PM_Job" ToRole="P_PM_JobDetail" />
+  </EntityType>
+  <EntityType Name="P_PM_JobDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PM_JobId" Type="Int32" Nullable="false" />
+    <Property Name="Index" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="IsUseData" Type="Boolean" Nullable="false" />
+    <Property Name="ObjectId" Type="Int32" />
+    <Property Name="Quantity" Type="Double" />
+    <Property Name="Min_Quantity" Type="Double" />
+    <Property Name="IsAutoDone" Type="Boolean" Nullable="false" />
+    <Property Name="Required" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Result" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsPass" Type="Boolean" Nullable="false" />
+    <Property Name="CompanyId" Type="Int32" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedUser" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUser" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedUser" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="P_PM_Job" Relationship="ProjectManagementModel.FK_P_PM_JobDetail_P_PM_Job" FromRole="P_PM_JobDetail" ToRole="P_PM_Job" />
+  </EntityType>
+  <EntityType Name="P_PM_JobGroup">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ParentId" Type="Int32" Nullable="false" />
+    <Property Name="JobGroupId" Type="Int32" Nullable="false" />
+    <Property Name="PartOfOrganId" Type="Int32" Nullable="false" />
+    <Property Name="Node" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="OrderIndex" Type="Int32" Nullable="false" />
+    <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsHasRHomebus" Type="Boolean" Nullable="false" />
+    <Property Name="RHomebusTitle" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="StatusId" Type="Int32" Nullable="false" />
+    <Property Name="PercentComplete" Type="Int32" Nullable="false" />
+    <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CompanyId" Type="Int32" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedUser" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUser" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedUser" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="P_JobGroup" Relationship="ProjectManagementModel.FK_P_PM_JobGroup_P_JobGroup" FromRole="P_PM_JobGroup" ToRole="P_JobGroup" />
+    <NavigationProperty Name="P_PM_Job" Relationship="ProjectManagementModel.FK_P_PM_Job_P_PM_JobGroup" FromRole="P_PM_JobGroup" ToRole="P_PM_Job" />
+    <NavigationProperty Name="P_ProManagement" Relationship="ProjectManagementModel.FK_P_PM_JobGroup_P_ProManagement" FromRole="P_PM_JobGroup" ToRole="P_ProManagement" />
+  </EntityType>
+  <EntityType Name="P_ProManagement">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ObjectType" Type="Int32" Nullable="false" />
+    <Property Name="ObjectId" Type="Int32" />
+    <Property Name="ParentId" Type="Int32" Nullable="false" />
+    <Property Name="Node" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Owner" Type="Int32" />
+    <Property Name="CompanyId" Type="Int32" Nullable="false" />
+    <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedUser" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUser" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedUser" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="P_PM_JobGroup" Relationship="ProjectManagementModel.FK_P_PM_JobGroup_P_ProManagement" FromRole="P_ProManagement" ToRole="P_PM_JobGroup" />
+  </EntityType>
+  <Association Name="FK_P_PM_Job_P_Job">
+    <End Type="ProjectManagementModel.P_Job" Role="P_Job" Multiplicity="1" />
+    <End Type="ProjectManagementModel.P_PM_Job" Role="P_PM_Job" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_Job">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_PM_Job">
+        <PropertyRef Name="JobId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_PM_JobGroup_P_JobGroup">
+    <End Type="ProjectManagementModel.P_JobGroup" Role="P_JobGroup" Multiplicity="1" />
+    <End Type="ProjectManagementModel.P_PM_JobGroup" Role="P_PM_JobGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_JobGroup">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_PM_JobGroup">
+        <PropertyRef Name="JobGroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_PM_EmployeeReference_P_PM_Job">
+    <End Type="ProjectManagementModel.P_PM_Job" Role="P_PM_Job" Multiplicity="1" />
+    <End Type="ProjectManagementModel.P_PM_EmployeeReference" Role="P_PM_EmployeeReference" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_PM_Job">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_PM_EmployeeReference">
+        <PropertyRef Name="PM_JobId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_PM_Job_P_PM_JobGroup">
+    <End Type="ProjectManagementModel.P_PM_JobGroup" Role="P_PM_JobGroup" Multiplicity="1" />
+    <End Type="ProjectManagementModel.P_PM_Job" Role="P_PM_Job" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_PM_JobGroup">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_PM_Job">
+        <PropertyRef Name="PM_JobGroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_PM_JobDetail_P_PM_Job">
+    <End Type="ProjectManagementModel.P_PM_Job" Role="P_PM_Job" Multiplicity="1" />
+    <End Type="ProjectManagementModel.P_PM_JobDetail" Role="P_PM_JobDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_PM_Job">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_PM_JobDetail">
+        <PropertyRef Name="PM_JobId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_PM_JobGroup_P_ProManagement">
+    <End Type="ProjectManagementModel.P_ProManagement" Role="P_ProManagement" Multiplicity="1" />
+    <End Type="ProjectManagementModel.P_PM_JobGroup" Role="P_PM_JobGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_ProManagement">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_PM_JobGroup">
+        <PropertyRef Name="ParentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="98fe03b9425544f984e69203f6ad5505" Name="Diagram1">
+        <EntityTypeShape EntityType="HRMModel.HR_AdvanceIncome" Width="1.5" PointX="7.5" PointY="75.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_BreakSchedule" Width="1.5" PointX="15" PointY="58.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_Config" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_Contract" Width="1.5" PointX="7.5" PointY="69.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_ContractAllowances" Width="1.5" PointX="22" PointY="80.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_ContractDetail" Width="1.5" PointX="10.75" PointY="77.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_ContractTemplate" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_ContractTime" Width="1.5" PointX="8.5" PointY="65.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_ContractType" Width="1.5" PointX="8.5" PointY="61.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_CreditRange" Width="1.5" PointX="4.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_CycleWageHistory" Width="1.5" PointX="22" PointY="76.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_DailyWorkSchedule" Width="1.5" PointX="17.25" PointY="57.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_Employee" Width="1.5" PointX="5.25" PointY="78.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_EmployeeDepartment" Width="1.5" PointX="7.5" PointY="91" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_EmployeeGroup" Width="1.5" PointX="0.75" PointY="73.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_EmployeeJob" Width="1.5" PointX="7.5" PointY="93.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_EmployeeMarital" Width="1.5" PointX="7.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_EmployeeMobivi" Width="1.5" PointX="7.5" PointY="98.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_EmployeePayrollFormula" Width="1.5" PointX="10.5" PointY="88.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_EmployeePayrollTable" Width="1.5" PointX="13.5" PointY="85.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_EmployeeSubGroup" Width="1.5" PointX="3" PointY="97.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_EmployeeTechnique" Width="1.5" PointX="9.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_EmployeeWSR" Width="1.5" PointX="13.5" PointY="80.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_ErrorLog" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_Families" Width="1.5" PointX="13.5" PointY="90.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_FamilyRelationship" Width="1.5" PointX="11.25" PointY="100.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_FileObject" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_Hospital" Width="1.5" PointX="6.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_InsuranceConfig" Width="1.5" PointX="8.25" PointY="117.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_InsuranceDetail" Width="1.5" PointX="10.5" PointY="93.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_InsuranceType" Width="1.5" PointX="6" PointY="118.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_IrregularIncome" Width="1.5" PointX="7.5" PointY="123.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_JobTitle" Width="1.5" PointX="17.25" PointY="64.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_MasterWorkScheduleRule" Width="1.5" PointX="9" PointY="129.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_MobiviAPI" Width="1.5" PointX="11.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_MoneyType" Width="1.5" PointX="11.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_ObjectWSR" Width="1.5" PointX="9" PointY="111.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_ObjectWSRDetail" Width="1.5" PointX="11.25" PointY="111.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_Organization" Width="1.5" PointX="3" PointY="75.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_OverTime" Width="1.5" PointX="16.5" PointY="84.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_OverTimeObject" Width="1.5" PointX="5.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_OverTimeObject_Detail" Width="1.5" PointX="8" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_PartOfOrganization" Width="1.5" PointX="5.25" PointY="72.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_Payroll" Width="1.5" PointX="14.25" PointY="64.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_PayrollAllowances" Width="1.5" PointX="19.75" PointY="69.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_PayrollCycleWage" Width="1.5" PointX="8.5" PointY="101.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_PayrollCycleWageAllocation" Width="1.5" PointX="10.75" PointY="104.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_PayrollCycleWageDetail" Width="1.5" PointX="19.75" PointY="105.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_PayrollData" Width="1.5" PointX="14.25" PointY="99.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_PayrollDataTime" Width="1.5" PointX="16.5" PointY="113.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_PayrollDetail" Width="1.5" PointX="16.5" PointY="78.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_PayrollFormPayment" Width="1.5" PointX="8.5" PointY="106.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_PayrollFormula" Width="1.5" PointX="12" PointY="64.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_PayrollFormulaShare" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_PayrollSalaryRank" Width="1.5" PointX="6.25" PointY="55.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_PayrollShareList" Width="1.5" PointX="8.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_PayrollStatus" Width="1.5" PointX="16.5" PointY="91.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_PayrollSumary" Width="1.5" PointX="10.75" PointY="117.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_PayrollTable" Width="1.5" PointX="9" PointY="43.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_PayrollTableDetail" Width="1.5" PointX="14.25" PointY="106.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_PayrollTableDetailData" Width="1.5" PointX="16.5" PointY="95.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_PayrollTableInput" Width="1.5" PointX="11.25" PointY="43.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_PayrollTableInputData" Width="1.5" PointX="13.5" PointY="74" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_PayrollTableShare" Width="1.5" PointX="2.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_PayRollWage" Width="1.5" PointX="8.5" PointY="56" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_PayrollWageScale" Width="1.5" PointX="4" PointY="56" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_PeriodWorkSchedule" Width="1.5" PointX="9.75" PointY="122.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_PeriodWorkScheduleOrder" Width="1.5" PointX="22.5" PointY="92.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_Position" Width="1.5" PointX="17.25" PointY="101.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_Promotion" Width="1.5" PointX="19.5" PointY="84.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_PWS_WSR" Width="1.5" PointX="12" PointY="108.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_SALARY_Shift" Width="1.5" PointX="3" PointY="102.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_SettlementTax" Width="1.5" PointX="14.25" PointY="69.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_SettlementTaxDetail" Width="1.5" PointX="16.5" PointY="74.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_Subtitution" Width="1.5" PointX="19.5" PointY="79.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_SubtitutionObject" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_SubtitutionObject_Detail" Width="1.5" PointX="3" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_Tariff" Width="1.5" PointX="13.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_TimeKeeping" Width="1.5" PointX="17.25" PointY="107" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_TimeKeepingApproval" Width="1.5" PointX="19.5" PointY="90.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_TimeKeepingApprovalError" Width="1.5" PointX="13.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_TimeKeepingDetail" Width="1.5" PointX="19.5" PointY="109.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_TimeKeepingSumary" Width="1.5" PointX="22" PointY="85.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_TimeType" Width="1.5" PointX="1.5" PointY="123" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_TimeTypeGroup" Width="1.5" PointX="0.75" PointY="110.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_Vacation" Width="1.5" PointX="19.5" PointY="95.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_VacationApproval" Width="1.5" PointX="17.25" PointY="69.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_VacationApprovalHistory" Width="1.5" PointX="24.75" PointY="89.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_VacationApprovalUser" Width="1.5" PointX="19.5" PointY="74.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_VacationDetail" Width="1.5" PointX="21.75" PointY="102.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_VacationException" Width="1.5" PointX="6" PointY="101.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_VacationExceptionApply" Width="1.5" PointX="8.25" PointY="85.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_VacationInsurance" Width="1.5" PointX="10.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_VacationInsuranceType" Width="1.5" PointX="13.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_VacationMuch" Width="1.5" PointX="4.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_VacationOverTimeApply" Width="1.5" PointX="8.25" PointY="80.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_VacationStore" Width="1.5" PointX="10.5" PointY="70.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_VacationTime" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_VacationType" Width="1.5" PointX="8.25" PointY="48.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_VacationTypeGroup" Width="1.5" PointX="6" PointY="49.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.HR_WorkScheduleRule" Width="1.5" PointX="6.75" PointY="111.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.TA_TimeLog" Width="1.5" PointX="15.75" PointY="4.75" IsExpanded="true" />
+        <AssociationConnector Association="HRMModel.FK_HR_AdvanceIncome_HR_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_DailyWorkSchedule_HR_BreakSchedule" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_OverTime_HR_BreakSchedule" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_Contract_HR_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_ContractDetail_HR_Contract" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_ContractAllowances_HR_ContractDetail" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_ContractAllowances_HR_PayrollAllowances" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_ContractDetail_HR_ContractDetail" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_ContractDetail_HR_ContractTime" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_ContractDetail_HR_ContractType" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_ContractDetail_HR_Employee1" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_ContractDetail_HR_PayrollCycleWage" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_ContractDetail_HR_PayrollFormPayment" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_ContractDetail_HR_PayRollWage" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_ContractDetail_HR_SALARY_Shift" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_CycleWageHistory_HR_ContractDetail" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_TimeKeepingSumary_HR_ContractDetail" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_CycleWageHistory_HR_PayrollCycleWage" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_PeriodWorkScheduleOrder_HR_DailyWorkSchedule" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_Subtitution_HR_DailyWorkSchedule" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_Employee_HR_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_Employee_HR_EmployeeGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_Employee_HR_EmployeeSubGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_Employee_HR_Organization" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_Employee_HR_SALARY_Shift" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_EmployeeDepartmant_HR_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_EmployeeJob_HR_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_EmployeeMobivi_HR_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_EmployeePayrollFormula_HR_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_EmployeePayrollTable_HR_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_EmployeeWSR_HR_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_Families_HR_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_InsuranceDetail_HR_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_IrregularIncome_HR_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_OverTime_HR_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_PayrollDetail_HR_PayrollDetail1" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_PayrollStatus_HR_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_PayrollTableDetailData_HR_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_PayrollTableInputData_HR_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_Promotion_HR_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_SettlementTaxDetail_HR_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_Subtitution_HR_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_TimeKeepingApproval_HR_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_Vacation_HR_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_VacationApprovalHistory_HR_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_VacationApprovalUser_HR_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_VacationStore_HR_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_EmployeeSubGroup_EmployeeGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_VacationExceptionApply_HR_EmployeeGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_VacationOverTimeApply_HR_EmployeeGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_EmployeePayrollFormula_HR_PayrollFormula" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_EmployeePayrollTable_HR_PayrollTable" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_VacationExceptionApply_HR_EmployeeSubGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_VacationOverTimeApply_HR_EmployeeSubGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_EmployeeWSR_HR_ObjectWSRDetail" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_EmployeeWSR_HR_WorkScheduleRule" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_Families_HR_FamilyRelationship" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_InsuranceConfig_HR_InsuranceType" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_InsuranceDetail_HR_InsuranceConfig" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_Position_HR_JobTitle" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_Promotion_HR_JobTitle" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_MasterWorkScheduleRule_HR_WorkScheduleRule" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_ObjectWSR_HR_WorkScheduleRule" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_ObjectWSRDetail_HR_ObjectWSR" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_PartOfOrganization_HR_Organization" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_Position_HR_Organization" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_Promotion_HR_Organization" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_OverTime_HR_TimeTypeGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK__HR_OverTi__OverT__1352D76D" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK__HR_OverTi__OverT__347EC10E" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_PayrollByFormula" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_PayrollDetail_HR_PayrollDetail" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_PayrollStatus_HR_Payroll" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_PayrollCycleWageAllocation_HR_PayrollCycleWage" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_PayrollCycleWageDetail_HR_PayrollCycleWage" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_PayrollSumary_HR_PayrollCycleWage" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_PayrollTableDetailData_HR_PayrollCycleWage" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_PayrollTableInputData_HR_PayrollCycleWage" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_PayrollDetail_HR_PayrollCycleWageDetail" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_PayrollStatus_HR_PayrollCycleWageDetail" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_TimeKeepingSumary_HR_PayrollCycleWageDetail" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_Payroll_HR_Payroll" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_PayrollDataTime_HR_ParollData" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_PayrollDataTime_HR_TimeType" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_PayrollSalaryRank_HR_PayrollWageScale" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_PayRollWage_HR_PayrollSalaryRank" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_PayrollTableDetail_HR_PayrollTable" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_PayrollTableInput_HR_PayrollTable" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_PayrollTableDetailData_HR_PayrollTableDetail" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_PayrollTableInputData_HR_PayrollTableInputData" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_PeriodWorkScheduleOrder_HR_PeriodWorkSchedule" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_PWS_WSR_HR_PeriodWorkSchedule" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_Promotion_HR_Position" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_PWS_WSR_HR_WorkScheduleRule" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_SALARY_Shift_HR_TimeTypeGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_SettlementTaxDetail_HR_SettlementTax" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK__HR_Subtit__Subti__3572E547" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK__HR_Subtit__Subti__39788055" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_TimeKeepingApproval_HR_TimeKeeping" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_TimeKeepingDetail_HR_TimeKeeping" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_TimeKeepingApproval_HR_TimeType" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_VacationExceptionApply_HR_TimeTypeGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_VacationOverTimeApply_HR_TimeTypeGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_Vacation_HR_VacationType" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_VacationApprovalHistory_HR_Vacation" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_VacationDetail_HR_Vacation" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_VacationApprovalUser_HR_VacationApproval" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_VacationExceptionApply_HR_VacationException" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_VacationStore_HR_VacationType" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK_HR_VacationType_HR_VacationTypeGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.HR_TimeType_TimeTypeGroup" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

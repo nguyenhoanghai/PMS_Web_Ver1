@@ -1,0 +1,158 @@
+﻿@{
+    ViewBag.Title = "LCDError";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+ <style>
+        
+        #tableproductivity {
+            width:100%;
+            height: 100%;
+        }
+         .header {
+           
+            width: 100%;
+            
+        }
+          .content {           
+            width:100%;            
+        }
+           .title{
+           
+            width:100%;            
+        }
+        #header {
+            height:100%;
+            width:100%;
+        }
+       
+         #content  {
+            height:100%;
+            width:100%;
+        }
+        
+          #title{
+            height:100%;
+            width:100%;
+        }
+         
+       #header  td {
+            
+            text-align:center;            
+            line-height: 40px;
+        }
+       #header  .logo{          
+           vertical-align: middle;
+        }
+       #header  .title{
+          
+           
+            vertical-align: middle;
+        }
+       #header  .time{
+           
+          
+            vertical-align: middle;
+        }      
+       #content  td {
+            border: 2px solid black;
+            text-align:center;            
+            line-height: 40px;
+        }
+       #title  td {
+            border: 2px solid black;
+            text-align:center;           
+            line-height: 40px;
+        }
+     #content .error {
+        height:120px;
+     }
+      #content .grouperror {
+        height:120px;
+     } 
+    </style>
+<script src="~/Scripts/QLNS/ShowLCDNS/LCDError.js"></script>
+    <table id="tableproductivity">
+        <tbody>
+           <tr class="header">
+               <td>
+                   <table id="header">
+                       <tbody>
+                           <tr>
+                               <td class="logo">
+                                   <img src="~/Content/img/logocompany.png" />
+                               </td>
+                               <td class="title" id="lineName">THÔNG TIN CHI TIẾT LỖI</td>                              
+                               <td class="time">
+                                   <span id="date"></span> <br /> 
+                                   <span id="timeofday"></span>
+                               </td>
+                           </tr>
+                       </tbody>
+                   </table>
+               </td>
+           </tr>
+             <tr class="title">
+                <td>
+                    <table id="title">
+                        <tbody>
+                            <tr class="lable">       
+                                <td columnint="1" id="lable1"></td>             
+                                <td columnint="2" id="lable2"></td>
+                                <td columnint="3" id="lable3"></td>
+                                <td columnint="4" id="lable4"></td>
+                            </tr>                           
+                        </tbody>
+                    </table>
+               </td>
+            </tr>
+            <tr class="content">
+                <td>
+                    <table id="content">    
+                                  
+                        <tbody>
+                           <tr class="error">
+                                <td class="title"></td>
+                                <td class="value"></td>
+                                <td class="value"></td>
+                                <td class="value"></td>
+                            </tr>
+                            <tr class="grouperror">
+                                <td class="title"></td>
+                                <td class="value"></td>
+                                <td class="value"></td>
+                                <td class="value"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+               </td>
+            </tr>
+
+           
+        </tbody>        
+    </table>
+<script>
+    $(document).ready(function () {
+        $('listLine').attr("Value", getCookie("listLine"));
+    });
+    var myVar = setInterval(function () { GetTime() }, 1000);
+    function GetTime() {
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth() + 1;
+        var yyyy = today.getFullYear();
+        if (dd < 10) {
+            dd = '0' + dd
+        }
+
+        if (mm < 10) {
+            mm = '0' + mm
+        }
+        var date = 'Ngày ' + dd + '/' + mm + '/' + yyyy;
+        var hours = today.getHours();
+        var minutes = today.getMinutes();
+        var second = today.getSeconds();
+        var time = hours + ':' + minutes + ':' + second;
+        $('#date').html(date);
+        $('#timeofday').html(time);
+    }
+</script>

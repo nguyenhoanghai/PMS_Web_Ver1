@@ -1,0 +1,182 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Danh sách màn hình</title>
+    <script src="~/Scripts/QLNS/jquery-1.10.2.js"></script>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/plugins_1.3.css" rel="stylesheet" />
+    <link href="~/Content/main_1.3.css" rel="stylesheet" />
+    <link href="~/Content/StyleBox.css" rel="stylesheet" />
+    <script src="~/Scripts/QLNS/Home/Home.js"></script>
+    
+</head>
+<body>
+    <ul id="home" class="animation-expandOpen">
+        <li action="check" tabletypeid="1" cmd="lineProductivity">
+            <div class="box box1">
+                <div class="title">Năng suất chuyền</div>
+                <div>
+                    <img class="navi" src="~/Content/img/Metrol/createRecord.png" width="" />
+                    <img class="infoi" src="~/Content/img/check.png" />
+                </div>
+            </div>
+        </li>
+        <li action="check" tabletypeid="2">
+            <div class="box box1">
+                <div class="title">
+                    Số lượng lỗi
+                </div>
+                <div>
+                    <img class="navi" src="~/Content/img/Metrol/closeRecord.png" />
+                    <img class="infoi" src="~/Content/img/check.png" />
+                </div>
+            </div>
+        </li>
+        <li action="check" tabletypeid="3">
+            <div class="box box1">
+                <div class="title">
+                    Thông tin tổng hợp
+                </div>
+                <div>
+                    <img class="navi" src="~/Content/img/Metrol/changeRecord.png" />
+                    <img class="infoi" src="~/Content/img/check.png" />
+                </div>
+            </div>
+        </li>
+        @*<li action="check" tabletypeid="4">
+                <div class="box box1">
+                    <div class="title">
+                        Năng suất cụm
+                    </div>
+                    <div>
+                        <img class="navi" src="~/Content/img/Metrol/recieve.png" />
+                        <img class="infoi" src="~/Content/img/check.png" />
+                    </div>
+                </div>
+            </li>*@
+        <li action="check" tabletypeid="4">
+            <div class="box box1">
+                <div class="title">
+                    Bảng KanBan 
+                </div>
+                <div>
+                    <img class="navi" src="~/Content/img/Metrol/report.png" style="height:90px" />
+                    <img class="infoi" src="~/Content/img/check.png" />
+                </div>
+            </div>
+        </li>
+        <li action="check" tabletypeid="6">
+            <div class="box box1" title="Biểu đồ năng suất của chuyền theo giờ">
+                <div class="title">
+                    Biểu đồ NS theo giờ
+                </div>
+                <div>
+                    <img class="navi" src="~/Content/img/Metrol/report1.png" style="height:90px" />
+                    <img class="infoi" src="~/Content/img/check.png" />
+                </div>
+            </div>
+        </li>
+        <li action="check" tabletypeid="8">
+            <div class="box box1" title="Biểu đồ năng suất thành phẩm thoát chuyền của chuyền theo giờ">
+                <div class="title">
+                    Biểu đồ TP thoát chuyền theo giờ
+                </div>
+                <div>
+                    <img class="navi" src="~/Content/img/Metrol/report1.png" style="height:90px" />
+                    <img class="infoi" src="~/Content/img/check.png" />
+                </div>
+            </div>
+        </li>
+        <li action="check" tabletypeid="10">
+            <div class="box box1">
+                <div class="title">
+                    Biểu đồ lỗi của chuyền
+                </div>
+                <div>
+                    <img class="navi" src="~/Content/img/Metrol/report1.png" style="height:90px" />
+                    <img class="infoi" src="~/Content/img/check.png" />
+                </div>
+            </div>
+        </li>
+        <li action="check" tabletypeid="7">
+            <div class="box box1" title="Biểu đồ năng suất các chuyền theo ngày">
+                <div class="title">
+                    Biểu đồ NS Tổng Hợp
+                </div>
+                <div>
+                    <img class="navi" src="~/Content/img/Metrol/report1.png" style="height:90px" />
+                    <img class="infoi" src="~/Content/img/check.png" />
+                </div>
+            </div>
+        </li>
+        <li action="check" tabletypeid="9">
+            <div class="box box1" title="Biểu đồ năng suất thành phẩm thoát chuyền các chuyền theo ngày">
+                <div class="title">
+                    Biểu đồ TP thoát chuyền Tổng Hợp
+                </div>
+                <div>
+                    <img class="navi" src="~/Content/img/Metrol/report1.png" style="height:90px" />
+                    <img class="infoi" src="~/Content/img/check.png" />
+                </div>
+            </div>
+        </li>
+        <li action="check" tabletypeid="11">
+            <div class="box box1">
+                <div class="title">
+                    Biểu đồ lỗi Tổng Hợp
+                </div>
+                <div>
+                    <img class="navi" src="~/Content/img/Metrol/report1.png" style="height:90px" />
+                    <img class="infoi" src="~/Content/img/check.png" />
+                </div>
+            </div>
+        </li>
+        <li action="check" tabletypeid="12">
+            <div class="box box1">
+                <div class="title">
+                    CheckList Tổng Hợp
+                </div>
+                <div>
+                    <img class="navi" src="~/Content/img/Metrol/report1.png" style="height:90px" />
+                    <img class="infoi" src="~/Content/img/check.png" />
+                </div>
+            </div>
+        </li>
+        <li action="check" tabletypeid="13">
+            <div class="box box1">
+                <div class="title">
+                    CheckList Nguyên Liệu
+                </div>
+                <div>
+                    <img class="navi" src="~/Content/img/Metrol/report1.png" style="height:90px" />
+                    <img class="infoi" src="~/Content/img/check.png" />
+                </div>
+            </div>
+        </li>
+        @*<li action="check">
+                <a href="~/InsertProductivity/Index" target="_blank">
+                    <div class="box box1">
+                        <div class="title">
+                            Nhập Thông tin Sản Lượng
+                        </div>
+                        <div>
+                            <img class="navi" src="~/Content/img/Metrol/report1.png" style="height:90px" />
+                            <img class="infoi" src="~/Content/img/check.png" />
+                        </div>
+                    </div>
+                </a>
+            </li>*@
+    </ul>
+    <div style="clear:left"></div>
+    <div style=" margin-top:4%; text-align:center">
+        <img title="Hiển thị màn hình LCD" class="animation-expandOpen" id="butLCDShow" src="~/Content/img/window.png" style=" width: 80px; cursor: pointer;" />
+        <a href="~/InsertProductivity/Index" target="_blank" title="Nhập Sản Lượng Năng Suất Cho Chuyền"> <img src="~/Images/kedit.ico" class="animation-expandOpen" style=" width: 80px;  cursor: pointer;" /></a>
+    </div>
+</body>
+</html>
+
+
+

@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <title>@ViewBag.Title</title>
+
+    <link href="~/Content/Jquery.alerts/jquery.alerts.css" rel="stylesheet" />
+
+    <script src="~/Scripts/QLNS/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+
+    <script src="~/Scripts/QLNS/jquery.alerts.js"></script>
+    <script src="~/Scripts/QLNS/common.js"></script>
+    <script src="~/Scripts/QLNS/cookie.js"></script>
+    <script src="~/Scripts/accounting.js"></script>
+    <script src="~/Scripts/QLNS/Common_Hai.js"></script>
+
+    <script src="~/Scripts/TotemTicker/jquery.totemticker.js"></script>
+
+    <!-- Compiled and minified CSS --> 
+    <link href="~/Content/Materialize/materialize.min.css" rel="stylesheet" />
+
+    <!-- Compiled and minified JavaScript --> 
+    <script src="~/Content/Materialize/materialize.min.js"></script>
+    <style>
+        .panel {
+            margin-bottom: 20px;
+            background-color: #fff;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+            box-shadow: 0 1px 1px rgba(0,0,0,.05);
+        }
+
+        .panel-default {
+            border-color: #ddd;
+        }
+
+            .panel-default > .panel-heading {
+                color: #333;
+                background-color: #f5f5f5;
+                border-color: #ddd;
+            }
+
+        .panel-heading {
+            padding: 10px 15px;
+            border-bottom: 1px solid transparent;
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+        }
+
+        .panel-body {
+            padding: 15px;
+        }
+
+        .panel-primary > .panel-heading {
+            color: #fff;
+            background-color: #337ab7;
+            border-color: #337ab7;
+        }
+
+        .panel-primary {
+            border-color: #337ab7;
+        }
+
+        .dropdown-content {
+            max-height: 300px;
+        }
+
+        table tfoot {
+            background-color: #337ab7;
+            color: white;
+            font-weight: bold;
+        }
+         table thead th{
+             padding:5px
+         }
+        table tbody td,
+        table tfoot td{padding:0}
+    </style>
+</head>
+<body>
+    <div class="progress hide" style="margin: 0; height: 6px;">
+        <div class="indeterminate"></div>
+    </div>
+    <div style="padding: 10px 20px 20px 20px">
+        @RenderBody()
+    </div>
+
+
+    @*<div id="loading" style="display:none">
+            <img src="~/Content/MasterPage/Images/loading%20(1).gif" />
+        </div>
+        <style>
+            #loading {
+                z-index: 9999;
+                position: fixed;
+                text-align: center;
+                padding: 20% 0 25% 0;
+                background: rgba(220, 220, 220, 0.29);
+                top: 0 !important;
+            }
+        </style>*@
+
+    <script>
+        $(document).ready(function () {
+
+            if (navigator.userAgent.match(/Android/i)) {
+                window.scrollTo(0, 0); // reset in case prev not scrolled
+                var nPageH = $(document).height();
+                var nViewH = window.outerHeight;
+                if (nViewH > nPageH) {
+                    nViewH -= 250;
+                    $('BODY').css('height', nViewH + 'px');
+                }
+                window.scrollTo(0, 1);
+            }
+
+
+            $('select').formSelect(); 
+
+        });
+    </script>
+
+</body>
+</html>

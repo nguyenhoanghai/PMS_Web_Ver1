@@ -1,0 +1,274 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Danh sách màn hình</title>
+    <script src="~/Scripts/QLNS/jquery-1.10.2.js"></script>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/Bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/Bootstrap/css/bootstrap-responsive.css" rel="stylesheet" />
+    <link href="~/Content/plugins_1.3.css" rel="stylesheet" />
+    <link href="~/Content/main_1.3.css" rel="stylesheet" />
+    <link href="~/Content/StyleBox.css" rel="stylesheet" />
+
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="~/Scripts/QLNS/Boostrap/bootstrap.js"></script>
+    <script src="~/Scripts/QLNS/jquery.alerts.js"></script>
+    <script src="~/Scripts/QLNS/common.js"></script>
+    <script src="~/Scripts/QLNS/cookie.js"></script>
+    <script src="~/Scripts/accounting.js"></script>
+    <script src="~/Scripts/QLNS/Common_Hai.js"></script>
+    <script src="~/Scripts/QLNS/Home/Home.js"></script>
+    <style>
+        .modalsmall {
+            width: 270px;
+            left: 60%;
+            height: 150px;
+            overflow: auto !important;
+        }
+
+        .modal-header {
+            background-color: #4195DD;
+            font-weight: bold;
+        }
+
+        .modal-title {
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+<body>
+    <ul id="home" class="animation-expandOpen">
+        <li action="check" tabletypeid="1" cmd="lineProductivity" qlns>
+            <div class="box box1">
+                <div class="title">Năng suất chuyền</div>
+                <div>
+                    <img class="navi" src="~/Content/img/Metrol/createRecord.png" width="" />
+                    <img class="infoi" src="~/Content/img/check.png" />
+                </div>
+            </div>
+        </li>
+        <li action="check" tabletypeid="14" cmd="lineProductivity" qlns>
+            <div class="box box1">
+                <div class="title">Năng suất chuyền Mới</div>
+                <div>
+                    <img class="navi" src="~/Content/img/Metrol/createRecord.png" width="" />
+                    <img class="infoi" src="~/Content/img/check.png" />
+                </div>
+            </div>
+        </li>
+        <li action="check" tabletypeid="2" qlns>
+            <div class="box box1">
+                <div class="title">
+                    Số lượng lỗi
+                </div>
+                <div>
+                    <img class="navi" src="~/Content/img/Metrol/closeRecord.png" />
+                    <img class="infoi" src="~/Content/img/check.png" />
+                </div>
+            </div>
+        </li>
+        <li action="check" tabletypeid="3" qlns>
+            <a href="~/Productivity/LCDTongHopN_Partial" target="_blank">
+                <div class="box box1">
+                    <div class="title">
+                        Thông tin tổng hợp
+                    </div>
+                    <div>
+                        <img class="navi" src="~/Content/img/Metrol/changeRecord.png" />
+                        <img class="infoi" src="~/Content/img/check.png" />
+                    </div>
+                </div>
+            </a>
+            
+        </li>       
+        <li action="check" tabletypeid="4" qlns>
+            <div class="box box1">
+                <div class="title">
+                    Bảng KanBan
+                </div>
+                <div>
+                    <img class="navi" src="~/Content/img/Metrol/report.png" style="height:90px" />
+                    <img class="infoi" src="~/Content/img/check.png" />
+                </div>
+            </div>
+        </li>
+        <li action="check" tabletypeid="5" qlns>
+            <div class="box box1">
+                <div class="title">
+                    Bảng Hoàn Tất
+                </div>
+                <div>
+                    <img class="navi" src="~/Content/img/Metrol/pac.png" style="height:90px" />
+                    <img class="infoi" src="~/Content/img/check.png" />
+                </div>
+            </div>
+        </li>
+        <li action="check" tabletypeid="6" qlns>
+            <div class="box box1" title="Biểu đồ năng suất của chuyền theo giờ">
+                <div class="title">
+                    Biểu đồ NS theo giờ
+                </div>
+                <div>
+                    <img class="navi" src="~/Content/img/Metrol/report1.png" style="height:90px" />
+                    <img class="infoi" src="~/Content/img/check.png" />
+                </div>
+            </div>
+        </li>
+        <li action="check" tabletypeid="8" qlns>
+            <div class="box box1" title="Biểu đồ năng suất thành phẩm thoát chuyền của chuyền theo giờ">
+                <div class="title">
+                    Biểu đồ TP thoát chuyền theo giờ
+                </div>
+                <div>
+                    <img class="navi" src="~/Content/img/Metrol/report1.png" style="height:90px" />
+                    <img class="infoi" src="~/Content/img/check.png" />
+                </div>
+            </div>
+        </li>
+        <li action="check" tabletypeid="10" qlns>
+            <div class="box box1">
+                <div class="title">
+                    Biểu đồ lỗi của chuyền
+                </div>
+                <div>
+                    <img class="navi" src="~/Content/img/Metrol/report1.png" style="height:90px" />
+                    <img class="infoi" src="~/Content/img/check.png" />
+                </div>
+            </div>
+        </li>
+        <li action="check" tabletypeid="7" qlns>
+            <div class="box box1" title="Biểu đồ năng suất các chuyền theo ngày">
+                <div class="title">
+                    Biểu đồ NS Tổng Hợp
+                </div>
+                <div>
+                    <img class="navi" src="~/Content/img/Metrol/report1.png" style="height:90px" />
+                    <img class="infoi" src="~/Content/img/check.png" />
+                </div>
+            </div>
+        </li>
+        <li action="check" tabletypeid="9" qlns>
+            <div class="box box1" title="Biểu đồ năng suất thành phẩm thoát chuyền các chuyền theo ngày">
+                <div class="title">
+                    Biểu đồ TP thoát chuyền Tổng Hợp
+                </div>
+                <div>
+                    <img class="navi" src="~/Content/img/Metrol/report1.png" style="height:90px" />
+                    <img class="infoi" src="~/Content/img/check.png" />
+                </div>
+            </div>
+        </li>
+        <li action="check" tabletypeid="11" qlns>
+            <div class="box box1">
+                <div class="title">
+                    Biểu đồ lỗi Tổng Hợp
+                </div>
+                <div>
+                    <img class="navi" src="~/Content/img/Metrol/report1.png" style="height:90px" />
+                    <img class="infoi" src="~/Content/img/check.png" />
+                </div>
+            </div>
+        </li>
+
+        <li action="check" tabletypeid="15" qlns>
+            <div class="box box1">
+                <div class="title">
+                    Hoàn tất Xưởng 1
+                </div>
+                <div>
+                    <img class="navi" src="~/Content/img/Metrol/pac.png" style="height:90px" />
+                    <img class="infoi" src="~/Content/img/check.png" />
+                </div>
+            </div>
+        </li> 
+        <li action="check" tabletypeid="16" qlns>
+            <div class="box box1">
+                <div class="title">
+                    Hoàn tất Xưởng 2
+                </div>
+                <div>
+                    <img class="navi" src="~/Content/img/Metrol/pac.png" style="height:90px" />
+                    <img class="infoi" src="~/Content/img/check.png" />
+                </div>
+            </div>
+        </li> 
+        <li action="check" tabletypeid="17" qlns>
+            <div class="box box1">
+                <div class="title">
+                    Hoàn tất Xưởng 3
+                </div>
+                <div>
+                    <img class="navi" src="~/Content/img/Metrol/pac.png" style="height:90px" />
+                    <img class="infoi" src="~/Content/img/check.png" />
+                </div>
+            </div>
+        </li> 
+
+
+
+
+
+
+
+
+        <li action="check" tabletypeid="12" checklist>
+            <div class="box box1">
+                <div class="title">
+                    CheckList Tổng Hợp
+                </div>
+                <div>
+                    <img class="navi" src="~/Content/img/Metrol/report1.png" style="height:90px" />
+                    <img class="infoi" src="~/Content/img/check.png" />
+                </div>
+            </div>
+        </li>
+        <li tabletypeid="13" checklist cl-nl>
+            <div class="box box1">
+                <div class="title">
+                    CheckList Nguyên Liệu
+                </div>
+                <div>
+                    <img class="navi" src="~/Content/img/Metrol/report1.png" style="height:90px" />
+                    <img class="infoi" src="~/Content/img/check.png" />
+                </div>
+            </div>
+        </li>
+        @*<li action="check">
+                <a href="~/InsertProductivity/Index" target="_blank">
+                    <div class="box box1">
+                        <div class="title">
+                            Nhập Thông tin Sản Lượng
+                        </div>
+                        <div>
+                            <img class="navi" src="~/Content/img/Metrol/report1.png" style="height:90px" />
+                            <img class="infoi" src="~/Content/img/check.png" />
+                        </div>
+                    </div>
+                </a>
+            </li>*@
+    </ul>
+    <div style="clear:left"></div>
+    <div style=" margin-top:4%; text-align:center">
+        <img title="Hiển thị màn hình LCD" class="animation-expandOpen" id="butLCDShow" src="~/Content/img/window.png" style=" width: 80px; cursor: pointer;" />
+        <a qlns href="~/InsertProductivity/Index" target="_blank" title="Nhập Sản Lượng Năng Suất Cho Chuyền"> <img src="~/Images/kedit.ico" class="animation-expandOpen" style=" width: 80px;  cursor: pointer;" /></a>
+    </div>
+
+
+
+    <div class="modal  fade modalsmall " id="popup_Education" data-backdrop="static" data-keyboard="false">
+        <div class="modal-header">
+            <button aria-hidden="true" data-dismiss="modal" cancel class="close" type="button">×</button>
+            <h4 class="modal-title">Chọn Nhóm Công Việc</h4>
+        </div>
+        <div class="modal-body form-inline">
+            <div class="rows">
+                @Html.DropDownList("jGroup"); 
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+﻿.navbar-brand-home {
+    padding: 5px 15px;
+}
+
+.navbar-brand > img {
+   width:38px;
+}
+
+.padding-left-none {
+    padding-left:0px;
+}
+
+.padding-5-percent {
+    padding:0px 5%;
+}
+body {
+    background-color:rgb(205, 206, 207);
+}
+
+.padding-right-50px {
+    padding-right:50px;
+}
+@media (min-width: 1000px) {
+    .navbar-form .form-control {
+        display: inline-block;
+        width: 400px;
+        vertical-align: middle;
+    }
+}
+
+/*Edit Jquery mobile*/
+
+.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
+    text-shadow: none;
+}
+.ui-page-theme-a a, html .ui-bar-a a, html .ui-body-a a, html body .ui-group-theme-a a {
+    font-weight: 700;    
+}
+
+.ui-input-text input, .ui-input-search input, textarea.ui-input-text {
+    padding:6px 12px;
+}
+
+.dropdown label {
+    display: initial;
+}
+
+button.ui-btn, .ui-controlgroup-controls button.ui-btn-icon-notext {
+    width: initial;
+}
+
+
+.navbar-header .ui-button {
+    background-color: transparent;
+}
+
+#leftpanel3 {
+    z-index: 1030;
+}
+
+.margin-top-70px {
+    margin-top:70px;
+}
+
+/*Custom select menu with filter*/
+ .ui-selectmenu.ui-popup .ui-input-search {
+        margin-left: .5em;
+        margin-right: .5em;
+    }
+
+    .ui-selectmenu.ui-dialog .ui-content {
+        padding-top: 0;
+    }
+
+    .ui-selectmenu.ui-dialog .ui-selectmenu-list {
+        margin-top: 0;
+    }
+
+    .ui-selectmenu.ui-popup .ui-selectmenu-list li.ui-first-child .ui-btn {
+        border-top-width: 1px;
+        -webkit-border-radius: 0;
+        border-radius: 0;
+    }
+
+    .ui-selectmenu.ui-dialog .ui-header {
+        border-bottom-width: 1px;
+    }
+
+.ui-mobile .ui-page-active {
+    overflow-x: visible;
+}

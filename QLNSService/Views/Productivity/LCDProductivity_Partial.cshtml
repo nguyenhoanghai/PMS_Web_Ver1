@@ -1,0 +1,130 @@
+﻿<script src="~/Scripts/QLNS/ShowLCDNS/ShowLCDNS.js"></script>
+<style>
+    /*#tableproductivity {
+        width: 100%;
+    }
+
+    #tableproductivity .header {
+        height: 25%;
+        width: 100%;
+    }
+
+    #tableproductivity .content {
+        height: 60%;
+        width: 100%;
+    }
+
+     #tableproductivity .footer {
+        height: 15%;
+        width: 100%;
+    }
+
+    #tableproductivity #header {
+        height: 100%;
+        width: 100%;
+    }
+
+    #tableproductivity #content {
+        height: 100%;
+        width: 100%;
+    }
+
+    #tableproductivity #footer {
+        height: 100%;
+        width: 100%;
+    }
+
+    #tableproductivity #header td {
+        text-align: center;
+        line-height: 40px;
+    }
+
+    #tableproductivity #header .logo {
+        vertical-align: middle;
+    }
+
+    #tableproductivity #header .title {
+        color: black;
+        font-size: 30px;
+        text-decoration: dashed;
+        font-weight: bold;
+        vertical-align: middle;
+    }
+
+    #tableproductivity #header .time {
+        color: black;
+        font-size: 30px;
+        vertical-align: middle;
+    }
+
+    #tableproductivity #header .ledalert {
+        color: black;
+        vertical-align: middle;
+    }
+
+    #tableproductivity #content td {
+        border: 2px solid black;
+        text-align: center;
+        line-height: 40px;
+    }
+
+    #tableproductivity #footer td {
+        border: 2px solid black;
+        text-align: center;
+        line-height: 40px;
+    }
+
+    #tableproductivity #footer .title {
+        height: 50%;
+    }
+
+    #tableproductivity #footer .value {
+        height: 50%;
+    }*/
+</style>
+
+<input type="hidden" id="listLine" />
+<table id="tableproductivity">
+    <tbody>
+        <tr class="header">
+            <td>
+                <table id="header">
+                    <tbody>
+                        <tr>
+                            <td class="logo">
+                                <img src="~/Content/img/logocompany.png" />
+                            </td>
+                            <td class="title" id="lineName">BẢNG NĂNG SUẤT</td>
+                            <td class="ledalert">
+                                <img id="lightAlert" src="~/Content/ShowLCD/circle_red.png" />
+                            </td>
+                            <td class="time">
+                                <span id="date" date></span> <br />
+                                <span id="timeofday" time></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+
+        <tr class="content">
+            <td>
+                <table id="content">
+                    <tbody></tbody>
+                </table>
+            </td>
+        </tr>
+
+        <tr class="footer">
+            <td>
+                <table id="footer">
+                    <tbody>
+                        <tr class="titleFooter"></tr>
+                        <tr class="valueFooter"></tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table> 

@@ -1,0 +1,366 @@
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\QLNSService.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\QLNSService.pdb
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\Antlr3.Runtime.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\EntityFramework.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\GPRO.Core.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\Microsoft.Data.Edm.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\Microsoft.Data.OData.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\Newtonsoft.Json.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\System.Spatial.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\System.Web.Helpers.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\System.Web.Http.OData.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\System.Web.Http.Tracing.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\System.Web.Mvc.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\System.Web.Optimization.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\System.Web.Providers.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\System.Web.Razor.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\System.Web.WebPages.Deployment.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\System.Web.WebPages.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\System.Web.WebPages.Razor.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\WebGrease.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\SystemGPRO.Serial.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\GPRO.Core.pdb
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\EntityFramework.xml
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\Newtonsoft.Json.xml
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\System.Web.Helpers.xml
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\System.Web.Mvc.xml
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\System.Web.Razor.xml
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\System.Web.WebPages.xml
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\System.Web.WebPages.Deployment.xml
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\System.Web.WebPages.Razor.xml
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\System.Web.Http.Tracing.xml
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\System.Web.Http.OData.xml
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\Microsoft.Data.Edm.xml
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\Microsoft.Data.OData.xml
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\System.Spatial.xml
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\SystemGPRO.Serial.pdb
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\de\Microsoft.Data.OData.resources.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\es\Microsoft.Data.OData.resources.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\it\Microsoft.Data.OData.resources.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\de\System.Spatial.resources.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\es\System.Spatial.resources.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\fr\System.Spatial.resources.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\it\System.Spatial.resources.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\ja\System.Spatial.resources.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\ko\System.Spatial.resources.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\ru\System.Spatial.resources.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\zh-Hans\System.Spatial.resources.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\zh-Hant\System.Spatial.resources.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\obj\Release\QLNSService.csprojResolveAssemblyReference.cache
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\obj\Release\QLNSService.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\obj\Release\QLNSService.pdb
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\System.Net.Http.Formatting.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\System.Web.Http.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\System.Web.Http.WebHost.dll
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\System.Net.Http.Formatting.xml
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\System.Web.Http.xml
+C:\Users\nslam\Documents\Visual Studio 2012\Projects\QLNSService\QLNSService\bin\System.Web.Http.WebHost.xml
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\QLNSService.dll.config
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\QLNSService.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\QLNSService.pdb
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\Antlr3.Runtime.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\EntityFramework.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\Microsoft.Data.Edm.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\Microsoft.Data.OData.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\Microsoft.Web.Infrastructure.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\Newtonsoft.Json.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\System.Net.Http.Formatting.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\System.Spatial.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\System.Web.Helpers.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\System.Web.Http.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\System.Web.Http.OData.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\System.Web.Http.Tracing.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\System.Web.Http.WebHost.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\System.Web.Mvc.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\System.Web.Optimization.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\System.Web.Providers.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\System.Web.Razor.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\System.Web.WebPages.Deployment.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\System.Web.WebPages.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\System.Web.WebPages.Razor.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\WebGrease.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\SystemGPRO.Serial.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\GPRO.Core.pdb
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\Newtonsoft.Json.xml
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\System.Net.Http.Formatting.xml
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\System.Web.Http.xml
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\System.Web.Http.WebHost.xml
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\EntityFramework.xml
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\System.Web.Helpers.xml
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\System.Web.Mvc.xml
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\System.Web.Razor.xml
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\System.Web.WebPages.xml
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\System.Web.WebPages.Deployment.xml
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\System.Web.WebPages.Razor.xml
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\System.Web.Http.Tracing.xml
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\System.Web.Http.OData.xml
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\Microsoft.Data.Edm.xml
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\Microsoft.Data.OData.xml
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\System.Spatial.xml
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\SystemGPRO.Serial.pdb
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\de\Microsoft.Data.Edm.resources.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\es\Microsoft.Data.Edm.resources.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\it\Microsoft.Data.Edm.resources.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\de\Microsoft.Data.OData.resources.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\es\Microsoft.Data.OData.resources.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\fr\Microsoft.Data.OData.resources.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\it\Microsoft.Data.OData.resources.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\ja\Microsoft.Data.OData.resources.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\ko\Microsoft.Data.OData.resources.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\ru\Microsoft.Data.OData.resources.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\de\System.Spatial.resources.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\es\System.Spatial.resources.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\fr\System.Spatial.resources.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\it\System.Spatial.resources.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\ja\System.Spatial.resources.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\ko\System.Spatial.resources.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\ru\System.Spatial.resources.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\zh-Hans\System.Spatial.resources.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\bin\zh-Hant\System.Spatial.resources.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\obj\Release\QLNSService.csprojResolveAssemblyReference.cache
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\obj\Release\QLNSService.dll
+D:\GPRO\Version 2_Source\QLNS_ShowLCD\trunk\QLNSService\QLNSService\obj\Release\QLNSService.pdb
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\QLNSService.dll.config
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\QLNSService.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\QLNSService.pdb
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\Antlr3.Runtime.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\EntityFramework.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\Microsoft.Data.Edm.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\Microsoft.Data.OData.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\Microsoft.Web.Infrastructure.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\Newtonsoft.Json.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Net.Http.Formatting.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Spatial.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Web.Helpers.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Web.Http.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Web.Http.OData.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Web.Http.Tracing.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Web.Http.WebHost.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Web.Mvc.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Web.Optimization.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Web.Providers.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Web.Razor.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Web.WebPages.Deployment.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Web.WebPages.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Web.WebPages.Razor.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\WebGrease.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\Newtonsoft.Json.xml
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Net.Http.Formatting.xml
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Web.Http.xml
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Web.Http.WebHost.xml
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\EntityFramework.xml
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Web.Helpers.xml
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Web.Mvc.xml
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Web.Razor.xml
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Web.WebPages.xml
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Web.WebPages.Deployment.xml
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Web.WebPages.Razor.xml
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Web.Http.Tracing.xml
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Web.Http.OData.xml
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\Microsoft.Data.Edm.xml
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\Microsoft.Data.OData.xml
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Spatial.xml
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\de\Microsoft.Data.Edm.resources.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\es\Microsoft.Data.Edm.resources.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\it\Microsoft.Data.Edm.resources.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\de\Microsoft.Data.OData.resources.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\es\Microsoft.Data.OData.resources.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\fr\Microsoft.Data.OData.resources.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\it\Microsoft.Data.OData.resources.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\ja\Microsoft.Data.OData.resources.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\ko\Microsoft.Data.OData.resources.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\ru\Microsoft.Data.OData.resources.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\de\System.Spatial.resources.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\es\System.Spatial.resources.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\fr\System.Spatial.resources.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\it\System.Spatial.resources.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\ja\System.Spatial.resources.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\ko\System.Spatial.resources.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\ru\System.Spatial.resources.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\zh-Hans\System.Spatial.resources.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\bin\zh-Hant\System.Spatial.resources.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\obj\Release\QLNSService.csprojResolveAssemblyReference.cache
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\obj\Release\QLNSService.dll
+D:\GPRO\Version 2_Source\QLNSService_V2\trunk\www\QLNSService\obj\Release\QLNSService.pdb
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\QLNSService.dll.config
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\QLNSService.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\QLNSService.pdb
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\Antlr3.Runtime.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\EntityFramework.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\Microsoft.Data.Edm.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\Microsoft.Data.OData.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\Microsoft.Web.Infrastructure.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\Newtonsoft.Json.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Net.Http.Formatting.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Spatial.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Web.Helpers.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Web.Http.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Web.Http.OData.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Web.Http.Tracing.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Web.Http.WebHost.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Web.Mvc.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Web.Optimization.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Web.Providers.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Web.Razor.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Web.WebPages.Deployment.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Web.WebPages.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Web.WebPages.Razor.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\WebGrease.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\Newtonsoft.Json.xml
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Net.Http.Formatting.xml
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Web.Http.xml
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Web.Http.WebHost.xml
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\EntityFramework.xml
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Web.Helpers.xml
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Web.Mvc.xml
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Web.Razor.xml
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Web.WebPages.xml
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Web.WebPages.Deployment.xml
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Web.WebPages.Razor.xml
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Web.Http.Tracing.xml
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Web.Http.OData.xml
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\Microsoft.Data.Edm.xml
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\Microsoft.Data.OData.xml
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\System.Spatial.xml
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\de\Microsoft.Data.Edm.resources.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\es\Microsoft.Data.Edm.resources.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\fr\Microsoft.Data.Edm.resources.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\it\Microsoft.Data.Edm.resources.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\ja\Microsoft.Data.Edm.resources.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\ko\Microsoft.Data.Edm.resources.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\ru\Microsoft.Data.Edm.resources.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\de\Microsoft.Data.OData.resources.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\es\Microsoft.Data.OData.resources.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\fr\Microsoft.Data.OData.resources.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\it\Microsoft.Data.OData.resources.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\ja\Microsoft.Data.OData.resources.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\ko\Microsoft.Data.OData.resources.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\ru\Microsoft.Data.OData.resources.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\de\System.Spatial.resources.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\es\System.Spatial.resources.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\fr\System.Spatial.resources.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\it\System.Spatial.resources.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\ja\System.Spatial.resources.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\ko\System.Spatial.resources.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\ru\System.Spatial.resources.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\zh-Hans\System.Spatial.resources.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\bin\zh-Hant\System.Spatial.resources.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\obj\Release\QLNSService.csprojResolveAssemblyReference.cache
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\obj\Release\QLNSService.dll
+E:\Gpro Company\Web Source\QLNSService_V2\trunk\www\QLNSService\obj\Release\QLNSService.pdb
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\QLNSService.dll.config
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\QLNSService.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\QLNSService.pdb
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\Antlr3.Runtime.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\EntityFramework.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\GPRO.Ultilities.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\Microsoft.Data.Edm.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\Microsoft.Data.OData.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\Microsoft.Web.Infrastructure.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\Newtonsoft.Json.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\PMS.Business.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\PMS.Data.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\System.Net.Http.Formatting.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\System.Spatial.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\System.Web.Helpers.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\System.Web.Http.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\System.Web.Http.OData.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\System.Web.Http.Tracing.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\System.Web.Http.WebHost.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\System.Web.Mvc.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\System.Web.Optimization.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\System.Web.Providers.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\System.Web.Razor.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\System.Web.WebPages.Deployment.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\System.Web.WebPages.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\System.Web.WebPages.Razor.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\WebGrease.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\Newtonsoft.Json.xml
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\System.Net.Http.Formatting.xml
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\System.Web.Http.xml
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\System.Web.Http.WebHost.xml
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\EntityFramework.xml
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\System.Web.Helpers.xml
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\System.Web.Mvc.xml
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\System.Web.Razor.xml
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\System.Web.WebPages.xml
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\System.Web.WebPages.Deployment.xml
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\System.Web.WebPages.Razor.xml
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\System.Web.Http.Tracing.xml
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\System.Web.Http.OData.xml
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\Microsoft.Data.Edm.xml
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\Microsoft.Data.OData.xml
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\System.Spatial.xml
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\de\Microsoft.Data.Edm.resources.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\es\Microsoft.Data.Edm.resources.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\fr\Microsoft.Data.Edm.resources.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\it\Microsoft.Data.Edm.resources.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\ja\Microsoft.Data.Edm.resources.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\ko\Microsoft.Data.Edm.resources.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\ru\Microsoft.Data.Edm.resources.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\de\Microsoft.Data.OData.resources.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\es\Microsoft.Data.OData.resources.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\fr\Microsoft.Data.OData.resources.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\it\Microsoft.Data.OData.resources.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\ja\Microsoft.Data.OData.resources.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\ko\Microsoft.Data.OData.resources.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\ru\Microsoft.Data.OData.resources.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\de\System.Spatial.resources.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\es\System.Spatial.resources.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\fr\System.Spatial.resources.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\it\System.Spatial.resources.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\ja\System.Spatial.resources.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\ko\System.Spatial.resources.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\ru\System.Spatial.resources.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\zh-Hans\System.Spatial.resources.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\bin\zh-Hant\System.Spatial.resources.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\obj\Release\QLNSService.csproj.AssemblyReference.cache
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\obj\Release\QLNSService.csproj.CoreCompileInputs.cache
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\obj\Release\QLNSService.csproj.CopyComplete
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\obj\Release\QLNSService.dll
+E:\Hai_GPRO\Git PMS\PMS_Web_Ver1\QLNSService\obj\Release\QLNSService.pdb

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="63ecc400f7cb46d4ab7af34514426848" Name="Diagram1">
+        <EntityTypeShape EntityType="AccountModel.SArea" Width="1.5" PointX="3" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountModel.SBank" Width="1.5" PointX="5.25" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountModel.SBankBranch" Width="1.5" PointX="7.5" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountModel.SCheckList_Config" Width="1.5" PointX="10" PointY="33" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountModel.SColor" Width="1.5" PointX="0.75" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountModel.SCompany" Width="1.5" PointX="7.75" PointY="18.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountModel.SCompanyModule" Width="1.5" PointX="12.25" PointY="20.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountModel.SConfig" Width="1.5" PointX="14.75" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountModel.SCountry" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountModel.SDistrict" Width="1.5" PointX="10.5" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountModel.SErrorLog" Width="1.5" PointX="14.75" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountModel.SFeature" Width="1.5" PointX="10" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountModel.SHospital" Width="1.5" PointX="12.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountModel.SLevelCompany" Width="1.5" PointX="2.75" PointY="17.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountModel.SLevelEducation" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountModel.SLevelForeignLanguage" Width="1.5" PointX="2.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountModel.SLevelInformatic" Width="1.5" PointX="4.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountModel.SLevelProfession" Width="1.5" PointX="15" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountModel.SMaritalStatu" Width="1.5" PointX="4.75" PointY="17.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountModel.SMenu" Width="1.5" PointX="15.25" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountModel.SMenuCategory" Width="1.5" PointX="10" PointY="40.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountModel.SModule" Width="1.5" PointX="7.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountModel.SMoneyType" Width="1.5" PointX="16.75" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountModel.SPermission" Width="1.5" PointX="10" PointY="27.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountModel.SProfessionType" Width="1.5" PointX="12.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountModel.SProvince" Width="1.5" PointX="5.25" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountModel.SRace" Width="1.5" PointX="3" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountModel.SReligion" Width="1.5" PointX="16.75" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountModel.SRoLe" Width="1.5" PointX="10" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountModel.SRolePermission" Width="1.5" PointX="12.25" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountModel.SStatu" Width="1.5" PointX="17.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountModel.SUnit" Width="1.5" PointX="17.75" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountModel.SUser" Width="1.5" PointX="10" PointY="20.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountModel.SUserRole" Width="1.5" PointX="15.25" PointY="19" IsExpanded="true" />
+        <AssociationConnector Association="AccountModel.FK__SArea__ContryID__04E4BC85" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountModel.FK__SProvince__AreaI__06CD04F7" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountModel.FK_SDistrict_SArea" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountModel.FK__SBankBran__BankI__08B54D69" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountModel.FK_SBankBranch_SCountry" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountModel.FK_SBankBranch_SDistrict" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountModel.FK_SBankBranch_SProvince" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountModel.FK_SCheckList_Config_SModule" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountModel.FK__SCompany__Parent__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountModel.FK__SUser__CompanyId__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountModel.FK_SRoLe_SCompany" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountModel.FK_Table_1_SCompany" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountModel.FK_Table_1_SUser" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountModel.FK_Table_1_SUser1" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountModel.FK_Table_1_SUser2" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountModel.FK__SProvince__Contr__05D8E0BE" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountModel.FK_SDistrict_SCountry" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountModel.FK_SHospital_SCountry" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountModel.FK_SRace_SCountry" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountModel.FK__SDistrict__Provi__07C12930" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountModel.FK_SHospital_SDistrict" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountModel.FK__SFeature__Module__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountModel.FK__SPermissi__Featu__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountModel.FK__SRolePerm__Featu__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountModel.FK_SHospital_SProvince" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountModel.FK_SLevelProfession_SProfessionType" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountModel.FK__SMenu__MenuCateg__03F0984C" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountModel.FK_SMenu_SModule" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountModel.FK_SMenuCategory_SModule" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountModel.FK__SRolePerm__Modul__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountModel.FK__SRolePerm__Pemis__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountModel.FK__SRolePerm__RoleI__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountModel.FK_SUserRole_SRoLe" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountModel.FK_SUserRole_SUser" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

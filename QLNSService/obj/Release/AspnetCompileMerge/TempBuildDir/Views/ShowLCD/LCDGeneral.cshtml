@@ -1,0 +1,165 @@
+﻿@{
+    ViewBag.Title = "LCDError";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+ <style>
+        
+        #tableproductivity {
+            width:100%;
+           
+        }
+        
+        #header {
+            height:100%;
+            width:100%;
+        }
+       
+         #content  {
+            height:100%;
+            width:100%;
+        }
+        
+          #title1{
+            height:100%;
+            width:100%;
+        }
+
+           #title2{
+            height:100%;
+            width:100%;
+        }
+
+             #footer{
+            height:100%;
+            width:100%;
+        }
+         
+       #header  td {
+            
+            text-align:center;            
+            line-height: 40px;
+        }
+      
+     body {
+        vertical-align: middle;
+     }  
+       #content  td {
+            border: 2px solid black;
+            text-align:center;            
+            line-height: 40px;
+        }
+       #title1  td {
+            border: 2px solid black;
+            text-align:center;           
+            line-height: 40px;
+        }
+        #title2  td {
+            border: 2px solid black;
+            text-align:center;           
+            line-height: 40px;
+        }
+    #footer  td {
+            border: 2px solid black;
+            text-align:center;           
+            line-height: 40px;
+        }
+    </style>
+<script src="~/Scripts/QLNS/ShowLCDNS/LCDGeneral.js"></script>
+    <table id="tableproductivity">
+        <tbody>
+           <tr class="header">
+               <td>
+                   <table id="header">
+                       <tbody>
+                           <tr>
+                               <td class="logo">
+                                   <img src="~/Content/img/logocompany.png" />
+                               </td>
+                               <td class="title" id="lineName">BẢNG THEO DÕI TIẾN ĐỘ SẢN XUẤT XƯỞNG</td>                              
+                               <td class="time">
+                                   <span id="date"></span> <br /> 
+                                   <span id="timeofday"></span>
+                               </td>
+                           </tr>
+                       </tbody>
+                   </table>
+               </td>
+           </tr>
+             <tr class="title1">
+                <td>
+                    <table id="title1">
+                        <tbody>
+                            <tr class="lable">       
+                                <td class="label1">THÁNG 1/2016</td>             
+                                <td class="label2">SẢN LƯỢNG (TH/KH): 99/16,55</td>
+                                <td class="label3">DOANH THU (TH/KH): 0/0</td>
+                                <td class="label4">NHỊP SẢN XUẤT (TH/KH): 0/0</td>
+                            </tr>                           
+                        </tbody>
+                    </table>
+               </td>
+            </tr>
+            <tr class="title2">
+                <td>
+                    <table id="title2">
+                        <tbody>
+                            <tr class="lable">       
+                                <td class="label1"></td>             
+                                <td class="label2">TH/KH NGÀY</td>
+                                <td class="label3">TH/KH THÁNG</td>
+                                <td class="label4">DOANH THU (TH/KH)</td>
+                                <td class="label5">% THỰC HIỆN</td>
+                            </tr>                           
+                        </tbody>
+                    </table>
+               </td>
+            </tr>
+            <tr class="content">
+                <td>
+                    <table id="content">
+                        <tbody>
+                           
+                        </tbody>
+                    </table>
+               </td>
+            </tr>
+             <tr class="footer">
+                <td>
+                    <table id="footer">
+                        <tbody>
+                           <tr class="title">                                
+                            </tr>
+                            <tr class="value">                                
+                            </tr>
+                        </tbody>
+                    </table>
+               </td>
+            </tr>
+           
+        </tbody>        
+    </table>
+<script>
+   
+    var myVar = setInterval(function () { GetTime() }, 1000);
+    function GetTime() {
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth() + 1;
+        var yyyy = today.getFullYear();
+        if (dd < 10) {
+            dd = '0' + dd
+        }
+
+        if (mm < 10) {
+            mm = '0' + mm
+        }
+        var date = 'Ngày ' + dd + '/' + mm + '/' + yyyy;
+        var hours = today.getHours();
+        var minutes = today.getMinutes();
+        var second = today.getSeconds();
+        var time = hours + ':' + minutes + ':' + second;
+        $('#date').html(date);
+        $('#timeofday').html(time);
+    }
+</script>
+

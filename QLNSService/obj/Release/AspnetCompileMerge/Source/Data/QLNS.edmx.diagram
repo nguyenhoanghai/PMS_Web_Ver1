@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9a922f8837a149f7829ebebfb0120bf9" Name="Diagram1" ZoomLevel="64">
+        <EntityTypeShape EntityType="QLNSModel.BaoHetHang" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.BTP" Width="1.5" PointX="10" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.CatalogTable" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.ChiTietHienThi" Width="1.5" PointX="5.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.Chuyen" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.Chuyen_SanPham" Width="1.5" PointX="7.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.Config" Width="1.5" PointX="3.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.Config_App" Width="1.5" PointX="12.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.Cum" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.Den" Width="1.5" PointX="1.5" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.Error" Width="1.5" PointX="5.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.Floor" Width="1.5" PointX="12.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.GroupError" Width="1.5" PointX="12.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.KeyPad" Width="1.5" PointX="12.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.KeyPad_Object" Width="1.5" PointX="14.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.MAIL_FILE" Width="1.5" PointX="14.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.MAIL_RECEIVE" Width="1.5" PointX="14.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.MAIL_SCHEDULE" Width="1.5" PointX="0.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.MAIL_SEND" Width="1.5" PointX="2.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.MAIL_T_M" Width="1.5" PointX="4.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.MAIL_TEMPLATE" Width="1.5" PointX="6.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.MAIL_TYPE" Width="1.5" PointX="12.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.MapIdSanPhamNgay" Width="1.5" PointX="14.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.NangSuat_Cum" Width="1.5" PointX="16.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.NangSuat_CumLoi" Width="1.5" PointX="16.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.ReadPercent" Width="1.5" PointX="16.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.SanLuongCat" Width="1.5" PointX="17.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.SanPham" Width="1.5" PointX="8.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.Shift" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.ShowLCD_Config" Width="1.5" PointX="16.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.ShowLCD_LabelArea" Width="1.5" PointX="18.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.ShowLCD_LabelForPanelContent" Width="1.5" PointX="18.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.ShowLCD_Panel" Width="1.5" PointX="10.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.ShowLCD_TableLayoutPanel" Width="1.5" PointX="18.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.SOUND" Width="1.5" PointX="18.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.SOUND_IntConfig" Width="1.5" PointX="19.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.SOUND_ReadConfig" Width="1.5" PointX="0.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.SOUND_ReadConfigDetail" Width="1.5" PointX="2.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.SOUND_TimeConfig" Width="1.5" PointX="4.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.SoundInt" Width="1.5" PointX="12.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.TaiKhoan" Width="1.5" PointX="15" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.ThanhPham" Width="1.5" PointX="10" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.ThoiGianTinhNhipDoTT" Width="1.5" PointX="20.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.ToCat" Width="1.5" PointX="20.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.TTHienThi" Width="1.5" PointX="3" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNSModel.TurnCOMMng" Width="1.5" PointX="14.75" PointY="20.75" IsExpanded="true" />
+        <AssociationConnector Association="QLNSModel.FK_BTP_Chuyen_SanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="QLNSModel.FK_ChiTietHienThi_TTHienThi" ManuallyRouted="false" />
+        <AssociationConnector Association="QLNSModel.FK_Chuyen_Den" ManuallyRouted="false" />
+        <AssociationConnector Association="QLNSModel.FK_Cum_Chuyen" ManuallyRouted="false" />
+        <AssociationConnector Association="QLNSModel.FK_Shift_Chuyen" ManuallyRouted="false" />
+        <AssociationConnector Association="QLNSModel.FK_TTHienThi_Chuyen" ManuallyRouted="false" />
+        <AssociationConnector Association="QLNSModel.FK_ThanhPham_Chuyen" ManuallyRouted="false" />
+        <AssociationConnector Association="QLNSModel.FK_Den_Den1" ManuallyRouted="false" />
+        <AssociationConnector Association="QLNSModel.FK_TaiKhoan_Floor" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="QLNSModel.NangXuat" Width="1.5" PointX="5.626868787047858" PointY="10.358258371408217" />
+        <AssociationConnector Association="QLNSModel.FK_NangXuat_Chuyen" />
+        <AssociationConnector Association="QLNSModel.FK_Chuyen_SanPham_Chuyen" />
+        <AssociationConnector Association="QLNSModel.FK_Chuyen_SanPham_SanPham" />
+        <EntityTypeShape EntityType="QLNSModel.TheoDoiNgay" Width="1.5" PointX="17.375" PointY="20.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

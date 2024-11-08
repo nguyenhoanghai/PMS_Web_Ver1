@@ -1,0 +1,1063 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QLNSModelStoreContainer" CdmEntityContainer="QLNSEntities">
+    <EntitySetMapping Name="BaoHetHangs">
+      <EntityTypeMapping TypeName="QLNSModel.BaoHetHang">
+        <MappingFragment StoreEntitySet="BaoHetHang">
+          <ScalarProperty Name="SoLanBao" ColumnName="SoLanBao" />
+          <ScalarProperty Name="SoSanPhamConLai" ColumnName="SoSanPhamConLai" />
+          <ScalarProperty Name="STT" ColumnName="STT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BTPs">
+      <EntityTypeMapping TypeName="QLNSModel.BTP">
+        <MappingFragment StoreEntitySet="BTP">
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsBTP_PB_HC" ColumnName="IsBTP_PB_HC" />
+          <ScalarProperty Name="IsEnterByKeypad" ColumnName="IsEnterByKeypad" />
+          <ScalarProperty Name="IsEndOfLine" ColumnName="IsEndOfLine" />
+          <ScalarProperty Name="CommandTypeId" ColumnName="CommandTypeId" />
+          <ScalarProperty Name="TimeUpdate" ColumnName="TimeUpdate" />
+          <ScalarProperty Name="BTPNgay" ColumnName="BTPNgay" />
+          <ScalarProperty Name="CumId" ColumnName="CumId" />
+          <ScalarProperty Name="STT" ColumnName="STT" />
+          <ScalarProperty Name="STTChuyen_SanPham" ColumnName="STTChuyen_SanPham" />
+          <ScalarProperty Name="Ngay" ColumnName="Ngay" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CatalogTables">
+      <EntityTypeMapping TypeName="QLNSModel.CatalogTable">
+        <MappingFragment StoreEntitySet="CatalogTable">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChiTietHienThis">
+      <EntityTypeMapping TypeName="QLNSModel.ChiTietHienThi">
+        <MappingFragment StoreEntitySet="ChiTietHienThi">
+          <ScalarProperty Name="IDCell" ColumnName="IDCell" />
+          <ScalarProperty Name="IDMat" ColumnName="IDMat" />
+          <ScalarProperty Name="IDMain" ColumnName="IDMain" />
+          <ScalarProperty Name="SoLed" ColumnName="SoLed" />
+          <ScalarProperty Name="STT" ColumnName="STT" />
+          <ScalarProperty Name="MaHienThi" ColumnName="MaHienThi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Chuyens">
+      <EntityTypeMapping TypeName="QLNSModel.Chuyen">
+        <MappingFragment StoreEntitySet="Chuyen">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="STTReadNS" ColumnName="STTReadNS" />
+          <ScalarProperty Name="IntSTT" ColumnName="IntSTT" />
+          <ScalarProperty Name="LaoDongDinhBien" ColumnName="LaoDongDinhBien" />
+          <ScalarProperty Name="IdTiLeBTPConLai" ColumnName="IdTiLeBTPConLai" />
+          <ScalarProperty Name="IsEndDate" ColumnName="IsEndDate" />
+          <ScalarProperty Name="IdTyLeDoc" ColumnName="IdTyLeDoc" />
+          <ScalarProperty Name="IdDenNangSuat" ColumnName="IdDenNangSuat" />
+          <ScalarProperty Name="IdDen" ColumnName="IdDen" />
+          <ScalarProperty Name="FloorId" ColumnName="FloorId" />
+          <ScalarProperty Name="Sound" ColumnName="Sound" />
+          <ScalarProperty Name="DinhNghia" ColumnName="DinhNghia" />
+          <ScalarProperty Name="TenChuyen" ColumnName="TenChuyen" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="MaChuyen" ColumnName="MaChuyen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Chuyen_SanPham">
+      <EntityTypeMapping TypeName="QLNSModel.Chuyen_SanPham">
+        <MappingFragment StoreEntitySet="Chuyen_SanPham">
+          <ScalarProperty Name="LK_BTP_HC" ColumnName="LK_BTP_HC" />
+          <ScalarProperty Name="LK_BTP" ColumnName="LK_BTP" />
+          <ScalarProperty Name="FinishedDate" ColumnName="FinishedDate" />
+          <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="TimeAdd" ColumnName="TimeAdd" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="IsFinish" ColumnName="IsFinish" />
+          <ScalarProperty Name="IsFinishNow" ColumnName="IsFinishNow" />
+          <ScalarProperty Name="IsMoveQuantityFromMorthOld" ColumnName="IsMoveQuantityFromMorthOld" />
+          <ScalarProperty Name="IsFinishBTPThoatChuyen" ColumnName="IsFinishBTPThoatChuyen" />
+          <ScalarProperty Name="LuyKeBTPThoatChuyen" ColumnName="LuyKeBTPThoatChuyen" />
+          <ScalarProperty Name="LuyKeTH" ColumnName="LuyKeTH" />
+          <ScalarProperty Name="SanLuongKeHoach" ColumnName="SanLuongKeHoach" />
+          <ScalarProperty Name="MaSanPham" ColumnName="MaSanPham" />
+          <ScalarProperty Name="MaChuyen" ColumnName="MaChuyen" />
+          <ScalarProperty Name="Nam" ColumnName="Nam" />
+          <ScalarProperty Name="Thang" ColumnName="Thang" />
+          <ScalarProperty Name="STTThucHien" ColumnName="STTThucHien" />
+          <ScalarProperty Name="STT" ColumnName="STT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Configs">
+      <EntityTypeMapping TypeName="QLNSModel.Config">
+        <MappingFragment StoreEntitySet="Config">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ValueDefault" ColumnName="ValueDefault" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Config_App">
+      <EntityTypeMapping TypeName="QLNSModel.Config_App">
+        <MappingFragment StoreEntitySet="Config_App">
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="ConfigId" ColumnName="ConfigId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cums">
+      <EntityTypeMapping TypeName="QLNSModel.Cum">
+        <MappingFragment StoreEntitySet="Cum">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsEndOfLine" ColumnName="IsEndOfLine" />
+          <ScalarProperty Name="FloorId" ColumnName="FloorId" />
+          <ScalarProperty Name="IdChuyen" ColumnName="IdChuyen" />
+          <ScalarProperty Name="MoTa" ColumnName="MoTa" />
+          <ScalarProperty Name="TenCum" ColumnName="TenCum" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Dens">
+      <EntityTypeMapping TypeName="QLNSModel.Den">
+        <MappingFragment StoreEntitySet="Den">
+          <ScalarProperty Name="MaMauDen" ColumnName="MaMauDen" />
+          <ScalarProperty Name="STTParent" ColumnName="STTParent" />
+          <ScalarProperty Name="IdCatalogTable" ColumnName="IdCatalogTable" />
+          <ScalarProperty Name="ValueTo" ColumnName="ValueTo" />
+          <ScalarProperty Name="ValueFrom" ColumnName="ValueFrom" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="STT" ColumnName="STT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Errors">
+      <EntityTypeMapping TypeName="QLNSModel.Error">
+        <MappingFragment StoreEntitySet="Error">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="GroupErrorId" ColumnName="GroupErrorId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Floors">
+      <EntityTypeMapping TypeName="QLNSModel.Floor">
+        <MappingFragment StoreEntitySet="Floor">
+          <ScalarProperty Name="IsDefault" ColumnName="IsDefault" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="IdFloor" ColumnName="IdFloor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GroupErrors">
+      <EntityTypeMapping TypeName="QLNSModel.GroupError">
+        <MappingFragment StoreEntitySet="GroupError">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KeyPads">
+      <EntityTypeMapping TypeName="QLNSModel.KeyPad">
+        <MappingFragment StoreEntitySet="KeyPad">
+          <ScalarProperty Name="UseTypeId" ColumnName="UseTypeId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="FloorId" ColumnName="FloorId" />
+          <ScalarProperty Name="EquipmentId" ColumnName="EquipmentId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="KeyPadName" ColumnName="KeyPadName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KeyPad_Object">
+      <EntityTypeMapping TypeName="QLNSModel.KeyPad_Object">
+        <MappingFragment StoreEntitySet="KeyPad_Object">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="TypeOfKeypad" ColumnName="TypeOfKeypad" />
+          <ScalarProperty Name="CommandTypeId" ColumnName="CommandTypeId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ClusterId" ColumnName="ClusterId" />
+          <ScalarProperty Name="STTNut" ColumnName="STTNut" />
+          <ScalarProperty Name="KeyPadId" ColumnName="KeyPadId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LCDConfigs">
+      <EntityTypeMapping TypeName="QLNSModel.LCDConfig">
+        <MappingFragment StoreEntitySet="LCDConfig">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="FontWeight" ColumnName="FontWeight" />
+          <ScalarProperty Name="Background" ColumnName="Background" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="FontStyle" ColumnName="FontStyle" />
+          <ScalarProperty Name="FontSize" ColumnName="FontSize" />
+          <ScalarProperty Name="FontName" ColumnName="FontName" />
+          <ScalarProperty Name="Column" ColumnName="Column" />
+          <ScalarProperty Name="RowType" ColumnName="RowType" />
+          <ScalarProperty Name="TableType" ColumnName="TableType" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAIL_FILE">
+      <EntityTypeMapping TypeName="QLNSModel.MAIL_FILE">
+        <MappingFragment StoreEntitySet="MAIL_FILE">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="SystemName" ColumnName="SystemName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAIL_RECEIVE">
+      <EntityTypeMapping TypeName="QLNSModel.MAIL_RECEIVE">
+        <MappingFragment StoreEntitySet="MAIL_RECEIVE">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAIL_SCHEDULE">
+      <EntityTypeMapping TypeName="QLNSModel.MAIL_SCHEDULE">
+        <MappingFragment StoreEntitySet="MAIL_SCHEDULE">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="MailTemplateId" ColumnName="MailTemplateId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAIL_SEND">
+      <EntityTypeMapping TypeName="QLNSModel.MAIL_SEND">
+        <MappingFragment StoreEntitySet="MAIL_SEND">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="PassWord" ColumnName="PassWord" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="MailTypeId" ColumnName="MailTypeId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAIL_T_M">
+      <EntityTypeMapping TypeName="QLNSModel.MAIL_T_M">
+        <MappingFragment StoreEntitySet="MAIL_T_M">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="MailFileId" ColumnName="MailFileId" />
+          <ScalarProperty Name="MailTemplateId" ColumnName="MailTemplateId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAIL_TEMPLATE">
+      <EntityTypeMapping TypeName="QLNSModel.MAIL_TEMPLATE">
+        <MappingFragment StoreEntitySet="MAIL_TEMPLATE">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="MailFileIds" ColumnName="MailFileIds" />
+          <ScalarProperty Name="MailReceiveIds" ColumnName="MailReceiveIds" />
+          <ScalarProperty Name="MailSendId" ColumnName="MailSendId" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAIL_TYPE">
+      <EntityTypeMapping TypeName="QLNSModel.MAIL_TYPE">
+        <MappingFragment StoreEntitySet="MAIL_TYPE">
+          <ScalarProperty Name="port" ColumnName="port" />
+          <ScalarProperty Name="host" ColumnName="host" />
+          <ScalarProperty Name="active" ColumnName="active" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MapIdSanPhamNgays">
+      <EntityTypeMapping TypeName="QLNSModel.MapIdSanPhamNgay">
+        <MappingFragment StoreEntitySet="MapIdSanPhamNgay">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="MaSanPham" ColumnName="MaSanPham" />
+          <ScalarProperty Name="STTChuyenSanPham" ColumnName="STTChuyenSanPham" />
+          <ScalarProperty Name="STT" ColumnName="STT" />
+          <ScalarProperty Name="MaChuyen" ColumnName="MaChuyen" />
+          <ScalarProperty Name="Ngay" ColumnName="Ngay" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NangSuat_Cum">
+      <EntityTypeMapping TypeName="QLNSModel.NangSuat_Cum">
+        <MappingFragment StoreEntitySet="NangSuat_Cum">
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="BTP_HC_Giam" ColumnName="BTP_HC_Giam" />
+          <ScalarProperty Name="BTP_HC_Tang" ColumnName="BTP_HC_Tang" />
+          <ScalarProperty Name="BTPGiam" ColumnName="BTPGiam" />
+          <ScalarProperty Name="BTPTang" ColumnName="BTPTang" />
+          <ScalarProperty Name="SanLuongTCGiam" ColumnName="SanLuongTCGiam" />
+          <ScalarProperty Name="SanLuongTCTang" ColumnName="SanLuongTCTang" />
+          <ScalarProperty Name="SanLuongKCSGiam" ColumnName="SanLuongKCSGiam" />
+          <ScalarProperty Name="SanLuongKCSTang" ColumnName="SanLuongKCSTang" />
+          <ScalarProperty Name="IdCum" ColumnName="IdCum" />
+          <ScalarProperty Name="STTChuyen_SanPham" ColumnName="STTChuyen_SanPham" />
+          <ScalarProperty Name="Ngay" ColumnName="Ngay" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NangSuat_CumLoi">
+      <EntityTypeMapping TypeName="QLNSModel.NangSuat_CumLoi">
+        <MappingFragment StoreEntitySet="NangSuat_CumLoi">
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="SoLuongGiam" ColumnName="SoLuongGiam" />
+          <ScalarProperty Name="SoLuongTang" ColumnName="SoLuongTang" />
+          <ScalarProperty Name="ErrorId" ColumnName="ErrorId" />
+          <ScalarProperty Name="CumId" ColumnName="CumId" />
+          <ScalarProperty Name="STTChuyenSanPham" ColumnName="STTChuyenSanPham" />
+          <ScalarProperty Name="Ngay" ColumnName="Ngay" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NangXuats">
+      <EntityTypeMapping TypeName="QLNSModel.NangXuat">
+        <MappingFragment StoreEntitySet="NangXuat">
+          <ScalarProperty Name="TGCheTaoSP" ColumnName="TGCheTaoSP" />
+          <ScalarProperty Name="BTP_HC_Giam" ColumnName="BTP_HC_Giam" />
+          <ScalarProperty Name="BTP_HC_Tang" ColumnName="BTP_HC_Tang" />
+          <ScalarProperty Name="TimeStopOnDay" ColumnName="TimeStopOnDay" />
+          <ScalarProperty Name="IsStopOnDay" ColumnName="IsStopOnDay" />
+          <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="BTPGiam" ColumnName="BTPGiam" />
+          <ScalarProperty Name="BTPTang" ColumnName="BTPTang" />
+          <ScalarProperty Name="SanLuongLoiGiam" ColumnName="SanLuongLoiGiam" />
+          <ScalarProperty Name="SanLuongLoi" ColumnName="SanLuongLoi" />
+          <ScalarProperty Name="BTPThoatChuyenNgayGiam" ColumnName="BTPThoatChuyenNgayGiam" />
+          <ScalarProperty Name="BTPThoatChuyenNgay" ColumnName="BTPThoatChuyenNgay" />
+          <ScalarProperty Name="IsEndDate" ColumnName="IsEndDate" />
+          <ScalarProperty Name="BTPLoi" ColumnName="BTPLoi" />
+          <ScalarProperty Name="TimeLastChange" ColumnName="TimeLastChange" />
+          <ScalarProperty Name="IsBTP" ColumnName="IsBTP" />
+          <ScalarProperty Name="IsChangeBTP" ColumnName="IsChangeBTP" />
+          <ScalarProperty Name="IsChange" ColumnName="IsChange" />
+          <ScalarProperty Name="NhipDoSanXuat" ColumnName="NhipDoSanXuat" />
+          <ScalarProperty Name="NhipDoThucTe" ColumnName="NhipDoThucTe" />
+          <ScalarProperty Name="NhipDoThucTeBTPThoatChuyen" ColumnName="NhipDoThucTeBTPThoatChuyen" />
+          <ScalarProperty Name="BTPTrenChuyen" ColumnName="BTPTrenChuyen" />
+          <ScalarProperty Name="ThucHienNgayGiam" ColumnName="ThucHienNgayGiam" />
+          <ScalarProperty Name="ThucHienNgay" ColumnName="ThucHienNgay" />
+          <ScalarProperty Name="DinhMucNgay" ColumnName="DinhMucNgay" />
+          <ScalarProperty Name="STTCHuyen_SanPham" ColumnName="STTCHuyen_SanPham" />
+          <ScalarProperty Name="Ngay" ColumnName="Ngay" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="P_AssignCompletion">
+      <EntityTypeMapping TypeName="QLNSModel.P_AssignCompletion">
+        <MappingFragment StoreEntitySet="P_AssignCompletion">
+          <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="FinishedDate" ColumnName="FinishedDate" />
+          <ScalarProperty Name="IsFinish" ColumnName="IsFinish" />
+          <ScalarProperty Name="ProductionsPlan" ColumnName="ProductionsPlan" />
+          <ScalarProperty Name="CommoId" ColumnName="CommoId" />
+          <ScalarProperty Name="OrderIndex" ColumnName="OrderIndex" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="P_CompletionPhase">
+      <EntityTypeMapping TypeName="QLNSModel.P_CompletionPhase">
+        <MappingFragment StoreEntitySet="P_CompletionPhase">
+          <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="OrderIndex" ColumnName="OrderIndex" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="P_CompletionPhase_Daily">
+      <EntityTypeMapping TypeName="QLNSModel.P_CompletionPhase_Daily">
+        <MappingFragment StoreEntitySet="P_CompletionPhase_Daily">
+          <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="CommandTypeId" ColumnName="CommandTypeId" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="CompletionPhaseId" ColumnName="CompletionPhaseId" />
+          <ScalarProperty Name="AssignId" ColumnName="AssignId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="P_DailyInfo">
+      <EntityTypeMapping TypeName="QLNSModel.P_DailyInfo">
+        <MappingFragment StoreEntitySet="P_DailyInfo">
+          <ScalarProperty Name="IsAdd" ColumnName="IsAdd" />
+          <ScalarProperty Name="IsEnterByKeypad" ColumnName="IsEnterByKeypad" />
+          <ScalarProperty Name="OutputType" ColumnName="OutputType" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="PhaseId" ColumnName="PhaseId" />
+          <ScalarProperty Name="KeypadId" ColumnName="KeypadId" />
+          <ScalarProperty Name="DailyPlansId" ColumnName="DailyPlansId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="P_DailyKeypadPosition">
+      <EntityTypeMapping TypeName="QLNSModel.P_DailyKeypadPosition">
+        <MappingFragment StoreEntitySet="P_DailyKeypadPosition">
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="BTP_HC_Day" ColumnName="BTP_HC_Day" />
+          <ScalarProperty Name="BTP_Day" ColumnName="BTP_Day" />
+          <ScalarProperty Name="Error_Day" ColumnName="Error_Day" />
+          <ScalarProperty Name="TC_Day" ColumnName="TC_Day" />
+          <ScalarProperty Name="KCS_Day" ColumnName="KCS_Day" />
+          <ScalarProperty Name="KeypadId" ColumnName="KeypadId" />
+          <ScalarProperty Name="DailyPlanId" ColumnName="DailyPlanId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="P_DailyKeypadRegister">
+      <EntityTypeMapping TypeName="QLNSModel.P_DailyKeypadRegister">
+        <MappingFragment StoreEntitySet="P_DailyKeypadRegister">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+          <ScalarProperty Name="KeypadId" ColumnName="KeypadId" />
+          <ScalarProperty Name="DailyPlansId" ColumnName="DailyPlansId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="P_DailyMapper">
+      <EntityTypeMapping TypeName="QLNSModel.P_DailyMapper">
+        <MappingFragment StoreEntitySet="P_DailyMapper">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="EquipCode" ColumnName="EquipCode" />
+          <ScalarProperty Name="KeypadId" ColumnName="KeypadId" />
+          <ScalarProperty Name="LineId" ColumnName="LineId" />
+          <ScalarProperty Name="PhaseId" ColumnName="PhaseId" />
+          <ScalarProperty Name="PhaseIndex" ColumnName="PhaseIndex" />
+          <ScalarProperty Name="AssignId" ColumnName="AssignId" />
+          <ScalarProperty Name="ProIndex" ColumnName="ProIndex" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="P_DailyPlans">
+      <EntityTypeMapping TypeName="QLNSModel.P_DailyPlans">
+        <MappingFragment StoreEntitySet="P_DailyPlans">
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ShowLCD" ColumnName="ShowLCD" />
+          <ScalarProperty Name="IsEndDate" ColumnName="IsEndDate" />
+          <ScalarProperty Name="Pace_SX" ColumnName="Pace_SX" />
+          <ScalarProperty Name="Pace_TT" ColumnName="Pace_TT" />
+          <ScalarProperty Name="Pace_TC" ColumnName="Pace_TC" />
+          <ScalarProperty Name="BTPInLine" ColumnName="BTPInLine" />
+          <ScalarProperty Name="BTP_HC_Day" ColumnName="BTP_HC_Day" />
+          <ScalarProperty Name="BTP_Day" ColumnName="BTP_Day" />
+          <ScalarProperty Name="Error_Day" ColumnName="Error_Day" />
+          <ScalarProperty Name="TC_Day" ColumnName="TC_Day" />
+          <ScalarProperty Name="KCS_Day" ColumnName="KCS_Day" />
+          <ScalarProperty Name="NormsOfDay" ColumnName="NormsOfDay" />
+          <ScalarProperty Name="LaborProductivity" ColumnName="LaborProductivity" />
+          <ScalarProperty Name="LeanKH" ColumnName="LeanKH" />
+          <ScalarProperty Name="Labors" ColumnName="Labors" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="CSP_Id" ColumnName="CSP_Id" />
+          <ScalarProperty Name="Index" ColumnName="Index" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="P_Employee">
+      <EntityTypeMapping TypeName="QLNSModel.P_Employee">
+        <MappingFragment StoreEntitySet="P_Employee">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Index" ColumnName="Index" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="P_HistoryPressedKeypad">
+      <EntityTypeMapping TypeName="QLNSModel.P_HistoryPressedKeypad">
+        <MappingFragment StoreEntitySet="P_HistoryPressedKeypad">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AssignmentId" ColumnName="AssignmentId" />
+          <ScalarProperty Name="LineId" ColumnName="LineId" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="P_Keypad">
+      <EntityTypeMapping TypeName="QLNSModel.P_Keypad">
+        <MappingFragment StoreEntitySet="P_Keypad">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="EquipCode" ColumnName="EquipCode" />
+          <ScalarProperty Name="ClusterId" ColumnName="ClusterId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="P_KeypadRegis_Detail">
+      <EntityTypeMapping TypeName="QLNSModel.P_KeypadRegis_Detail">
+        <MappingFragment StoreEntitySet="P_KeypadRegis_Detail">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Index" ColumnName="Index" />
+          <ScalarProperty Name="PhaseId" ColumnName="PhaseId" />
+          <ScalarProperty Name="KeypadRegisId" ColumnName="KeypadRegisId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="P_LightPercent">
+      <EntityTypeMapping TypeName="QLNSModel.P_LightPercent">
+        <MappingFragment StoreEntitySet="P_LightPercent">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="P_LightPercent_De">
+      <EntityTypeMapping TypeName="QLNSModel.P_LightPercent_De">
+        <MappingFragment StoreEntitySet="P_LightPercent_De">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="To" ColumnName="To" />
+          <ScalarProperty Name="From" ColumnName="From" />
+          <ScalarProperty Name="ColorName" ColumnName="ColorName" />
+          <ScalarProperty Name="LightPercentId" ColumnName="LightPercentId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="P_LineWorkingShift">
+      <EntityTypeMapping TypeName="QLNSModel.P_LineWorkingShift">
+        <MappingFragment StoreEntitySet="P_LineWorkingShift">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ShiftId" ColumnName="ShiftId" />
+          <ScalarProperty Name="LineId" ColumnName="LineId" />
+          <ScalarProperty Name="ShiftOrder" ColumnName="ShiftOrder" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="P_MonthlyProductionPlans">
+      <EntityTypeMapping TypeName="QLNSModel.P_MonthlyProductionPlans">
+        <MappingFragment StoreEntitySet="P_MonthlyProductionPlans">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="LK_BTP_HC" ColumnName="LK_BTP_HC" />
+          <ScalarProperty Name="LK_BTP" ColumnName="LK_BTP" />
+          <ScalarProperty Name="LK_TC" ColumnName="LK_TC" />
+          <ScalarProperty Name="LK_TH" ColumnName="LK_TH" />
+          <ScalarProperty Name="ProductionPlans" ColumnName="ProductionPlans" />
+          <ScalarProperty Name="STT_C_SP" ColumnName="STT_C_SP" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="P_Phase">
+      <EntityTypeMapping TypeName="QLNSModel.P_Phase">
+        <MappingFragment StoreEntitySet="P_Phase">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Index" ColumnName="Index" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="P_Phase_Assign_Log">
+      <EntityTypeMapping TypeName="QLNSModel.P_Phase_Assign_Log">
+        <MappingFragment StoreEntitySet="P_Phase_Assign_Log">
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="PhaseId" ColumnName="PhaseId" />
+          <ScalarProperty Name="AssignId" ColumnName="AssignId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="P_PhaseDaily">
+      <EntityTypeMapping TypeName="QLNSModel.P_PhaseDaily">
+        <MappingFragment StoreEntitySet="P_PhaseDaily">
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CommandTypeId" ColumnName="CommandTypeId" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="PhaseId" ColumnName="PhaseId" />
+          <ScalarProperty Name="NangSuatId" ColumnName="NangSuatId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="P_PhaseDailyLog">
+      <EntityTypeMapping TypeName="QLNSModel.P_PhaseDailyLog">
+        <MappingFragment StoreEntitySet="P_PhaseDailyLog">
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CommandTypeId" ColumnName="CommandTypeId" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="PhaseId" ColumnName="PhaseId" />
+          <ScalarProperty Name="NangSuatId" ColumnName="NangSuatId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="P_PlayVideoShedule">
+      <EntityTypeMapping TypeName="QLNSModel.P_PlayVideoShedule">
+        <MappingFragment StoreEntitySet="P_PlayVideoShedule">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="TimeEnd" ColumnName="TimeEnd" />
+          <ScalarProperty Name="TimeStart" ColumnName="TimeStart" />
+          <ScalarProperty Name="LineId" ColumnName="LineId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="P_PlayVideoSheduleDetail">
+      <EntityTypeMapping TypeName="QLNSModel.P_PlayVideoSheduleDetail">
+        <MappingFragment StoreEntitySet="P_PlayVideoSheduleDetail">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="OrderIndex" ColumnName="OrderIndex" />
+          <ScalarProperty Name="VideoSheduleId" ColumnName="VideoSheduleId" />
+          <ScalarProperty Name="VideoId" ColumnName="VideoId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="P_ReadPercent_KCSInventory">
+      <EntityTypeMapping TypeName="QLNSModel.P_ReadPercent_KCSInventory">
+        <MappingFragment StoreEntitySet="P_ReadPercent_KCSInventory">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="P_ReadPercent_KCSInventory_De">
+      <EntityTypeMapping TypeName="QLNSModel.P_ReadPercent_KCSInventory_De">
+        <MappingFragment StoreEntitySet="P_ReadPercent_KCSInventory_De">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="RepeatTimes" ColumnName="RepeatTimes" />
+          <ScalarProperty Name="SoundPath" ColumnName="SoundPath" />
+          <ScalarProperty Name="To" ColumnName="To" />
+          <ScalarProperty Name="From" ColumnName="From" />
+          <ScalarProperty Name="KCSInventoryId" ColumnName="KCSInventoryId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="P_ReadPercentOfLine">
+      <EntityTypeMapping TypeName="QLNSModel.P_ReadPercentOfLine">
+        <MappingFragment StoreEntitySet="P_ReadPercentOfLine">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AssignmentId" ColumnName="AssignmentId" />
+          <ScalarProperty Name="LineId" ColumnName="LineId" />
+          <ScalarProperty Name="ProductLightPercentId" ColumnName="ProductLightPercentId" />
+          <ScalarProperty Name="KanbanLightPercentId" ColumnName="KanbanLightPercentId" />
+          <ScalarProperty Name="ReadPercentId" ColumnName="ReadPercentId" />
+          <ScalarProperty Name="ReadPercent_KCSInventoryId" ColumnName="ReadPercent_KCSInventoryId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="P_VideoLibrary">
+      <EntityTypeMapping TypeName="QLNSModel.P_VideoLibrary">
+        <MappingFragment StoreEntitySet="P_VideoLibrary">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Length" ColumnName="Length" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="P_WorkingShift">
+      <EntityTypeMapping TypeName="QLNSModel.P_WorkingShift">
+        <MappingFragment StoreEntitySet="P_WorkingShift">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="TimeEnd" ColumnName="TimeEnd" />
+          <ScalarProperty Name="TimeStart" ColumnName="TimeStart" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReadPercents">
+      <EntityTypeMapping TypeName="QLNSModel.ReadPercent">
+        <MappingFragment StoreEntitySet="ReadPercent">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="IdParent" ColumnName="IdParent" />
+          <ScalarProperty Name="Sound" ColumnName="Sound" />
+          <ScalarProperty Name="CountRepeat" ColumnName="CountRepeat" />
+          <ScalarProperty Name="PercentTo" ColumnName="PercentTo" />
+          <ScalarProperty Name="PercentFrom" ColumnName="PercentFrom" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SanLuongCats">
+      <EntityTypeMapping TypeName="QLNSModel.SanLuongCat">
+        <MappingFragment StoreEntitySet="SanLuongCat">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="NgayNapSL" ColumnName="NgayNapSL" />
+          <ScalarProperty Name="ThoiGianNapSL" ColumnName="ThoiGianNapSL" />
+          <ScalarProperty Name="SanLuong" ColumnName="SanLuong" />
+          <ScalarProperty Name="IdSanPham" ColumnName="IdSanPham" />
+          <ScalarProperty Name="IdToCat" ColumnName="IdToCat" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SanPhams">
+      <EntityTypeMapping TypeName="QLNSModel.SanPham">
+        <MappingFragment StoreEntitySet="SanPham">
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="ProductionTime" ColumnName="ProductionTime" />
+          <ScalarProperty Name="DonGiaCM" ColumnName="DonGiaCM" />
+          <ScalarProperty Name="DonGia" ColumnName="DonGia" />
+          <ScalarProperty Name="Floor" ColumnName="Floor" />
+          <ScalarProperty Name="DinhNghia" ColumnName="DinhNghia" />
+          <ScalarProperty Name="TenSanPham" ColumnName="TenSanPham" />
+          <ScalarProperty Name="MaSanPham" ColumnName="MaSanPham" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shifts">
+      <EntityTypeMapping TypeName="QLNSModel.Shift">
+        <MappingFragment StoreEntitySet="Shift">
+          <ScalarProperty Name="TimeEnd" ColumnName="TimeEnd" />
+          <ScalarProperty Name="TimeStart" ColumnName="TimeStart" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="IdShift" ColumnName="IdShift" />
+          <ScalarProperty Name="MaChuyen" ColumnName="MaChuyen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShowLCD_Config">
+      <EntityTypeMapping TypeName="QLNSModel.ShowLCD_Config">
+        <MappingFragment StoreEntitySet="ShowLCD_Config">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShowLCD_LabelArea">
+      <EntityTypeMapping TypeName="QLNSModel.ShowLCD_LabelArea">
+        <MappingFragment StoreEntitySet="ShowLCD_LabelArea">
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="TableType" ColumnName="TableType" />
+          <ScalarProperty Name="TableLayoutPanelName" ColumnName="TableLayoutPanelName" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Italic" ColumnName="Italic" />
+          <ScalarProperty Name="Bold" ColumnName="Bold" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="Font" ColumnName="Font" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShowLCD_LabelForPanelContent">
+      <EntityTypeMapping TypeName="QLNSModel.ShowLCD_LabelForPanelContent">
+        <MappingFragment StoreEntitySet="ShowLCD_LabelForPanelContent">
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="TableType" ColumnName="TableType" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="SttNext" ColumnName="SttNext" />
+          <ScalarProperty Name="IntRowTBLPanelContent" ColumnName="IntRowTBLPanelContent" />
+          <ScalarProperty Name="SystemValueName" ColumnName="SystemValueName" />
+          <ScalarProperty Name="LabelName" ColumnName="LabelName" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShowLCD_Panel">
+      <EntityTypeMapping TypeName="QLNSModel.ShowLCD_Panel">
+        <MappingFragment StoreEntitySet="ShowLCD_Panel">
+          <ScalarProperty Name="TableType" ColumnName="TableType" />
+          <ScalarProperty Name="BackColor" ColumnName="BackColor" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShowLCD_TableLayoutPanel">
+      <EntityTypeMapping TypeName="QLNSModel.ShowLCD_TableLayoutPanel">
+        <MappingFragment StoreEntitySet="ShowLCD_TableLayoutPanel">
+          <ScalarProperty Name="TableType" ColumnName="TableType" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="SizePercent" ColumnName="SizePercent" />
+          <ScalarProperty Name="TableLayoutPanelName" ColumnName="TableLayoutPanelName" />
+          <ScalarProperty Name="RowInt" ColumnName="RowInt" />
+          <ScalarProperty Name="ColumnInt" ColumnName="ColumnInt" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SOUNDs">
+      <EntityTypeMapping TypeName="QLNSModel.SOUND">
+        <MappingFragment StoreEntitySet="SOUND">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SOUND_IntConfig">
+      <EntityTypeMapping TypeName="QLNSModel.SOUND_IntConfig">
+        <MappingFragment StoreEntitySet="SOUND_IntConfig">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsProductivity" ColumnName="IsProductivity" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Formula" ColumnName="Formula" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SOUND_ReadConfig">
+      <EntityTypeMapping TypeName="QLNSModel.SOUND_ReadConfig">
+        <MappingFragment StoreEntitySet="SOUND_ReadConfig">
+          <ScalarProperty Name="IdChuyen" ColumnName="IdChuyen" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ConfigType" ColumnName="ConfigType" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SOUND_ReadConfigDetail">
+      <EntityTypeMapping TypeName="QLNSModel.SOUND_ReadConfigDetail">
+        <MappingFragment StoreEntitySet="SOUND_ReadConfigDetail">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="OrderIndex" ColumnName="OrderIndex" />
+          <ScalarProperty Name="IntType" ColumnName="IntType" />
+          <ScalarProperty Name="IdIntConfig" ColumnName="IdIntConfig" />
+          <ScalarProperty Name="IdSound" ColumnName="IdSound" />
+          <ScalarProperty Name="IdReadConfig" ColumnName="IdReadConfig" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SOUND_TimeConfig">
+      <EntityTypeMapping TypeName="QLNSModel.SOUND_TimeConfig">
+        <MappingFragment StoreEntitySet="SOUND_TimeConfig">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ConfigType" ColumnName="ConfigType" />
+          <ScalarProperty Name="SoLanDoc" ColumnName="SoLanDoc" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SoundInts">
+      <EntityTypeMapping TypeName="QLNSModel.SoundInt">
+        <MappingFragment StoreEntitySet="SoundInt">
+          <ScalarProperty Name="AddressFile" ColumnName="AddressFile" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaiKhoans">
+      <EntityTypeMapping TypeName="QLNSModel.TaiKhoan">
+        <MappingFragment StoreEntitySet="TaiKhoan">
+          <ScalarProperty Name="IsCompleteAcc" ColumnName="IsCompleteAcc" />
+          <ScalarProperty Name="IsKanbanAcc" ColumnName="IsKanbanAcc" />
+          <ScalarProperty Name="IsOnwer" ColumnName="IsOnwer" />
+          <ScalarProperty Name="ListChuyenId" ColumnName="ListChuyenId" />
+          <ScalarProperty Name="Floor" ColumnName="Floor" />
+          <ScalarProperty Name="ThaoTac" ColumnName="ThaoTac" />
+          <ScalarProperty Name="BTP" ColumnName="BTP" />
+          <ScalarProperty Name="ThanhPham" ColumnName="ThanhPham" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ThanhPhams">
+      <EntityTypeMapping TypeName="QLNSModel.ThanhPham">
+        <MappingFragment StoreEntitySet="ThanhPham">
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="HieuSuat" ColumnName="HieuSuat" />
+          <ScalarProperty Name="LeanKH" ColumnName="LeanKH" />
+          <ScalarProperty Name="LaoDongChuyen" ColumnName="LaoDongChuyen" />
+          <ScalarProperty Name="ShowLCD" ColumnName="ShowLCD" />
+          <ScalarProperty Name="NangXuatLaoDong" ColumnName="NangXuatLaoDong" />
+          <ScalarProperty Name="STTChuyen_SanPham" ColumnName="STTChuyen_SanPham" />
+          <ScalarProperty Name="Ngay" ColumnName="Ngay" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TheoDoiNgays">
+      <EntityTypeMapping TypeName="QLNSModel.TheoDoiNgay">
+        <MappingFragment StoreEntitySet="TheoDoiNgay">
+          <ScalarProperty Name="IsEnterByKeypad" ColumnName="IsEnterByKeypad" />
+          <ScalarProperty Name="IsEndOfLine" ColumnName="IsEndOfLine" />
+          <ScalarProperty Name="ErrorId" ColumnName="ErrorId" />
+          <ScalarProperty Name="ProductOutputTypeId" ColumnName="ProductOutputTypeId" />
+          <ScalarProperty Name="CommandTypeId" ColumnName="CommandTypeId" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="ThanhPham" ColumnName="ThanhPham" />
+          <ScalarProperty Name="MaSanPham" ColumnName="MaSanPham" />
+          <ScalarProperty Name="STTChuyenSanPham" ColumnName="STTChuyenSanPham" />
+          <ScalarProperty Name="CumId" ColumnName="CumId" />
+          <ScalarProperty Name="MaChuyen" ColumnName="MaChuyen" />
+          <ScalarProperty Name="STT" ColumnName="STT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ThoiGianTinhNhipDoTTs">
+      <EntityTypeMapping TypeName="QLNSModel.ThoiGianTinhNhipDoTT">
+        <MappingFragment StoreEntitySet="ThoiGianTinhNhipDoTT">
+          <ScalarProperty Name="ThoiGianBatDau" ColumnName="ThoiGianBatDau" />
+          <ScalarProperty Name="MaChuyen" ColumnName="MaChuyen" />
+          <ScalarProperty Name="Ngay" ColumnName="Ngay" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ToCats">
+      <EntityTypeMapping TypeName="QLNSModel.ToCat">
+        <MappingFragment StoreEntitySet="ToCat">
+          <ScalarProperty Name="IdFloor" ColumnName="IdFloor" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DinhNghia" ColumnName="DinhNghia" />
+          <ScalarProperty Name="TenToCat" ColumnName="TenToCat" />
+          <ScalarProperty Name="IdToCat" ColumnName="IdToCat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TTHienThis">
+      <EntityTypeMapping TypeName="QLNSModel.TTHienThi">
+        <MappingFragment StoreEntitySet="TTHienThi">
+          <ScalarProperty Name="STTDen" ColumnName="STTDen" />
+          <ScalarProperty Name="IdCatalogTable" ColumnName="IdCatalogTable" />
+          <ScalarProperty Name="IsInt" ColumnName="IsInt" />
+          <ScalarProperty Name="ChangeBTP" ColumnName="ChangeBTP" />
+          <ScalarProperty Name="ChangeTP" ColumnName="ChangeTP" />
+          <ScalarProperty Name="ViTri" ColumnName="ViTri" />
+          <ScalarProperty Name="MaChuyen" ColumnName="MaChuyen" />
+          <ScalarProperty Name="MaHienThi" ColumnName="MaHienThi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TurnCOMMngs">
+      <EntityTypeMapping TypeName="QLNSModel.TurnCOMMng">
+        <MappingFragment StoreEntitySet="TurnCOMMng">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="TimeAction" ColumnName="TimeAction" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ComTypeId" ColumnName="ComTypeId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

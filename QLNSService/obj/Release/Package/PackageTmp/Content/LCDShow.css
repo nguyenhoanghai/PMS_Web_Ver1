@@ -1,0 +1,191 @@
+﻿  .slide-image {
+        width: 100%;
+    }
+
+    #cl-title {
+        border: 1px solid green;
+        text-align: center;
+        padding: 30px;
+    }
+
+    #ul-head ul {
+        margin: 0;
+        padding: 0;
+    }
+
+        #ul-head ul li {
+            float: left;
+            list-style: none;
+            font-size: 26px;
+            font-weight: bold;
+            padding: 20px 0;
+            text-align: center;
+            line-height: 30px;
+        }
+
+            #ul-head ul li:last-child {
+                border: none;
+            }
+
+    #ul-content {
+        border-top: 2px solid blue;
+        border-bottom: 2px solid blue;
+    }
+
+    .col-ok {
+        background: blue;
+        color: #eee;
+    }
+
+    .col-process {
+        background: yellow;
+    }
+
+    .col-error {
+        background: red;
+        color: #eee;
+    }
+
+    .value {
+        border-right: 2px solid #aaa;
+        overflow: hidden;
+    }
+
+    #LCD_Complete_ticker,
+    #LCD_Complete_ticker ul,
+    #LCD_NS_New_ticker,
+    #LCD_NS_New_ticker ul,
+    #LCDTH_CL_ticker,
+    #LCDTH_CL_ticker ul,
+    #LCDCT_CL_ticker,
+    #LCDCT_CL_ticker ul {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        border-bottom: 2px solid #aaa;
+    }
+
+        #LCD_Complete_ticker li,
+        #LCD_Complete_ticker ul li,
+        #LCD_NS_New_ticker li,
+        #LCD_NS_New_ticker ul li,
+        #LCDTH_CL_ticker li,
+        #LCDTH_CL_ticker ul li,
+        #LCDCT_CL_ticker li,
+        #LCDCT_CL_ticker ul li {
+            list-style: none;
+            text-align: center;
+        }
+
+        #LCD_Complete_ticker ul li,
+        #LCD_NS_New_ticker ul li,
+        #LCDTH_CL_ticker ul li,
+        #LCDCT_CL_ticker ul li {
+            float: left;
+            height: 100%;
+        }
+
+            #LCD_Complete_ticker ul li:last-child,
+            #LCD_NS_New_ticker ul li:last-child,
+            #LCDTH_CL_ticker ul li:last-child,
+            #LCDCT_CL_ticker ul li:last-child {
+                border: none;
+            }
+
+        #LCD_Complete_ticker li table td,
+        #LCD_NS_New_ticker li table td,
+        #LCDTH_CL_ticker li table td,
+        #LCDCT_CL_ticker li table td {
+            vertical-align: middle;
+            line-height: 30px !important;
+        }
+
+        #LCD_Complete_ticker li table,
+        #LCD_NS_New_ticker li table,
+        #LCDTH_CL_ticker li table,
+        #LCDCT_CL_ticker li table {
+            border-bottom: 2px solid #aaa;
+            width: 100%;
+        }
+
+        
+
+        #LCD_Complete_ticker li ul li,
+        #KanBan_Ticker li ul li,
+        #LCD_NS_New_ticker li ul li,
+        #LCDTH_CL_ticker li ul li,
+        #LCDCT_CL_ticker li ul li {
+            line-height: 30px  ;
+        }
+
+            #LCD_Complete_ticker li ul li span,
+            #KanBan_Ticker li ul li span,
+            #LCD_NS_New_ticker li ul li span,
+            #LCDTH_CL_ticker li ul li span,
+            #LCDCT_CL_ticker li ul li span {
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            #LCD_Complete_ticker li ul li:before,
+            #KanBan_Ticker li ul li:before,
+            #LCD_NS_New_ticker li ul li:before,
+            #LCDTH_CL_ticker li ul li:before,
+            #LCDCT_CL_ticker li ul li:before {
+                content: '';
+                display: inline-block;
+                vertical-align: middle;
+                height: 100%;
+            }
+
+            #KanBan_Ticker li ul li.value6:before {
+                content: none !important;
+            }
+
+    .font_dien_tu {
+        font-family: DS-DIGIB !important;
+    }
+      .video-js {
+        width: 100%;
+        height: 100%;
+    }
+
+    .full-box {
+        /*width:10px;
+        height:20px;*/
+        /*border:1px solid #ccc;
+        border-radius:5px;*/
+        position: fixed;
+        top: 72px;
+        left: 0;
+        z-index: 99999;
+        overflow: hidden;
+        margin-left: -30px;
+    }
+
+        .full-box:hover {
+            /*width:70px;
+        height:70px;*/
+            margin: 0;
+        }
+
+    :-webkit-full-screen {
+        background: pink;
+    }
+
+    :-moz-full-screen {
+        background: pink;
+    }
+
+    :-ms-fullscreen {
+        background: pink;
+    }
+
+    :full-screen { /*pre-spec */
+        background: pink;
+    }
+
+    :fullscreen { /* spec */
+        background: pink;
+    }

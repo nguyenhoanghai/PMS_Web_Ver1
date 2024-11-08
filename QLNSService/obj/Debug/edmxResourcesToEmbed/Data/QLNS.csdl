@@ -1,0 +1,2334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLNSModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="QLNSEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="BaoHetHangs" EntityType="QLNSModel.BaoHetHang" />
+    <EntitySet Name="BTPs" EntityType="QLNSModel.BTP" />
+    <EntitySet Name="CatalogTables" EntityType="QLNSModel.CatalogTable" />
+    <EntitySet Name="ChiTietHienThis" EntityType="QLNSModel.ChiTietHienThi" />
+    <EntitySet Name="Chuyens" EntityType="QLNSModel.Chuyen" />
+    <EntitySet Name="Chuyen_SanPham" EntityType="QLNSModel.Chuyen_SanPham" />
+    <EntitySet Name="Configs" EntityType="QLNSModel.Config" />
+    <EntitySet Name="Config_App" EntityType="QLNSModel.Config_App" />
+    <EntitySet Name="Cums" EntityType="QLNSModel.Cum" />
+    <EntitySet Name="Dens" EntityType="QLNSModel.Den" />
+    <EntitySet Name="Errors" EntityType="QLNSModel.Error" />
+    <EntitySet Name="Floors" EntityType="QLNSModel.Floor" />
+    <EntitySet Name="GroupErrors" EntityType="QLNSModel.GroupError" />
+    <EntitySet Name="KeyPads" EntityType="QLNSModel.KeyPad" />
+    <EntitySet Name="KeyPad_Object" EntityType="QLNSModel.KeyPad_Object" />
+    <EntitySet Name="LCDConfigs" EntityType="QLNSModel.LCDConfig" />
+    <EntitySet Name="MAIL_FILE" EntityType="QLNSModel.MAIL_FILE" />
+    <EntitySet Name="MAIL_RECEIVE" EntityType="QLNSModel.MAIL_RECEIVE" />
+    <EntitySet Name="MAIL_SCHEDULE" EntityType="QLNSModel.MAIL_SCHEDULE" />
+    <EntitySet Name="MAIL_SEND" EntityType="QLNSModel.MAIL_SEND" />
+    <EntitySet Name="MAIL_T_M" EntityType="QLNSModel.MAIL_T_M" />
+    <EntitySet Name="MAIL_TEMPLATE" EntityType="QLNSModel.MAIL_TEMPLATE" />
+    <EntitySet Name="MAIL_TYPE" EntityType="QLNSModel.MAIL_TYPE" />
+    <EntitySet Name="MapIdSanPhamNgays" EntityType="QLNSModel.MapIdSanPhamNgay" />
+    <EntitySet Name="NangSuat_Cum" EntityType="QLNSModel.NangSuat_Cum" />
+    <EntitySet Name="NangSuat_CumLoi" EntityType="QLNSModel.NangSuat_CumLoi" />
+    <EntitySet Name="NangXuats" EntityType="QLNSModel.NangXuat" />
+    <EntitySet Name="P_AssignCompletion" EntityType="QLNSModel.P_AssignCompletion" />
+    <EntitySet Name="P_CompletionPhase" EntityType="QLNSModel.P_CompletionPhase" />
+    <EntitySet Name="P_CompletionPhase_Daily" EntityType="QLNSModel.P_CompletionPhase_Daily" />
+    <EntitySet Name="P_DailyInfo" EntityType="QLNSModel.P_DailyInfo" />
+    <EntitySet Name="P_DailyKeypadPosition" EntityType="QLNSModel.P_DailyKeypadPosition" />
+    <EntitySet Name="P_DailyKeypadRegister" EntityType="QLNSModel.P_DailyKeypadRegister" />
+    <EntitySet Name="P_DailyMapper" EntityType="QLNSModel.P_DailyMapper" />
+    <EntitySet Name="P_DailyPlans" EntityType="QLNSModel.P_DailyPlans" />
+    <EntitySet Name="P_Employee" EntityType="QLNSModel.P_Employee" />
+    <EntitySet Name="P_HistoryPressedKeypad" EntityType="QLNSModel.P_HistoryPressedKeypad" />
+    <EntitySet Name="P_Keypad" EntityType="QLNSModel.P_Keypad" />
+    <EntitySet Name="P_KeypadRegis_Detail" EntityType="QLNSModel.P_KeypadRegis_Detail" />
+    <EntitySet Name="P_LightPercent" EntityType="QLNSModel.P_LightPercent" />
+    <EntitySet Name="P_LightPercent_De" EntityType="QLNSModel.P_LightPercent_De" />
+    <EntitySet Name="P_LineWorkingShift" EntityType="QLNSModel.P_LineWorkingShift" />
+    <EntitySet Name="P_MonthlyProductionPlans" EntityType="QLNSModel.P_MonthlyProductionPlans" />
+    <EntitySet Name="P_Phase" EntityType="QLNSModel.P_Phase" />
+    <EntitySet Name="P_Phase_Assign_Log" EntityType="QLNSModel.P_Phase_Assign_Log" />
+    <EntitySet Name="P_PhaseDaily" EntityType="QLNSModel.P_PhaseDaily" />
+    <EntitySet Name="P_PhaseDailyLog" EntityType="QLNSModel.P_PhaseDailyLog" />
+    <EntitySet Name="P_PlayVideoShedule" EntityType="QLNSModel.P_PlayVideoShedule" />
+    <EntitySet Name="P_PlayVideoSheduleDetail" EntityType="QLNSModel.P_PlayVideoSheduleDetail" />
+    <EntitySet Name="P_ReadPercent_KCSInventory" EntityType="QLNSModel.P_ReadPercent_KCSInventory" />
+    <EntitySet Name="P_ReadPercent_KCSInventory_De" EntityType="QLNSModel.P_ReadPercent_KCSInventory_De" />
+    <EntitySet Name="P_ReadPercentOfLine" EntityType="QLNSModel.P_ReadPercentOfLine" />
+    <EntitySet Name="P_VideoLibrary" EntityType="QLNSModel.P_VideoLibrary" />
+    <EntitySet Name="P_WorkingShift" EntityType="QLNSModel.P_WorkingShift" />
+    <EntitySet Name="ReadPercents" EntityType="QLNSModel.ReadPercent" />
+    <EntitySet Name="SanLuongCats" EntityType="QLNSModel.SanLuongCat" />
+    <EntitySet Name="SanPhams" EntityType="QLNSModel.SanPham" />
+    <EntitySet Name="Shifts" EntityType="QLNSModel.Shift" />
+    <EntitySet Name="ShowLCD_Config" EntityType="QLNSModel.ShowLCD_Config" />
+    <EntitySet Name="ShowLCD_LabelArea" EntityType="QLNSModel.ShowLCD_LabelArea" />
+    <EntitySet Name="ShowLCD_LabelForPanelContent" EntityType="QLNSModel.ShowLCD_LabelForPanelContent" />
+    <EntitySet Name="ShowLCD_Panel" EntityType="QLNSModel.ShowLCD_Panel" />
+    <EntitySet Name="ShowLCD_TableLayoutPanel" EntityType="QLNSModel.ShowLCD_TableLayoutPanel" />
+    <EntitySet Name="SOUNDs" EntityType="QLNSModel.SOUND" />
+    <EntitySet Name="SOUND_IntConfig" EntityType="QLNSModel.SOUND_IntConfig" />
+    <EntitySet Name="SOUND_ReadConfig" EntityType="QLNSModel.SOUND_ReadConfig" />
+    <EntitySet Name="SOUND_ReadConfigDetail" EntityType="QLNSModel.SOUND_ReadConfigDetail" />
+    <EntitySet Name="SOUND_TimeConfig" EntityType="QLNSModel.SOUND_TimeConfig" />
+    <EntitySet Name="SoundInts" EntityType="QLNSModel.SoundInt" />
+    <EntitySet Name="TaiKhoans" EntityType="QLNSModel.TaiKhoan" />
+    <EntitySet Name="ThanhPhams" EntityType="QLNSModel.ThanhPham" />
+    <EntitySet Name="TheoDoiNgays" EntityType="QLNSModel.TheoDoiNgay" />
+    <EntitySet Name="ThoiGianTinhNhipDoTTs" EntityType="QLNSModel.ThoiGianTinhNhipDoTT" />
+    <EntitySet Name="ToCats" EntityType="QLNSModel.ToCat" />
+    <EntitySet Name="TTHienThis" EntityType="QLNSModel.TTHienThi" />
+    <EntitySet Name="TurnCOMMngs" EntityType="QLNSModel.TurnCOMMng" />
+    <AssociationSet Name="FK_BTP_Chuyen_SanPham" Association="QLNSModel.FK_BTP_Chuyen_SanPham">
+      <End Role="Chuyen_SanPham" EntitySet="Chuyen_SanPham" />
+      <End Role="BTP" EntitySet="BTPs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BTP_Cum" Association="QLNSModel.FK_BTP_Cum">
+      <End Role="Cum" EntitySet="Cums" />
+      <End Role="BTP" EntitySet="BTPs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Chuyen_Floor" Association="QLNSModel.FK_Chuyen_Floor">
+      <End Role="Floor" EntitySet="Floors" />
+      <End Role="Chuyen" EntitySet="Chuyens" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Chuyen_P_LightPercent1" Association="QLNSModel.FK_Chuyen_P_LightPercent1">
+      <End Role="P_LightPercent" EntitySet="P_LightPercent" />
+      <End Role="Chuyen" EntitySet="Chuyens" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Chuyen_SanPham_Chuyen" Association="QLNSModel.FK_Chuyen_SanPham_Chuyen">
+      <End Role="Chuyen" EntitySet="Chuyens" />
+      <End Role="Chuyen_SanPham" EntitySet="Chuyen_SanPham" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Chuyens_ReadPercents" Association="QLNSModel.FK_Chuyens_ReadPercents">
+      <End Role="ReadPercent" EntitySet="ReadPercents" />
+      <End Role="Chuyen" EntitySet="Chuyens" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cum_Chuyen" Association="QLNSModel.FK_Cum_Chuyen">
+      <End Role="Chuyen" EntitySet="Chuyens" />
+      <End Role="Cum" EntitySet="Cums" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MapIdSanPhamNgay_Chuyen" Association="QLNSModel.FK_MapIdSanPhamNgay_Chuyen">
+      <End Role="Chuyen" EntitySet="Chuyens" />
+      <End Role="MapIdSanPhamNgay" EntitySet="MapIdSanPhamNgays" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_DailyMapper_Chuyen" Association="QLNSModel.FK_P_DailyMapper_Chuyen">
+      <End Role="Chuyen" EntitySet="Chuyens" />
+      <End Role="P_DailyMapper" EntitySet="P_DailyMapper" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_LineWorkingShift_Chuyen" Association="QLNSModel.FK_P_LineWorkingShift_Chuyen">
+      <End Role="Chuyen" EntitySet="Chuyens" />
+      <End Role="P_LineWorkingShift" EntitySet="P_LineWorkingShift" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_PlayVideoShedule_Chuyen" Association="QLNSModel.FK_P_PlayVideoShedule_Chuyen">
+      <End Role="Chuyen" EntitySet="Chuyens" />
+      <End Role="P_PlayVideoShedule" EntitySet="P_PlayVideoShedule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_ReadPercentOfLine_Chuyen" Association="QLNSModel.FK_P_ReadPercentOfLine_Chuyen">
+      <End Role="Chuyen" EntitySet="Chuyens" />
+      <End Role="P_ReadPercentOfLine" EntitySet="P_ReadPercentOfLine" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SOUND_ReadConfig_Chuyen" Association="QLNSModel.FK_SOUND_ReadConfig_Chuyen">
+      <End Role="Chuyen" EntitySet="Chuyens" />
+      <End Role="SOUND_ReadConfig" EntitySet="SOUND_ReadConfig" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TheoDoiNgay_Chuyen" Association="QLNSModel.FK_TheoDoiNgay_Chuyen">
+      <End Role="Chuyen" EntitySet="Chuyens" />
+      <End Role="TheoDoiNgay" EntitySet="TheoDoiNgays" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ThoiGianTinhNhipDoTT_Chuyen" Association="QLNSModel.FK_ThoiGianTinhNhipDoTT_Chuyen">
+      <End Role="Chuyen" EntitySet="Chuyens" />
+      <End Role="ThoiGianTinhNhipDoTT" EntitySet="ThoiGianTinhNhipDoTTs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Chuyen_SanPham_SanPham" Association="QLNSModel.FK_Chuyen_SanPham_SanPham">
+      <End Role="SanPham" EntitySet="SanPhams" />
+      <End Role="Chuyen_SanPham" EntitySet="Chuyen_SanPham" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MapIdSanPhamNgay_Chuyen_SanPham" Association="QLNSModel.FK_MapIdSanPhamNgay_Chuyen_SanPham">
+      <End Role="Chuyen_SanPham" EntitySet="Chuyen_SanPham" />
+      <End Role="MapIdSanPhamNgay" EntitySet="MapIdSanPhamNgays" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NangXuat_Chuyen_SanPham" Association="QLNSModel.FK_NangXuat_Chuyen_SanPham">
+      <End Role="Chuyen_SanPham" EntitySet="Chuyen_SanPham" />
+      <End Role="NangXuat" EntitySet="NangXuats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_Assign_Phase_QuantityLog_Chuyen_SanPham" Association="QLNSModel.FK_P_Assign_Phase_QuantityLog_Chuyen_SanPham">
+      <End Role="Chuyen_SanPham" EntitySet="Chuyen_SanPham" />
+      <End Role="P_Phase_Assign_Log" EntitySet="P_Phase_Assign_Log" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_DailyMapper_Chuyen_SanPham" Association="QLNSModel.FK_P_DailyMapper_Chuyen_SanPham">
+      <End Role="Chuyen_SanPham" EntitySet="Chuyen_SanPham" />
+      <End Role="P_DailyMapper" EntitySet="P_DailyMapper" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_DailyPlans_Chuyen_SanPham" Association="QLNSModel.FK_P_DailyPlans_Chuyen_SanPham">
+      <End Role="Chuyen_SanPham" EntitySet="Chuyen_SanPham" />
+      <End Role="P_DailyPlans" EntitySet="P_DailyPlans" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_MonthlyProductionPlans_Chuyen_SanPham" Association="QLNSModel.FK_P_MonthlyProductionPlans_Chuyen_SanPham">
+      <End Role="Chuyen_SanPham" EntitySet="Chuyen_SanPham" />
+      <End Role="P_MonthlyProductionPlans" EntitySet="P_MonthlyProductionPlans" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_ReadPercentOfLine_Chuyen_SanPham" Association="QLNSModel.FK_P_ReadPercentOfLine_Chuyen_SanPham">
+      <End Role="Chuyen_SanPham" EntitySet="Chuyen_SanPham" />
+      <End Role="P_ReadPercentOfLine" EntitySet="P_ReadPercentOfLine" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ThanhPham_Chuyen_SanPham" Association="QLNSModel.FK_ThanhPham_Chuyen_SanPham">
+      <End Role="Chuyen_SanPham" EntitySet="Chuyen_SanPham" />
+      <End Role="ThanhPham" EntitySet="ThanhPhams" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Config_App_Config" Association="QLNSModel.FK_Config_App_Config">
+      <End Role="Config" EntitySet="Configs" />
+      <End Role="Config_App" EntitySet="Config_App" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KeyPad_Object_Cum" Association="QLNSModel.FK_KeyPad_Object_Cum">
+      <End Role="Cum" EntitySet="Cums" />
+      <End Role="KeyPad_Object" EntitySet="KeyPad_Object" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NangSuat_Cum_Cum" Association="QLNSModel.FK_NangSuat_Cum_Cum">
+      <End Role="Cum" EntitySet="Cums" />
+      <End Role="NangSuat_Cum" EntitySet="NangSuat_Cum" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NangSuat_CumLoi_Cum" Association="QLNSModel.FK_NangSuat_CumLoi_Cum">
+      <End Role="Cum" EntitySet="Cums" />
+      <End Role="NangSuat_CumLoi" EntitySet="NangSuat_CumLoi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_Keypad_Cum" Association="QLNSModel.FK_P_Keypad_Cum">
+      <End Role="Cum" EntitySet="Cums" />
+      <End Role="P_Keypad" EntitySet="P_Keypad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TheoDoiNgay_Cum" Association="QLNSModel.FK_TheoDoiNgay_Cum">
+      <End Role="Cum" EntitySet="Cums" />
+      <End Role="TheoDoiNgay" EntitySet="TheoDoiNgays" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Error_GroupError" Association="QLNSModel.FK_Error_GroupError">
+      <End Role="GroupError" EntitySet="GroupErrors" />
+      <End Role="Error" EntitySet="Errors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NangSuat_CumLoi_Error" Association="QLNSModel.FK_NangSuat_CumLoi_Error">
+      <End Role="Error" EntitySet="Errors" />
+      <End Role="NangSuat_CumLoi" EntitySet="NangSuat_CumLoi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KeyPad_Floor" Association="QLNSModel.FK_KeyPad_Floor">
+      <End Role="Floor" EntitySet="Floors" />
+      <End Role="KeyPad" EntitySet="KeyPads" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KeyPad_Object_KeyPad" Association="QLNSModel.FK_KeyPad_Object_KeyPad">
+      <End Role="KeyPad" EntitySet="KeyPads" />
+      <End Role="KeyPad_Object" EntitySet="KeyPad_Object" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MAIL_T_M_MAIL_FILE" Association="QLNSModel.FK_MAIL_T_M_MAIL_FILE">
+      <End Role="MAIL_FILE" EntitySet="MAIL_FILE" />
+      <End Role="MAIL_T_M" EntitySet="MAIL_T_M" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MAIL_SCHEDULE_MAIL_TEMPLATE" Association="QLNSModel.FK_MAIL_SCHEDULE_MAIL_TEMPLATE">
+      <End Role="MAIL_TEMPLATE" EntitySet="MAIL_TEMPLATE" />
+      <End Role="MAIL_SCHEDULE" EntitySet="MAIL_SCHEDULE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MAIL_SEND_MAIL_TYPE" Association="QLNSModel.FK_MAIL_SEND_MAIL_TYPE">
+      <End Role="MAIL_TYPE" EntitySet="MAIL_TYPE" />
+      <End Role="MAIL_SEND" EntitySet="MAIL_SEND" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MAIL_TEMPLATE_MAIL_SEND" Association="QLNSModel.FK_MAIL_TEMPLATE_MAIL_SEND">
+      <End Role="MAIL_SEND" EntitySet="MAIL_SEND" />
+      <End Role="MAIL_TEMPLATE" EntitySet="MAIL_TEMPLATE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MAIL_T_M_MAIL_TEMPLATE" Association="QLNSModel.FK_MAIL_T_M_MAIL_TEMPLATE">
+      <End Role="MAIL_TEMPLATE" EntitySet="MAIL_TEMPLATE" />
+      <End Role="MAIL_T_M" EntitySet="MAIL_T_M" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MapIdSanPhamNgay_SanPham" Association="QLNSModel.FK_MapIdSanPhamNgay_SanPham">
+      <End Role="SanPham" EntitySet="SanPhams" />
+      <End Role="MapIdSanPhamNgay" EntitySet="MapIdSanPhamNgays" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_BTP_HCInDay_NangXuat" Association="QLNSModel.FK_P_BTP_HCInDay_NangXuat">
+      <End Role="NangXuat" EntitySet="NangXuats" />
+      <End Role="P_PhaseDailyLog" EntitySet="P_PhaseDailyLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_PhaseDailyLog_NangXuat" Association="QLNSModel.FK_P_PhaseDailyLog_NangXuat">
+      <End Role="NangXuat" EntitySet="NangXuats" />
+      <End Role="P_PhaseDaily" EntitySet="P_PhaseDaily" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_Assignment_SanPham" Association="QLNSModel.FK_P_Assignment_SanPham">
+      <End Role="SanPham" EntitySet="SanPhams" />
+      <End Role="P_AssignCompletion" EntitySet="P_AssignCompletion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_CompletionPhase_Detail_Chuyen_SanPham" Association="QLNSModel.FK_P_CompletionPhase_Detail_Chuyen_SanPham">
+      <End Role="P_AssignCompletion" EntitySet="P_AssignCompletion" />
+      <End Role="P_CompletionPhase_Daily" EntitySet="P_CompletionPhase_Daily" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_CompletionPhase_Detail_P_CompletionPhase" Association="QLNSModel.FK_P_CompletionPhase_Detail_P_CompletionPhase">
+      <End Role="P_CompletionPhase" EntitySet="P_CompletionPhase" />
+      <End Role="P_CompletionPhase_Daily" EntitySet="P_CompletionPhase_Daily" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_PhaseDailyLog_P_Phase" Association="QLNSModel.FK_P_PhaseDailyLog_P_Phase">
+      <End Role="P_CompletionPhase" EntitySet="P_CompletionPhase" />
+      <End Role="P_PhaseDaily" EntitySet="P_PhaseDaily" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_DailyInfo_P_DailyPlans1" Association="QLNSModel.FK_P_DailyInfo_P_DailyPlans1">
+      <End Role="P_DailyPlans" EntitySet="P_DailyPlans" />
+      <End Role="P_DailyInfo" EntitySet="P_DailyInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_DailyInfo_P_Keypad" Association="QLNSModel.FK_P_DailyInfo_P_Keypad">
+      <End Role="P_Keypad" EntitySet="P_Keypad" />
+      <End Role="P_DailyInfo" EntitySet="P_DailyInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_DailyKeypadPosition_P_DailyPlans" Association="QLNSModel.FK_P_DailyKeypadPosition_P_DailyPlans">
+      <End Role="P_DailyPlans" EntitySet="P_DailyPlans" />
+      <End Role="P_DailyKeypadPosition" EntitySet="P_DailyKeypadPosition" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_DailyKeypadPosition_P_Keypad" Association="QLNSModel.FK_P_DailyKeypadPosition_P_Keypad">
+      <End Role="P_Keypad" EntitySet="P_Keypad" />
+      <End Role="P_DailyKeypadPosition" EntitySet="P_DailyKeypadPosition" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_DailyKeypadRegister_P_DailyPlans" Association="QLNSModel.FK_P_DailyKeypadRegister_P_DailyPlans">
+      <End Role="P_DailyPlans" EntitySet="P_DailyPlans" />
+      <End Role="P_DailyKeypadRegister" EntitySet="P_DailyKeypadRegister" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_DailyKeypadRegister_P_Employee" Association="QLNSModel.FK_P_DailyKeypadRegister_P_Employee">
+      <End Role="P_Employee" EntitySet="P_Employee" />
+      <End Role="P_DailyKeypadRegister" EntitySet="P_DailyKeypadRegister" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_DailyKeypadRegister_P_Keypad" Association="QLNSModel.FK_P_DailyKeypadRegister_P_Keypad">
+      <End Role="P_Keypad" EntitySet="P_Keypad" />
+      <End Role="P_DailyKeypadRegister" EntitySet="P_DailyKeypadRegister" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_KeypadRegis_Detail_P_DailyKeypadRegister" Association="QLNSModel.FK_P_KeypadRegis_Detail_P_DailyKeypadRegister">
+      <End Role="P_DailyKeypadRegister" EntitySet="P_DailyKeypadRegister" />
+      <End Role="P_KeypadRegis_Detail" EntitySet="P_KeypadRegis_Detail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_DailyMapper_P_Keypad" Association="QLNSModel.FK_P_DailyMapper_P_Keypad">
+      <End Role="P_Keypad" EntitySet="P_Keypad" />
+      <End Role="P_DailyMapper" EntitySet="P_DailyMapper" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_KanbanLightPercent_De_P_KanbanLightPercent" Association="QLNSModel.FK_P_KanbanLightPercent_De_P_KanbanLightPercent">
+      <End Role="P_LightPercent" EntitySet="P_LightPercent" />
+      <End Role="P_LightPercent_De" EntitySet="P_LightPercent_De" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_ReadPercentOfLine_P_LightPercent" Association="QLNSModel.FK_P_ReadPercentOfLine_P_LightPercent">
+      <End Role="P_LightPercent" EntitySet="P_LightPercent" />
+      <End Role="P_ReadPercentOfLine" EntitySet="P_ReadPercentOfLine" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_ReadPercentOfLine_P_LightPercent1" Association="QLNSModel.FK_P_ReadPercentOfLine_P_LightPercent1">
+      <End Role="P_LightPercent" EntitySet="P_LightPercent" />
+      <End Role="P_ReadPercentOfLine" EntitySet="P_ReadPercentOfLine" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_LineWorkingShift_P_WorkingShift" Association="QLNSModel.FK_P_LineWorkingShift_P_WorkingShift">
+      <End Role="P_WorkingShift" EntitySet="P_WorkingShift" />
+      <End Role="P_LineWorkingShift" EntitySet="P_LineWorkingShift" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_BTP_HCInDay_P_Phase" Association="QLNSModel.FK_P_BTP_HCInDay_P_Phase">
+      <End Role="P_Phase" EntitySet="P_Phase" />
+      <End Role="P_PhaseDailyLog" EntitySet="P_PhaseDailyLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_Phase_Assign_Log_P_Phase" Association="QLNSModel.FK_P_Phase_Assign_Log_P_Phase">
+      <End Role="P_Phase" EntitySet="P_Phase" />
+      <End Role="P_Phase_Assign_Log" EntitySet="P_Phase_Assign_Log" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_PlayVideoSheduleDetail_P_PlayVideoShedule" Association="QLNSModel.FK_P_PlayVideoSheduleDetail_P_PlayVideoShedule">
+      <End Role="P_PlayVideoShedule" EntitySet="P_PlayVideoShedule" />
+      <End Role="P_PlayVideoSheduleDetail" EntitySet="P_PlayVideoSheduleDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_PlayVideoSheduleDetail_P_VideoLibrary" Association="QLNSModel.FK_P_PlayVideoSheduleDetail_P_VideoLibrary">
+      <End Role="P_VideoLibrary" EntitySet="P_VideoLibrary" />
+      <End Role="P_PlayVideoSheduleDetail" EntitySet="P_PlayVideoSheduleDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_ReadPercent_KCSInventory_De_P_ReadPercent_KCSInventory" Association="QLNSModel.FK_P_ReadPercent_KCSInventory_De_P_ReadPercent_KCSInventory">
+      <End Role="P_ReadPercent_KCSInventory" EntitySet="P_ReadPercent_KCSInventory" />
+      <End Role="P_ReadPercent_KCSInventory_De" EntitySet="P_ReadPercent_KCSInventory_De" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_ReadPercentOfLine_P_ReadPercent_KCSInventory" Association="QLNSModel.FK_P_ReadPercentOfLine_P_ReadPercent_KCSInventory">
+      <End Role="P_ReadPercent_KCSInventory" EntitySet="P_ReadPercent_KCSInventory" />
+      <End Role="P_ReadPercentOfLine" EntitySet="P_ReadPercentOfLine" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_ReadPercentOfLine_ReadPercent" Association="QLNSModel.FK_P_ReadPercentOfLine_ReadPercent">
+      <End Role="ReadPercent" EntitySet="ReadPercents" />
+      <End Role="P_ReadPercentOfLine" EntitySet="P_ReadPercentOfLine" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TheoDoiNgay_SanPham" Association="QLNSModel.FK_TheoDoiNgay_SanPham">
+      <End Role="SanPham" EntitySet="SanPhams" />
+      <End Role="TheoDoiNgay" EntitySet="TheoDoiNgays" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SOUND_ReadConfigDetail_SOUND" Association="QLNSModel.FK_SOUND_ReadConfigDetail_SOUND">
+      <End Role="SOUND" EntitySet="SOUNDs" />
+      <End Role="SOUND_ReadConfigDetail" EntitySet="SOUND_ReadConfigDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SOUND_ReadConfigDetail_SOUND_IntConfig" Association="QLNSModel.FK_SOUND_ReadConfigDetail_SOUND_IntConfig">
+      <End Role="SOUND_IntConfig" EntitySet="SOUND_IntConfig" />
+      <End Role="SOUND_ReadConfigDetail" EntitySet="SOUND_ReadConfigDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SOUND_ReadConfigDetail_SOUND_ReadConfig" Association="QLNSModel.FK_SOUND_ReadConfigDetail_SOUND_ReadConfig">
+      <End Role="SOUND_ReadConfig" EntitySet="SOUND_ReadConfig" />
+      <End Role="SOUND_ReadConfigDetail" EntitySet="SOUND_ReadConfigDetail" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="BaoHetHang">
+    <Key>
+      <PropertyRef Name="STT" />
+    </Key>
+    <Property Name="STT" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SoSanPhamConLai" Type="Int32" Nullable="false" />
+    <Property Name="SoLanBao" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BTP">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ngay" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="STTChuyen_SanPham" Type="Int32" Nullable="false" />
+    <Property Name="STT" Type="Int32" Nullable="false" />
+    <Property Name="CumId" Type="Int32" Nullable="false" />
+    <Property Name="BTPNgay" Type="Int32" Nullable="false" />
+    <Property Name="TimeUpdate" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="CommandTypeId" Type="Int32" />
+    <Property Name="IsEndOfLine" Type="Boolean" Nullable="false" />
+    <Property Name="IsEnterByKeypad" Type="Boolean" Nullable="false" />
+    <Property Name="IsBTP_PB_HC" Type="Boolean" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Chuyen_SanPham" Relationship="QLNSModel.FK_BTP_Chuyen_SanPham" FromRole="BTP" ToRole="Chuyen_SanPham" />
+    <NavigationProperty Name="Cum" Relationship="QLNSModel.FK_BTP_Cum" FromRole="BTP" ToRole="Cum" />
+  </EntityType>
+  <EntityType Name="CatalogTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ChiTietHienThi">
+    <Key>
+      <PropertyRef Name="MaHienThi" />
+      <PropertyRef Name="STT" />
+    </Key>
+    <Property Name="MaHienThi" Type="Int32" Nullable="false" />
+    <Property Name="STT" Type="Int32" Nullable="false" />
+    <Property Name="SoLed" Type="Int32" Nullable="false" />
+    <Property Name="IDMain" Type="Int32" />
+    <Property Name="IDMat" Type="Int32" />
+    <Property Name="IDCell" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Chuyen">
+    <Key>
+      <PropertyRef Name="MaChuyen" />
+    </Key>
+    <Property Name="MaChuyen" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="TenChuyen" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DinhNghia" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Sound" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FloorId" Type="Int32" />
+    <Property Name="IdDen" Type="Int32" />
+    <Property Name="IdDenNangSuat" Type="Int32" />
+    <Property Name="IdTyLeDoc" Type="Int32" />
+    <Property Name="IsEndDate" Type="Boolean" />
+    <Property Name="IdTiLeBTPConLai" Type="Int32" />
+    <Property Name="LaoDongDinhBien" Type="Int32" Nullable="false" />
+    <Property Name="IntSTT" Type="Int32" Nullable="false" />
+    <Property Name="STTReadNS" Type="Int32" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Floor" Relationship="QLNSModel.FK_Chuyen_Floor" FromRole="Chuyen" ToRole="Floor" />
+    <NavigationProperty Name="P_LightPercent" Relationship="QLNSModel.FK_Chuyen_P_LightPercent1" FromRole="Chuyen" ToRole="P_LightPercent" />
+    <NavigationProperty Name="Chuyen_SanPham" Relationship="QLNSModel.FK_Chuyen_SanPham_Chuyen" FromRole="Chuyen" ToRole="Chuyen_SanPham" />
+    <NavigationProperty Name="ReadPercent" Relationship="QLNSModel.FK_Chuyens_ReadPercents" FromRole="Chuyen" ToRole="ReadPercent" />
+    <NavigationProperty Name="Cums" Relationship="QLNSModel.FK_Cum_Chuyen" FromRole="Chuyen" ToRole="Cum" />
+    <NavigationProperty Name="MapIdSanPhamNgays" Relationship="QLNSModel.FK_MapIdSanPhamNgay_Chuyen" FromRole="Chuyen" ToRole="MapIdSanPhamNgay" />
+    <NavigationProperty Name="P_DailyMapper" Relationship="QLNSModel.FK_P_DailyMapper_Chuyen" FromRole="Chuyen" ToRole="P_DailyMapper" />
+    <NavigationProperty Name="P_LineWorkingShift" Relationship="QLNSModel.FK_P_LineWorkingShift_Chuyen" FromRole="Chuyen" ToRole="P_LineWorkingShift" />
+    <NavigationProperty Name="P_PlayVideoShedule" Relationship="QLNSModel.FK_P_PlayVideoShedule_Chuyen" FromRole="Chuyen" ToRole="P_PlayVideoShedule" />
+    <NavigationProperty Name="P_ReadPercentOfLine" Relationship="QLNSModel.FK_P_ReadPercentOfLine_Chuyen" FromRole="Chuyen" ToRole="P_ReadPercentOfLine" />
+    <NavigationProperty Name="SOUND_ReadConfig" Relationship="QLNSModel.FK_SOUND_ReadConfig_Chuyen" FromRole="Chuyen" ToRole="SOUND_ReadConfig" />
+    <NavigationProperty Name="TheoDoiNgays" Relationship="QLNSModel.FK_TheoDoiNgay_Chuyen" FromRole="Chuyen" ToRole="TheoDoiNgay" />
+    <NavigationProperty Name="ThoiGianTinhNhipDoTTs" Relationship="QLNSModel.FK_ThoiGianTinhNhipDoTT_Chuyen" FromRole="Chuyen" ToRole="ThoiGianTinhNhipDoTT" />
+  </EntityType>
+  <EntityType Name="Chuyen_SanPham">
+    <Key>
+      <PropertyRef Name="STT" />
+    </Key>
+    <Property Name="STT" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="STTThucHien" Type="Int32" Nullable="false" />
+    <Property Name="Thang" Type="Int32" Nullable="false" />
+    <Property Name="Nam" Type="Int32" Nullable="false" />
+    <Property Name="MaChuyen" Type="Int32" Nullable="false" />
+    <Property Name="MaSanPham" Type="Int32" Nullable="false" />
+    <Property Name="SanLuongKeHoach" Type="Int32" Nullable="false" />
+    <Property Name="LuyKeTH" Type="Int32" Nullable="false" />
+    <Property Name="LuyKeBTPThoatChuyen" Type="Int32" Nullable="false" />
+    <Property Name="IsFinishBTPThoatChuyen" Type="Boolean" Nullable="false" />
+    <Property Name="IsMoveQuantityFromMorthOld" Type="Boolean" Nullable="false" />
+    <Property Name="IsFinishNow" Type="Boolean" Nullable="false" />
+    <Property Name="IsFinish" Type="Boolean" Nullable="false" />
+    <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+    <Property Name="TimeAdd" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <Property Name="FinishedDate" Type="DateTime" Precision="3" />
+    <Property Name="LK_BTP" Type="Int32" Nullable="false" />
+    <Property Name="LK_BTP_HC" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="BTPs" Relationship="QLNSModel.FK_BTP_Chuyen_SanPham" FromRole="Chuyen_SanPham" ToRole="BTP" />
+    <NavigationProperty Name="Chuyen" Relationship="QLNSModel.FK_Chuyen_SanPham_Chuyen" FromRole="Chuyen_SanPham" ToRole="Chuyen" />
+    <NavigationProperty Name="SanPham" Relationship="QLNSModel.FK_Chuyen_SanPham_SanPham" FromRole="Chuyen_SanPham" ToRole="SanPham" />
+    <NavigationProperty Name="MapIdSanPhamNgays" Relationship="QLNSModel.FK_MapIdSanPhamNgay_Chuyen_SanPham" FromRole="Chuyen_SanPham" ToRole="MapIdSanPhamNgay" />
+    <NavigationProperty Name="NangXuats" Relationship="QLNSModel.FK_NangXuat_Chuyen_SanPham" FromRole="Chuyen_SanPham" ToRole="NangXuat" />
+    <NavigationProperty Name="P_Phase_Assign_Log" Relationship="QLNSModel.FK_P_Assign_Phase_QuantityLog_Chuyen_SanPham" FromRole="Chuyen_SanPham" ToRole="P_Phase_Assign_Log" />
+    <NavigationProperty Name="P_DailyMapper" Relationship="QLNSModel.FK_P_DailyMapper_Chuyen_SanPham" FromRole="Chuyen_SanPham" ToRole="P_DailyMapper" />
+    <NavigationProperty Name="P_DailyPlans" Relationship="QLNSModel.FK_P_DailyPlans_Chuyen_SanPham" FromRole="Chuyen_SanPham" ToRole="P_DailyPlans" />
+    <NavigationProperty Name="P_MonthlyProductionPlans" Relationship="QLNSModel.FK_P_MonthlyProductionPlans_Chuyen_SanPham" FromRole="Chuyen_SanPham" ToRole="P_MonthlyProductionPlans" />
+    <NavigationProperty Name="P_ReadPercentOfLine" Relationship="QLNSModel.FK_P_ReadPercentOfLine_Chuyen_SanPham" FromRole="Chuyen_SanPham" ToRole="P_ReadPercentOfLine" />
+    <NavigationProperty Name="ThanhPhams" Relationship="QLNSModel.FK_ThanhPham_Chuyen_SanPham" FromRole="Chuyen_SanPham" ToRole="ThanhPham" />
+  </EntityType>
+  <EntityType Name="Config">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DisplayName" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ValueDefault" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Config_App" Relationship="QLNSModel.FK_Config_App_Config" FromRole="Config" ToRole="Config_App" />
+  </EntityType>
+  <EntityType Name="Config_App">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ConfigId" Type="Int32" Nullable="false" />
+    <Property Name="AppId" Type="Int32" Nullable="false" />
+    <Property Name="Value" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Config" Relationship="QLNSModel.FK_Config_App_Config" FromRole="Config_App" ToRole="Config" />
+  </EntityType>
+  <EntityType Name="Cum">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="TenCum" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MoTa" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="IdChuyen" Type="Int32" Nullable="false" />
+    <Property Name="FloorId" Type="Int32" />
+    <Property Name="IsEndOfLine" Type="Boolean" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="BTPs" Relationship="QLNSModel.FK_BTP_Cum" FromRole="Cum" ToRole="BTP" />
+    <NavigationProperty Name="Chuyen" Relationship="QLNSModel.FK_Cum_Chuyen" FromRole="Cum" ToRole="Chuyen" />
+    <NavigationProperty Name="KeyPad_Object" Relationship="QLNSModel.FK_KeyPad_Object_Cum" FromRole="Cum" ToRole="KeyPad_Object" />
+    <NavigationProperty Name="NangSuat_Cum" Relationship="QLNSModel.FK_NangSuat_Cum_Cum" FromRole="Cum" ToRole="NangSuat_Cum" />
+    <NavigationProperty Name="NangSuat_CumLoi" Relationship="QLNSModel.FK_NangSuat_CumLoi_Cum" FromRole="Cum" ToRole="NangSuat_CumLoi" />
+    <NavigationProperty Name="P_Keypad" Relationship="QLNSModel.FK_P_Keypad_Cum" FromRole="Cum" ToRole="P_Keypad" />
+    <NavigationProperty Name="TheoDoiNgays" Relationship="QLNSModel.FK_TheoDoiNgay_Cum" FromRole="Cum" ToRole="TheoDoiNgay" />
+  </EntityType>
+  <EntityType Name="Den">
+    <Key>
+      <PropertyRef Name="STT" />
+    </Key>
+    <Property Name="STT" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Color" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ValueFrom" Type="Int32" Nullable="false" />
+    <Property Name="ValueTo" Type="Int32" Nullable="false" />
+    <Property Name="IdCatalogTable" Type="Int32" />
+    <Property Name="STTParent" Type="Int32" />
+    <Property Name="MaMauDen" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Error">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="GroupErrorId" Type="Int32" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="GroupError" Relationship="QLNSModel.FK_Error_GroupError" FromRole="Error" ToRole="GroupError" />
+    <NavigationProperty Name="NangSuat_CumLoi" Relationship="QLNSModel.FK_NangSuat_CumLoi_Error" FromRole="Error" ToRole="NangSuat_CumLoi" />
+  </EntityType>
+  <EntityType Name="Floor">
+    <Key>
+      <PropertyRef Name="IdFloor" />
+    </Key>
+    <Property Name="IdFloor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="IsDefault" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Chuyens" Relationship="QLNSModel.FK_Chuyen_Floor" FromRole="Floor" ToRole="Chuyen" />
+    <NavigationProperty Name="KeyPads" Relationship="QLNSModel.FK_KeyPad_Floor" FromRole="Floor" ToRole="KeyPad" />
+  </EntityType>
+  <EntityType Name="GroupError">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Errors" Relationship="QLNSModel.FK_Error_GroupError" FromRole="GroupError" ToRole="Error" />
+  </EntityType>
+  <EntityType Name="KeyPad">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KeyPadName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="EquipmentId" Type="Int32" />
+    <Property Name="FloorId" Type="Int32" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="UseTypeId" Type="Int32" />
+    <NavigationProperty Name="Floor" Relationship="QLNSModel.FK_KeyPad_Floor" FromRole="KeyPad" ToRole="Floor" />
+    <NavigationProperty Name="KeyPad_Object" Relationship="QLNSModel.FK_KeyPad_Object_KeyPad" FromRole="KeyPad" ToRole="KeyPad_Object" />
+  </EntityType>
+  <EntityType Name="KeyPad_Object">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KeyPadId" Type="Int32" Nullable="false" />
+    <Property Name="STTNut" Type="Int32" />
+    <Property Name="ClusterId" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CommandTypeId" Type="Int32" />
+    <Property Name="TypeOfKeypad" Type="Int32" Nullable="false" />
+    <Property Name="Note" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Cum" Relationship="QLNSModel.FK_KeyPad_Object_Cum" FromRole="KeyPad_Object" ToRole="Cum" />
+    <NavigationProperty Name="KeyPad" Relationship="QLNSModel.FK_KeyPad_Object_KeyPad" FromRole="KeyPad_Object" ToRole="KeyPad" />
+  </EntityType>
+  <EntityType Name="LCDConfig">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TableType" Type="Int32" Nullable="false" />
+    <Property Name="RowType" Type="Int32" Nullable="false" />
+    <Property Name="Column" Type="Int32" />
+    <Property Name="FontName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="FontSize" Type="Double" />
+    <Property Name="FontStyle" Type="Int32" />
+    <Property Name="Color" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Background" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="FontWeight" Type="Boolean" />
+    <Property Name="Width" Type="Double" />
+    <Property Name="Height" Type="Double" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MAIL_FILE">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SystemName" Type="String" Nullable="false" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="Code" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Path" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="MAIL_T_M" Relationship="QLNSModel.FK_MAIL_T_M_MAIL_FILE" FromRole="MAIL_FILE" ToRole="MAIL_T_M" />
+  </EntityType>
+  <EntityType Name="MAIL_RECEIVE">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Address" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Note" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MAIL_SCHEDULE">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MailTemplateId" Type="Int32" />
+    <Property Name="Time" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="MAIL_TEMPLATE" Relationship="QLNSModel.FK_MAIL_SCHEDULE_MAIL_TEMPLATE" FromRole="MAIL_SCHEDULE" ToRole="MAIL_TEMPLATE" />
+  </EntityType>
+  <EntityType Name="MAIL_SEND">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MailTypeId" Type="Int32" Nullable="false" />
+    <Property Name="Address" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PassWord" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Note" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="MAIL_TYPE" Relationship="QLNSModel.FK_MAIL_SEND_MAIL_TYPE" FromRole="MAIL_SEND" ToRole="MAIL_TYPE" />
+    <NavigationProperty Name="MAIL_TEMPLATE" Relationship="QLNSModel.FK_MAIL_TEMPLATE_MAIL_SEND" FromRole="MAIL_SEND" ToRole="MAIL_TEMPLATE" />
+  </EntityType>
+  <EntityType Name="MAIL_T_M">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MailTemplateId" Type="Int32" Nullable="false" />
+    <Property Name="MailFileId" Type="Int32" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="MAIL_FILE" Relationship="QLNSModel.FK_MAIL_T_M_MAIL_FILE" FromRole="MAIL_T_M" ToRole="MAIL_FILE" />
+    <NavigationProperty Name="MAIL_TEMPLATE" Relationship="QLNSModel.FK_MAIL_T_M_MAIL_TEMPLATE" FromRole="MAIL_T_M" ToRole="MAIL_TEMPLATE" />
+  </EntityType>
+  <EntityType Name="MAIL_TEMPLATE">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Subject" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MailSendId" Type="Int32" Nullable="false" />
+    <Property Name="MailReceiveIds" Type="String" Nullable="false" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="MailFileIds" Type="String" Nullable="false" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="MAIL_SCHEDULE" Relationship="QLNSModel.FK_MAIL_SCHEDULE_MAIL_TEMPLATE" FromRole="MAIL_TEMPLATE" ToRole="MAIL_SCHEDULE" />
+    <NavigationProperty Name="MAIL_SEND" Relationship="QLNSModel.FK_MAIL_TEMPLATE_MAIL_SEND" FromRole="MAIL_TEMPLATE" ToRole="MAIL_SEND" />
+    <NavigationProperty Name="MAIL_T_M" Relationship="QLNSModel.FK_MAIL_T_M_MAIL_TEMPLATE" FromRole="MAIL_TEMPLATE" ToRole="MAIL_T_M" />
+  </EntityType>
+  <EntityType Name="MAIL_TYPE">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TypeName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="note" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="active" Type="Boolean" Nullable="false" />
+    <Property Name="host" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <Property Name="port" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="MAIL_SEND" Relationship="QLNSModel.FK_MAIL_SEND_MAIL_TYPE" FromRole="MAIL_TYPE" ToRole="MAIL_SEND" />
+  </EntityType>
+  <EntityType Name="MapIdSanPhamNgay">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ngay" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="MaChuyen" Type="Int32" Nullable="false" />
+    <Property Name="STT" Type="Int32" Nullable="false" />
+    <Property Name="STTChuyenSanPham" Type="Int32" Nullable="false" />
+    <Property Name="MaSanPham" Type="Int32" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Chuyen" Relationship="QLNSModel.FK_MapIdSanPhamNgay_Chuyen" FromRole="MapIdSanPhamNgay" ToRole="Chuyen" />
+    <NavigationProperty Name="Chuyen_SanPham" Relationship="QLNSModel.FK_MapIdSanPhamNgay_Chuyen_SanPham" FromRole="MapIdSanPhamNgay" ToRole="Chuyen_SanPham" />
+    <NavigationProperty Name="SanPham" Relationship="QLNSModel.FK_MapIdSanPhamNgay_SanPham" FromRole="MapIdSanPhamNgay" ToRole="SanPham" />
+  </EntityType>
+  <EntityType Name="NangSuat_Cum">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ngay" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="STTChuyen_SanPham" Type="Int32" Nullable="false" />
+    <Property Name="IdCum" Type="Int32" Nullable="false" />
+    <Property Name="SanLuongKCSTang" Type="Int32" Nullable="false" />
+    <Property Name="SanLuongKCSGiam" Type="Int32" Nullable="false" />
+    <Property Name="SanLuongTCTang" Type="Int32" Nullable="false" />
+    <Property Name="SanLuongTCGiam" Type="Int32" Nullable="false" />
+    <Property Name="BTPTang" Type="Int32" Nullable="false" />
+    <Property Name="BTPGiam" Type="Int32" Nullable="false" />
+    <Property Name="BTP_HC_Tang" Type="Int32" Nullable="false" />
+    <Property Name="BTP_HC_Giam" Type="Int32" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Cum" Relationship="QLNSModel.FK_NangSuat_Cum_Cum" FromRole="NangSuat_Cum" ToRole="Cum" />
+  </EntityType>
+  <EntityType Name="NangSuat_CumLoi">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ngay" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="STTChuyenSanPham" Type="Int32" Nullable="false" />
+    <Property Name="CumId" Type="Int32" Nullable="false" />
+    <Property Name="ErrorId" Type="Int32" Nullable="false" />
+    <Property Name="SoLuongTang" Type="Int32" Nullable="false" />
+    <Property Name="SoLuongGiam" Type="Int32" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Cum" Relationship="QLNSModel.FK_NangSuat_CumLoi_Cum" FromRole="NangSuat_CumLoi" ToRole="Cum" />
+    <NavigationProperty Name="Error" Relationship="QLNSModel.FK_NangSuat_CumLoi_Error" FromRole="NangSuat_CumLoi" ToRole="Error" />
+  </EntityType>
+  <EntityType Name="NangXuat">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ngay" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="STTCHuyen_SanPham" Type="Int32" Nullable="false" />
+    <Property Name="DinhMucNgay" Type="Double" Nullable="false" />
+    <Property Name="ThucHienNgay" Type="Int32" Nullable="false" />
+    <Property Name="ThucHienNgayGiam" Type="Int32" Nullable="false" />
+    <Property Name="BTPTrenChuyen" Type="Int32" Nullable="false" />
+    <Property Name="NhipDoThucTeBTPThoatChuyen" Type="Double" Nullable="false" />
+    <Property Name="NhipDoThucTe" Type="Double" Nullable="false" />
+    <Property Name="NhipDoSanXuat" Type="Double" Nullable="false" />
+    <Property Name="IsChange" Type="Int32" Nullable="false" />
+    <Property Name="IsChangeBTP" Type="Int32" Nullable="false" />
+    <Property Name="IsBTP" Type="Int32" Nullable="false" />
+    <Property Name="TimeLastChange" Type="Time" Precision="7" />
+    <Property Name="BTPLoi" Type="Int32" Nullable="false" />
+    <Property Name="IsEndDate" Type="Boolean" Nullable="false" />
+    <Property Name="BTPThoatChuyenNgay" Type="Int32" Nullable="false" />
+    <Property Name="BTPThoatChuyenNgayGiam" Type="Int32" Nullable="false" />
+    <Property Name="SanLuongLoi" Type="Int32" Nullable="false" />
+    <Property Name="SanLuongLoiGiam" Type="Int32" Nullable="false" />
+    <Property Name="BTPTang" Type="Int32" Nullable="false" />
+    <Property Name="BTPGiam" Type="Int32" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsStopOnDay" Type="Boolean" Nullable="false" />
+    <Property Name="TimeStopOnDay" Type="Time" Precision="7" />
+    <Property Name="BTP_HC_Tang" Type="Int32" Nullable="false" />
+    <Property Name="BTP_HC_Giam" Type="Int32" Nullable="false" />
+    <Property Name="TGCheTaoSP" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Chuyen_SanPham" Relationship="QLNSModel.FK_NangXuat_Chuyen_SanPham" FromRole="NangXuat" ToRole="Chuyen_SanPham" />
+    <NavigationProperty Name="P_PhaseDailyLog" Relationship="QLNSModel.FK_P_BTP_HCInDay_NangXuat" FromRole="NangXuat" ToRole="P_PhaseDailyLog" />
+    <NavigationProperty Name="P_PhaseDaily" Relationship="QLNSModel.FK_P_PhaseDailyLog_NangXuat" FromRole="NangXuat" ToRole="P_PhaseDaily" />
+  </EntityType>
+  <EntityType Name="P_AssignCompletion">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderIndex" Type="Int32" Nullable="false" />
+    <Property Name="CommoId" Type="Int32" Nullable="false" />
+    <Property Name="ProductionsPlan" Type="Int32" Nullable="false" />
+    <Property Name="IsFinish" Type="Boolean" Nullable="false" />
+    <Property Name="FinishedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="SanPham" Relationship="QLNSModel.FK_P_Assignment_SanPham" FromRole="P_AssignCompletion" ToRole="SanPham" />
+    <NavigationProperty Name="P_CompletionPhase_Daily" Relationship="QLNSModel.FK_P_CompletionPhase_Detail_Chuyen_SanPham" FromRole="P_AssignCompletion" ToRole="P_CompletionPhase_Daily" />
+  </EntityType>
+  <EntityType Name="P_CompletionPhase">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderIndex" Type="Int32" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="IsShow" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="P_CompletionPhase_Daily" Relationship="QLNSModel.FK_P_CompletionPhase_Detail_P_CompletionPhase" FromRole="P_CompletionPhase" ToRole="P_CompletionPhase_Daily" />
+    <NavigationProperty Name="P_PhaseDaily" Relationship="QLNSModel.FK_P_PhaseDailyLog_P_Phase" FromRole="P_CompletionPhase" ToRole="P_PhaseDaily" />
+  </EntityType>
+  <EntityType Name="P_CompletionPhase_Daily">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AssignId" Type="Int32" Nullable="false" />
+    <Property Name="CompletionPhaseId" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="CommandTypeId" Type="Int32" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="P_AssignCompletion" Relationship="QLNSModel.FK_P_CompletionPhase_Detail_Chuyen_SanPham" FromRole="P_CompletionPhase_Daily" ToRole="P_AssignCompletion" />
+    <NavigationProperty Name="P_CompletionPhase" Relationship="QLNSModel.FK_P_CompletionPhase_Detail_P_CompletionPhase" FromRole="P_CompletionPhase_Daily" ToRole="P_CompletionPhase" />
+  </EntityType>
+  <EntityType Name="P_DailyInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DailyPlansId" Type="Int32" Nullable="false" />
+    <Property Name="KeypadId" Type="Int32" Nullable="false" />
+    <Property Name="PhaseId" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="Time" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="OutputType" Type="Int32" Nullable="false" />
+    <Property Name="IsEnterByKeypad" Type="Boolean" Nullable="false" />
+    <Property Name="IsAdd" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="P_DailyPlans" Relationship="QLNSModel.FK_P_DailyInfo_P_DailyPlans1" FromRole="P_DailyInfo" ToRole="P_DailyPlans" />
+    <NavigationProperty Name="P_Keypad" Relationship="QLNSModel.FK_P_DailyInfo_P_Keypad" FromRole="P_DailyInfo" ToRole="P_Keypad" />
+  </EntityType>
+  <EntityType Name="P_DailyKeypadPosition">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DailyPlanId" Type="Int32" Nullable="false" />
+    <Property Name="KeypadId" Type="Int32" Nullable="false" />
+    <Property Name="KCS_Day" Type="Int32" Nullable="false" />
+    <Property Name="TC_Day" Type="Int32" Nullable="false" />
+    <Property Name="Error_Day" Type="Int32" Nullable="false" />
+    <Property Name="BTP_Day" Type="Int32" Nullable="false" />
+    <Property Name="BTP_HC_Day" Type="Int32" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="P_DailyPlans" Relationship="QLNSModel.FK_P_DailyKeypadPosition_P_DailyPlans" FromRole="P_DailyKeypadPosition" ToRole="P_DailyPlans" />
+    <NavigationProperty Name="P_Keypad" Relationship="QLNSModel.FK_P_DailyKeypadPosition_P_Keypad" FromRole="P_DailyKeypadPosition" ToRole="P_Keypad" />
+  </EntityType>
+  <EntityType Name="P_DailyKeypadRegister">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DailyPlansId" Type="Int32" Nullable="false" />
+    <Property Name="KeypadId" Type="Int32" Nullable="false" />
+    <Property Name="EmployeeId" Type="Int32" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="P_DailyPlans" Relationship="QLNSModel.FK_P_DailyKeypadRegister_P_DailyPlans" FromRole="P_DailyKeypadRegister" ToRole="P_DailyPlans" />
+    <NavigationProperty Name="P_Employee" Relationship="QLNSModel.FK_P_DailyKeypadRegister_P_Employee" FromRole="P_DailyKeypadRegister" ToRole="P_Employee" />
+    <NavigationProperty Name="P_Keypad" Relationship="QLNSModel.FK_P_DailyKeypadRegister_P_Keypad" FromRole="P_DailyKeypadRegister" ToRole="P_Keypad" />
+    <NavigationProperty Name="P_KeypadRegis_Detail" Relationship="QLNSModel.FK_P_KeypadRegis_Detail_P_DailyKeypadRegister" FromRole="P_DailyKeypadRegister" ToRole="P_KeypadRegis_Detail" />
+  </EntityType>
+  <EntityType Name="P_DailyMapper">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ProIndex" Type="Int32" Nullable="false" />
+    <Property Name="AssignId" Type="Int32" Nullable="false" />
+    <Property Name="PhaseIndex" Type="Int32" Nullable="false" />
+    <Property Name="PhaseId" Type="Int32" Nullable="false" />
+    <Property Name="LineId" Type="Int32" Nullable="false" />
+    <Property Name="KeypadId" Type="Int32" Nullable="false" />
+    <Property Name="EquipCode" Type="Int32" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Chuyen" Relationship="QLNSModel.FK_P_DailyMapper_Chuyen" FromRole="P_DailyMapper" ToRole="Chuyen" />
+    <NavigationProperty Name="Chuyen_SanPham" Relationship="QLNSModel.FK_P_DailyMapper_Chuyen_SanPham" FromRole="P_DailyMapper" ToRole="Chuyen_SanPham" />
+    <NavigationProperty Name="P_Keypad" Relationship="QLNSModel.FK_P_DailyMapper_P_Keypad" FromRole="P_DailyMapper" ToRole="P_Keypad" />
+  </EntityType>
+  <EntityType Name="P_DailyPlans">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Index" Type="Int32" Nullable="false" />
+    <Property Name="CSP_Id" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Labors" Type="Int32" Nullable="false" />
+    <Property Name="LeanKH" Type="Double" Nullable="false" />
+    <Property Name="LaborProductivity" Type="Double" Nullable="false" />
+    <Property Name="NormsOfDay" Type="Double" Nullable="false" />
+    <Property Name="KCS_Day" Type="Int32" Nullable="false" />
+    <Property Name="TC_Day" Type="Int32" Nullable="false" />
+    <Property Name="Error_Day" Type="Int32" Nullable="false" />
+    <Property Name="BTP_Day" Type="Int32" Nullable="false" />
+    <Property Name="BTP_HC_Day" Type="Int32" Nullable="false" />
+    <Property Name="BTPInLine" Type="Int32" Nullable="false" />
+    <Property Name="Pace_TC" Type="Double" Nullable="false" />
+    <Property Name="Pace_TT" Type="Double" Nullable="false" />
+    <Property Name="Pace_SX" Type="Double" Nullable="false" />
+    <Property Name="IsEndDate" Type="Boolean" Nullable="false" />
+    <Property Name="ShowLCD" Type="Boolean" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Chuyen_SanPham" Relationship="QLNSModel.FK_P_DailyPlans_Chuyen_SanPham" FromRole="P_DailyPlans" ToRole="Chuyen_SanPham" />
+    <NavigationProperty Name="P_DailyInfo" Relationship="QLNSModel.FK_P_DailyInfo_P_DailyPlans1" FromRole="P_DailyPlans" ToRole="P_DailyInfo" />
+    <NavigationProperty Name="P_DailyKeypadPosition" Relationship="QLNSModel.FK_P_DailyKeypadPosition_P_DailyPlans" FromRole="P_DailyPlans" ToRole="P_DailyKeypadPosition" />
+    <NavigationProperty Name="P_DailyKeypadRegister" Relationship="QLNSModel.FK_P_DailyKeypadRegister_P_DailyPlans" FromRole="P_DailyPlans" ToRole="P_DailyKeypadRegister" />
+  </EntityType>
+  <EntityType Name="P_Employee">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Index" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Sex" Type="Boolean" Nullable="false" />
+    <Property Name="Note" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="P_DailyKeypadRegister" Relationship="QLNSModel.FK_P_DailyKeypadRegister_P_Employee" FromRole="P_Employee" ToRole="P_DailyKeypadRegister" />
+  </EntityType>
+  <EntityType Name="P_HistoryPressedKeypad">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="LineId" Type="Int32" Nullable="false" />
+    <Property Name="AssignmentId" Type="Int32" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="P_Keypad">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ClusterId" Type="Int32" Nullable="false" />
+    <Property Name="EquipCode" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="Int32" Nullable="false" />
+    <Property Name="Note" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Cum" Relationship="QLNSModel.FK_P_Keypad_Cum" FromRole="P_Keypad" ToRole="Cum" />
+    <NavigationProperty Name="P_DailyInfo" Relationship="QLNSModel.FK_P_DailyInfo_P_Keypad" FromRole="P_Keypad" ToRole="P_DailyInfo" />
+    <NavigationProperty Name="P_DailyKeypadPosition" Relationship="QLNSModel.FK_P_DailyKeypadPosition_P_Keypad" FromRole="P_Keypad" ToRole="P_DailyKeypadPosition" />
+    <NavigationProperty Name="P_DailyKeypadRegister" Relationship="QLNSModel.FK_P_DailyKeypadRegister_P_Keypad" FromRole="P_Keypad" ToRole="P_DailyKeypadRegister" />
+    <NavigationProperty Name="P_DailyMapper" Relationship="QLNSModel.FK_P_DailyMapper_P_Keypad" FromRole="P_Keypad" ToRole="P_DailyMapper" />
+  </EntityType>
+  <EntityType Name="P_KeypadRegis_Detail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KeypadRegisId" Type="Int32" Nullable="false" />
+    <Property Name="PhaseId" Type="Int32" Nullable="false" />
+    <Property Name="Index" Type="Int32" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="P_DailyKeypadRegister" Relationship="QLNSModel.FK_P_KeypadRegis_Detail_P_DailyKeypadRegister" FromRole="P_KeypadRegis_Detail" ToRole="P_DailyKeypadRegister" />
+  </EntityType>
+  <EntityType Name="P_LightPercent">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="Int32" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Chuyens" Relationship="QLNSModel.FK_Chuyen_P_LightPercent1" FromRole="P_LightPercent" ToRole="Chuyen" />
+    <NavigationProperty Name="P_LightPercent_De" Relationship="QLNSModel.FK_P_KanbanLightPercent_De_P_KanbanLightPercent" FromRole="P_LightPercent" ToRole="P_LightPercent_De" />
+    <NavigationProperty Name="P_ReadPercentOfLine" Relationship="QLNSModel.FK_P_ReadPercentOfLine_P_LightPercent" FromRole="P_LightPercent" ToRole="P_ReadPercentOfLine" />
+    <NavigationProperty Name="P_ReadPercentOfLine1" Relationship="QLNSModel.FK_P_ReadPercentOfLine_P_LightPercent1" FromRole="P_LightPercent" ToRole="P_ReadPercentOfLine" />
+  </EntityType>
+  <EntityType Name="P_LightPercent_De">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LightPercentId" Type="Int32" Nullable="false" />
+    <Property Name="ColorName" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="From" Type="Double" Nullable="false" />
+    <Property Name="To" Type="Double" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="P_LightPercent" Relationship="QLNSModel.FK_P_KanbanLightPercent_De_P_KanbanLightPercent" FromRole="P_LightPercent_De" ToRole="P_LightPercent" />
+  </EntityType>
+  <EntityType Name="P_LineWorkingShift">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ShiftOrder" Type="Int32" Nullable="false" />
+    <Property Name="LineId" Type="Int32" Nullable="false" />
+    <Property Name="ShiftId" Type="Int32" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Chuyen" Relationship="QLNSModel.FK_P_LineWorkingShift_Chuyen" FromRole="P_LineWorkingShift" ToRole="Chuyen" />
+    <NavigationProperty Name="P_WorkingShift" Relationship="QLNSModel.FK_P_LineWorkingShift_P_WorkingShift" FromRole="P_LineWorkingShift" ToRole="P_WorkingShift" />
+  </EntityType>
+  <EntityType Name="P_MonthlyProductionPlans">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="STT_C_SP" Type="Int32" Nullable="false" />
+    <Property Name="ProductionPlans" Type="Int32" Nullable="false" />
+    <Property Name="LK_TH" Type="Int32" Nullable="false" />
+    <Property Name="LK_TC" Type="Int32" Nullable="false" />
+    <Property Name="LK_BTP" Type="Int32" Nullable="false" />
+    <Property Name="LK_BTP_HC" Type="Int32" Nullable="false" />
+    <Property Name="Month" Type="Int32" Nullable="false" />
+    <Property Name="Year" Type="Int32" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Chuyen_SanPham" Relationship="QLNSModel.FK_P_MonthlyProductionPlans_Chuyen_SanPham" FromRole="P_MonthlyProductionPlans" ToRole="Chuyen_SanPham" />
+  </EntityType>
+  <EntityType Name="P_Phase">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Index" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="Int32" Nullable="false" />
+    <Property Name="IsShow" Type="Boolean" Nullable="false" />
+    <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="P_PhaseDailyLog" Relationship="QLNSModel.FK_P_BTP_HCInDay_P_Phase" FromRole="P_Phase" ToRole="P_PhaseDailyLog" />
+    <NavigationProperty Name="P_Phase_Assign_Log" Relationship="QLNSModel.FK_P_Phase_Assign_Log_P_Phase" FromRole="P_Phase" ToRole="P_Phase_Assign_Log" />
+  </EntityType>
+  <EntityType Name="P_Phase_Assign_Log">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AssignId" Type="Int32" Nullable="false" />
+    <Property Name="PhaseId" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Chuyen_SanPham" Relationship="QLNSModel.FK_P_Assign_Phase_QuantityLog_Chuyen_SanPham" FromRole="P_Phase_Assign_Log" ToRole="Chuyen_SanPham" />
+    <NavigationProperty Name="P_Phase" Relationship="QLNSModel.FK_P_Phase_Assign_Log_P_Phase" FromRole="P_Phase_Assign_Log" ToRole="P_Phase" />
+  </EntityType>
+  <EntityType Name="P_PhaseDaily">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NangSuatId" Type="Int32" Nullable="false" />
+    <Property Name="PhaseId" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="CommandTypeId" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="NangXuat" Relationship="QLNSModel.FK_P_PhaseDailyLog_NangXuat" FromRole="P_PhaseDaily" ToRole="NangXuat" />
+    <NavigationProperty Name="P_CompletionPhase" Relationship="QLNSModel.FK_P_PhaseDailyLog_P_Phase" FromRole="P_PhaseDaily" ToRole="P_CompletionPhase" />
+  </EntityType>
+  <EntityType Name="P_PhaseDailyLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NangSuatId" Type="Int32" Nullable="false" />
+    <Property Name="PhaseId" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="CommandTypeId" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="NangXuat" Relationship="QLNSModel.FK_P_BTP_HCInDay_NangXuat" FromRole="P_PhaseDailyLog" ToRole="NangXuat" />
+    <NavigationProperty Name="P_Phase" Relationship="QLNSModel.FK_P_BTP_HCInDay_P_Phase" FromRole="P_PhaseDailyLog" ToRole="P_Phase" />
+  </EntityType>
+  <EntityType Name="P_PlayVideoShedule">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LineId" Type="Int32" Nullable="false" />
+    <Property Name="TimeStart" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="TimeEnd" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Chuyen" Relationship="QLNSModel.FK_P_PlayVideoShedule_Chuyen" FromRole="P_PlayVideoShedule" ToRole="Chuyen" />
+    <NavigationProperty Name="P_PlayVideoSheduleDetail" Relationship="QLNSModel.FK_P_PlayVideoSheduleDetail_P_PlayVideoShedule" FromRole="P_PlayVideoShedule" ToRole="P_PlayVideoSheduleDetail" />
+  </EntityType>
+  <EntityType Name="P_PlayVideoSheduleDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VideoId" Type="Int32" Nullable="false" />
+    <Property Name="VideoSheduleId" Type="Int32" Nullable="false" />
+    <Property Name="OrderIndex" Type="Int32" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="P_PlayVideoShedule" Relationship="QLNSModel.FK_P_PlayVideoSheduleDetail_P_PlayVideoShedule" FromRole="P_PlayVideoSheduleDetail" ToRole="P_PlayVideoShedule" />
+    <NavigationProperty Name="P_VideoLibrary" Relationship="QLNSModel.FK_P_PlayVideoSheduleDetail_P_VideoLibrary" FromRole="P_PlayVideoSheduleDetail" ToRole="P_VideoLibrary" />
+  </EntityType>
+  <EntityType Name="P_ReadPercent_KCSInventory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="P_ReadPercent_KCSInventory_De" Relationship="QLNSModel.FK_P_ReadPercent_KCSInventory_De_P_ReadPercent_KCSInventory" FromRole="P_ReadPercent_KCSInventory" ToRole="P_ReadPercent_KCSInventory_De" />
+    <NavigationProperty Name="P_ReadPercentOfLine" Relationship="QLNSModel.FK_P_ReadPercentOfLine_P_ReadPercent_KCSInventory" FromRole="P_ReadPercent_KCSInventory" ToRole="P_ReadPercentOfLine" />
+  </EntityType>
+  <EntityType Name="P_ReadPercent_KCSInventory_De">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KCSInventoryId" Type="Int32" Nullable="false" />
+    <Property Name="From" Type="Int32" Nullable="false" />
+    <Property Name="To" Type="Int32" Nullable="false" />
+    <Property Name="SoundPath" Type="String" Nullable="false" MaxLength="500" FixedLength="true" Unicode="true" />
+    <Property Name="RepeatTimes" Type="Int32" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="P_ReadPercent_KCSInventory" Relationship="QLNSModel.FK_P_ReadPercent_KCSInventory_De_P_ReadPercent_KCSInventory" FromRole="P_ReadPercent_KCSInventory_De" ToRole="P_ReadPercent_KCSInventory" />
+  </EntityType>
+  <EntityType Name="P_ReadPercentOfLine">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ReadPercent_KCSInventoryId" Type="Int32" />
+    <Property Name="ReadPercentId" Type="Int32" />
+    <Property Name="KanbanLightPercentId" Type="Int32" />
+    <Property Name="ProductLightPercentId" Type="Int32" />
+    <Property Name="LineId" Type="Int32" Nullable="false" />
+    <Property Name="AssignmentId" Type="Int32" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Chuyen" Relationship="QLNSModel.FK_P_ReadPercentOfLine_Chuyen" FromRole="P_ReadPercentOfLine" ToRole="Chuyen" />
+    <NavigationProperty Name="Chuyen_SanPham" Relationship="QLNSModel.FK_P_ReadPercentOfLine_Chuyen_SanPham" FromRole="P_ReadPercentOfLine" ToRole="Chuyen_SanPham" />
+    <NavigationProperty Name="P_LightPercent" Relationship="QLNSModel.FK_P_ReadPercentOfLine_P_LightPercent" FromRole="P_ReadPercentOfLine" ToRole="P_LightPercent" />
+    <NavigationProperty Name="P_LightPercent1" Relationship="QLNSModel.FK_P_ReadPercentOfLine_P_LightPercent1" FromRole="P_ReadPercentOfLine" ToRole="P_LightPercent" />
+    <NavigationProperty Name="P_ReadPercent_KCSInventory" Relationship="QLNSModel.FK_P_ReadPercentOfLine_P_ReadPercent_KCSInventory" FromRole="P_ReadPercentOfLine" ToRole="P_ReadPercent_KCSInventory" />
+    <NavigationProperty Name="ReadPercent" Relationship="QLNSModel.FK_P_ReadPercentOfLine_ReadPercent" FromRole="P_ReadPercentOfLine" ToRole="ReadPercent" />
+  </EntityType>
+  <EntityType Name="P_VideoLibrary">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Path" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Size" Type="Double" Nullable="false" />
+    <Property Name="Length" Type="Double" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="P_PlayVideoSheduleDetail" Relationship="QLNSModel.FK_P_PlayVideoSheduleDetail_P_VideoLibrary" FromRole="P_VideoLibrary" ToRole="P_PlayVideoSheduleDetail" />
+  </EntityType>
+  <EntityType Name="P_WorkingShift">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="TimeStart" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="TimeEnd" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="P_LineWorkingShift" Relationship="QLNSModel.FK_P_LineWorkingShift_P_WorkingShift" FromRole="P_WorkingShift" ToRole="P_LineWorkingShift" />
+  </EntityType>
+  <EntityType Name="ReadPercent">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PercentFrom" Type="Int32" Nullable="false" />
+    <Property Name="PercentTo" Type="Int32" Nullable="false" />
+    <Property Name="CountRepeat" Type="Int32" Nullable="false" />
+    <Property Name="Sound" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="IdParent" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Chuyens" Relationship="QLNSModel.FK_Chuyens_ReadPercents" FromRole="ReadPercent" ToRole="Chuyen" />
+    <NavigationProperty Name="P_ReadPercentOfLine" Relationship="QLNSModel.FK_P_ReadPercentOfLine_ReadPercent" FromRole="ReadPercent" ToRole="P_ReadPercentOfLine" />
+  </EntityType>
+  <EntityType Name="SanLuongCat">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="IdToCat" />
+      <PropertyRef Name="IdSanPham" />
+      <PropertyRef Name="SanLuong" />
+      <PropertyRef Name="ThoiGianNapSL" />
+      <PropertyRef Name="NgayNapSL" />
+      <PropertyRef Name="IsDeleted" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdToCat" Type="Int32" Nullable="false" />
+    <Property Name="IdSanPham" Type="Int32" Nullable="false" />
+    <Property Name="SanLuong" Type="Int32" Nullable="false" />
+    <Property Name="ThoiGianNapSL" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="NgayNapSL" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SanPham">
+    <Key>
+      <PropertyRef Name="MaSanPham" />
+    </Key>
+    <Property Name="MaSanPham" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenSanPham" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DinhNghia" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Floor" Type="Int32" />
+    <Property Name="DonGia" Type="Double" Nullable="false" />
+    <Property Name="DonGiaCM" Type="Double" Nullable="false" />
+    <Property Name="ProductionTime" Type="Double" Nullable="false" />
+    <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Chuyen_SanPham" Relationship="QLNSModel.FK_Chuyen_SanPham_SanPham" FromRole="SanPham" ToRole="Chuyen_SanPham" />
+    <NavigationProperty Name="MapIdSanPhamNgays" Relationship="QLNSModel.FK_MapIdSanPhamNgay_SanPham" FromRole="SanPham" ToRole="MapIdSanPhamNgay" />
+    <NavigationProperty Name="P_AssignCompletion" Relationship="QLNSModel.FK_P_Assignment_SanPham" FromRole="SanPham" ToRole="P_AssignCompletion" />
+    <NavigationProperty Name="TheoDoiNgays" Relationship="QLNSModel.FK_TheoDoiNgay_SanPham" FromRole="SanPham" ToRole="TheoDoiNgay" />
+  </EntityType>
+  <EntityType Name="Shift">
+    <Key>
+      <PropertyRef Name="MaChuyen" />
+      <PropertyRef Name="IdShift" />
+    </Key>
+    <Property Name="MaChuyen" Type="Int32" Nullable="false" />
+    <Property Name="IdShift" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TimeStart" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="TimeEnd" Type="Time" Nullable="false" Precision="7" />
+  </EntityType>
+  <EntityType Name="ShowLCD_Config">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Value" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ShowLCD_LabelArea">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Font" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Size" Type="Double" Nullable="false" />
+    <Property Name="Bold" Type="Boolean" Nullable="false" />
+    <Property Name="Italic" Type="Boolean" Nullable="false" />
+    <Property Name="Color" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Position" Type="Int32" />
+    <Property Name="TableLayoutPanelName" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Name="TableType" Type="Int32" Nullable="false" />
+    <Property Name="Note" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ShowLCD_LabelForPanelContent">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LabelName" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+    <Property Name="SystemValueName" Type="String" MaxLength="25" FixedLength="true" Unicode="true" />
+    <Property Name="IntRowTBLPanelContent" Type="Int32" Nullable="false" />
+    <Property Name="SttNext" Type="Int32" Nullable="false" />
+    <Property Name="IsShow" Type="Boolean" Nullable="false" />
+    <Property Name="TableType" Type="Int32" Nullable="false" />
+    <Property Name="Note" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ShowLCD_Panel">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BackColor" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TableType" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ShowLCD_TableLayoutPanel">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ColumnInt" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="RowInt" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="TableLayoutPanelName" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="SizePercent" Type="Double" />
+    <Property Name="IsShow" Type="Boolean" Nullable="false" />
+    <Property Name="TableType" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SOUND">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Path" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="SOUND_ReadConfigDetail" Relationship="QLNSModel.FK_SOUND_ReadConfigDetail_SOUND" FromRole="SOUND" ToRole="SOUND_ReadConfigDetail" />
+  </EntityType>
+  <EntityType Name="SOUND_IntConfig">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Formula" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsProductivity" Type="Boolean" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="SOUND_ReadConfigDetail" Relationship="QLNSModel.FK_SOUND_ReadConfigDetail_SOUND_IntConfig" FromRole="SOUND_IntConfig" ToRole="SOUND_ReadConfigDetail" />
+  </EntityType>
+  <EntityType Name="SOUND_ReadConfig">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ConfigType" Type="Int32" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="IdChuyen" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Chuyen" Relationship="QLNSModel.FK_SOUND_ReadConfig_Chuyen" FromRole="SOUND_ReadConfig" ToRole="Chuyen" />
+    <NavigationProperty Name="SOUND_ReadConfigDetail" Relationship="QLNSModel.FK_SOUND_ReadConfigDetail_SOUND_ReadConfig" FromRole="SOUND_ReadConfig" ToRole="SOUND_ReadConfigDetail" />
+  </EntityType>
+  <EntityType Name="SOUND_ReadConfigDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdReadConfig" Type="Int32" Nullable="false" />
+    <Property Name="IdSound" Type="Int32" />
+    <Property Name="IdIntConfig" Type="Int32" />
+    <Property Name="IntType" Type="Int32" Nullable="false" />
+    <Property Name="OrderIndex" Type="Int32" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="SOUND" Relationship="QLNSModel.FK_SOUND_ReadConfigDetail_SOUND" FromRole="SOUND_ReadConfigDetail" ToRole="SOUND" />
+    <NavigationProperty Name="SOUND_IntConfig" Relationship="QLNSModel.FK_SOUND_ReadConfigDetail_SOUND_IntConfig" FromRole="SOUND_ReadConfigDetail" ToRole="SOUND_IntConfig" />
+    <NavigationProperty Name="SOUND_ReadConfig" Relationship="QLNSModel.FK_SOUND_ReadConfigDetail_SOUND_ReadConfig" FromRole="SOUND_ReadConfigDetail" ToRole="SOUND_ReadConfig" />
+  </EntityType>
+  <EntityType Name="SOUND_TimeConfig">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Time" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="SoLanDoc" Type="Int32" Nullable="false" />
+    <Property Name="ConfigType" Type="Int32" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SoundInt">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="AddressFile" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TaiKhoan">
+    <Key>
+      <PropertyRef Name="UserName" />
+    </Key>
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ThanhPham" Type="Int32" Nullable="false" />
+    <Property Name="BTP" Type="Int32" Nullable="false" />
+    <Property Name="ThaoTac" Type="Int32" />
+    <Property Name="Floor" Type="Int32" />
+    <Property Name="ListChuyenId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsOnwer" Type="Boolean" Nullable="false" />
+    <Property Name="IsKanbanAcc" Type="Boolean" Nullable="false" />
+    <Property Name="IsCompleteAcc" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ThanhPham">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ngay" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="STTChuyen_SanPham" Type="Int32" Nullable="false" />
+    <Property Name="NangXuatLaoDong" Type="Double" Nullable="false" />
+    <Property Name="ShowLCD" Type="Boolean" Nullable="false" />
+    <Property Name="LaoDongChuyen" Type="Int32" Nullable="false" />
+    <Property Name="LeanKH" Type="Double" Nullable="false" />
+    <Property Name="HieuSuat" Type="Double" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Chuyen_SanPham" Relationship="QLNSModel.FK_ThanhPham_Chuyen_SanPham" FromRole="ThanhPham" ToRole="Chuyen_SanPham" />
+  </EntityType>
+  <EntityType Name="TheoDoiNgay">
+    <Key>
+      <PropertyRef Name="STT" />
+    </Key>
+    <Property Name="STT" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaChuyen" Type="Int32" Nullable="false" />
+    <Property Name="CumId" Type="Int32" Nullable="false" />
+    <Property Name="STTChuyenSanPham" Type="Int32" Nullable="false" />
+    <Property Name="MaSanPham" Type="Int32" Nullable="false" />
+    <Property Name="ThanhPham" Type="Int32" Nullable="false" />
+    <Property Name="Time" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="Date" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CommandTypeId" Type="Int32" />
+    <Property Name="ProductOutputTypeId" Type="Int32" />
+    <Property Name="ErrorId" Type="Int32" />
+    <Property Name="IsEndOfLine" Type="Boolean" Nullable="false" />
+    <Property Name="IsEnterByKeypad" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Chuyen" Relationship="QLNSModel.FK_TheoDoiNgay_Chuyen" FromRole="TheoDoiNgay" ToRole="Chuyen" />
+    <NavigationProperty Name="Cum" Relationship="QLNSModel.FK_TheoDoiNgay_Cum" FromRole="TheoDoiNgay" ToRole="Cum" />
+    <NavigationProperty Name="SanPham" Relationship="QLNSModel.FK_TheoDoiNgay_SanPham" FromRole="TheoDoiNgay" ToRole="SanPham" />
+  </EntityType>
+  <EntityType Name="ThoiGianTinhNhipDoTT">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ngay" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="MaChuyen" Type="Int32" Nullable="false" />
+    <Property Name="ThoiGianBatDau" Type="Time" Nullable="false" Precision="7" />
+    <NavigationProperty Name="Chuyen" Relationship="QLNSModel.FK_ThoiGianTinhNhipDoTT_Chuyen" FromRole="ThoiGianTinhNhipDoTT" ToRole="Chuyen" />
+  </EntityType>
+  <EntityType Name="ToCat">
+    <Key>
+      <PropertyRef Name="IdToCat" />
+      <PropertyRef Name="TenToCat" />
+      <PropertyRef Name="IsDeleted" />
+      <PropertyRef Name="IdFloor" />
+    </Key>
+    <Property Name="IdToCat" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenToCat" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DinhNghia" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="IdFloor" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TTHienThi">
+    <Key>
+      <PropertyRef Name="MaHienThi" />
+    </Key>
+    <Property Name="MaHienThi" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaChuyen" Type="Int32" Nullable="false" />
+    <Property Name="ViTri" Type="Int32" Nullable="false" />
+    <Property Name="ChangeTP" Type="Int32" Nullable="false" />
+    <Property Name="ChangeBTP" Type="Int32" Nullable="false" />
+    <Property Name="IsInt" Type="Int32" Nullable="false" />
+    <Property Name="IdCatalogTable" Type="Int32" Nullable="false" />
+    <Property Name="STTDen" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TurnCOMMng">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ComTypeId" Type="Int32" Nullable="false" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="TimeAction" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_BTP_Chuyen_SanPham">
+    <End Type="QLNSModel.Chuyen_SanPham" Role="Chuyen_SanPham" Multiplicity="1" />
+    <End Type="QLNSModel.BTP" Role="BTP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chuyen_SanPham">
+        <PropertyRef Name="STT" />
+      </Principal>
+      <Dependent Role="BTP">
+        <PropertyRef Name="STTChuyen_SanPham" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BTP_Cum">
+    <End Type="QLNSModel.Cum" Role="Cum" Multiplicity="1" />
+    <End Type="QLNSModel.BTP" Role="BTP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cum">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BTP">
+        <PropertyRef Name="CumId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Chuyen_Floor">
+    <End Type="QLNSModel.Floor" Role="Floor" Multiplicity="0..1" />
+    <End Type="QLNSModel.Chuyen" Role="Chuyen" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Floor">
+        <PropertyRef Name="IdFloor" />
+      </Principal>
+      <Dependent Role="Chuyen">
+        <PropertyRef Name="FloorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Chuyen_P_LightPercent1">
+    <End Type="QLNSModel.P_LightPercent" Role="P_LightPercent" Multiplicity="0..1" />
+    <End Type="QLNSModel.Chuyen" Role="Chuyen" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_LightPercent">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Chuyen">
+        <PropertyRef Name="IdTiLeBTPConLai" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Chuyen_SanPham_Chuyen">
+    <End Type="QLNSModel.Chuyen" Role="Chuyen" Multiplicity="1" />
+    <End Type="QLNSModel.Chuyen_SanPham" Role="Chuyen_SanPham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chuyen">
+        <PropertyRef Name="MaChuyen" />
+      </Principal>
+      <Dependent Role="Chuyen_SanPham">
+        <PropertyRef Name="MaChuyen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Chuyens_ReadPercents">
+    <End Type="QLNSModel.ReadPercent" Role="ReadPercent" Multiplicity="0..1" />
+    <End Type="QLNSModel.Chuyen" Role="Chuyen" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ReadPercent">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Chuyen">
+        <PropertyRef Name="IdTyLeDoc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cum_Chuyen">
+    <End Type="QLNSModel.Chuyen" Role="Chuyen" Multiplicity="1" />
+    <End Type="QLNSModel.Cum" Role="Cum" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chuyen">
+        <PropertyRef Name="MaChuyen" />
+      </Principal>
+      <Dependent Role="Cum">
+        <PropertyRef Name="IdChuyen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MapIdSanPhamNgay_Chuyen">
+    <End Type="QLNSModel.Chuyen" Role="Chuyen" Multiplicity="1" />
+    <End Type="QLNSModel.MapIdSanPhamNgay" Role="MapIdSanPhamNgay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chuyen">
+        <PropertyRef Name="MaChuyen" />
+      </Principal>
+      <Dependent Role="MapIdSanPhamNgay">
+        <PropertyRef Name="MaChuyen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_DailyMapper_Chuyen">
+    <End Type="QLNSModel.Chuyen" Role="Chuyen" Multiplicity="1" />
+    <End Type="QLNSModel.P_DailyMapper" Role="P_DailyMapper" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chuyen">
+        <PropertyRef Name="MaChuyen" />
+      </Principal>
+      <Dependent Role="P_DailyMapper">
+        <PropertyRef Name="LineId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_LineWorkingShift_Chuyen">
+    <End Type="QLNSModel.Chuyen" Role="Chuyen" Multiplicity="1" />
+    <End Type="QLNSModel.P_LineWorkingShift" Role="P_LineWorkingShift" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chuyen">
+        <PropertyRef Name="MaChuyen" />
+      </Principal>
+      <Dependent Role="P_LineWorkingShift">
+        <PropertyRef Name="LineId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_PlayVideoShedule_Chuyen">
+    <End Type="QLNSModel.Chuyen" Role="Chuyen" Multiplicity="1" />
+    <End Type="QLNSModel.P_PlayVideoShedule" Role="P_PlayVideoShedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chuyen">
+        <PropertyRef Name="MaChuyen" />
+      </Principal>
+      <Dependent Role="P_PlayVideoShedule">
+        <PropertyRef Name="LineId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_ReadPercentOfLine_Chuyen">
+    <End Type="QLNSModel.Chuyen" Role="Chuyen" Multiplicity="1" />
+    <End Type="QLNSModel.P_ReadPercentOfLine" Role="P_ReadPercentOfLine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chuyen">
+        <PropertyRef Name="MaChuyen" />
+      </Principal>
+      <Dependent Role="P_ReadPercentOfLine">
+        <PropertyRef Name="LineId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SOUND_ReadConfig_Chuyen">
+    <End Type="QLNSModel.Chuyen" Role="Chuyen" Multiplicity="1" />
+    <End Type="QLNSModel.SOUND_ReadConfig" Role="SOUND_ReadConfig" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chuyen">
+        <PropertyRef Name="MaChuyen" />
+      </Principal>
+      <Dependent Role="SOUND_ReadConfig">
+        <PropertyRef Name="IdChuyen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TheoDoiNgay_Chuyen">
+    <End Type="QLNSModel.Chuyen" Role="Chuyen" Multiplicity="1" />
+    <End Type="QLNSModel.TheoDoiNgay" Role="TheoDoiNgay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chuyen">
+        <PropertyRef Name="MaChuyen" />
+      </Principal>
+      <Dependent Role="TheoDoiNgay">
+        <PropertyRef Name="MaChuyen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ThoiGianTinhNhipDoTT_Chuyen">
+    <End Type="QLNSModel.Chuyen" Role="Chuyen" Multiplicity="1" />
+    <End Type="QLNSModel.ThoiGianTinhNhipDoTT" Role="ThoiGianTinhNhipDoTT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chuyen">
+        <PropertyRef Name="MaChuyen" />
+      </Principal>
+      <Dependent Role="ThoiGianTinhNhipDoTT">
+        <PropertyRef Name="MaChuyen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Chuyen_SanPham_SanPham">
+    <End Type="QLNSModel.SanPham" Role="SanPham" Multiplicity="1" />
+    <End Type="QLNSModel.Chuyen_SanPham" Role="Chuyen_SanPham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SanPham">
+        <PropertyRef Name="MaSanPham" />
+      </Principal>
+      <Dependent Role="Chuyen_SanPham">
+        <PropertyRef Name="MaSanPham" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MapIdSanPhamNgay_Chuyen_SanPham">
+    <End Type="QLNSModel.Chuyen_SanPham" Role="Chuyen_SanPham" Multiplicity="1" />
+    <End Type="QLNSModel.MapIdSanPhamNgay" Role="MapIdSanPhamNgay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chuyen_SanPham">
+        <PropertyRef Name="STT" />
+      </Principal>
+      <Dependent Role="MapIdSanPhamNgay">
+        <PropertyRef Name="STTChuyenSanPham" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NangXuat_Chuyen_SanPham">
+    <End Type="QLNSModel.Chuyen_SanPham" Role="Chuyen_SanPham" Multiplicity="1" />
+    <End Type="QLNSModel.NangXuat" Role="NangXuat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chuyen_SanPham">
+        <PropertyRef Name="STT" />
+      </Principal>
+      <Dependent Role="NangXuat">
+        <PropertyRef Name="STTCHuyen_SanPham" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_Assign_Phase_QuantityLog_Chuyen_SanPham">
+    <End Type="QLNSModel.Chuyen_SanPham" Role="Chuyen_SanPham" Multiplicity="1" />
+    <End Type="QLNSModel.P_Phase_Assign_Log" Role="P_Phase_Assign_Log" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chuyen_SanPham">
+        <PropertyRef Name="STT" />
+      </Principal>
+      <Dependent Role="P_Phase_Assign_Log">
+        <PropertyRef Name="AssignId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_DailyMapper_Chuyen_SanPham">
+    <End Type="QLNSModel.Chuyen_SanPham" Role="Chuyen_SanPham" Multiplicity="1" />
+    <End Type="QLNSModel.P_DailyMapper" Role="P_DailyMapper" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chuyen_SanPham">
+        <PropertyRef Name="STT" />
+      </Principal>
+      <Dependent Role="P_DailyMapper">
+        <PropertyRef Name="AssignId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_DailyPlans_Chuyen_SanPham">
+    <End Type="QLNSModel.Chuyen_SanPham" Role="Chuyen_SanPham" Multiplicity="1" />
+    <End Type="QLNSModel.P_DailyPlans" Role="P_DailyPlans" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chuyen_SanPham">
+        <PropertyRef Name="STT" />
+      </Principal>
+      <Dependent Role="P_DailyPlans">
+        <PropertyRef Name="CSP_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_MonthlyProductionPlans_Chuyen_SanPham">
+    <End Type="QLNSModel.Chuyen_SanPham" Role="Chuyen_SanPham" Multiplicity="1" />
+    <End Type="QLNSModel.P_MonthlyProductionPlans" Role="P_MonthlyProductionPlans" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chuyen_SanPham">
+        <PropertyRef Name="STT" />
+      </Principal>
+      <Dependent Role="P_MonthlyProductionPlans">
+        <PropertyRef Name="STT_C_SP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_ReadPercentOfLine_Chuyen_SanPham">
+    <End Type="QLNSModel.Chuyen_SanPham" Role="Chuyen_SanPham" Multiplicity="1" />
+    <End Type="QLNSModel.P_ReadPercentOfLine" Role="P_ReadPercentOfLine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chuyen_SanPham">
+        <PropertyRef Name="STT" />
+      </Principal>
+      <Dependent Role="P_ReadPercentOfLine">
+        <PropertyRef Name="AssignmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ThanhPham_Chuyen_SanPham">
+    <End Type="QLNSModel.Chuyen_SanPham" Role="Chuyen_SanPham" Multiplicity="1" />
+    <End Type="QLNSModel.ThanhPham" Role="ThanhPham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chuyen_SanPham">
+        <PropertyRef Name="STT" />
+      </Principal>
+      <Dependent Role="ThanhPham">
+        <PropertyRef Name="STTChuyen_SanPham" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Config_App_Config">
+    <End Type="QLNSModel.Config" Role="Config" Multiplicity="1" />
+    <End Type="QLNSModel.Config_App" Role="Config_App" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Config">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Config_App">
+        <PropertyRef Name="ConfigId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KeyPad_Object_Cum">
+    <End Type="QLNSModel.Cum" Role="Cum" Multiplicity="1" />
+    <End Type="QLNSModel.KeyPad_Object" Role="KeyPad_Object" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cum">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="KeyPad_Object">
+        <PropertyRef Name="ClusterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NangSuat_Cum_Cum">
+    <End Type="QLNSModel.Cum" Role="Cum" Multiplicity="1" />
+    <End Type="QLNSModel.NangSuat_Cum" Role="NangSuat_Cum" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cum">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NangSuat_Cum">
+        <PropertyRef Name="IdCum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NangSuat_CumLoi_Cum">
+    <End Type="QLNSModel.Cum" Role="Cum" Multiplicity="1" />
+    <End Type="QLNSModel.NangSuat_CumLoi" Role="NangSuat_CumLoi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cum">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NangSuat_CumLoi">
+        <PropertyRef Name="CumId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_Keypad_Cum">
+    <End Type="QLNSModel.Cum" Role="Cum" Multiplicity="1" />
+    <End Type="QLNSModel.P_Keypad" Role="P_Keypad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cum">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_Keypad">
+        <PropertyRef Name="ClusterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TheoDoiNgay_Cum">
+    <End Type="QLNSModel.Cum" Role="Cum" Multiplicity="1" />
+    <End Type="QLNSModel.TheoDoiNgay" Role="TheoDoiNgay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cum">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TheoDoiNgay">
+        <PropertyRef Name="CumId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Error_GroupError">
+    <End Type="QLNSModel.GroupError" Role="GroupError" Multiplicity="0..1" />
+    <End Type="QLNSModel.Error" Role="Error" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GroupError">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Error">
+        <PropertyRef Name="GroupErrorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NangSuat_CumLoi_Error">
+    <End Type="QLNSModel.Error" Role="Error" Multiplicity="1" />
+    <End Type="QLNSModel.NangSuat_CumLoi" Role="NangSuat_CumLoi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Error">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NangSuat_CumLoi">
+        <PropertyRef Name="ErrorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KeyPad_Floor">
+    <End Type="QLNSModel.Floor" Role="Floor" Multiplicity="0..1" />
+    <End Type="QLNSModel.KeyPad" Role="KeyPad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Floor">
+        <PropertyRef Name="IdFloor" />
+      </Principal>
+      <Dependent Role="KeyPad">
+        <PropertyRef Name="FloorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KeyPad_Object_KeyPad">
+    <End Type="QLNSModel.KeyPad" Role="KeyPad" Multiplicity="1" />
+    <End Type="QLNSModel.KeyPad_Object" Role="KeyPad_Object" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KeyPad">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="KeyPad_Object">
+        <PropertyRef Name="KeyPadId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MAIL_T_M_MAIL_FILE">
+    <End Type="QLNSModel.MAIL_FILE" Role="MAIL_FILE" Multiplicity="1" />
+    <End Type="QLNSModel.MAIL_T_M" Role="MAIL_T_M" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MAIL_FILE">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MAIL_T_M">
+        <PropertyRef Name="MailFileId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MAIL_SCHEDULE_MAIL_TEMPLATE">
+    <End Type="QLNSModel.MAIL_TEMPLATE" Role="MAIL_TEMPLATE" Multiplicity="0..1" />
+    <End Type="QLNSModel.MAIL_SCHEDULE" Role="MAIL_SCHEDULE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MAIL_TEMPLATE">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MAIL_SCHEDULE">
+        <PropertyRef Name="MailTemplateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MAIL_SEND_MAIL_TYPE">
+    <End Type="QLNSModel.MAIL_TYPE" Role="MAIL_TYPE" Multiplicity="1" />
+    <End Type="QLNSModel.MAIL_SEND" Role="MAIL_SEND" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MAIL_TYPE">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="MAIL_SEND">
+        <PropertyRef Name="MailTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MAIL_TEMPLATE_MAIL_SEND">
+    <End Type="QLNSModel.MAIL_SEND" Role="MAIL_SEND" Multiplicity="1" />
+    <End Type="QLNSModel.MAIL_TEMPLATE" Role="MAIL_TEMPLATE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MAIL_SEND">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MAIL_TEMPLATE">
+        <PropertyRef Name="MailSendId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MAIL_T_M_MAIL_TEMPLATE">
+    <End Type="QLNSModel.MAIL_TEMPLATE" Role="MAIL_TEMPLATE" Multiplicity="1" />
+    <End Type="QLNSModel.MAIL_T_M" Role="MAIL_T_M" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MAIL_TEMPLATE">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MAIL_T_M">
+        <PropertyRef Name="MailTemplateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MapIdSanPhamNgay_SanPham">
+    <End Type="QLNSModel.SanPham" Role="SanPham" Multiplicity="1" />
+    <End Type="QLNSModel.MapIdSanPhamNgay" Role="MapIdSanPhamNgay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SanPham">
+        <PropertyRef Name="MaSanPham" />
+      </Principal>
+      <Dependent Role="MapIdSanPhamNgay">
+        <PropertyRef Name="MaSanPham" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_BTP_HCInDay_NangXuat">
+    <End Type="QLNSModel.NangXuat" Role="NangXuat" Multiplicity="1" />
+    <End Type="QLNSModel.P_PhaseDailyLog" Role="P_PhaseDailyLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NangXuat">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_PhaseDailyLog">
+        <PropertyRef Name="NangSuatId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_PhaseDailyLog_NangXuat">
+    <End Type="QLNSModel.NangXuat" Role="NangXuat" Multiplicity="1" />
+    <End Type="QLNSModel.P_PhaseDaily" Role="P_PhaseDaily" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NangXuat">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_PhaseDaily">
+        <PropertyRef Name="NangSuatId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_Assignment_SanPham">
+    <End Type="QLNSModel.SanPham" Role="SanPham" Multiplicity="1" />
+    <End Type="QLNSModel.P_AssignCompletion" Role="P_AssignCompletion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SanPham">
+        <PropertyRef Name="MaSanPham" />
+      </Principal>
+      <Dependent Role="P_AssignCompletion">
+        <PropertyRef Name="CommoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_CompletionPhase_Detail_Chuyen_SanPham">
+    <End Type="QLNSModel.P_AssignCompletion" Role="P_AssignCompletion" Multiplicity="1" />
+    <End Type="QLNSModel.P_CompletionPhase_Daily" Role="P_CompletionPhase_Daily" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_AssignCompletion">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_CompletionPhase_Daily">
+        <PropertyRef Name="AssignId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_CompletionPhase_Detail_P_CompletionPhase">
+    <End Type="QLNSModel.P_CompletionPhase" Role="P_CompletionPhase" Multiplicity="1" />
+    <End Type="QLNSModel.P_CompletionPhase_Daily" Role="P_CompletionPhase_Daily" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_CompletionPhase">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_CompletionPhase_Daily">
+        <PropertyRef Name="CompletionPhaseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_PhaseDailyLog_P_Phase">
+    <End Type="QLNSModel.P_CompletionPhase" Role="P_CompletionPhase" Multiplicity="1" />
+    <End Type="QLNSModel.P_PhaseDaily" Role="P_PhaseDaily" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_CompletionPhase">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_PhaseDaily">
+        <PropertyRef Name="PhaseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_DailyInfo_P_DailyPlans1">
+    <End Type="QLNSModel.P_DailyPlans" Role="P_DailyPlans" Multiplicity="1" />
+    <End Type="QLNSModel.P_DailyInfo" Role="P_DailyInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_DailyPlans">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_DailyInfo">
+        <PropertyRef Name="DailyPlansId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_DailyInfo_P_Keypad">
+    <End Type="QLNSModel.P_Keypad" Role="P_Keypad" Multiplicity="1" />
+    <End Type="QLNSModel.P_DailyInfo" Role="P_DailyInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_Keypad">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_DailyInfo">
+        <PropertyRef Name="KeypadId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_DailyKeypadPosition_P_DailyPlans">
+    <End Type="QLNSModel.P_DailyPlans" Role="P_DailyPlans" Multiplicity="1" />
+    <End Type="QLNSModel.P_DailyKeypadPosition" Role="P_DailyKeypadPosition" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_DailyPlans">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_DailyKeypadPosition">
+        <PropertyRef Name="DailyPlanId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_DailyKeypadPosition_P_Keypad">
+    <End Type="QLNSModel.P_Keypad" Role="P_Keypad" Multiplicity="1" />
+    <End Type="QLNSModel.P_DailyKeypadPosition" Role="P_DailyKeypadPosition" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_Keypad">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_DailyKeypadPosition">
+        <PropertyRef Name="KeypadId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_DailyKeypadRegister_P_DailyPlans">
+    <End Type="QLNSModel.P_DailyPlans" Role="P_DailyPlans" Multiplicity="1" />
+    <End Type="QLNSModel.P_DailyKeypadRegister" Role="P_DailyKeypadRegister" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_DailyPlans">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_DailyKeypadRegister">
+        <PropertyRef Name="DailyPlansId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_DailyKeypadRegister_P_Employee">
+    <End Type="QLNSModel.P_Employee" Role="P_Employee" Multiplicity="1" />
+    <End Type="QLNSModel.P_DailyKeypadRegister" Role="P_DailyKeypadRegister" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_Employee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_DailyKeypadRegister">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_DailyKeypadRegister_P_Keypad">
+    <End Type="QLNSModel.P_Keypad" Role="P_Keypad" Multiplicity="1" />
+    <End Type="QLNSModel.P_DailyKeypadRegister" Role="P_DailyKeypadRegister" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_Keypad">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_DailyKeypadRegister">
+        <PropertyRef Name="KeypadId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_KeypadRegis_Detail_P_DailyKeypadRegister">
+    <End Type="QLNSModel.P_DailyKeypadRegister" Role="P_DailyKeypadRegister" Multiplicity="1" />
+    <End Type="QLNSModel.P_KeypadRegis_Detail" Role="P_KeypadRegis_Detail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_DailyKeypadRegister">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_KeypadRegis_Detail">
+        <PropertyRef Name="KeypadRegisId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_DailyMapper_P_Keypad">
+    <End Type="QLNSModel.P_Keypad" Role="P_Keypad" Multiplicity="1" />
+    <End Type="QLNSModel.P_DailyMapper" Role="P_DailyMapper" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_Keypad">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_DailyMapper">
+        <PropertyRef Name="KeypadId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_KanbanLightPercent_De_P_KanbanLightPercent">
+    <End Type="QLNSModel.P_LightPercent" Role="P_LightPercent" Multiplicity="1" />
+    <End Type="QLNSModel.P_LightPercent_De" Role="P_LightPercent_De" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_LightPercent">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_LightPercent_De">
+        <PropertyRef Name="LightPercentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_ReadPercentOfLine_P_LightPercent">
+    <End Type="QLNSModel.P_LightPercent" Role="P_LightPercent" Multiplicity="0..1" />
+    <End Type="QLNSModel.P_ReadPercentOfLine" Role="P_ReadPercentOfLine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_LightPercent">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_ReadPercentOfLine">
+        <PropertyRef Name="KanbanLightPercentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_ReadPercentOfLine_P_LightPercent1">
+    <End Type="QLNSModel.P_LightPercent" Role="P_LightPercent" Multiplicity="0..1" />
+    <End Type="QLNSModel.P_ReadPercentOfLine" Role="P_ReadPercentOfLine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_LightPercent">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_ReadPercentOfLine">
+        <PropertyRef Name="ProductLightPercentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_LineWorkingShift_P_WorkingShift">
+    <End Type="QLNSModel.P_WorkingShift" Role="P_WorkingShift" Multiplicity="1" />
+    <End Type="QLNSModel.P_LineWorkingShift" Role="P_LineWorkingShift" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_WorkingShift">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_LineWorkingShift">
+        <PropertyRef Name="ShiftId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_BTP_HCInDay_P_Phase">
+    <End Type="QLNSModel.P_Phase" Role="P_Phase" Multiplicity="1" />
+    <End Type="QLNSModel.P_PhaseDailyLog" Role="P_PhaseDailyLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_Phase">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_PhaseDailyLog">
+        <PropertyRef Name="PhaseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_Phase_Assign_Log_P_Phase">
+    <End Type="QLNSModel.P_Phase" Role="P_Phase" Multiplicity="1" />
+    <End Type="QLNSModel.P_Phase_Assign_Log" Role="P_Phase_Assign_Log" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_Phase">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_Phase_Assign_Log">
+        <PropertyRef Name="PhaseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_PlayVideoSheduleDetail_P_PlayVideoShedule">
+    <End Type="QLNSModel.P_PlayVideoShedule" Role="P_PlayVideoShedule" Multiplicity="1" />
+    <End Type="QLNSModel.P_PlayVideoSheduleDetail" Role="P_PlayVideoSheduleDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_PlayVideoShedule">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_PlayVideoSheduleDetail">
+        <PropertyRef Name="VideoSheduleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_PlayVideoSheduleDetail_P_VideoLibrary">
+    <End Type="QLNSModel.P_VideoLibrary" Role="P_VideoLibrary" Multiplicity="1" />
+    <End Type="QLNSModel.P_PlayVideoSheduleDetail" Role="P_PlayVideoSheduleDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_VideoLibrary">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_PlayVideoSheduleDetail">
+        <PropertyRef Name="VideoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_ReadPercent_KCSInventory_De_P_ReadPercent_KCSInventory">
+    <End Type="QLNSModel.P_ReadPercent_KCSInventory" Role="P_ReadPercent_KCSInventory" Multiplicity="1" />
+    <End Type="QLNSModel.P_ReadPercent_KCSInventory_De" Role="P_ReadPercent_KCSInventory_De" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_ReadPercent_KCSInventory">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_ReadPercent_KCSInventory_De">
+        <PropertyRef Name="KCSInventoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_ReadPercentOfLine_P_ReadPercent_KCSInventory">
+    <End Type="QLNSModel.P_ReadPercent_KCSInventory" Role="P_ReadPercent_KCSInventory" Multiplicity="0..1" />
+    <End Type="QLNSModel.P_ReadPercentOfLine" Role="P_ReadPercentOfLine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_ReadPercent_KCSInventory">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_ReadPercentOfLine">
+        <PropertyRef Name="ReadPercent_KCSInventoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_ReadPercentOfLine_ReadPercent">
+    <End Type="QLNSModel.ReadPercent" Role="ReadPercent" Multiplicity="0..1" />
+    <End Type="QLNSModel.P_ReadPercentOfLine" Role="P_ReadPercentOfLine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ReadPercent">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_ReadPercentOfLine">
+        <PropertyRef Name="ReadPercentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TheoDoiNgay_SanPham">
+    <End Type="QLNSModel.SanPham" Role="SanPham" Multiplicity="1" />
+    <End Type="QLNSModel.TheoDoiNgay" Role="TheoDoiNgay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SanPham">
+        <PropertyRef Name="MaSanPham" />
+      </Principal>
+      <Dependent Role="TheoDoiNgay">
+        <PropertyRef Name="MaSanPham" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SOUND_ReadConfigDetail_SOUND">
+    <End Type="QLNSModel.SOUND" Role="SOUND" Multiplicity="0..1" />
+    <End Type="QLNSModel.SOUND_ReadConfigDetail" Role="SOUND_ReadConfigDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SOUND">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SOUND_ReadConfigDetail">
+        <PropertyRef Name="IdSound" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SOUND_ReadConfigDetail_SOUND_IntConfig">
+    <End Type="QLNSModel.SOUND_IntConfig" Role="SOUND_IntConfig" Multiplicity="0..1" />
+    <End Type="QLNSModel.SOUND_ReadConfigDetail" Role="SOUND_ReadConfigDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SOUND_IntConfig">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SOUND_ReadConfigDetail">
+        <PropertyRef Name="IdIntConfig" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SOUND_ReadConfigDetail_SOUND_ReadConfig">
+    <End Type="QLNSModel.SOUND_ReadConfig" Role="SOUND_ReadConfig" Multiplicity="1" />
+    <End Type="QLNSModel.SOUND_ReadConfigDetail" Role="SOUND_ReadConfigDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SOUND_ReadConfig">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SOUND_ReadConfigDetail">
+        <PropertyRef Name="IdReadConfig" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

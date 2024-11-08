@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Tỉ lệ đèn cắt";
+    Layout = "~/Views/Shared/_NewLayout.cshtml";
+}
+<style>
+    .dataTables_wrapper {
+        width: 400px !important;
+    }
+</style>
+<h4>Tỉ lệ đèn cắt</h4>
+<hr />
+
+<table style="width:400px !important " class="table striped highlight centered" id="tbCat"> </table>
+<script src="~/Scripts/QLNS/TiLeCat/ti-le-cat.js"></script>
+<script>
+
+    var tile = new GPRO.TiLeCat();
+    tile.Init();
+    function Edit(Id) {
+        tile.Edit(Id);
+    }
+
+    function Delete(Id) {
+        tile.Delete(Id);
+    } 
+</script>

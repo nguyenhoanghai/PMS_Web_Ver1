@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9a922f8837a149f7829ebebfb0120bf9" Name="Diagram1" ZoomLevel="56">
+        <EntityTypeShape EntityType="QLNSModel.BaoHetHang" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="QLNSModel.BTP" Width="1.5" PointX="10.5" PointY="54.25" />
+        <EntityTypeShape EntityType="QLNSModel.CatalogTable" Width="1.5" PointX="9.75" PointY="0.75" />
+        <EntityTypeShape EntityType="QLNSModel.ChiTietHienThi" Width="1.5" PointX="0.75" PointY="9.75" />
+        <EntityTypeShape EntityType="QLNSModel.Chuyen" Width="1.5" PointX="3" PointY="44.875" />
+        <EntityTypeShape EntityType="QLNSModel.Chuyen_SanPham" Width="1.5" PointX="8.25" PointY="44.625" />
+        <EntityTypeShape EntityType="QLNSModel.Config" Width="1.5" PointX="7.75" PointY="9" />
+        <EntityTypeShape EntityType="QLNSModel.Config_App" Width="1.5" PointX="10" PointY="9.125" />
+        <EntityTypeShape EntityType="QLNSModel.Cum" Width="1.5" PointX="5.25" PointY="70.25" />
+        <EntityTypeShape EntityType="QLNSModel.Den" Width="1.5" PointX="9.75" PointY="3.75" />
+        <EntityTypeShape EntityType="QLNSModel.Error" Width="1.5" PointX="5.25" PointY="62" />
+        <EntityTypeShape EntityType="QLNSModel.Floor" Width="1.5" PointX="0.75" PointY="50.75" />
+        <EntityTypeShape EntityType="QLNSModel.GroupError" Width="1.5" PointX="3" PointY="62.125" />
+        <EntityTypeShape EntityType="QLNSModel.KeyPad" Width="1.5" PointX="8.25" PointY="66.875" />
+        <EntityTypeShape EntityType="QLNSModel.KeyPad_Object" Width="1.5" PointX="10.5" PointY="70.625" />
+        <EntityTypeShape EntityType="QLNSModel.LCDConfig" Width="1.5" PointX="11.75" PointY="0.75" />
+        <EntityTypeShape EntityType="QLNSModel.MAIL_FILE" Width="1.5" PointX="5.25" PointY="7.375" />
+        <EntityTypeShape EntityType="QLNSModel.MAIL_RECEIVE" Width="1.5" PointX="2.75" PointY="11.75" />
+        <EntityTypeShape EntityType="QLNSModel.MAIL_SCHEDULE" Width="1.5" PointX="7.5" PointY="5.75" />
+        <EntityTypeShape EntityType="QLNSModel.MAIL_SEND" Width="1.5" PointX="3" PointY="2.375" />
+        <EntityTypeShape EntityType="QLNSModel.MAIL_T_M" Width="1.5" PointX="7.5" PointY="2.5" />
+        <EntityTypeShape EntityType="QLNSModel.MAIL_TEMPLATE" Width="1.5" PointX="5.25" PointY="2" />
+        <EntityTypeShape EntityType="QLNSModel.MAIL_TYPE" Width="1.5" PointX="0.75" PointY="2.5" />
+        <EntityTypeShape EntityType="QLNSModel.MapIdSanPhamNgay" Width="1.5" PointX="13.5" PointY="42.625" />
+        <EntityTypeShape EntityType="QLNSModel.NangSuat_Cum" Width="1.5" PointX="7.5" PointY="81" />
+        <EntityTypeShape EntityType="QLNSModel.NangSuat_CumLoi" Width="1.5" PointX="7.5" PointY="70.5" />
+        <EntityTypeShape EntityType="QLNSModel.NangXuat" Width="1.5" PointX="10.5" PointY="84.25" />
+        <EntityTypeShape EntityType="QLNSModel.P_AssignCompletion" Width="1.5" PointX="8.25" PointY="40.5" />
+        <EntityTypeShape EntityType="QLNSModel.P_CompletionPhase" Width="1.5" PointX="13.5" PointY="82.375" />
+        <EntityTypeShape EntityType="QLNSModel.P_CompletionPhase_Daily" Width="1.5" PointX="15.75" PointY="59.375" />
+        <EntityTypeShape EntityType="QLNSModel.P_DailyInfo" Width="1.5" PointX="15.75" PointY="63.875" />
+        <EntityTypeShape EntityType="QLNSModel.P_DailyKeypadPosition" Width="1.5" PointX="12.75" PointY="63.75" />
+        <EntityTypeShape EntityType="QLNSModel.P_DailyKeypadRegister" Width="1.5" PointX="12.75" PointY="68" />
+        <EntityTypeShape EntityType="QLNSModel.P_DailyMapper" Width="1.5" PointX="15.5" PointY="68.25" />
+        <EntityTypeShape EntityType="QLNSModel.P_DailyPlans" Width="1.5" PointX="10.5" PointY="41.5" />
+        <EntityTypeShape EntityType="QLNSModel.P_Employee" Width="1.5" PointX="10.5" PointY="75.25" />
+        <EntityTypeShape EntityType="QLNSModel.P_HistoryPressedKeypad" Width="1.5" PointX="4.75" PointY="11.75" />
+        <EntityTypeShape EntityType="QLNSModel.P_Keypad" Width="1.5" PointX="7.5" PointY="86.125" />
+        <EntityTypeShape EntityType="QLNSModel.P_KeypadRegis_Detail" Width="1.5" PointX="15" PointY="73.375" />
+        <EntityTypeShape EntityType="QLNSModel.P_LightPercent" Width="1.5" PointX="0.75" PointY="46.875" />
+        <EntityTypeShape EntityType="QLNSModel.P_LightPercent_De" Width="1.5" PointX="3" PointY="65.625" />
+        <EntityTypeShape EntityType="QLNSModel.P_LineWorkingShift" Width="1.5" PointX="5.25" PointY="47" />
+        <EntityTypeShape EntityType="QLNSModel.P_MonthlyProductionPlans" Width="1.5" PointX="10.5" PointY="66.375" />
+        <EntityTypeShape EntityType="QLNSModel.P_Phase" Width="1.5" PointX="11.25" PointY="37.75" />
+        <EntityTypeShape EntityType="QLNSModel.P_Phase_Assign_Log" Width="1.5" PointX="13.5" PointY="47" />
+        <EntityTypeShape EntityType="QLNSModel.P_PhaseDaily" Width="1.5" PointX="15.75" PointY="86.75" />
+        <EntityTypeShape EntityType="QLNSModel.P_PhaseDailyLog" Width="1.5" PointX="12.75" PointY="86.75" />
+        <EntityTypeShape EntityType="QLNSModel.P_PlayVideoShedule" Width="1.5" PointX="5.25" PointY="80.625" />
+        <EntityTypeShape EntityType="QLNSModel.P_PlayVideoSheduleDetail" Width="1.5" PointX="10.5" PointY="80.75" />
+        <EntityTypeShape EntityType="QLNSModel.P_ReadPercent_KCSInventory" Width="1.5" PointX="8.25" PointY="53.125" />
+        <EntityTypeShape EntityType="QLNSModel.P_ReadPercent_KCSInventory_De" Width="1.5" PointX="10.5" PointY="33.875" />
+        <EntityTypeShape EntityType="QLNSModel.P_ReadPercentOfLine" Width="1.5" PointX="10.5" PointY="48.25" />
+        <EntityTypeShape EntityType="QLNSModel.P_VideoLibrary" Width="1.5" PointX="8.25" PointY="90.625" />
+        <EntityTypeShape EntityType="QLNSModel.P_WorkingShift" Width="1.5" PointX="3" PointY="41" />
+        <EntityTypeShape EntityType="QLNSModel.ReadPercent" Width="1.5" PointX="0.75" PointY="43.125" />
+        <EntityTypeShape EntityType="QLNSModel.SanLuongCat" Width="1.5" PointX="11.75" PointY="5.75" />
+        <EntityTypeShape EntityType="QLNSModel.SanPham" Width="1.5" PointX="6" PointY="42.5" />
+        <EntityTypeShape EntityType="QLNSModel.Shift" Width="1.5" PointX="6.75" PointY="12.75" />
+        <EntityTypeShape EntityType="QLNSModel.ShowLCD_Config" Width="1.5" PointX="8.75" PointY="12.75" />
+        <EntityTypeShape EntityType="QLNSModel.ShowLCD_LabelArea" Width="1.5" PointX="12.75" PointY="9.75" />
+        <EntityTypeShape EntityType="QLNSModel.ShowLCD_LabelForPanelContent" Width="1.5" PointX="13.75" PointY="0.75" />
+        <EntityTypeShape EntityType="QLNSModel.ShowLCD_Panel" Width="1.5" PointX="13.75" PointY="4.75" />
+        <EntityTypeShape EntityType="QLNSModel.ShowLCD_TableLayoutPanel" Width="1.5" PointX="10.75" PointY="13.75" />
+        <EntityTypeShape EntityType="QLNSModel.SOUND" Width="1.5" PointX="5.25" PointY="88" />
+        <EntityTypeShape EntityType="QLNSModel.SOUND_IntConfig" Width="1.5" PointX="5.25" PointY="84.5" />
+        <EntityTypeShape EntityType="QLNSModel.SOUND_ReadConfig" Width="1.5" PointX="5.25" PointY="77.125" />
+        <EntityTypeShape EntityType="QLNSModel.SOUND_ReadConfigDetail" Width="1.5" PointX="7.5" PointY="77" />
+        <EntityTypeShape EntityType="QLNSModel.SOUND_TimeConfig" Width="1.5" PointX="12.75" PointY="13.75" />
+        <EntityTypeShape EntityType="QLNSModel.SoundInt" Width="1.5" PointX="0.75" PointY="14.75" />
+        <EntityTypeShape EntityType="QLNSModel.TaiKhoan" Width="1.5" PointX="2.75" PointY="14.75" />
+        <EntityTypeShape EntityType="QLNSModel.ThanhPham" Width="1.5" PointX="10.5" PointY="59.875" />
+        <EntityTypeShape EntityType="QLNSModel.TheoDoiNgay" Width="1.5" PointX="7.5" PointY="57.5" />
+        <EntityTypeShape EntityType="QLNSModel.ThoiGianTinhNhipDoTT" Width="1.5" PointX="5.25" PointY="65.375" />
+        <EntityTypeShape EntityType="QLNSModel.ToCat" Width="1.5" PointX="14.75" PointY="7.75" />
+        <EntityTypeShape EntityType="QLNSModel.TTHienThi" Width="1.5" PointX="14.75" PointY="10.75" />
+        <EntityTypeShape EntityType="QLNSModel.TurnCOMMng" Width="1.5" PointX="14.75" PointY="14.75" />
+        <AssociationConnector Association="QLNSModel.FK_BTP_Chuyen_SanPham" />
+        <AssociationConnector Association="QLNSModel.FK_BTP_Cum" />
+        <AssociationConnector Association="QLNSModel.FK_Chuyen_Floor" />
+        <AssociationConnector Association="QLNSModel.FK_Chuyen_P_LightPercent1" />
+        <AssociationConnector Association="QLNSModel.FK_Chuyen_SanPham_Chuyen" />
+        <AssociationConnector Association="QLNSModel.FK_Chuyens_ReadPercents" />
+        <AssociationConnector Association="QLNSModel.FK_Cum_Chuyen" />
+        <AssociationConnector Association="QLNSModel.FK_MapIdSanPhamNgay_Chuyen" />
+        <AssociationConnector Association="QLNSModel.FK_P_DailyMapper_Chuyen" />
+        <AssociationConnector Association="QLNSModel.FK_P_LineWorkingShift_Chuyen" />
+        <AssociationConnector Association="QLNSModel.FK_P_PlayVideoShedule_Chuyen" />
+        <AssociationConnector Association="QLNSModel.FK_P_ReadPercentOfLine_Chuyen" />
+        <AssociationConnector Association="QLNSModel.FK_SOUND_ReadConfig_Chuyen" />
+        <AssociationConnector Association="QLNSModel.FK_TheoDoiNgay_Chuyen" />
+        <AssociationConnector Association="QLNSModel.FK_ThoiGianTinhNhipDoTT_Chuyen" />
+        <AssociationConnector Association="QLNSModel.FK_Chuyen_SanPham_SanPham" />
+        <AssociationConnector Association="QLNSModel.FK_MapIdSanPhamNgay_Chuyen_SanPham" />
+        <AssociationConnector Association="QLNSModel.FK_NangXuat_Chuyen_SanPham" />
+        <AssociationConnector Association="QLNSModel.FK_P_Assign_Phase_QuantityLog_Chuyen_SanPham" />
+        <AssociationConnector Association="QLNSModel.FK_P_DailyMapper_Chuyen_SanPham" />
+        <AssociationConnector Association="QLNSModel.FK_P_DailyPlans_Chuyen_SanPham" />
+        <AssociationConnector Association="QLNSModel.FK_P_MonthlyProductionPlans_Chuyen_SanPham" />
+        <AssociationConnector Association="QLNSModel.FK_P_ReadPercentOfLine_Chuyen_SanPham" />
+        <AssociationConnector Association="QLNSModel.FK_ThanhPham_Chuyen_SanPham" />
+        <AssociationConnector Association="QLNSModel.FK_Config_App_Config" />
+        <AssociationConnector Association="QLNSModel.FK_KeyPad_Object_Cum" />
+        <AssociationConnector Association="QLNSModel.FK_NangSuat_Cum_Cum" />
+        <AssociationConnector Association="QLNSModel.FK_NangSuat_CumLoi_Cum" />
+        <AssociationConnector Association="QLNSModel.FK_P_Keypad_Cum" />
+        <AssociationConnector Association="QLNSModel.FK_TheoDoiNgay_Cum" />
+        <AssociationConnector Association="QLNSModel.FK_Error_GroupError" />
+        <AssociationConnector Association="QLNSModel.FK_NangSuat_CumLoi_Error" />
+        <AssociationConnector Association="QLNSModel.FK_KeyPad_Floor" />
+        <AssociationConnector Association="QLNSModel.FK_KeyPad_Object_KeyPad" />
+        <AssociationConnector Association="QLNSModel.FK_MAIL_T_M_MAIL_FILE" />
+        <AssociationConnector Association="QLNSModel.FK_MAIL_SCHEDULE_MAIL_TEMPLATE" />
+        <AssociationConnector Association="QLNSModel.FK_MAIL_SEND_MAIL_TYPE" />
+        <AssociationConnector Association="QLNSModel.FK_MAIL_TEMPLATE_MAIL_SEND" />
+        <AssociationConnector Association="QLNSModel.FK_MAIL_T_M_MAIL_TEMPLATE" />
+        <AssociationConnector Association="QLNSModel.FK_MapIdSanPhamNgay_SanPham" />
+        <AssociationConnector Association="QLNSModel.FK_P_BTP_HCInDay_NangXuat" />
+        <AssociationConnector Association="QLNSModel.FK_P_PhaseDailyLog_NangXuat" />
+        <AssociationConnector Association="QLNSModel.FK_P_Assignment_SanPham" />
+        <AssociationConnector Association="QLNSModel.FK_P_CompletionPhase_Detail_Chuyen_SanPham" />
+        <AssociationConnector Association="QLNSModel.FK_P_CompletionPhase_Detail_P_CompletionPhase" />
+        <AssociationConnector Association="QLNSModel.FK_P_PhaseDailyLog_P_Phase" />
+        <AssociationConnector Association="QLNSModel.FK_P_DailyInfo_P_DailyPlans1" />
+        <AssociationConnector Association="QLNSModel.FK_P_DailyInfo_P_Keypad" />
+        <AssociationConnector Association="QLNSModel.FK_P_DailyKeypadPosition_P_DailyPlans" />
+        <AssociationConnector Association="QLNSModel.FK_P_DailyKeypadPosition_P_Keypad" />
+        <AssociationConnector Association="QLNSModel.FK_P_DailyKeypadRegister_P_DailyPlans" />
+        <AssociationConnector Association="QLNSModel.FK_P_DailyKeypadRegister_P_Employee" />
+        <AssociationConnector Association="QLNSModel.FK_P_DailyKeypadRegister_P_Keypad" />
+        <AssociationConnector Association="QLNSModel.FK_P_KeypadRegis_Detail_P_DailyKeypadRegister" />
+        <AssociationConnector Association="QLNSModel.FK_P_DailyMapper_P_Keypad" />
+        <AssociationConnector Association="QLNSModel.FK_P_KanbanLightPercent_De_P_KanbanLightPercent" />
+        <AssociationConnector Association="QLNSModel.FK_P_ReadPercentOfLine_P_LightPercent" />
+        <AssociationConnector Association="QLNSModel.FK_P_ReadPercentOfLine_P_LightPercent1" />
+        <AssociationConnector Association="QLNSModel.FK_P_LineWorkingShift_P_WorkingShift" />
+        <AssociationConnector Association="QLNSModel.FK_P_BTP_HCInDay_P_Phase" />
+        <AssociationConnector Association="QLNSModel.FK_P_Phase_Assign_Log_P_Phase" />
+        <AssociationConnector Association="QLNSModel.FK_P_PlayVideoSheduleDetail_P_PlayVideoShedule" />
+        <AssociationConnector Association="QLNSModel.FK_P_PlayVideoSheduleDetail_P_VideoLibrary" />
+        <AssociationConnector Association="QLNSModel.FK_P_ReadPercent_KCSInventory_De_P_ReadPercent_KCSInventory" />
+        <AssociationConnector Association="QLNSModel.FK_P_ReadPercentOfLine_P_ReadPercent_KCSInventory" />
+        <AssociationConnector Association="QLNSModel.FK_P_ReadPercentOfLine_ReadPercent" />
+        <AssociationConnector Association="QLNSModel.FK_TheoDoiNgay_SanPham" />
+        <AssociationConnector Association="QLNSModel.FK_SOUND_ReadConfigDetail_SOUND" />
+        <AssociationConnector Association="QLNSModel.FK_SOUND_ReadConfigDetail_SOUND_IntConfig" />
+        <AssociationConnector Association="QLNSModel.FK_SOUND_ReadConfigDetail_SOUND_ReadConfig" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

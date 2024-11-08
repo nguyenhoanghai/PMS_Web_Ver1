@@ -1,0 +1,77 @@
+﻿@{
+    ViewBag.Title = "LCDKanBan";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+ <style>
+        
+        #tableproductivity {
+            width:100%;
+            height: 100%;
+        }
+        
+        #header {
+            height:100%;
+            width:100%;
+        }
+       
+         #content  {
+            height:100%;
+            width:100%;
+        }
+        
+        
+         
+       #header  td {
+            
+            text-align:center;            
+            line-height: 40px;
+        }
+      
+     body {
+        vertical-align: middle;
+     }  
+       #content  td {
+            border: 2px solid black;
+            text-align:center;            
+            line-height: 40px;
+            vertical-align: middle;
+        }
+
+        #header  td {
+            border: 2px solid black;
+            text-align:center;            
+            line-height: 40px;
+            vertical-align: middle;
+        }
+       
+    </style>
+<script src="~/Scripts/QLNS/ShowLCDNS/LCDKanBan.js"></script>
+    <table id="tableproductivity">
+        <tbody>
+           <tr class="header">
+               <td>
+                   <table id="header">
+                       <tbody>
+                           <tr class="title">
+                               <td rowint="1" class="label1"></td>
+                               <td rowint="2" class="label2"></td>
+                               <td rowint="3" class="label3"></td>
+                               <td rowint="4" class="label4"></td>
+                               <td rowint="5" class="label5"></td>
+                               <td rowint="6" class="label6"></td>
+                           </tr>
+                       </tbody>
+                   </table>
+               </td>
+           </tr>          
+         <tr class="content">
+                <td>
+                    <table id="content">
+                        <tbody>                           
+                        </tbody>
+                    </table>
+               </td>
+            </tr>            
+        </tbody>        
+    </table>

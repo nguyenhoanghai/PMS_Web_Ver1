@@ -1,0 +1,2194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLNSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BaoHetHang">
+    <Key>
+      <PropertyRef Name="STT" />
+    </Key>
+    <Property Name="STT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SoSanPhamConLai" Type="int" Nullable="false" />
+    <Property Name="SoLanBao" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BTP">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ngay" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STTChuyen_SanPham" Type="int" Nullable="false" />
+    <Property Name="STT" Type="int" Nullable="false" />
+    <Property Name="CumId" Type="int" Nullable="false" />
+    <Property Name="BTPNgay" Type="int" Nullable="false" />
+    <Property Name="TimeUpdate" Type="time" Precision="7" Nullable="false" />
+    <Property Name="CommandTypeId" Type="int" />
+    <Property Name="IsEndOfLine" Type="bit" Nullable="false" />
+    <Property Name="IsEnterByKeypad" Type="bit" Nullable="false" />
+    <Property Name="IsBTP_PB_HC" Type="bit" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="DeletedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="CatalogTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="ChiTietHienThi">
+    <Key>
+      <PropertyRef Name="MaHienThi" />
+      <PropertyRef Name="STT" />
+    </Key>
+    <Property Name="MaHienThi" Type="int" Nullable="false" />
+    <Property Name="STT" Type="int" Nullable="false" />
+    <Property Name="SoLed" Type="int" Nullable="false" />
+    <Property Name="IDMain" Type="int" />
+    <Property Name="IDMat" Type="int" />
+    <Property Name="IDCell" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Chuyen">
+    <Key>
+      <PropertyRef Name="MaChuyen" />
+    </Key>
+    <Property Name="MaChuyen" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nchar" MaxLength="10" />
+    <Property Name="TenChuyen" Type="nvarchar" MaxLength="100" />
+    <Property Name="DinhNghia" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Sound" Type="nvarchar" MaxLength="100" />
+    <Property Name="FloorId" Type="int" />
+    <Property Name="IdDen" Type="int" />
+    <Property Name="IdDenNangSuat" Type="int" />
+    <Property Name="IdTyLeDoc" Type="int" />
+    <Property Name="IsEndDate" Type="bit" />
+    <Property Name="IdTiLeBTPConLai" Type="int" />
+    <Property Name="LaoDongDinhBien" Type="int" Nullable="false" />
+    <Property Name="IntSTT" Type="int" Nullable="false" />
+    <Property Name="STTReadNS" Type="int" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Chuyen_SanPham">
+    <Key>
+      <PropertyRef Name="STT" />
+    </Key>
+    <Property Name="STT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="STTThucHien" Type="int" Nullable="false" />
+    <Property Name="Thang" Type="int" Nullable="false" />
+    <Property Name="Nam" Type="int" Nullable="false" />
+    <Property Name="MaChuyen" Type="int" Nullable="false" />
+    <Property Name="MaSanPham" Type="int" Nullable="false" />
+    <Property Name="SanLuongKeHoach" Type="int" Nullable="false" />
+    <Property Name="LuyKeTH" Type="int" Nullable="false" />
+    <Property Name="LuyKeBTPThoatChuyen" Type="int" Nullable="false" />
+    <Property Name="IsFinishBTPThoatChuyen" Type="bit" Nullable="false" />
+    <Property Name="IsMoveQuantityFromMorthOld" Type="bit" Nullable="false" />
+    <Property Name="IsFinishNow" Type="bit" Nullable="false" />
+    <Property Name="IsFinish" Type="bit" Nullable="false" />
+    <Property Name="IsDelete" Type="bit" Nullable="false" />
+    <Property Name="TimeAdd" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedDate" Type="datetime" />
+    <Property Name="DeletedDate" Type="datetime" />
+    <Property Name="FinishedDate" Type="datetime" />
+    <Property Name="LK_BTP" Type="int" Nullable="false" />
+    <Property Name="LK_BTP_HC" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Config">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DisplayName" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ValueDefault" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Config_App">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ConfigId" Type="int" Nullable="false" />
+    <Property Name="AppId" Type="int" Nullable="false" />
+    <Property Name="Value" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Cum">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nchar" MaxLength="50" />
+    <Property Name="TenCum" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="MoTa" Type="nvarchar" MaxLength="200" />
+    <Property Name="IdChuyen" Type="int" Nullable="false" />
+    <Property Name="FloorId" Type="int" />
+    <Property Name="IsEndOfLine" Type="bit" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Den">
+    <Key>
+      <PropertyRef Name="STT" />
+    </Key>
+    <Property Name="STT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Color" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ValueFrom" Type="int" Nullable="false" />
+    <Property Name="ValueTo" Type="int" Nullable="false" />
+    <Property Name="IdCatalogTable" Type="int" />
+    <Property Name="STTParent" Type="int" />
+    <Property Name="MaMauDen" Type="int" />
+  </EntityType>
+  <EntityType Name="Error">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="250" />
+    <Property Name="GroupErrorId" Type="int" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Floor">
+    <Key>
+      <PropertyRef Name="IdFloor" />
+    </Key>
+    <Property Name="IdFloor" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="200" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="IsDefault" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GroupError">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="250" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="KeyPad">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KeyPadName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="EquipmentId" Type="int" />
+    <Property Name="FloorId" Type="int" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="UseTypeId" Type="int" />
+  </EntityType>
+  <EntityType Name="KeyPad_Object">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KeyPadId" Type="int" Nullable="false" />
+    <Property Name="STTNut" Type="int" />
+    <Property Name="ClusterId" Type="int" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="100" />
+    <Property Name="CommandTypeId" Type="int" />
+    <Property Name="TypeOfKeypad" Type="int" Nullable="false" />
+    <Property Name="Note" Type="nvarchar" MaxLength="500" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LCDConfig">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TableType" Type="int" Nullable="false" />
+    <Property Name="RowType" Type="int" Nullable="false" />
+    <Property Name="Column" Type="int" />
+    <Property Name="FontName" Type="nvarchar" MaxLength="250" />
+    <Property Name="FontSize" Type="float" />
+    <Property Name="FontStyle" Type="int" />
+    <Property Name="Color" Type="nvarchar" MaxLength="250" />
+    <Property Name="Background" Type="nvarchar" MaxLength="250" />
+    <Property Name="FontWeight" Type="bit" />
+    <Property Name="Width" Type="float" />
+    <Property Name="Height" Type="float" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MAIL_FILE">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SystemName" Type="nchar" MaxLength="100" Nullable="false" />
+    <Property Name="Code" Type="nchar" MaxLength="100" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="200" />
+    <Property Name="Path" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MAIL_RECEIVE">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Note" Type="nvarchar" MaxLength="200" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MAIL_SCHEDULE">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MailTemplateId" Type="int" />
+    <Property Name="Time" Type="nvarchar" MaxLength="8" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MAIL_SEND">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MailTypeId" Type="int" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="PassWord" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Note" Type="nvarchar" MaxLength="200" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MAIL_T_M">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MailTemplateId" Type="int" Nullable="false" />
+    <Property Name="MailFileId" Type="int" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MAIL_TEMPLATE">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="200" />
+    <Property Name="Subject" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Content" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MailSendId" Type="int" Nullable="false" />
+    <Property Name="MailReceiveIds" Type="nchar" MaxLength="100" Nullable="false" />
+    <Property Name="MailFileIds" Type="nchar" MaxLength="100" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MAIL_TYPE">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TypeName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="note" Type="nvarchar" MaxLength="250" />
+    <Property Name="active" Type="bit" Nullable="false" />
+    <Property Name="host" Type="nchar" MaxLength="200" />
+    <Property Name="port" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="MapIdSanPhamNgay">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ngay" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MaChuyen" Type="int" Nullable="false" />
+    <Property Name="STT" Type="int" Nullable="false" />
+    <Property Name="STTChuyenSanPham" Type="int" Nullable="false" />
+    <Property Name="MaSanPham" Type="int" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NangSuat_Cum">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ngay" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STTChuyen_SanPham" Type="int" Nullable="false" />
+    <Property Name="IdCum" Type="int" Nullable="false" />
+    <Property Name="SanLuongKCSTang" Type="int" Nullable="false" />
+    <Property Name="SanLuongKCSGiam" Type="int" Nullable="false" />
+    <Property Name="SanLuongTCTang" Type="int" Nullable="false" />
+    <Property Name="SanLuongTCGiam" Type="int" Nullable="false" />
+    <Property Name="BTPTang" Type="int" Nullable="false" />
+    <Property Name="BTPGiam" Type="int" Nullable="false" />
+    <Property Name="BTP_HC_Tang" Type="int" Nullable="false" />
+    <Property Name="BTP_HC_Giam" Type="int" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="DeletedDate" Type="datetime" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="NangSuat_CumLoi">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ngay" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STTChuyenSanPham" Type="int" Nullable="false" />
+    <Property Name="CumId" Type="int" Nullable="false" />
+    <Property Name="ErrorId" Type="int" Nullable="false" />
+    <Property Name="SoLuongTang" Type="int" Nullable="false" />
+    <Property Name="SoLuongGiam" Type="int" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="DeletedDate" Type="datetime" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="NangXuat">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ngay" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STTCHuyen_SanPham" Type="int" Nullable="false" />
+    <Property Name="DinhMucNgay" Type="float" Nullable="false" />
+    <Property Name="ThucHienNgay" Type="int" Nullable="false" />
+    <Property Name="ThucHienNgayGiam" Type="int" Nullable="false" />
+    <Property Name="BTPTrenChuyen" Type="int" Nullable="false" />
+    <Property Name="NhipDoThucTeBTPThoatChuyen" Type="float" Nullable="false" />
+    <Property Name="NhipDoThucTe" Type="float" Nullable="false" />
+    <Property Name="NhipDoSanXuat" Type="float" Nullable="false" />
+    <Property Name="IsChange" Type="int" Nullable="false" />
+    <Property Name="IsChangeBTP" Type="int" Nullable="false" />
+    <Property Name="IsBTP" Type="int" Nullable="false" />
+    <Property Name="TimeLastChange" Type="time" Precision="7" />
+    <Property Name="BTPLoi" Type="int" Nullable="false" />
+    <Property Name="IsEndDate" Type="bit" Nullable="false" />
+    <Property Name="BTPThoatChuyenNgay" Type="int" Nullable="false" />
+    <Property Name="BTPThoatChuyenNgayGiam" Type="int" Nullable="false" />
+    <Property Name="SanLuongLoi" Type="int" Nullable="false" />
+    <Property Name="SanLuongLoiGiam" Type="int" Nullable="false" />
+    <Property Name="BTPTang" Type="int" Nullable="false" />
+    <Property Name="BTPGiam" Type="int" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedDate" Type="datetime" />
+    <Property Name="DeletedDate" Type="datetime" />
+    <Property Name="IsStopOnDay" Type="bit" Nullable="false" />
+    <Property Name="TimeStopOnDay" Type="time" Precision="7" />
+    <Property Name="BTP_HC_Tang" Type="int" Nullable="false" />
+    <Property Name="BTP_HC_Giam" Type="int" Nullable="false" />
+    <Property Name="TGCheTaoSP" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="P_AssignCompletion">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderIndex" Type="int" Nullable="false" />
+    <Property Name="CommoId" Type="int" Nullable="false" />
+    <Property Name="ProductionsPlan" Type="int" Nullable="false" />
+    <Property Name="IsFinish" Type="bit" Nullable="false" />
+    <Property Name="FinishedDate" Type="datetime" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedDate" Type="datetime" />
+    <Property Name="DeletedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="P_CompletionPhase">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderIndex" Type="int" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="Name" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="IsShow" Type="bit" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedDate" Type="datetime" />
+    <Property Name="DeletedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="P_CompletionPhase_Daily">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AssignId" Type="int" Nullable="false" />
+    <Property Name="CompletionPhaseId" Type="int" Nullable="false" />
+    <Property Name="Date" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+    <Property Name="CommandTypeId" Type="int" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedDate" Type="datetime" />
+    <Property Name="DeletedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="P_DailyInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DailyPlansId" Type="int" Nullable="false" />
+    <Property Name="KeypadId" Type="int" Nullable="false" />
+    <Property Name="PhaseId" Type="int" Nullable="false" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+    <Property Name="Time" Type="datetime" Nullable="false" />
+    <Property Name="OutputType" Type="int" Nullable="false" />
+    <Property Name="IsEnterByKeypad" Type="bit" Nullable="false" />
+    <Property Name="IsAdd" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="P_DailyKeypadPosition">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DailyPlanId" Type="int" Nullable="false" />
+    <Property Name="KeypadId" Type="int" Nullable="false" />
+    <Property Name="KCS_Day" Type="int" Nullable="false" />
+    <Property Name="TC_Day" Type="int" Nullable="false" />
+    <Property Name="Error_Day" Type="int" Nullable="false" />
+    <Property Name="BTP_Day" Type="int" Nullable="false" />
+    <Property Name="BTP_HC_Day" Type="int" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="P_DailyKeypadRegister">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DailyPlansId" Type="int" Nullable="false" />
+    <Property Name="KeypadId" Type="int" Nullable="false" />
+    <Property Name="EmployeeId" Type="int" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="P_DailyMapper">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ProIndex" Type="int" Nullable="false" />
+    <Property Name="AssignId" Type="int" Nullable="false" />
+    <Property Name="PhaseIndex" Type="int" Nullable="false" />
+    <Property Name="PhaseId" Type="int" Nullable="false" />
+    <Property Name="LineId" Type="int" Nullable="false" />
+    <Property Name="KeypadId" Type="int" Nullable="false" />
+    <Property Name="EquipCode" Type="int" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="P_DailyPlans">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Index" Type="int" Nullable="false" />
+    <Property Name="CSP_Id" Type="int" Nullable="false" />
+    <Property Name="Date" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Labors" Type="int" Nullable="false" />
+    <Property Name="LeanKH" Type="float" Nullable="false" />
+    <Property Name="LaborProductivity" Type="float" Nullable="false" />
+    <Property Name="NormsOfDay" Type="float" Nullable="false" />
+    <Property Name="KCS_Day" Type="int" Nullable="false" />
+    <Property Name="TC_Day" Type="int" Nullable="false" />
+    <Property Name="Error_Day" Type="int" Nullable="false" />
+    <Property Name="BTP_Day" Type="int" Nullable="false" />
+    <Property Name="BTP_HC_Day" Type="int" Nullable="false" />
+    <Property Name="BTPInLine" Type="int" Nullable="false" />
+    <Property Name="Pace_TC" Type="float" Nullable="false" />
+    <Property Name="Pace_TT" Type="float" Nullable="false" />
+    <Property Name="Pace_SX" Type="float" Nullable="false" />
+    <Property Name="IsEndDate" Type="bit" Nullable="false" />
+    <Property Name="ShowLCD" Type="bit" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="P_Employee">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Index" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Sex" Type="bit" Nullable="false" />
+    <Property Name="Note" Type="nvarchar" MaxLength="1000" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="P_HistoryPressedKeypad">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="LineId" Type="int" Nullable="false" />
+    <Property Name="AssignmentId" Type="int" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="P_Keypad">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClusterId" Type="int" Nullable="false" />
+    <Property Name="EquipCode" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Type" Type="int" Nullable="false" />
+    <Property Name="Note" Type="nvarchar" MaxLength="1000" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="P_KeypadRegis_Detail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KeypadRegisId" Type="int" Nullable="false" />
+    <Property Name="PhaseId" Type="int" Nullable="false" />
+    <Property Name="Index" Type="int" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="P_LightPercent">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="Type" Type="int" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="P_LightPercent_De">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LightPercentId" Type="int" Nullable="false" />
+    <Property Name="ColorName" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="From" Type="float" Nullable="false" />
+    <Property Name="To" Type="float" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="P_LineWorkingShift">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ShiftOrder" Type="int" Nullable="false" />
+    <Property Name="LineId" Type="int" Nullable="false" />
+    <Property Name="ShiftId" Type="int" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="P_MonthlyProductionPlans">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="STT_C_SP" Type="int" Nullable="false" />
+    <Property Name="ProductionPlans" Type="int" Nullable="false" />
+    <Property Name="LK_TH" Type="int" Nullable="false" />
+    <Property Name="LK_TC" Type="int" Nullable="false" />
+    <Property Name="LK_BTP" Type="int" Nullable="false" />
+    <Property Name="LK_BTP_HC" Type="int" Nullable="false" />
+    <Property Name="Month" Type="int" Nullable="false" />
+    <Property Name="Year" Type="int" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="P_Phase">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Index" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="1000" Nullable="false" />
+    <Property Name="Type" Type="int" Nullable="false" />
+    <Property Name="IsShow" Type="bit" Nullable="false" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="P_Phase_Assign_Log">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AssignId" Type="int" Nullable="false" />
+    <Property Name="PhaseId" Type="int" Nullable="false" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="P_PhaseDaily">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NangSuatId" Type="int" Nullable="false" />
+    <Property Name="PhaseId" Type="int" Nullable="false" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+    <Property Name="CommandTypeId" Type="int" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="P_PhaseDailyLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NangSuatId" Type="int" Nullable="false" />
+    <Property Name="PhaseId" Type="int" Nullable="false" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+    <Property Name="CommandTypeId" Type="int" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="P_PlayVideoShedule">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LineId" Type="int" Nullable="false" />
+    <Property Name="TimeStart" Type="time" Precision="7" Nullable="false" />
+    <Property Name="TimeEnd" Type="time" Precision="7" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="P_PlayVideoSheduleDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VideoId" Type="int" Nullable="false" />
+    <Property Name="VideoSheduleId" Type="int" Nullable="false" />
+    <Property Name="OrderIndex" Type="int" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="P_ReadPercent_KCSInventory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="P_ReadPercent_KCSInventory_De">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KCSInventoryId" Type="int" Nullable="false" />
+    <Property Name="From" Type="int" Nullable="false" />
+    <Property Name="To" Type="int" Nullable="false" />
+    <Property Name="SoundPath" Type="nchar" MaxLength="500" Nullable="false" />
+    <Property Name="RepeatTimes" Type="int" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="P_ReadPercentOfLine">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReadPercent_KCSInventoryId" Type="int" />
+    <Property Name="ReadPercentId" Type="int" />
+    <Property Name="KanbanLightPercentId" Type="int" />
+    <Property Name="ProductLightPercentId" Type="int" />
+    <Property Name="LineId" Type="int" Nullable="false" />
+    <Property Name="AssignmentId" Type="int" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="P_VideoLibrary">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="Path" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Type" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="Size" Type="float" Nullable="false" />
+    <Property Name="Length" Type="float" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="P_WorkingShift">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="TimeStart" Type="time" Precision="7" Nullable="false" />
+    <Property Name="TimeEnd" Type="time" Precision="7" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ReadPercent">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PercentFrom" Type="int" Nullable="false" />
+    <Property Name="PercentTo" Type="int" Nullable="false" />
+    <Property Name="CountRepeat" Type="int" Nullable="false" />
+    <Property Name="Sound" Type="nvarchar" MaxLength="200" />
+    <Property Name="IdParent" Type="int" />
+    <Property Name="Name" Type="nvarchar" MaxLength="200" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SanLuongCat">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="IdToCat" />
+      <PropertyRef Name="IdSanPham" />
+      <PropertyRef Name="SanLuong" />
+      <PropertyRef Name="ThoiGianNapSL" />
+      <PropertyRef Name="NgayNapSL" />
+      <PropertyRef Name="IsDeleted" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdToCat" Type="int" Nullable="false" />
+    <Property Name="IdSanPham" Type="int" Nullable="false" />
+    <Property Name="SanLuong" Type="int" Nullable="false" />
+    <Property Name="ThoiGianNapSL" Type="time" Precision="7" Nullable="false" />
+    <Property Name="NgayNapSL" Type="datetime" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SanPham">
+    <Key>
+      <PropertyRef Name="MaSanPham" />
+    </Key>
+    <Property Name="MaSanPham" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenSanPham" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="DinhNghia" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Floor" Type="int" />
+    <Property Name="DonGia" Type="float" Nullable="false" />
+    <Property Name="DonGiaCM" Type="float" Nullable="false" />
+    <Property Name="ProductionTime" Type="float" Nullable="false" />
+    <Property Name="IsDelete" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Shift">
+    <Key>
+      <PropertyRef Name="MaChuyen" />
+      <PropertyRef Name="IdShift" />
+    </Key>
+    <Property Name="MaChuyen" Type="int" Nullable="false" />
+    <Property Name="IdShift" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TimeStart" Type="time" Precision="7" Nullable="false" />
+    <Property Name="TimeEnd" Type="time" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ShowLCD_Config">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Value" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="ShowLCD_LabelArea">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Font" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Size" Type="float" Nullable="false" />
+    <Property Name="Bold" Type="bit" Nullable="false" />
+    <Property Name="Italic" Type="bit" Nullable="false" />
+    <Property Name="Color" Type="nvarchar" MaxLength="50" />
+    <Property Name="Position" Type="int" />
+    <Property Name="TableLayoutPanelName" Type="nchar" MaxLength="30" />
+    <Property Name="TableType" Type="int" Nullable="false" />
+    <Property Name="Note" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="ShowLCD_LabelForPanelContent">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LabelName" Type="nvarchar" MaxLength="400" />
+    <Property Name="SystemValueName" Type="nchar" MaxLength="25" />
+    <Property Name="IntRowTBLPanelContent" Type="int" Nullable="false" />
+    <Property Name="SttNext" Type="int" Nullable="false" />
+    <Property Name="IsShow" Type="bit" Nullable="false" />
+    <Property Name="TableType" Type="int" Nullable="false" />
+    <Property Name="Note" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="ShowLCD_Panel">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="BackColor" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TableType" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ShowLCD_TableLayoutPanel">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ColumnInt" Type="nchar" MaxLength="10" />
+    <Property Name="RowInt" Type="nchar" MaxLength="10" />
+    <Property Name="TableLayoutPanelName" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="SizePercent" Type="float" />
+    <Property Name="IsShow" Type="bit" Nullable="false" />
+    <Property Name="TableType" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SOUND">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="200" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="250" />
+    <Property Name="Path" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SOUND_IntConfig">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nchar" MaxLength="200" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="250" />
+    <Property Name="Formula" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IsProductivity" Type="bit" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SOUND_ReadConfig">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="250" />
+    <Property Name="ConfigType" Type="int" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="IdChuyen" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SOUND_ReadConfigDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdReadConfig" Type="int" Nullable="false" />
+    <Property Name="IdSound" Type="int" />
+    <Property Name="IdIntConfig" Type="int" />
+    <Property Name="IntType" Type="int" Nullable="false" />
+    <Property Name="OrderIndex" Type="int" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SOUND_TimeConfig">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Time" Type="time" Precision="7" Nullable="false" />
+    <Property Name="SoLanDoc" Type="int" Nullable="false" />
+    <Property Name="ConfigType" Type="int" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SoundInt">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="200" />
+    <Property Name="AddressFile" Type="nvarchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TaiKhoan">
+    <Key>
+      <PropertyRef Name="UserName" />
+    </Key>
+    <Property Name="UserName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="ThanhPham" Type="int" Nullable="false" />
+    <Property Name="BTP" Type="int" Nullable="false" />
+    <Property Name="ThaoTac" Type="int" />
+    <Property Name="Floor" Type="int" />
+    <Property Name="ListChuyenId" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsOnwer" Type="bit" Nullable="false" />
+    <Property Name="IsKanbanAcc" Type="bit" Nullable="false" />
+    <Property Name="IsCompleteAcc" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ThanhPham">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ngay" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STTChuyen_SanPham" Type="int" Nullable="false" />
+    <Property Name="NangXuatLaoDong" Type="float" Nullable="false" />
+    <Property Name="ShowLCD" Type="bit" Nullable="false" />
+    <Property Name="LaoDongChuyen" Type="int" Nullable="false" />
+    <Property Name="LeanKH" Type="float" Nullable="false" />
+    <Property Name="HieuSuat" Type="float" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="DeletedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TheoDoiNgay">
+    <Key>
+      <PropertyRef Name="STT" />
+    </Key>
+    <Property Name="STT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaChuyen" Type="int" Nullable="false" />
+    <Property Name="CumId" Type="int" Nullable="false" />
+    <Property Name="STTChuyenSanPham" Type="int" Nullable="false" />
+    <Property Name="MaSanPham" Type="int" Nullable="false" />
+    <Property Name="ThanhPham" Type="int" Nullable="false" />
+    <Property Name="Time" Type="time" Precision="7" Nullable="false" />
+    <Property Name="Date" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="CommandTypeId" Type="int" />
+    <Property Name="ProductOutputTypeId" Type="int" />
+    <Property Name="ErrorId" Type="int" />
+    <Property Name="IsEndOfLine" Type="bit" Nullable="false" />
+    <Property Name="IsEnterByKeypad" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ThoiGianTinhNhipDoTT">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ngay" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MaChuyen" Type="int" Nullable="false" />
+    <Property Name="ThoiGianBatDau" Type="time" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ToCat">
+    <Key>
+      <PropertyRef Name="IdToCat" />
+      <PropertyRef Name="TenToCat" />
+      <PropertyRef Name="IsDeleted" />
+      <PropertyRef Name="IdFloor" />
+    </Key>
+    <Property Name="IdToCat" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenToCat" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="DinhNghia" Type="nvarchar" MaxLength="500" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="IdFloor" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TTHienThi">
+    <Key>
+      <PropertyRef Name="MaHienThi" />
+    </Key>
+    <Property Name="MaHienThi" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaChuyen" Type="int" Nullable="false" />
+    <Property Name="ViTri" Type="int" Nullable="false" />
+    <Property Name="ChangeTP" Type="int" Nullable="false" />
+    <Property Name="ChangeBTP" Type="int" Nullable="false" />
+    <Property Name="IsInt" Type="int" Nullable="false" />
+    <Property Name="IdCatalogTable" Type="int" Nullable="false" />
+    <Property Name="STTDen" Type="int" />
+  </EntityType>
+  <EntityType Name="TurnCOMMng">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ComTypeId" Type="int" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="TimeAction" Type="time" Precision="7" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="250" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_BTP_Chuyen_SanPham">
+    <End Role="Chuyen_SanPham" Type="Self.Chuyen_SanPham" Multiplicity="1" />
+    <End Role="BTP" Type="Self.BTP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chuyen_SanPham">
+        <PropertyRef Name="STT" />
+      </Principal>
+      <Dependent Role="BTP">
+        <PropertyRef Name="STTChuyen_SanPham" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BTP_Cum">
+    <End Role="Cum" Type="Self.Cum" Multiplicity="1" />
+    <End Role="BTP" Type="Self.BTP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cum">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BTP">
+        <PropertyRef Name="CumId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Chuyen_Floor">
+    <End Role="Floor" Type="Self.Floor" Multiplicity="0..1" />
+    <End Role="Chuyen" Type="Self.Chuyen" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Floor">
+        <PropertyRef Name="IdFloor" />
+      </Principal>
+      <Dependent Role="Chuyen">
+        <PropertyRef Name="FloorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Chuyen_P_LightPercent1">
+    <End Role="P_LightPercent" Type="Self.P_LightPercent" Multiplicity="0..1" />
+    <End Role="Chuyen" Type="Self.Chuyen" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_LightPercent">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Chuyen">
+        <PropertyRef Name="IdTiLeBTPConLai" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Chuyen_SanPham_Chuyen">
+    <End Role="Chuyen" Type="Self.Chuyen" Multiplicity="1" />
+    <End Role="Chuyen_SanPham" Type="Self.Chuyen_SanPham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chuyen">
+        <PropertyRef Name="MaChuyen" />
+      </Principal>
+      <Dependent Role="Chuyen_SanPham">
+        <PropertyRef Name="MaChuyen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Chuyen_SanPham_SanPham">
+    <End Role="SanPham" Type="Self.SanPham" Multiplicity="1" />
+    <End Role="Chuyen_SanPham" Type="Self.Chuyen_SanPham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SanPham">
+        <PropertyRef Name="MaSanPham" />
+      </Principal>
+      <Dependent Role="Chuyen_SanPham">
+        <PropertyRef Name="MaSanPham" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Chuyens_ReadPercents">
+    <End Role="ReadPercent" Type="Self.ReadPercent" Multiplicity="0..1" />
+    <End Role="Chuyen" Type="Self.Chuyen" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ReadPercent">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Chuyen">
+        <PropertyRef Name="IdTyLeDoc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Config_App_Config">
+    <End Role="Config" Type="Self.Config" Multiplicity="1" />
+    <End Role="Config_App" Type="Self.Config_App" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Config">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Config_App">
+        <PropertyRef Name="ConfigId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cum_Chuyen">
+    <End Role="Chuyen" Type="Self.Chuyen" Multiplicity="1" />
+    <End Role="Cum" Type="Self.Cum" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chuyen">
+        <PropertyRef Name="MaChuyen" />
+      </Principal>
+      <Dependent Role="Cum">
+        <PropertyRef Name="IdChuyen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Error_GroupError">
+    <End Role="GroupError" Type="Self.GroupError" Multiplicity="0..1" />
+    <End Role="Error" Type="Self.Error" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GroupError">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Error">
+        <PropertyRef Name="GroupErrorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KeyPad_Floor">
+    <End Role="Floor" Type="Self.Floor" Multiplicity="0..1" />
+    <End Role="KeyPad" Type="Self.KeyPad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Floor">
+        <PropertyRef Name="IdFloor" />
+      </Principal>
+      <Dependent Role="KeyPad">
+        <PropertyRef Name="FloorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KeyPad_Object_Cum">
+    <End Role="Cum" Type="Self.Cum" Multiplicity="1" />
+    <End Role="KeyPad_Object" Type="Self.KeyPad_Object" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cum">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="KeyPad_Object">
+        <PropertyRef Name="ClusterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KeyPad_Object_KeyPad">
+    <End Role="KeyPad" Type="Self.KeyPad" Multiplicity="1" />
+    <End Role="KeyPad_Object" Type="Self.KeyPad_Object" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KeyPad">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="KeyPad_Object">
+        <PropertyRef Name="KeyPadId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MAIL_SCHEDULE_MAIL_TEMPLATE">
+    <End Role="MAIL_TEMPLATE" Type="Self.MAIL_TEMPLATE" Multiplicity="0..1" />
+    <End Role="MAIL_SCHEDULE" Type="Self.MAIL_SCHEDULE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MAIL_TEMPLATE">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MAIL_SCHEDULE">
+        <PropertyRef Name="MailTemplateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MAIL_SEND_MAIL_TYPE">
+    <End Role="MAIL_TYPE" Type="Self.MAIL_TYPE" Multiplicity="1" />
+    <End Role="MAIL_SEND" Type="Self.MAIL_SEND" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MAIL_TYPE">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="MAIL_SEND">
+        <PropertyRef Name="MailTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MAIL_T_M_MAIL_FILE">
+    <End Role="MAIL_FILE" Type="Self.MAIL_FILE" Multiplicity="1" />
+    <End Role="MAIL_T_M" Type="Self.MAIL_T_M" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MAIL_FILE">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MAIL_T_M">
+        <PropertyRef Name="MailFileId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MAIL_T_M_MAIL_TEMPLATE">
+    <End Role="MAIL_TEMPLATE" Type="Self.MAIL_TEMPLATE" Multiplicity="1" />
+    <End Role="MAIL_T_M" Type="Self.MAIL_T_M" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MAIL_TEMPLATE">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MAIL_T_M">
+        <PropertyRef Name="MailTemplateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MAIL_TEMPLATE_MAIL_SEND">
+    <End Role="MAIL_SEND" Type="Self.MAIL_SEND" Multiplicity="1" />
+    <End Role="MAIL_TEMPLATE" Type="Self.MAIL_TEMPLATE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MAIL_SEND">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MAIL_TEMPLATE">
+        <PropertyRef Name="MailSendId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MapIdSanPhamNgay_Chuyen">
+    <End Role="Chuyen" Type="Self.Chuyen" Multiplicity="1" />
+    <End Role="MapIdSanPhamNgay" Type="Self.MapIdSanPhamNgay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chuyen">
+        <PropertyRef Name="MaChuyen" />
+      </Principal>
+      <Dependent Role="MapIdSanPhamNgay">
+        <PropertyRef Name="MaChuyen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MapIdSanPhamNgay_Chuyen_SanPham">
+    <End Role="Chuyen_SanPham" Type="Self.Chuyen_SanPham" Multiplicity="1" />
+    <End Role="MapIdSanPhamNgay" Type="Self.MapIdSanPhamNgay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chuyen_SanPham">
+        <PropertyRef Name="STT" />
+      </Principal>
+      <Dependent Role="MapIdSanPhamNgay">
+        <PropertyRef Name="STTChuyenSanPham" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MapIdSanPhamNgay_SanPham">
+    <End Role="SanPham" Type="Self.SanPham" Multiplicity="1" />
+    <End Role="MapIdSanPhamNgay" Type="Self.MapIdSanPhamNgay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SanPham">
+        <PropertyRef Name="MaSanPham" />
+      </Principal>
+      <Dependent Role="MapIdSanPhamNgay">
+        <PropertyRef Name="MaSanPham" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NangSuat_Cum_Cum">
+    <End Role="Cum" Type="Self.Cum" Multiplicity="1" />
+    <End Role="NangSuat_Cum" Type="Self.NangSuat_Cum" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cum">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NangSuat_Cum">
+        <PropertyRef Name="IdCum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NangSuat_CumLoi_Cum">
+    <End Role="Cum" Type="Self.Cum" Multiplicity="1" />
+    <End Role="NangSuat_CumLoi" Type="Self.NangSuat_CumLoi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cum">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NangSuat_CumLoi">
+        <PropertyRef Name="CumId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NangSuat_CumLoi_Error">
+    <End Role="Error" Type="Self.Error" Multiplicity="1" />
+    <End Role="NangSuat_CumLoi" Type="Self.NangSuat_CumLoi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Error">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NangSuat_CumLoi">
+        <PropertyRef Name="ErrorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NangXuat_Chuyen_SanPham">
+    <End Role="Chuyen_SanPham" Type="Self.Chuyen_SanPham" Multiplicity="1" />
+    <End Role="NangXuat" Type="Self.NangXuat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chuyen_SanPham">
+        <PropertyRef Name="STT" />
+      </Principal>
+      <Dependent Role="NangXuat">
+        <PropertyRef Name="STTCHuyen_SanPham" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_Assign_Phase_QuantityLog_Chuyen_SanPham">
+    <End Role="Chuyen_SanPham" Type="Self.Chuyen_SanPham" Multiplicity="1" />
+    <End Role="P_Phase_Assign_Log" Type="Self.P_Phase_Assign_Log" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chuyen_SanPham">
+        <PropertyRef Name="STT" />
+      </Principal>
+      <Dependent Role="P_Phase_Assign_Log">
+        <PropertyRef Name="AssignId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_Assignment_SanPham">
+    <End Role="SanPham" Type="Self.SanPham" Multiplicity="1" />
+    <End Role="P_AssignCompletion" Type="Self.P_AssignCompletion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SanPham">
+        <PropertyRef Name="MaSanPham" />
+      </Principal>
+      <Dependent Role="P_AssignCompletion">
+        <PropertyRef Name="CommoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_BTP_HCInDay_NangXuat">
+    <End Role="NangXuat" Type="Self.NangXuat" Multiplicity="1" />
+    <End Role="P_PhaseDailyLog" Type="Self.P_PhaseDailyLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NangXuat">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_PhaseDailyLog">
+        <PropertyRef Name="NangSuatId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_BTP_HCInDay_P_Phase">
+    <End Role="P_Phase" Type="Self.P_Phase" Multiplicity="1" />
+    <End Role="P_PhaseDailyLog" Type="Self.P_PhaseDailyLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_Phase">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_PhaseDailyLog">
+        <PropertyRef Name="PhaseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_CompletionPhase_Detail_Chuyen_SanPham">
+    <End Role="P_AssignCompletion" Type="Self.P_AssignCompletion" Multiplicity="1" />
+    <End Role="P_CompletionPhase_Daily" Type="Self.P_CompletionPhase_Daily" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_AssignCompletion">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_CompletionPhase_Daily">
+        <PropertyRef Name="AssignId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_CompletionPhase_Detail_P_CompletionPhase">
+    <End Role="P_CompletionPhase" Type="Self.P_CompletionPhase" Multiplicity="1" />
+    <End Role="P_CompletionPhase_Daily" Type="Self.P_CompletionPhase_Daily" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_CompletionPhase">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_CompletionPhase_Daily">
+        <PropertyRef Name="CompletionPhaseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_DailyInfo_P_DailyPlans1">
+    <End Role="P_DailyPlans" Type="Self.P_DailyPlans" Multiplicity="1" />
+    <End Role="P_DailyInfo" Type="Self.P_DailyInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_DailyPlans">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_DailyInfo">
+        <PropertyRef Name="DailyPlansId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_DailyInfo_P_Keypad">
+    <End Role="P_Keypad" Type="Self.P_Keypad" Multiplicity="1" />
+    <End Role="P_DailyInfo" Type="Self.P_DailyInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_Keypad">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_DailyInfo">
+        <PropertyRef Name="KeypadId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_DailyKeypadPosition_P_DailyPlans">
+    <End Role="P_DailyPlans" Type="Self.P_DailyPlans" Multiplicity="1" />
+    <End Role="P_DailyKeypadPosition" Type="Self.P_DailyKeypadPosition" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_DailyPlans">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_DailyKeypadPosition">
+        <PropertyRef Name="DailyPlanId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_DailyKeypadPosition_P_Keypad">
+    <End Role="P_Keypad" Type="Self.P_Keypad" Multiplicity="1" />
+    <End Role="P_DailyKeypadPosition" Type="Self.P_DailyKeypadPosition" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_Keypad">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_DailyKeypadPosition">
+        <PropertyRef Name="KeypadId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_DailyKeypadRegister_P_DailyPlans">
+    <End Role="P_DailyPlans" Type="Self.P_DailyPlans" Multiplicity="1" />
+    <End Role="P_DailyKeypadRegister" Type="Self.P_DailyKeypadRegister" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_DailyPlans">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_DailyKeypadRegister">
+        <PropertyRef Name="DailyPlansId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_DailyKeypadRegister_P_Employee">
+    <End Role="P_Employee" Type="Self.P_Employee" Multiplicity="1" />
+    <End Role="P_DailyKeypadRegister" Type="Self.P_DailyKeypadRegister" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_Employee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_DailyKeypadRegister">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_DailyKeypadRegister_P_Keypad">
+    <End Role="P_Keypad" Type="Self.P_Keypad" Multiplicity="1" />
+    <End Role="P_DailyKeypadRegister" Type="Self.P_DailyKeypadRegister" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_Keypad">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_DailyKeypadRegister">
+        <PropertyRef Name="KeypadId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_DailyMapper_Chuyen">
+    <End Role="Chuyen" Type="Self.Chuyen" Multiplicity="1" />
+    <End Role="P_DailyMapper" Type="Self.P_DailyMapper" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chuyen">
+        <PropertyRef Name="MaChuyen" />
+      </Principal>
+      <Dependent Role="P_DailyMapper">
+        <PropertyRef Name="LineId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_DailyMapper_Chuyen_SanPham">
+    <End Role="Chuyen_SanPham" Type="Self.Chuyen_SanPham" Multiplicity="1" />
+    <End Role="P_DailyMapper" Type="Self.P_DailyMapper" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chuyen_SanPham">
+        <PropertyRef Name="STT" />
+      </Principal>
+      <Dependent Role="P_DailyMapper">
+        <PropertyRef Name="AssignId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_DailyMapper_P_Keypad">
+    <End Role="P_Keypad" Type="Self.P_Keypad" Multiplicity="1" />
+    <End Role="P_DailyMapper" Type="Self.P_DailyMapper" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_Keypad">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_DailyMapper">
+        <PropertyRef Name="KeypadId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_DailyPlans_Chuyen_SanPham">
+    <End Role="Chuyen_SanPham" Type="Self.Chuyen_SanPham" Multiplicity="1" />
+    <End Role="P_DailyPlans" Type="Self.P_DailyPlans" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chuyen_SanPham">
+        <PropertyRef Name="STT" />
+      </Principal>
+      <Dependent Role="P_DailyPlans">
+        <PropertyRef Name="CSP_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_KanbanLightPercent_De_P_KanbanLightPercent">
+    <End Role="P_LightPercent" Type="Self.P_LightPercent" Multiplicity="1" />
+    <End Role="P_LightPercent_De" Type="Self.P_LightPercent_De" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_LightPercent">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_LightPercent_De">
+        <PropertyRef Name="LightPercentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_Keypad_Cum">
+    <End Role="Cum" Type="Self.Cum" Multiplicity="1" />
+    <End Role="P_Keypad" Type="Self.P_Keypad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cum">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_Keypad">
+        <PropertyRef Name="ClusterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_KeypadRegis_Detail_P_DailyKeypadRegister">
+    <End Role="P_DailyKeypadRegister" Type="Self.P_DailyKeypadRegister" Multiplicity="1" />
+    <End Role="P_KeypadRegis_Detail" Type="Self.P_KeypadRegis_Detail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_DailyKeypadRegister">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_KeypadRegis_Detail">
+        <PropertyRef Name="KeypadRegisId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_LineWorkingShift_Chuyen">
+    <End Role="Chuyen" Type="Self.Chuyen" Multiplicity="1" />
+    <End Role="P_LineWorkingShift" Type="Self.P_LineWorkingShift" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chuyen">
+        <PropertyRef Name="MaChuyen" />
+      </Principal>
+      <Dependent Role="P_LineWorkingShift">
+        <PropertyRef Name="LineId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_LineWorkingShift_P_WorkingShift">
+    <End Role="P_WorkingShift" Type="Self.P_WorkingShift" Multiplicity="1" />
+    <End Role="P_LineWorkingShift" Type="Self.P_LineWorkingShift" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_WorkingShift">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_LineWorkingShift">
+        <PropertyRef Name="ShiftId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_MonthlyProductionPlans_Chuyen_SanPham">
+    <End Role="Chuyen_SanPham" Type="Self.Chuyen_SanPham" Multiplicity="1" />
+    <End Role="P_MonthlyProductionPlans" Type="Self.P_MonthlyProductionPlans" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chuyen_SanPham">
+        <PropertyRef Name="STT" />
+      </Principal>
+      <Dependent Role="P_MonthlyProductionPlans">
+        <PropertyRef Name="STT_C_SP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_Phase_Assign_Log_P_Phase">
+    <End Role="P_Phase" Type="Self.P_Phase" Multiplicity="1" />
+    <End Role="P_Phase_Assign_Log" Type="Self.P_Phase_Assign_Log" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_Phase">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_Phase_Assign_Log">
+        <PropertyRef Name="PhaseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_PhaseDailyLog_NangXuat">
+    <End Role="NangXuat" Type="Self.NangXuat" Multiplicity="1" />
+    <End Role="P_PhaseDaily" Type="Self.P_PhaseDaily" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NangXuat">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_PhaseDaily">
+        <PropertyRef Name="NangSuatId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_PhaseDailyLog_P_Phase">
+    <End Role="P_CompletionPhase" Type="Self.P_CompletionPhase" Multiplicity="1" />
+    <End Role="P_PhaseDaily" Type="Self.P_PhaseDaily" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_CompletionPhase">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_PhaseDaily">
+        <PropertyRef Name="PhaseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_PlayVideoShedule_Chuyen">
+    <End Role="Chuyen" Type="Self.Chuyen" Multiplicity="1" />
+    <End Role="P_PlayVideoShedule" Type="Self.P_PlayVideoShedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chuyen">
+        <PropertyRef Name="MaChuyen" />
+      </Principal>
+      <Dependent Role="P_PlayVideoShedule">
+        <PropertyRef Name="LineId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_PlayVideoSheduleDetail_P_PlayVideoShedule">
+    <End Role="P_PlayVideoShedule" Type="Self.P_PlayVideoShedule" Multiplicity="1" />
+    <End Role="P_PlayVideoSheduleDetail" Type="Self.P_PlayVideoSheduleDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_PlayVideoShedule">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_PlayVideoSheduleDetail">
+        <PropertyRef Name="VideoSheduleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_PlayVideoSheduleDetail_P_VideoLibrary">
+    <End Role="P_VideoLibrary" Type="Self.P_VideoLibrary" Multiplicity="1" />
+    <End Role="P_PlayVideoSheduleDetail" Type="Self.P_PlayVideoSheduleDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_VideoLibrary">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_PlayVideoSheduleDetail">
+        <PropertyRef Name="VideoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_ReadPercent_KCSInventory_De_P_ReadPercent_KCSInventory">
+    <End Role="P_ReadPercent_KCSInventory" Type="Self.P_ReadPercent_KCSInventory" Multiplicity="1" />
+    <End Role="P_ReadPercent_KCSInventory_De" Type="Self.P_ReadPercent_KCSInventory_De" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_ReadPercent_KCSInventory">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_ReadPercent_KCSInventory_De">
+        <PropertyRef Name="KCSInventoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_ReadPercentOfLine_Chuyen">
+    <End Role="Chuyen" Type="Self.Chuyen" Multiplicity="1" />
+    <End Role="P_ReadPercentOfLine" Type="Self.P_ReadPercentOfLine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chuyen">
+        <PropertyRef Name="MaChuyen" />
+      </Principal>
+      <Dependent Role="P_ReadPercentOfLine">
+        <PropertyRef Name="LineId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_ReadPercentOfLine_Chuyen_SanPham">
+    <End Role="Chuyen_SanPham" Type="Self.Chuyen_SanPham" Multiplicity="1" />
+    <End Role="P_ReadPercentOfLine" Type="Self.P_ReadPercentOfLine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chuyen_SanPham">
+        <PropertyRef Name="STT" />
+      </Principal>
+      <Dependent Role="P_ReadPercentOfLine">
+        <PropertyRef Name="AssignmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_ReadPercentOfLine_P_LightPercent">
+    <End Role="P_LightPercent" Type="Self.P_LightPercent" Multiplicity="0..1" />
+    <End Role="P_ReadPercentOfLine" Type="Self.P_ReadPercentOfLine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_LightPercent">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_ReadPercentOfLine">
+        <PropertyRef Name="KanbanLightPercentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_ReadPercentOfLine_P_LightPercent1">
+    <End Role="P_LightPercent" Type="Self.P_LightPercent" Multiplicity="0..1" />
+    <End Role="P_ReadPercentOfLine" Type="Self.P_ReadPercentOfLine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_LightPercent">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_ReadPercentOfLine">
+        <PropertyRef Name="ProductLightPercentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_ReadPercentOfLine_P_ReadPercent_KCSInventory">
+    <End Role="P_ReadPercent_KCSInventory" Type="Self.P_ReadPercent_KCSInventory" Multiplicity="0..1" />
+    <End Role="P_ReadPercentOfLine" Type="Self.P_ReadPercentOfLine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_ReadPercent_KCSInventory">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_ReadPercentOfLine">
+        <PropertyRef Name="ReadPercent_KCSInventoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_ReadPercentOfLine_ReadPercent">
+    <End Role="ReadPercent" Type="Self.ReadPercent" Multiplicity="0..1" />
+    <End Role="P_ReadPercentOfLine" Type="Self.P_ReadPercentOfLine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ReadPercent">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="P_ReadPercentOfLine">
+        <PropertyRef Name="ReadPercentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SOUND_ReadConfig_Chuyen">
+    <End Role="Chuyen" Type="Self.Chuyen" Multiplicity="1" />
+    <End Role="SOUND_ReadConfig" Type="Self.SOUND_ReadConfig" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chuyen">
+        <PropertyRef Name="MaChuyen" />
+      </Principal>
+      <Dependent Role="SOUND_ReadConfig">
+        <PropertyRef Name="IdChuyen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SOUND_ReadConfigDetail_SOUND">
+    <End Role="SOUND" Type="Self.SOUND" Multiplicity="0..1" />
+    <End Role="SOUND_ReadConfigDetail" Type="Self.SOUND_ReadConfigDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SOUND">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SOUND_ReadConfigDetail">
+        <PropertyRef Name="IdSound" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SOUND_ReadConfigDetail_SOUND_IntConfig">
+    <End Role="SOUND_IntConfig" Type="Self.SOUND_IntConfig" Multiplicity="0..1" />
+    <End Role="SOUND_ReadConfigDetail" Type="Self.SOUND_ReadConfigDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SOUND_IntConfig">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SOUND_ReadConfigDetail">
+        <PropertyRef Name="IdIntConfig" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SOUND_ReadConfigDetail_SOUND_ReadConfig">
+    <End Role="SOUND_ReadConfig" Type="Self.SOUND_ReadConfig" Multiplicity="1" />
+    <End Role="SOUND_ReadConfigDetail" Type="Self.SOUND_ReadConfigDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SOUND_ReadConfig">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SOUND_ReadConfigDetail">
+        <PropertyRef Name="IdReadConfig" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ThanhPham_Chuyen_SanPham">
+    <End Role="Chuyen_SanPham" Type="Self.Chuyen_SanPham" Multiplicity="1" />
+    <End Role="ThanhPham" Type="Self.ThanhPham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chuyen_SanPham">
+        <PropertyRef Name="STT" />
+      </Principal>
+      <Dependent Role="ThanhPham">
+        <PropertyRef Name="STTChuyen_SanPham" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TheoDoiNgay_Chuyen">
+    <End Role="Chuyen" Type="Self.Chuyen" Multiplicity="1" />
+    <End Role="TheoDoiNgay" Type="Self.TheoDoiNgay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chuyen">
+        <PropertyRef Name="MaChuyen" />
+      </Principal>
+      <Dependent Role="TheoDoiNgay">
+        <PropertyRef Name="MaChuyen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TheoDoiNgay_Cum">
+    <End Role="Cum" Type="Self.Cum" Multiplicity="1" />
+    <End Role="TheoDoiNgay" Type="Self.TheoDoiNgay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cum">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TheoDoiNgay">
+        <PropertyRef Name="CumId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TheoDoiNgay_SanPham">
+    <End Role="SanPham" Type="Self.SanPham" Multiplicity="1" />
+    <End Role="TheoDoiNgay" Type="Self.TheoDoiNgay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SanPham">
+        <PropertyRef Name="MaSanPham" />
+      </Principal>
+      <Dependent Role="TheoDoiNgay">
+        <PropertyRef Name="MaSanPham" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ThoiGianTinhNhipDoTT_Chuyen">
+    <End Role="Chuyen" Type="Self.Chuyen" Multiplicity="1" />
+    <End Role="ThoiGianTinhNhipDoTT" Type="Self.ThoiGianTinhNhipDoTT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chuyen">
+        <PropertyRef Name="MaChuyen" />
+      </Principal>
+      <Dependent Role="ThoiGianTinhNhipDoTT">
+        <PropertyRef Name="MaChuyen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QLNSModelStoreContainer">
+    <EntitySet Name="BaoHetHang" EntityType="Self.BaoHetHang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BTP" EntityType="Self.BTP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatalogTable" EntityType="Self.CatalogTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ChiTietHienThi" EntityType="Self.ChiTietHienThi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Chuyen" EntityType="Self.Chuyen" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Chuyen_SanPham" EntityType="Self.Chuyen_SanPham" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Config" EntityType="Self.Config" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Config_App" EntityType="Self.Config_App" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cum" EntityType="Self.Cum" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Den" EntityType="Self.Den" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Error" EntityType="Self.Error" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Floor" EntityType="Self.Floor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GroupError" EntityType="Self.GroupError" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KeyPad" EntityType="Self.KeyPad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KeyPad_Object" EntityType="Self.KeyPad_Object" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LCDConfig" EntityType="Self.LCDConfig" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MAIL_FILE" EntityType="Self.MAIL_FILE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MAIL_RECEIVE" EntityType="Self.MAIL_RECEIVE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MAIL_SCHEDULE" EntityType="Self.MAIL_SCHEDULE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MAIL_SEND" EntityType="Self.MAIL_SEND" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MAIL_T_M" EntityType="Self.MAIL_T_M" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MAIL_TEMPLATE" EntityType="Self.MAIL_TEMPLATE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MAIL_TYPE" EntityType="Self.MAIL_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MapIdSanPhamNgay" EntityType="Self.MapIdSanPhamNgay" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NangSuat_Cum" EntityType="Self.NangSuat_Cum" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NangSuat_CumLoi" EntityType="Self.NangSuat_CumLoi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NangXuat" EntityType="Self.NangXuat" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="P_AssignCompletion" EntityType="Self.P_AssignCompletion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="P_CompletionPhase" EntityType="Self.P_CompletionPhase" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="P_CompletionPhase_Daily" EntityType="Self.P_CompletionPhase_Daily" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="P_DailyInfo" EntityType="Self.P_DailyInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="P_DailyKeypadPosition" EntityType="Self.P_DailyKeypadPosition" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="P_DailyKeypadRegister" EntityType="Self.P_DailyKeypadRegister" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="P_DailyMapper" EntityType="Self.P_DailyMapper" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="P_DailyPlans" EntityType="Self.P_DailyPlans" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="P_Employee" EntityType="Self.P_Employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="P_HistoryPressedKeypad" EntityType="Self.P_HistoryPressedKeypad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="P_Keypad" EntityType="Self.P_Keypad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="P_KeypadRegis_Detail" EntityType="Self.P_KeypadRegis_Detail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="P_LightPercent" EntityType="Self.P_LightPercent" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="P_LightPercent_De" EntityType="Self.P_LightPercent_De" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="P_LineWorkingShift" EntityType="Self.P_LineWorkingShift" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="P_MonthlyProductionPlans" EntityType="Self.P_MonthlyProductionPlans" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="P_Phase" EntityType="Self.P_Phase" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="P_Phase_Assign_Log" EntityType="Self.P_Phase_Assign_Log" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="P_PhaseDaily" EntityType="Self.P_PhaseDaily" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="P_PhaseDailyLog" EntityType="Self.P_PhaseDailyLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="P_PlayVideoShedule" EntityType="Self.P_PlayVideoShedule" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="P_PlayVideoSheduleDetail" EntityType="Self.P_PlayVideoSheduleDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="P_ReadPercent_KCSInventory" EntityType="Self.P_ReadPercent_KCSInventory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="P_ReadPercent_KCSInventory_De" EntityType="Self.P_ReadPercent_KCSInventory_De" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="P_ReadPercentOfLine" EntityType="Self.P_ReadPercentOfLine" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="P_VideoLibrary" EntityType="Self.P_VideoLibrary" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="P_WorkingShift" EntityType="Self.P_WorkingShift" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ReadPercent" EntityType="Self.ReadPercent" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SanLuongCat" EntityType="Self.SanLuongCat" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SanPham" EntityType="Self.SanPham" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Shift" EntityType="Self.Shift" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ShowLCD_Config" EntityType="Self.ShowLCD_Config" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ShowLCD_LabelArea" EntityType="Self.ShowLCD_LabelArea" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ShowLCD_LabelForPanelContent" EntityType="Self.ShowLCD_LabelForPanelContent" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ShowLCD_Panel" EntityType="Self.ShowLCD_Panel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ShowLCD_TableLayoutPanel" EntityType="Self.ShowLCD_TableLayoutPanel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SOUND" EntityType="Self.SOUND" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SOUND_IntConfig" EntityType="Self.SOUND_IntConfig" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SOUND_ReadConfig" EntityType="Self.SOUND_ReadConfig" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SOUND_ReadConfigDetail" EntityType="Self.SOUND_ReadConfigDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SOUND_TimeConfig" EntityType="Self.SOUND_TimeConfig" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SoundInt" EntityType="Self.SoundInt" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ThanhPham" EntityType="Self.ThanhPham" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TheoDoiNgay" EntityType="Self.TheoDoiNgay" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ThoiGianTinhNhipDoTT" EntityType="Self.ThoiGianTinhNhipDoTT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ToCat" EntityType="Self.ToCat" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TTHienThi" EntityType="Self.TTHienThi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TurnCOMMng" EntityType="Self.TurnCOMMng" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_BTP_Chuyen_SanPham" Association="Self.FK_BTP_Chuyen_SanPham">
+      <End Role="Chuyen_SanPham" EntitySet="Chuyen_SanPham" />
+      <End Role="BTP" EntitySet="BTP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BTP_Cum" Association="Self.FK_BTP_Cum">
+      <End Role="Cum" EntitySet="Cum" />
+      <End Role="BTP" EntitySet="BTP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Chuyen_Floor" Association="Self.FK_Chuyen_Floor">
+      <End Role="Floor" EntitySet="Floor" />
+      <End Role="Chuyen" EntitySet="Chuyen" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Chuyen_P_LightPercent1" Association="Self.FK_Chuyen_P_LightPercent1">
+      <End Role="P_LightPercent" EntitySet="P_LightPercent" />
+      <End Role="Chuyen" EntitySet="Chuyen" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Chuyen_SanPham_Chuyen" Association="Self.FK_Chuyen_SanPham_Chuyen">
+      <End Role="Chuyen" EntitySet="Chuyen" />
+      <End Role="Chuyen_SanPham" EntitySet="Chuyen_SanPham" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Chuyen_SanPham_SanPham" Association="Self.FK_Chuyen_SanPham_SanPham">
+      <End Role="SanPham" EntitySet="SanPham" />
+      <End Role="Chuyen_SanPham" EntitySet="Chuyen_SanPham" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Chuyens_ReadPercents" Association="Self.FK_Chuyens_ReadPercents">
+      <End Role="ReadPercent" EntitySet="ReadPercent" />
+      <End Role="Chuyen" EntitySet="Chuyen" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Config_App_Config" Association="Self.FK_Config_App_Config">
+      <End Role="Config" EntitySet="Config" />
+      <End Role="Config_App" EntitySet="Config_App" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cum_Chuyen" Association="Self.FK_Cum_Chuyen">
+      <End Role="Chuyen" EntitySet="Chuyen" />
+      <End Role="Cum" EntitySet="Cum" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Error_GroupError" Association="Self.FK_Error_GroupError">
+      <End Role="GroupError" EntitySet="GroupError" />
+      <End Role="Error" EntitySet="Error" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KeyPad_Floor" Association="Self.FK_KeyPad_Floor">
+      <End Role="Floor" EntitySet="Floor" />
+      <End Role="KeyPad" EntitySet="KeyPad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KeyPad_Object_Cum" Association="Self.FK_KeyPad_Object_Cum">
+      <End Role="Cum" EntitySet="Cum" />
+      <End Role="KeyPad_Object" EntitySet="KeyPad_Object" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KeyPad_Object_KeyPad" Association="Self.FK_KeyPad_Object_KeyPad">
+      <End Role="KeyPad" EntitySet="KeyPad" />
+      <End Role="KeyPad_Object" EntitySet="KeyPad_Object" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MAIL_SCHEDULE_MAIL_TEMPLATE" Association="Self.FK_MAIL_SCHEDULE_MAIL_TEMPLATE">
+      <End Role="MAIL_TEMPLATE" EntitySet="MAIL_TEMPLATE" />
+      <End Role="MAIL_SCHEDULE" EntitySet="MAIL_SCHEDULE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MAIL_SEND_MAIL_TYPE" Association="Self.FK_MAIL_SEND_MAIL_TYPE">
+      <End Role="MAIL_TYPE" EntitySet="MAIL_TYPE" />
+      <End Role="MAIL_SEND" EntitySet="MAIL_SEND" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MAIL_T_M_MAIL_FILE" Association="Self.FK_MAIL_T_M_MAIL_FILE">
+      <End Role="MAIL_FILE" EntitySet="MAIL_FILE" />
+      <End Role="MAIL_T_M" EntitySet="MAIL_T_M" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MAIL_T_M_MAIL_TEMPLATE" Association="Self.FK_MAIL_T_M_MAIL_TEMPLATE">
+      <End Role="MAIL_TEMPLATE" EntitySet="MAIL_TEMPLATE" />
+      <End Role="MAIL_T_M" EntitySet="MAIL_T_M" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MAIL_TEMPLATE_MAIL_SEND" Association="Self.FK_MAIL_TEMPLATE_MAIL_SEND">
+      <End Role="MAIL_SEND" EntitySet="MAIL_SEND" />
+      <End Role="MAIL_TEMPLATE" EntitySet="MAIL_TEMPLATE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MapIdSanPhamNgay_Chuyen" Association="Self.FK_MapIdSanPhamNgay_Chuyen">
+      <End Role="Chuyen" EntitySet="Chuyen" />
+      <End Role="MapIdSanPhamNgay" EntitySet="MapIdSanPhamNgay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MapIdSanPhamNgay_Chuyen_SanPham" Association="Self.FK_MapIdSanPhamNgay_Chuyen_SanPham">
+      <End Role="Chuyen_SanPham" EntitySet="Chuyen_SanPham" />
+      <End Role="MapIdSanPhamNgay" EntitySet="MapIdSanPhamNgay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MapIdSanPhamNgay_SanPham" Association="Self.FK_MapIdSanPhamNgay_SanPham">
+      <End Role="SanPham" EntitySet="SanPham" />
+      <End Role="MapIdSanPhamNgay" EntitySet="MapIdSanPhamNgay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NangSuat_Cum_Cum" Association="Self.FK_NangSuat_Cum_Cum">
+      <End Role="Cum" EntitySet="Cum" />
+      <End Role="NangSuat_Cum" EntitySet="NangSuat_Cum" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NangSuat_CumLoi_Cum" Association="Self.FK_NangSuat_CumLoi_Cum">
+      <End Role="Cum" EntitySet="Cum" />
+      <End Role="NangSuat_CumLoi" EntitySet="NangSuat_CumLoi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NangSuat_CumLoi_Error" Association="Self.FK_NangSuat_CumLoi_Error">
+      <End Role="Error" EntitySet="Error" />
+      <End Role="NangSuat_CumLoi" EntitySet="NangSuat_CumLoi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NangXuat_Chuyen_SanPham" Association="Self.FK_NangXuat_Chuyen_SanPham">
+      <End Role="Chuyen_SanPham" EntitySet="Chuyen_SanPham" />
+      <End Role="NangXuat" EntitySet="NangXuat" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_Assign_Phase_QuantityLog_Chuyen_SanPham" Association="Self.FK_P_Assign_Phase_QuantityLog_Chuyen_SanPham">
+      <End Role="Chuyen_SanPham" EntitySet="Chuyen_SanPham" />
+      <End Role="P_Phase_Assign_Log" EntitySet="P_Phase_Assign_Log" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_Assignment_SanPham" Association="Self.FK_P_Assignment_SanPham">
+      <End Role="SanPham" EntitySet="SanPham" />
+      <End Role="P_AssignCompletion" EntitySet="P_AssignCompletion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_BTP_HCInDay_NangXuat" Association="Self.FK_P_BTP_HCInDay_NangXuat">
+      <End Role="NangXuat" EntitySet="NangXuat" />
+      <End Role="P_PhaseDailyLog" EntitySet="P_PhaseDailyLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_BTP_HCInDay_P_Phase" Association="Self.FK_P_BTP_HCInDay_P_Phase">
+      <End Role="P_Phase" EntitySet="P_Phase" />
+      <End Role="P_PhaseDailyLog" EntitySet="P_PhaseDailyLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_CompletionPhase_Detail_Chuyen_SanPham" Association="Self.FK_P_CompletionPhase_Detail_Chuyen_SanPham">
+      <End Role="P_AssignCompletion" EntitySet="P_AssignCompletion" />
+      <End Role="P_CompletionPhase_Daily" EntitySet="P_CompletionPhase_Daily" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_CompletionPhase_Detail_P_CompletionPhase" Association="Self.FK_P_CompletionPhase_Detail_P_CompletionPhase">
+      <End Role="P_CompletionPhase" EntitySet="P_CompletionPhase" />
+      <End Role="P_CompletionPhase_Daily" EntitySet="P_CompletionPhase_Daily" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_DailyInfo_P_DailyPlans1" Association="Self.FK_P_DailyInfo_P_DailyPlans1">
+      <End Role="P_DailyPlans" EntitySet="P_DailyPlans" />
+      <End Role="P_DailyInfo" EntitySet="P_DailyInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_DailyInfo_P_Keypad" Association="Self.FK_P_DailyInfo_P_Keypad">
+      <End Role="P_Keypad" EntitySet="P_Keypad" />
+      <End Role="P_DailyInfo" EntitySet="P_DailyInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_DailyKeypadPosition_P_DailyPlans" Association="Self.FK_P_DailyKeypadPosition_P_DailyPlans">
+      <End Role="P_DailyPlans" EntitySet="P_DailyPlans" />
+      <End Role="P_DailyKeypadPosition" EntitySet="P_DailyKeypadPosition" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_DailyKeypadPosition_P_Keypad" Association="Self.FK_P_DailyKeypadPosition_P_Keypad">
+      <End Role="P_Keypad" EntitySet="P_Keypad" />
+      <End Role="P_DailyKeypadPosition" EntitySet="P_DailyKeypadPosition" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_DailyKeypadRegister_P_DailyPlans" Association="Self.FK_P_DailyKeypadRegister_P_DailyPlans">
+      <End Role="P_DailyPlans" EntitySet="P_DailyPlans" />
+      <End Role="P_DailyKeypadRegister" EntitySet="P_DailyKeypadRegister" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_DailyKeypadRegister_P_Employee" Association="Self.FK_P_DailyKeypadRegister_P_Employee">
+      <End Role="P_Employee" EntitySet="P_Employee" />
+      <End Role="P_DailyKeypadRegister" EntitySet="P_DailyKeypadRegister" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_DailyKeypadRegister_P_Keypad" Association="Self.FK_P_DailyKeypadRegister_P_Keypad">
+      <End Role="P_Keypad" EntitySet="P_Keypad" />
+      <End Role="P_DailyKeypadRegister" EntitySet="P_DailyKeypadRegister" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_DailyMapper_Chuyen" Association="Self.FK_P_DailyMapper_Chuyen">
+      <End Role="Chuyen" EntitySet="Chuyen" />
+      <End Role="P_DailyMapper" EntitySet="P_DailyMapper" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_DailyMapper_Chuyen_SanPham" Association="Self.FK_P_DailyMapper_Chuyen_SanPham">
+      <End Role="Chuyen_SanPham" EntitySet="Chuyen_SanPham" />
+      <End Role="P_DailyMapper" EntitySet="P_DailyMapper" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_DailyMapper_P_Keypad" Association="Self.FK_P_DailyMapper_P_Keypad">
+      <End Role="P_Keypad" EntitySet="P_Keypad" />
+      <End Role="P_DailyMapper" EntitySet="P_DailyMapper" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_DailyPlans_Chuyen_SanPham" Association="Self.FK_P_DailyPlans_Chuyen_SanPham">
+      <End Role="Chuyen_SanPham" EntitySet="Chuyen_SanPham" />
+      <End Role="P_DailyPlans" EntitySet="P_DailyPlans" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_KanbanLightPercent_De_P_KanbanLightPercent" Association="Self.FK_P_KanbanLightPercent_De_P_KanbanLightPercent">
+      <End Role="P_LightPercent" EntitySet="P_LightPercent" />
+      <End Role="P_LightPercent_De" EntitySet="P_LightPercent_De" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_Keypad_Cum" Association="Self.FK_P_Keypad_Cum">
+      <End Role="Cum" EntitySet="Cum" />
+      <End Role="P_Keypad" EntitySet="P_Keypad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_KeypadRegis_Detail_P_DailyKeypadRegister" Association="Self.FK_P_KeypadRegis_Detail_P_DailyKeypadRegister">
+      <End Role="P_DailyKeypadRegister" EntitySet="P_DailyKeypadRegister" />
+      <End Role="P_KeypadRegis_Detail" EntitySet="P_KeypadRegis_Detail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_LineWorkingShift_Chuyen" Association="Self.FK_P_LineWorkingShift_Chuyen">
+      <End Role="Chuyen" EntitySet="Chuyen" />
+      <End Role="P_LineWorkingShift" EntitySet="P_LineWorkingShift" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_LineWorkingShift_P_WorkingShift" Association="Self.FK_P_LineWorkingShift_P_WorkingShift">
+      <End Role="P_WorkingShift" EntitySet="P_WorkingShift" />
+      <End Role="P_LineWorkingShift" EntitySet="P_LineWorkingShift" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_MonthlyProductionPlans_Chuyen_SanPham" Association="Self.FK_P_MonthlyProductionPlans_Chuyen_SanPham">
+      <End Role="Chuyen_SanPham" EntitySet="Chuyen_SanPham" />
+      <End Role="P_MonthlyProductionPlans" EntitySet="P_MonthlyProductionPlans" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_Phase_Assign_Log_P_Phase" Association="Self.FK_P_Phase_Assign_Log_P_Phase">
+      <End Role="P_Phase" EntitySet="P_Phase" />
+      <End Role="P_Phase_Assign_Log" EntitySet="P_Phase_Assign_Log" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_PhaseDailyLog_NangXuat" Association="Self.FK_P_PhaseDailyLog_NangXuat">
+      <End Role="NangXuat" EntitySet="NangXuat" />
+      <End Role="P_PhaseDaily" EntitySet="P_PhaseDaily" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_PhaseDailyLog_P_Phase" Association="Self.FK_P_PhaseDailyLog_P_Phase">
+      <End Role="P_CompletionPhase" EntitySet="P_CompletionPhase" />
+      <End Role="P_PhaseDaily" EntitySet="P_PhaseDaily" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_PlayVideoShedule_Chuyen" Association="Self.FK_P_PlayVideoShedule_Chuyen">
+      <End Role="Chuyen" EntitySet="Chuyen" />
+      <End Role="P_PlayVideoShedule" EntitySet="P_PlayVideoShedule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_PlayVideoSheduleDetail_P_PlayVideoShedule" Association="Self.FK_P_PlayVideoSheduleDetail_P_PlayVideoShedule">
+      <End Role="P_PlayVideoShedule" EntitySet="P_PlayVideoShedule" />
+      <End Role="P_PlayVideoSheduleDetail" EntitySet="P_PlayVideoSheduleDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_PlayVideoSheduleDetail_P_VideoLibrary" Association="Self.FK_P_PlayVideoSheduleDetail_P_VideoLibrary">
+      <End Role="P_VideoLibrary" EntitySet="P_VideoLibrary" />
+      <End Role="P_PlayVideoSheduleDetail" EntitySet="P_PlayVideoSheduleDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_ReadPercent_KCSInventory_De_P_ReadPercent_KCSInventory" Association="Self.FK_P_ReadPercent_KCSInventory_De_P_ReadPercent_KCSInventory">
+      <End Role="P_ReadPercent_KCSInventory" EntitySet="P_ReadPercent_KCSInventory" />
+      <End Role="P_ReadPercent_KCSInventory_De" EntitySet="P_ReadPercent_KCSInventory_De" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_ReadPercentOfLine_Chuyen" Association="Self.FK_P_ReadPercentOfLine_Chuyen">
+      <End Role="Chuyen" EntitySet="Chuyen" />
+      <End Role="P_ReadPercentOfLine" EntitySet="P_ReadPercentOfLine" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_ReadPercentOfLine_Chuyen_SanPham" Association="Self.FK_P_ReadPercentOfLine_Chuyen_SanPham">
+      <End Role="Chuyen_SanPham" EntitySet="Chuyen_SanPham" />
+      <End Role="P_ReadPercentOfLine" EntitySet="P_ReadPercentOfLine" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_ReadPercentOfLine_P_LightPercent" Association="Self.FK_P_ReadPercentOfLine_P_LightPercent">
+      <End Role="P_LightPercent" EntitySet="P_LightPercent" />
+      <End Role="P_ReadPercentOfLine" EntitySet="P_ReadPercentOfLine" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_ReadPercentOfLine_P_LightPercent1" Association="Self.FK_P_ReadPercentOfLine_P_LightPercent1">
+      <End Role="P_LightPercent" EntitySet="P_LightPercent" />
+      <End Role="P_ReadPercentOfLine" EntitySet="P_ReadPercentOfLine" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_ReadPercentOfLine_P_ReadPercent_KCSInventory" Association="Self.FK_P_ReadPercentOfLine_P_ReadPercent_KCSInventory">
+      <End Role="P_ReadPercent_KCSInventory" EntitySet="P_ReadPercent_KCSInventory" />
+      <End Role="P_ReadPercentOfLine" EntitySet="P_ReadPercentOfLine" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_ReadPercentOfLine_ReadPercent" Association="Self.FK_P_ReadPercentOfLine_ReadPercent">
+      <End Role="ReadPercent" EntitySet="ReadPercent" />
+      <End Role="P_ReadPercentOfLine" EntitySet="P_ReadPercentOfLine" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SOUND_ReadConfig_Chuyen" Association="Self.FK_SOUND_ReadConfig_Chuyen">
+      <End Role="Chuyen" EntitySet="Chuyen" />
+      <End Role="SOUND_ReadConfig" EntitySet="SOUND_ReadConfig" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SOUND_ReadConfigDetail_SOUND" Association="Self.FK_SOUND_ReadConfigDetail_SOUND">
+      <End Role="SOUND" EntitySet="SOUND" />
+      <End Role="SOUND_ReadConfigDetail" EntitySet="SOUND_ReadConfigDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SOUND_ReadConfigDetail_SOUND_IntConfig" Association="Self.FK_SOUND_ReadConfigDetail_SOUND_IntConfig">
+      <End Role="SOUND_IntConfig" EntitySet="SOUND_IntConfig" />
+      <End Role="SOUND_ReadConfigDetail" EntitySet="SOUND_ReadConfigDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SOUND_ReadConfigDetail_SOUND_ReadConfig" Association="Self.FK_SOUND_ReadConfigDetail_SOUND_ReadConfig">
+      <End Role="SOUND_ReadConfig" EntitySet="SOUND_ReadConfig" />
+      <End Role="SOUND_ReadConfigDetail" EntitySet="SOUND_ReadConfigDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ThanhPham_Chuyen_SanPham" Association="Self.FK_ThanhPham_Chuyen_SanPham">
+      <End Role="Chuyen_SanPham" EntitySet="Chuyen_SanPham" />
+      <End Role="ThanhPham" EntitySet="ThanhPham" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TheoDoiNgay_Chuyen" Association="Self.FK_TheoDoiNgay_Chuyen">
+      <End Role="Chuyen" EntitySet="Chuyen" />
+      <End Role="TheoDoiNgay" EntitySet="TheoDoiNgay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TheoDoiNgay_Cum" Association="Self.FK_TheoDoiNgay_Cum">
+      <End Role="Cum" EntitySet="Cum" />
+      <End Role="TheoDoiNgay" EntitySet="TheoDoiNgay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TheoDoiNgay_SanPham" Association="Self.FK_TheoDoiNgay_SanPham">
+      <End Role="SanPham" EntitySet="SanPham" />
+      <End Role="TheoDoiNgay" EntitySet="TheoDoiNgay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ThoiGianTinhNhipDoTT_Chuyen" Association="Self.FK_ThoiGianTinhNhipDoTT_Chuyen">
+      <End Role="Chuyen" EntitySet="Chuyen" />
+      <End Role="ThoiGianTinhNhipDoTT" EntitySet="ThoiGianTinhNhipDoTT" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

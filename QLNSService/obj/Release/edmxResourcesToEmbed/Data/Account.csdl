@@ -1,0 +1,1256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AccountModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="SArea">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CountryID" Type="Int32" Nullable="false" />
+    <Property Name="AreaName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedUser" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUser" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedUser" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="SCountry" Relationship="Self.FK__SArea__ContryID__04E4BC85" FromRole="SArea" ToRole="SCountry" />
+    <NavigationProperty Name="SProvinces" Relationship="Self.FK__SProvince__AreaI__06CD04F7" FromRole="SArea" ToRole="SProvince" />
+    <NavigationProperty Name="SDistricts" Relationship="Self.FK_SDistrict_SArea" FromRole="SArea" ToRole="SDistrict" />
+  </EntityType>
+  <EntityType Name="SBank">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedUser" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUser" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedUser" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="SBankBranches" Relationship="Self.FK__SBankBran__BankI__08B54D69" FromRole="SBank" ToRole="SBankBranch" />
+  </EntityType>
+  <EntityType Name="SBankBranch">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BankId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CountryId" Type="Int32" Nullable="false" />
+    <Property Name="ProvinceId" Type="Int32" Nullable="false" />
+    <Property Name="DistrictId" Type="Int32" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedUser" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUser" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedUser" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="SBank" Relationship="Self.FK__SBankBran__BankI__08B54D69" FromRole="SBankBranch" ToRole="SBank" />
+    <NavigationProperty Name="SCountry" Relationship="Self.FK_SBankBranch_SCountry" FromRole="SBankBranch" ToRole="SCountry" />
+    <NavigationProperty Name="SDistrict" Relationship="Self.FK_SBankBranch_SDistrict" FromRole="SBankBranch" ToRole="SDistrict" />
+    <NavigationProperty Name="SProvince" Relationship="Self.FK_SBankBranch_SProvince" FromRole="SBankBranch" ToRole="SProvince" />
+  </EntityType>
+  <EntityType Name="SCheckList_Config">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyId" Type="Int32" Nullable="false" />
+    <Property Name="JobId" Type="Int32" Nullable="false" />
+    <Property Name="HasMenu" Type="Boolean" Nullable="false" />
+    <Property Name="ModuleId_Menu" Type="Int32" />
+    <Property Name="TableName_Menu" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="EventAdd_Menu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EventDelete_Menu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ModuleId_WH" Type="Int32" />
+    <Property Name="TableName_WH" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="EventAdd_WH" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EventDelete_WH" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ModuleId_Pro" Type="Int32" />
+    <Property Name="TableName_Pro" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="EventAdd_Pro" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EventDelete_Pro" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsDefault" Type="Boolean" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedUser" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUser" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedUser" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="SModule" Relationship="Self.FK_SCheckList_Config_SModule" FromRole="SCheckList_Config" ToRole="SModule" />
+  </EntityType>
+  <EntityType Name="SColor">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedUser" Type="Int32" Nullable="false" />
+    <Property Name="DeletedUser" Type="Int32" />
+    <Property Name="UpdatedUser" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="SCompany">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LevelCompanyId" Type="Int32" Nullable="false" />
+    <Property Name="CompanyName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Telephone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="TaxCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ParentId" Type="Int32" />
+    <Property Name="ParentNode" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Logo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="IsOwner" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedUser" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUser" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedUser" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="SCompany1" Relationship="Self.FK__SCompany__Parent__3B75D760" FromRole="SCompany" ToRole="SCompany1" />
+    <NavigationProperty Name="SCompany2" Relationship="Self.FK__SCompany__Parent__3B75D760" FromRole="SCompany1" ToRole="SCompany" />
+    <NavigationProperty Name="SUsers" Relationship="Self.FK__SUser__CompanyId__3A81B327" FromRole="SCompany" ToRole="SUser" />
+    <NavigationProperty Name="SRoLes" Relationship="Self.FK_SRoLe_SCompany" FromRole="SCompany" ToRole="SRoLe" />
+    <NavigationProperty Name="SCompanyModules" Relationship="Self.FK_Table_1_SCompany" FromRole="SCompany" ToRole="SCompanyModule" />
+  </EntityType>
+  <EntityType Name="SCompanyModule">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyId" Type="Int32" Nullable="false" />
+    <Property Name="ModuleName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedUser" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUser" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedUser" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="SCompany" Relationship="Self.FK_Table_1_SCompany" FromRole="SCompanyModule" ToRole="SCompany" />
+    <NavigationProperty Name="SUser" Relationship="Self.FK_Table_1_SUser" FromRole="SCompanyModule" ToRole="SUser" />
+    <NavigationProperty Name="SUser1" Relationship="Self.FK_Table_1_SUser1" FromRole="SCompanyModule" ToRole="SUser" />
+    <NavigationProperty Name="SUser2" Relationship="Self.FK_Table_1_SUser2" FromRole="SCompanyModule" ToRole="SUser" />
+  </EntityType>
+  <EntityType Name="SConfig">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ConpanyId" Type="Int32" Nullable="false" />
+    <Property Name="TableName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ObjectId" Type="Int32" />
+    <Property Name="IsHidden" Type="Boolean" Nullable="false" />
+    <Property Name="IsDefault" Type="Boolean" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedUser" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUser" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedUser" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="SCountry">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CountryName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedUser" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUser" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedUser" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="SAreas" Relationship="Self.FK__SArea__ContryID__04E4BC85" FromRole="SCountry" ToRole="SArea" />
+    <NavigationProperty Name="SBankBranches" Relationship="Self.FK_SBankBranch_SCountry" FromRole="SCountry" ToRole="SBankBranch" />
+    <NavigationProperty Name="SProvinces" Relationship="Self.FK__SProvince__Contr__05D8E0BE" FromRole="SCountry" ToRole="SProvince" />
+    <NavigationProperty Name="SDistricts" Relationship="Self.FK_SDistrict_SCountry" FromRole="SCountry" ToRole="SDistrict" />
+    <NavigationProperty Name="SHospitals" Relationship="Self.FK_SHospital_SCountry" FromRole="SCountry" ToRole="SHospital" />
+    <NavigationProperty Name="SRaces" Relationship="Self.FK_SRace_SCountry" FromRole="SCountry" ToRole="SRace" />
+  </EntityType>
+  <EntityType Name="SDistrict">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CountryId" Type="Int32" Nullable="false" />
+    <Property Name="AreaId" Type="Int32" Nullable="false" />
+    <Property Name="ProvinceId" Type="Int32" Nullable="false" />
+    <Property Name="DistrictName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedUser" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUser" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedUser" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="SArea" Relationship="Self.FK_SDistrict_SArea" FromRole="SDistrict" ToRole="SArea" />
+    <NavigationProperty Name="SBankBranches" Relationship="Self.FK_SBankBranch_SDistrict" FromRole="SDistrict" ToRole="SBankBranch" />
+    <NavigationProperty Name="SCountry" Relationship="Self.FK_SDistrict_SCountry" FromRole="SDistrict" ToRole="SCountry" />
+    <NavigationProperty Name="SProvince" Relationship="Self.FK__SDistrict__Provi__07C12930" FromRole="SDistrict" ToRole="SProvince" />
+    <NavigationProperty Name="SHospitals" Relationship="Self.FK_SHospital_SDistrict" FromRole="SDistrict" ToRole="SHospital" />
+  </EntityType>
+  <EntityType Name="SErrorLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyId" Type="Int32" Nullable="false" />
+    <Property Name="ModuleName" Type="String" MaxLength="40" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreateUser" Type="Int32" Nullable="false" />
+    <Property Name="IsFix" Type="Boolean" Nullable="false" />
+    <Property Name="ErrorCaption" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ErrorClass" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ErrorMethod" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="StrackTrace" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="IpError" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ActionError" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="TargetSite" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SFeature">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FeatureName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SystemName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ModuleId" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="IsSystem" Type="Boolean" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="IsDefault" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedUser" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUser" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedUser" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="SModule" Relationship="Self.FK__SFeature__Module__3D5E1FD2" FromRole="SFeature" ToRole="SModule" />
+    <NavigationProperty Name="SPermissions" Relationship="Self.FK__SPermissi__Featu__3C69FB99" FromRole="SFeature" ToRole="SPermission" />
+    <NavigationProperty Name="SRolePermissions" Relationship="Self.FK__SRolePerm__Featu__403A8C7D" FromRole="SFeature" ToRole="SRolePermission" />
+  </EntityType>
+  <EntityType Name="SHospital">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HospitalCode" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="HospitalName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Note" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="CountryId" Type="Int32" Nullable="false" />
+    <Property Name="ProvinceId" Type="Int32" Nullable="false" />
+    <Property Name="DistrictId" Type="Int32" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedUser" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUser" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedUser" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="SCountry" Relationship="Self.FK_SHospital_SCountry" FromRole="SHospital" ToRole="SCountry" />
+    <NavigationProperty Name="SDistrict" Relationship="Self.FK_SHospital_SDistrict" FromRole="SHospital" ToRole="SDistrict" />
+    <NavigationProperty Name="SProvince" Relationship="Self.FK_SHospital_SProvince" FromRole="SHospital" ToRole="SProvince" />
+  </EntityType>
+  <EntityType Name="SLevelCompany">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LevelName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OrderIndex" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedUser" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUser" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedUser" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="SLevelEducation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OrderIndex" Type="Int32" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedUser" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUser" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedUser" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="SLevelForeignLanguage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OrderIndex" Type="Int32" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedUser" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUser" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedUser" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="SLevelInformatic">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OrderIndex" Type="Int32" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedUser" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUser" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedUser" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="SLevelProfession">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OrderIndex" Type="Int32" Nullable="false" />
+    <Property Name="ProfessionTypeId" Type="Int32" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedUser" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUser" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedUser" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="SProfessionType" Relationship="Self.FK_SLevelProfession_SProfessionType" FromRole="SLevelProfession" ToRole="SProfessionType" />
+  </EntityType>
+  <EntityType Name="SMaritalStatu">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="250" FixedLength="true" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedUser" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUser" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedUser" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="SMenu">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MenuCategoryId" Type="Int32" Nullable="false" />
+    <Property Name="MenuName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OrderIndex" Type="Int32" Nullable="false" />
+    <Property Name="Link" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="IsShow" Type="Boolean" Nullable="false" />
+    <Property Name="IsViewIcon" Type="Boolean" Nullable="false" />
+    <Property Name="Icon" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="ModuleId" Type="Int32" Nullable="false" />
+    <Property Name="CompanyId" Type="Int32" />
+    <Property Name="CreatedUser" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUser" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedUser" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="SMenuCategory" Relationship="Self.FK__SMenu__MenuCateg__03F0984C" FromRole="SMenu" ToRole="SMenuCategory" />
+    <NavigationProperty Name="SModule" Relationship="Self.FK_SMenu_SModule" FromRole="SMenu" ToRole="SModule" />
+  </EntityType>
+  <EntityType Name="SMenuCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Category" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Position" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OrderIndex" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Icon" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="IsViewIcon" Type="Boolean" Nullable="false" />
+    <Property Name="Link" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ModuleId" Type="Int32" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CompanyId" Type="Int32" />
+    <Property Name="CreatedUser" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUser" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedUser" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="SMenus" Relationship="Self.FK__SMenu__MenuCateg__03F0984C" FromRole="SMenuCategory" ToRole="SMenu" />
+    <NavigationProperty Name="SModule" Relationship="Self.FK_SMenuCategory_SModule" FromRole="SMenuCategory" ToRole="SModule" />
+  </EntityType>
+  <EntityType Name="SModule">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SystemName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ModuleName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IsSystem" Type="Boolean" Nullable="false" />
+    <Property Name="OrderIndex" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ModuleUrl" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedUser" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUser" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedUser" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsShow" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="SCheckList_Config" Relationship="Self.FK_SCheckList_Config_SModule" FromRole="SModule" ToRole="SCheckList_Config" />
+    <NavigationProperty Name="SFeatures" Relationship="Self.FK__SFeature__Module__3D5E1FD2" FromRole="SModule" ToRole="SFeature" />
+    <NavigationProperty Name="SMenus" Relationship="Self.FK_SMenu_SModule" FromRole="SModule" ToRole="SMenu" />
+    <NavigationProperty Name="SMenuCategories" Relationship="Self.FK_SMenuCategory_SModule" FromRole="SModule" ToRole="SMenuCategory" />
+    <NavigationProperty Name="SRolePermissions" Relationship="Self.FK__SRolePerm__Modul__3F466844" FromRole="SModule" ToRole="SRolePermission" />
+  </EntityType>
+  <EntityType Name="SMoneyType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RateExchange" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedUser" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUser" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedUser" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="SPermission">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FeatureId" Type="Int32" Nullable="false" />
+    <Property Name="PermissionTypeId" Type="Int32" Nullable="false" />
+    <Property Name="SystemName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PermissionName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Url" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="IsDefault" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedUser" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUser" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedUser" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="SFeature" Relationship="Self.FK__SPermissi__Featu__3C69FB99" FromRole="SPermission" ToRole="SFeature" />
+    <NavigationProperty Name="SRolePermissions" Relationship="Self.FK__SRolePerm__Pemis__412EB0B6" FromRole="SPermission" ToRole="SRolePermission" />
+  </EntityType>
+  <EntityType Name="SProfessionType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedUser" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUser" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedUser" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="SLevelProfessions" Relationship="Self.FK_SLevelProfession_SProfessionType" FromRole="SProfessionType" ToRole="SLevelProfession" />
+  </EntityType>
+  <EntityType Name="SProvince">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AreaId" Type="Int32" />
+    <Property Name="CountryId" Type="Int32" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PhoneCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedUser" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUser" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedUser" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="SArea" Relationship="Self.FK__SProvince__AreaI__06CD04F7" FromRole="SProvince" ToRole="SArea" />
+    <NavigationProperty Name="SBankBranches" Relationship="Self.FK_SBankBranch_SProvince" FromRole="SProvince" ToRole="SBankBranch" />
+    <NavigationProperty Name="SCountry" Relationship="Self.FK__SProvince__Contr__05D8E0BE" FromRole="SProvince" ToRole="SCountry" />
+    <NavigationProperty Name="SDistricts" Relationship="Self.FK__SDistrict__Provi__07C12930" FromRole="SProvince" ToRole="SDistrict" />
+    <NavigationProperty Name="SHospitals" Relationship="Self.FK_SHospital_SProvince" FromRole="SProvince" ToRole="SHospital" />
+  </EntityType>
+  <EntityType Name="SRace">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OrderIndex" Type="Int32" Nullable="false" />
+    <Property Name="CountryId" Type="Int32" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedUser" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUser" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedUser" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="SCountry" Relationship="Self.FK_SRace_SCountry" FromRole="SRace" ToRole="SCountry" />
+  </EntityType>
+  <EntityType Name="SReligion">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OrderIndex" Type="Int32" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedUser" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUser" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedUser" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="SRoLe">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyId" Type="Int32" Nullable="false" />
+    <Property Name="RoleName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsSystem" Type="Boolean" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedUser" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUser" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedUser" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="SCompany" Relationship="Self.FK_SRoLe_SCompany" FromRole="SRoLe" ToRole="SCompany" />
+    <NavigationProperty Name="SRolePermissions" Relationship="Self.FK__SRolePerm__RoleI__3E52440B" FromRole="SRoLe" ToRole="SRolePermission" />
+    <NavigationProperty Name="SUserRoles" Relationship="Self.FK_SUserRole_SRoLe" FromRole="SRoLe" ToRole="SUserRole" />
+  </EntityType>
+  <EntityType Name="SRolePermission">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleId" Type="Int32" Nullable="false" />
+    <Property Name="ModuleId" Type="Int32" Nullable="false" />
+    <Property Name="FeatureId" Type="Int32" Nullable="false" />
+    <Property Name="PermissionId" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedUser" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUser" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedUser" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="SFeature" Relationship="Self.FK__SRolePerm__Featu__403A8C7D" FromRole="SRolePermission" ToRole="SFeature" />
+    <NavigationProperty Name="SModule" Relationship="Self.FK__SRolePerm__Modul__3F466844" FromRole="SRolePermission" ToRole="SModule" />
+    <NavigationProperty Name="SPermission" Relationship="Self.FK__SRolePerm__Pemis__412EB0B6" FromRole="SRolePermission" ToRole="SPermission" />
+    <NavigationProperty Name="SRoLe" Relationship="Self.FK__SRolePerm__RoleI__3E52440B" FromRole="SRolePermission" ToRole="SRoLe" />
+  </EntityType>
+  <EntityType Name="SStatu">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsDefault" Type="Boolean" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedUser" Type="Int32" Nullable="false" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedUser" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedUser" Type="Int32" />
+  </EntityType>
+  <EntityType Name="SUnit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedUser" Type="Int32" Nullable="false" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedUser" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedUser" Type="Int32" />
+  </EntityType>
+  <EntityType Name="SUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyId" Type="Int32" Nullable="false" />
+    <Property Name="IsOwner" Type="Boolean" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PassWord" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IsLock" Type="Boolean" Nullable="false" />
+    <Property Name="IsRequireChangePW" Type="Boolean" Nullable="false" />
+    <Property Name="IsForgotPassword" Type="Boolean" Nullable="false" />
+    <Property Name="NoteForgotPassword" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ImagePath" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="LockedTime" Type="DateTime" Precision="3" />
+    <Property Name="LastName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FisrtName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedUser" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUser" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedUser" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="SCompany" Relationship="Self.FK__SUser__CompanyId__3A81B327" FromRole="SUser" ToRole="SCompany" />
+    <NavigationProperty Name="SCompanyModules" Relationship="Self.FK_Table_1_SUser" FromRole="SUser" ToRole="SCompanyModule" />
+    <NavigationProperty Name="SCompanyModules1" Relationship="Self.FK_Table_1_SUser1" FromRole="SUser" ToRole="SCompanyModule" />
+    <NavigationProperty Name="SCompanyModules2" Relationship="Self.FK_Table_1_SUser2" FromRole="SUser" ToRole="SCompanyModule" />
+    <NavigationProperty Name="SUserRoles" Relationship="Self.FK_SUserRole_SUser" FromRole="SUser" ToRole="SUserRole" />
+  </EntityType>
+  <EntityType Name="SUserRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleId" Type="Int32" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="Decription" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedUser" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUser" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedUser" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="SRoLe" Relationship="Self.FK_SUserRole_SRoLe" FromRole="SUserRole" ToRole="SRoLe" />
+    <NavigationProperty Name="SUser" Relationship="Self.FK_SUserRole_SUser" FromRole="SUserRole" ToRole="SUser" />
+  </EntityType>
+  <Association Name="FK__SArea__ContryID__04E4BC85">
+    <End Role="SCountry" Type="Self.SCountry" Multiplicity="1" />
+    <End Role="SArea" Type="Self.SArea" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SCountry">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SArea">
+        <PropertyRef Name="CountryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SProvince__AreaI__06CD04F7">
+    <End Role="SArea" Type="Self.SArea" Multiplicity="0..1" />
+    <End Role="SProvince" Type="Self.SProvince" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SArea">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SProvince">
+        <PropertyRef Name="AreaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SDistrict_SArea">
+    <End Role="SArea" Type="Self.SArea" Multiplicity="1" />
+    <End Role="SDistrict" Type="Self.SDistrict" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SArea">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SDistrict">
+        <PropertyRef Name="AreaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SBankBran__BankI__08B54D69">
+    <End Role="SBank" Type="Self.SBank" Multiplicity="1" />
+    <End Role="SBankBranch" Type="Self.SBankBranch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SBank">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SBankBranch">
+        <PropertyRef Name="BankId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SBankBranch_SCountry">
+    <End Role="SCountry" Type="Self.SCountry" Multiplicity="1" />
+    <End Role="SBankBranch" Type="Self.SBankBranch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SCountry">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SBankBranch">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SBankBranch_SDistrict">
+    <End Role="SDistrict" Type="Self.SDistrict" Multiplicity="1" />
+    <End Role="SBankBranch" Type="Self.SBankBranch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SDistrict">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SBankBranch">
+        <PropertyRef Name="DistrictId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SBankBranch_SProvince">
+    <End Role="SProvince" Type="Self.SProvince" Multiplicity="1" />
+    <End Role="SBankBranch" Type="Self.SBankBranch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SProvince">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SBankBranch">
+        <PropertyRef Name="ProvinceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SCheckList_Config_SModule">
+    <End Role="SModule" Type="Self.SModule" Multiplicity="0..1" />
+    <End Role="SCheckList_Config" Type="Self.SCheckList_Config" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SModule">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SCheckList_Config">
+        <PropertyRef Name="ModuleId_Menu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SCompany__Parent__3B75D760">
+    <End Role="SCompany" Type="Self.SCompany" Multiplicity="0..1" />
+    <End Role="SCompany1" Type="Self.SCompany" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SCompany">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SCompany1">
+        <PropertyRef Name="ParentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SUser__CompanyId__3A81B327">
+    <End Role="SCompany" Type="Self.SCompany" Multiplicity="1" />
+    <End Role="SUser" Type="Self.SUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SCompany">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SUser">
+        <PropertyRef Name="CompanyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SRoLe_SCompany">
+    <End Role="SCompany" Type="Self.SCompany" Multiplicity="1" />
+    <End Role="SRoLe" Type="Self.SRoLe" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SCompany">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SRoLe">
+        <PropertyRef Name="CompanyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_1_SCompany">
+    <End Role="SCompany" Type="Self.SCompany" Multiplicity="1" />
+    <End Role="SCompanyModule" Type="Self.SCompanyModule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SCompany">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SCompanyModule">
+        <PropertyRef Name="CompanyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_1_SUser">
+    <End Role="SUser" Type="Self.SUser" Multiplicity="1" />
+    <End Role="SCompanyModule" Type="Self.SCompanyModule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SCompanyModule">
+        <PropertyRef Name="CreatedUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_1_SUser1">
+    <End Role="SUser" Type="Self.SUser" Multiplicity="0..1" />
+    <End Role="SCompanyModule" Type="Self.SCompanyModule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SCompanyModule">
+        <PropertyRef Name="UpdatedUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_1_SUser2">
+    <End Role="SUser" Type="Self.SUser" Multiplicity="0..1" />
+    <End Role="SCompanyModule" Type="Self.SCompanyModule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SCompanyModule">
+        <PropertyRef Name="DeletedUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SProvince__Contr__05D8E0BE">
+    <End Role="SCountry" Type="Self.SCountry" Multiplicity="1" />
+    <End Role="SProvince" Type="Self.SProvince" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SCountry">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SProvince">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SDistrict_SCountry">
+    <End Role="SCountry" Type="Self.SCountry" Multiplicity="1" />
+    <End Role="SDistrict" Type="Self.SDistrict" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SCountry">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SDistrict">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SHospital_SCountry">
+    <End Role="SCountry" Type="Self.SCountry" Multiplicity="1" />
+    <End Role="SHospital" Type="Self.SHospital" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SCountry">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SHospital">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SRace_SCountry">
+    <End Role="SCountry" Type="Self.SCountry" Multiplicity="1" />
+    <End Role="SRace" Type="Self.SRace" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SCountry">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SRace">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SDistrict__Provi__07C12930">
+    <End Role="SProvince" Type="Self.SProvince" Multiplicity="1" />
+    <End Role="SDistrict" Type="Self.SDistrict" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SProvince">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SDistrict">
+        <PropertyRef Name="ProvinceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SHospital_SDistrict">
+    <End Role="SDistrict" Type="Self.SDistrict" Multiplicity="1" />
+    <End Role="SHospital" Type="Self.SHospital" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SDistrict">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SHospital">
+        <PropertyRef Name="DistrictId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SFeature__Module__3D5E1FD2">
+    <End Role="SModule" Type="Self.SModule" Multiplicity="1" />
+    <End Role="SFeature" Type="Self.SFeature" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SModule">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SFeature">
+        <PropertyRef Name="ModuleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SPermissi__Featu__3C69FB99">
+    <End Role="SFeature" Type="Self.SFeature" Multiplicity="1" />
+    <End Role="SPermission" Type="Self.SPermission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SFeature">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SPermission">
+        <PropertyRef Name="FeatureId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SRolePerm__Featu__403A8C7D">
+    <End Role="SFeature" Type="Self.SFeature" Multiplicity="1" />
+    <End Role="SRolePermission" Type="Self.SRolePermission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SFeature">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SRolePermission">
+        <PropertyRef Name="FeatureId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SHospital_SProvince">
+    <End Role="SProvince" Type="Self.SProvince" Multiplicity="1" />
+    <End Role="SHospital" Type="Self.SHospital" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SProvince">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SHospital">
+        <PropertyRef Name="ProvinceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SLevelProfession_SProfessionType">
+    <End Role="SProfessionType" Type="Self.SProfessionType" Multiplicity="1" />
+    <End Role="SLevelProfession" Type="Self.SLevelProfession" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SProfessionType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SLevelProfession">
+        <PropertyRef Name="ProfessionTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SMenu__MenuCateg__03F0984C">
+    <End Role="SMenuCategory" Type="Self.SMenuCategory" Multiplicity="1" />
+    <End Role="SMenu" Type="Self.SMenu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SMenuCategory">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SMenu">
+        <PropertyRef Name="MenuCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SMenu_SModule">
+    <End Role="SModule" Type="Self.SModule" Multiplicity="1" />
+    <End Role="SMenu" Type="Self.SMenu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SModule">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SMenu">
+        <PropertyRef Name="ModuleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SMenuCategory_SModule">
+    <End Role="SModule" Type="Self.SModule" Multiplicity="1" />
+    <End Role="SMenuCategory" Type="Self.SMenuCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SModule">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SMenuCategory">
+        <PropertyRef Name="ModuleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SRolePerm__Modul__3F466844">
+    <End Role="SModule" Type="Self.SModule" Multiplicity="1" />
+    <End Role="SRolePermission" Type="Self.SRolePermission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SModule">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SRolePermission">
+        <PropertyRef Name="ModuleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SRolePerm__Pemis__412EB0B6">
+    <End Role="SPermission" Type="Self.SPermission" Multiplicity="1" />
+    <End Role="SRolePermission" Type="Self.SRolePermission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SPermission">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SRolePermission">
+        <PropertyRef Name="PermissionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SRolePerm__RoleI__3E52440B">
+    <End Role="SRoLe" Type="Self.SRoLe" Multiplicity="1" />
+    <End Role="SRolePermission" Type="Self.SRolePermission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SRoLe">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SRolePermission">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SUserRole_SRoLe">
+    <End Role="SRoLe" Type="Self.SRoLe" Multiplicity="1" />
+    <End Role="SUserRole" Type="Self.SUserRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SRoLe">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SUserRole">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SUserRole_SUser">
+    <End Role="SUser" Type="Self.SUser" Multiplicity="1" />
+    <End Role="SUserRole" Type="Self.SUserRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SUserRole">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AccountEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="SAreas" EntityType="Self.SArea" />
+    <EntitySet Name="SBanks" EntityType="Self.SBank" />
+    <EntitySet Name="SBankBranches" EntityType="Self.SBankBranch" />
+    <EntitySet Name="SCheckList_Config" EntityType="Self.SCheckList_Config" />
+    <EntitySet Name="SColors" EntityType="Self.SColor" />
+    <EntitySet Name="SCompanies" EntityType="Self.SCompany" />
+    <EntitySet Name="SCompanyModules" EntityType="Self.SCompanyModule" />
+    <EntitySet Name="SConfigs" EntityType="Self.SConfig" />
+    <EntitySet Name="SCountries" EntityType="Self.SCountry" />
+    <EntitySet Name="SDistricts" EntityType="Self.SDistrict" />
+    <EntitySet Name="SErrorLogs" EntityType="Self.SErrorLog" />
+    <EntitySet Name="SFeatures" EntityType="Self.SFeature" />
+    <EntitySet Name="SHospitals" EntityType="Self.SHospital" />
+    <EntitySet Name="SLevelCompanies" EntityType="Self.SLevelCompany" />
+    <EntitySet Name="SLevelEducations" EntityType="Self.SLevelEducation" />
+    <EntitySet Name="SLevelForeignLanguages" EntityType="Self.SLevelForeignLanguage" />
+    <EntitySet Name="SLevelInformatics" EntityType="Self.SLevelInformatic" />
+    <EntitySet Name="SLevelProfessions" EntityType="Self.SLevelProfession" />
+    <EntitySet Name="SMaritalStatus" EntityType="Self.SMaritalStatu" />
+    <EntitySet Name="SMenus" EntityType="Self.SMenu" />
+    <EntitySet Name="SMenuCategories" EntityType="Self.SMenuCategory" />
+    <EntitySet Name="SModules" EntityType="Self.SModule" />
+    <EntitySet Name="SMoneyTypes" EntityType="Self.SMoneyType" />
+    <EntitySet Name="SPermissions" EntityType="Self.SPermission" />
+    <EntitySet Name="SProfessionTypes" EntityType="Self.SProfessionType" />
+    <EntitySet Name="SProvinces" EntityType="Self.SProvince" />
+    <EntitySet Name="SRaces" EntityType="Self.SRace" />
+    <EntitySet Name="SReligions" EntityType="Self.SReligion" />
+    <EntitySet Name="SRoLes" EntityType="Self.SRoLe" />
+    <EntitySet Name="SRolePermissions" EntityType="Self.SRolePermission" />
+    <EntitySet Name="SStatus" EntityType="Self.SStatu" />
+    <EntitySet Name="SUnits" EntityType="Self.SUnit" />
+    <EntitySet Name="SUsers" EntityType="Self.SUser" />
+    <EntitySet Name="SUserRoles" EntityType="Self.SUserRole" />
+    <AssociationSet Name="FK__SArea__ContryID__04E4BC85" Association="Self.FK__SArea__ContryID__04E4BC85">
+      <End Role="SCountry" EntitySet="SCountries" />
+      <End Role="SArea" EntitySet="SAreas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SProvince__AreaI__06CD04F7" Association="Self.FK__SProvince__AreaI__06CD04F7">
+      <End Role="SArea" EntitySet="SAreas" />
+      <End Role="SProvince" EntitySet="SProvinces" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SDistrict_SArea" Association="Self.FK_SDistrict_SArea">
+      <End Role="SArea" EntitySet="SAreas" />
+      <End Role="SDistrict" EntitySet="SDistricts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SBankBran__BankI__08B54D69" Association="Self.FK__SBankBran__BankI__08B54D69">
+      <End Role="SBank" EntitySet="SBanks" />
+      <End Role="SBankBranch" EntitySet="SBankBranches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SBankBranch_SCountry" Association="Self.FK_SBankBranch_SCountry">
+      <End Role="SCountry" EntitySet="SCountries" />
+      <End Role="SBankBranch" EntitySet="SBankBranches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SBankBranch_SDistrict" Association="Self.FK_SBankBranch_SDistrict">
+      <End Role="SDistrict" EntitySet="SDistricts" />
+      <End Role="SBankBranch" EntitySet="SBankBranches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SBankBranch_SProvince" Association="Self.FK_SBankBranch_SProvince">
+      <End Role="SProvince" EntitySet="SProvinces" />
+      <End Role="SBankBranch" EntitySet="SBankBranches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SCheckList_Config_SModule" Association="Self.FK_SCheckList_Config_SModule">
+      <End Role="SModule" EntitySet="SModules" />
+      <End Role="SCheckList_Config" EntitySet="SCheckList_Config" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SCompany__Parent__3B75D760" Association="Self.FK__SCompany__Parent__3B75D760">
+      <End Role="SCompany" EntitySet="SCompanies" />
+      <End Role="SCompany1" EntitySet="SCompanies" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SUser__CompanyId__3A81B327" Association="Self.FK__SUser__CompanyId__3A81B327">
+      <End Role="SCompany" EntitySet="SCompanies" />
+      <End Role="SUser" EntitySet="SUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SRoLe_SCompany" Association="Self.FK_SRoLe_SCompany">
+      <End Role="SCompany" EntitySet="SCompanies" />
+      <End Role="SRoLe" EntitySet="SRoLes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_1_SCompany" Association="Self.FK_Table_1_SCompany">
+      <End Role="SCompany" EntitySet="SCompanies" />
+      <End Role="SCompanyModule" EntitySet="SCompanyModules" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_1_SUser" Association="Self.FK_Table_1_SUser">
+      <End Role="SUser" EntitySet="SUsers" />
+      <End Role="SCompanyModule" EntitySet="SCompanyModules" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_1_SUser1" Association="Self.FK_Table_1_SUser1">
+      <End Role="SUser" EntitySet="SUsers" />
+      <End Role="SCompanyModule" EntitySet="SCompanyModules" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_1_SUser2" Association="Self.FK_Table_1_SUser2">
+      <End Role="SUser" EntitySet="SUsers" />
+      <End Role="SCompanyModule" EntitySet="SCompanyModules" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SProvince__Contr__05D8E0BE" Association="Self.FK__SProvince__Contr__05D8E0BE">
+      <End Role="SCountry" EntitySet="SCountries" />
+      <End Role="SProvince" EntitySet="SProvinces" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SDistrict_SCountry" Association="Self.FK_SDistrict_SCountry">
+      <End Role="SCountry" EntitySet="SCountries" />
+      <End Role="SDistrict" EntitySet="SDistricts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SHospital_SCountry" Association="Self.FK_SHospital_SCountry">
+      <End Role="SCountry" EntitySet="SCountries" />
+      <End Role="SHospital" EntitySet="SHospitals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SRace_SCountry" Association="Self.FK_SRace_SCountry">
+      <End Role="SCountry" EntitySet="SCountries" />
+      <End Role="SRace" EntitySet="SRaces" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SDistrict__Provi__07C12930" Association="Self.FK__SDistrict__Provi__07C12930">
+      <End Role="SProvince" EntitySet="SProvinces" />
+      <End Role="SDistrict" EntitySet="SDistricts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SHospital_SDistrict" Association="Self.FK_SHospital_SDistrict">
+      <End Role="SDistrict" EntitySet="SDistricts" />
+      <End Role="SHospital" EntitySet="SHospitals" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SFeature__Module__3D5E1FD2" Association="Self.FK__SFeature__Module__3D5E1FD2">
+      <End Role="SModule" EntitySet="SModules" />
+      <End Role="SFeature" EntitySet="SFeatures" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SPermissi__Featu__3C69FB99" Association="Self.FK__SPermissi__Featu__3C69FB99">
+      <End Role="SFeature" EntitySet="SFeatures" />
+      <End Role="SPermission" EntitySet="SPermissions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SRolePerm__Featu__403A8C7D" Association="Self.FK__SRolePerm__Featu__403A8C7D">
+      <End Role="SFeature" EntitySet="SFeatures" />
+      <End Role="SRolePermission" EntitySet="SRolePermissions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SHospital_SProvince" Association="Self.FK_SHospital_SProvince">
+      <End Role="SProvince" EntitySet="SProvinces" />
+      <End Role="SHospital" EntitySet="SHospitals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SLevelProfession_SProfessionType" Association="Self.FK_SLevelProfession_SProfessionType">
+      <End Role="SProfessionType" EntitySet="SProfessionTypes" />
+      <End Role="SLevelProfession" EntitySet="SLevelProfessions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SMenu__MenuCateg__03F0984C" Association="Self.FK__SMenu__MenuCateg__03F0984C">
+      <End Role="SMenuCategory" EntitySet="SMenuCategories" />
+      <End Role="SMenu" EntitySet="SMenus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SMenu_SModule" Association="Self.FK_SMenu_SModule">
+      <End Role="SModule" EntitySet="SModules" />
+      <End Role="SMenu" EntitySet="SMenus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SMenuCategory_SModule" Association="Self.FK_SMenuCategory_SModule">
+      <End Role="SModule" EntitySet="SModules" />
+      <End Role="SMenuCategory" EntitySet="SMenuCategories" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SRolePerm__Modul__3F466844" Association="Self.FK__SRolePerm__Modul__3F466844">
+      <End Role="SModule" EntitySet="SModules" />
+      <End Role="SRolePermission" EntitySet="SRolePermissions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SRolePerm__Pemis__412EB0B6" Association="Self.FK__SRolePerm__Pemis__412EB0B6">
+      <End Role="SPermission" EntitySet="SPermissions" />
+      <End Role="SRolePermission" EntitySet="SRolePermissions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SRolePerm__RoleI__3E52440B" Association="Self.FK__SRolePerm__RoleI__3E52440B">
+      <End Role="SRoLe" EntitySet="SRoLes" />
+      <End Role="SRolePermission" EntitySet="SRolePermissions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SUserRole_SRoLe" Association="Self.FK_SUserRole_SRoLe">
+      <End Role="SRoLe" EntitySet="SRoLes" />
+      <End Role="SUserRole" EntitySet="SUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SUserRole_SUser" Association="Self.FK_SUserRole_SUser">
+      <End Role="SUser" EntitySet="SUsers" />
+      <End Role="SUserRole" EntitySet="SUserRoles" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

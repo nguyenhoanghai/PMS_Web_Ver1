@@ -1,0 +1,85 @@
+﻿.radio-box input[type=radio]{
+   width:12px !important;
+   margin:0 !important
+}
+
+.number{
+    text-align: right !important;
+    width: 70px !important;
+}
+
+.row_color{
+    background:rgb(247, 247, 247) !important;
+}
+/*******************************************************************************************
+ ***************************                 2 column Css                *******************
+ *******************************************************************************************/            
+.modal_2 .rows label {
+    cursor: default;
+    width: 100%;
+}
+
+.modal_2 .rows .col-left {
+    float: left;
+}
+
+.modal_2 .rows .col-right {
+    float: right;
+}
+
+.modal_2 .rows .col-left,
+.modal_2 .rows .col-right {
+    width: 45%;
+}
+
+.modal_2 .rows input,
+.modal_2 .rows textarea,
+.modal_2 .rows select {
+    width: 100%;
+}
+
+.modal_2 .rows input[type="checkbox"] {
+    width: 15px;
+}
+
+.modal_2 .rows input[type="number"] {
+    width: 50px;
+}
+
+.modal_2 .rows {
+    min-height: 65px;
+    padding:0 10px;
+     background:white
+}
+
+.modal_2 .container-fluid {
+    padding: 0 ;
+}
+
+.modal_2 .required {
+    font-weight: bold;
+    color: red;
+    font-size: 17px;
+}
+
+@media (max-width:600px) {
+    .modal_2 .container-fluid {
+        padding: 0;
+    }
+
+    .modal_2 .container-fluid .rows {
+        margin: 0 20px 0 10px;
+    }
+
+    .modal_2 .container-fluid .rows input[type="checkbox"] {
+        margin: 0px;
+    }
+}
+
+@media (max-width:430px) {
+    .modal_2 .rows .col-left,
+    .modal_2 .rows .col-right {
+        width: 100%;
+        float: none;
+    }
+}

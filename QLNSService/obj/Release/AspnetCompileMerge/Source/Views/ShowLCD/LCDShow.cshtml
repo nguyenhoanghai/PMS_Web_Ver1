@@ -1,0 +1,286 @@
+﻿@{
+    ViewBag.Title = "LCDShow";
+}
+<link href="~/Font/css/font-awesome.css" rel="stylesheet" />
+<link href="~/Content/ShowLCD/LCDcss.css" rel="stylesheet" />
+<link href="~/Scripts/jqwidgets-ver3.8.0/jqwidgets/styles/jqx.base.css" rel="stylesheet" />
+<link href="~/Scripts/jqwidgets-ver3.8.0/jqwidgets/styles/jqx.orange.css" rel="stylesheet" />
+<script src="~/Scripts/jqwidgets-ver3.8.0/jqwidgets/jqx-all.js"></script>
+<script src="~/Scripts/SlideJs/jquery.cycle.all.js"></script>
+<script src="~/Scripts/TotemTicker/jquery.totemticker.js"></script>
+<script src="~/Scripts/FullScreen_plugin/jquery.fullscreen.js"></script>
+<style>
+    .slide-image {
+        width: 100%;
+    }
+</style>
+<a style="display:none" height>@ViewData["Height"]</a>
+
+<div id="fullscreen" class="slide">
+    <div class="full-box">
+        <a class="btn btn-primary" id="full">
+            <i class="fa fa-expand "></i>
+        </a>
+        <a class="btn btn-primary" id="dis-full" style="display:none">
+            <i class="fa fa-compress "> </i>
+        </a>
+    </div>
+    <div id="vtemslideshow_wapper">
+        <div id="vtemslideshow1" class="vtem_main_slideshow" style="background:white">
+
+            @if (ViewBag.ListTableTypeId != null && ViewBag.ListTableTypeId.Count > 0)
+            {
+                foreach (string tableTypeId in ViewBag.ListTableTypeId)
+                {
+                    switch (tableTypeId)
+                    {
+                        case "1":
+                            <div class="slide-image">
+                                @*   <iframe class="iframe" width="100%" id="myFrame" src="/ShowLCD/Index"></iframe>*@
+                                @*@Html.Action("LCDProductivity_Partial", "Productivity")*@
+                                @Html.Action("LCDNS_Partial", "Productivity")
+                            </div>
+                            break;
+                        case "2":
+                        <div class="slide-image">
+                            @*<iframe class="iframe" width="100%" id="myFrame3" src="/ShowLCD/LCDError"></iframe>*@
+                            @*@Html.Action("ErrorLCD", "Error")*@
+                            @Html.Action("LCDError_Partial", "Error")
+                        </div>
+                            break;
+
+                        case "3":
+                        <div class="slide-image ">
+                            @*<iframe class="iframe" width="100%" id="myFrame2" src="/ShowLCD/LCDGeneral"></iframe>*@
+                            @*@Html.Action("LCDProductivityCollection_Partial", "Productivity")*@
+                            @Html.Action("LCDNS_Collection_Partial", "Productivity")
+                        </div>
+                            break;
+
+                        case "4":
+                        <div class="slide-image">
+                            @*<iframe class="iframe" width="100%" id="myFrame1" src="/ShowLCD/LCDKanBan"></iframe>*@
+                            @Html.Action("LCDKanBan_Partial", "Productivity")
+                        </div>
+                            break;
+                        case "6":
+                        <div class="slide-image">
+                            @Html.Action("ProOfLineEachHours_Partial", "Productivity")
+                            @*<iframe class="iframe" width="100%" id="myFrame1" src="/Productivity/ProOfLineEachHours_Partial"></iframe>*@
+                        </div>
+                            break;
+                        case "7":
+                        <div class="slide-image">
+                            @Html.Action("ProOfLineOfDay_Partial", "Productivity")
+                        </div>
+                            break;
+                        case "8":
+                        <div class="slide-image">
+                            @Html.Action("ProOfLineEachHours_Output_Partial", "Productivity")
+                        </div>
+                            break;
+                        case "9":
+                        <div class="slide-image ">
+                            @Html.Action("ProOfLineOfDay_Output_Partial", "Productivity")
+                        </div>
+                            break;
+                        case "10":
+                        <div class="slide-image">
+                            @Html.Action("ErrorOfLineEachHours_Partial", "Error")
+                        </div>
+                            break;
+                        case "11":
+                        <div class="slide-image">
+                            @Html.Action("ErrorOfLineOfDay_Partial", "Error")
+                        </div>
+                            break;
+                        case "12":
+                        <div class="slide-image">
+                            @*@Html.Action("CollectionPage_Partial", "CheckList")*@
+                            @Html.Partial("CollectionPage_Partial")
+                        </div>
+                            break;
+                        case "13":
+                        <div class="slide-image">
+                            @*@Html.Action("Staple_Partial", "CheckList")*@
+                            @Html.Partial("StaplePartial")
+                        </div>
+                            break;
+                    }
+                }
+            }
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function() {
+        // check native support
+        //    $('#support').text($.fullscreen.isNativelySupported() ? 'supports' : 'doesn\'t support');
+
+        // open in fullscreen
+        $('#full').click(function() {
+            $('#fullscreen').fullscreen();
+            $('#full').hide();
+            $('#dis-full').show();
+            return false;
+        });
+
+        // exit fullscreen
+        $('#dis-full').click(function() {
+            $.fullscreen.exit();
+            $('#full').show();
+            $('#dis-full').hide();
+            return false;
+        });
+
+        // document's event
+        $(document).bind('fscreenchange', function(e, state, elem) {
+            // if we currently in fullscreen mode
+            if ($.fullscreen.isFullScreen()) {
+                $('#fullscreen .requestfullscreen').hide();
+                $('#fullscreen .exitfullscreen').show();
+            } else {
+                $('#fullscreen .requestfullscreen').show();
+                $('#fullscreen .exitfullscreen').hide();
+            }
+
+            $('#state').text($.fullscreen.isFullScreen() ? '' : 'not');
+        });
+    });
+</script>
+
+<style>
+    .full-box {
+        /*width:10px;
+        height:20px;*/
+        /*border:1px solid #ccc;
+        border-radius:5px;*/
+        position: fixed;
+        top: 72px;
+        left: 0;
+        z-index: 99999;
+        overflow: hidden;
+        margin-left: -30px;
+    }
+
+        .full-box:hover {
+            /*width:70px;
+        height:70px;*/
+            margin: 0;
+        }
+</style>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#vtemslideshow1').cycle({
+            // fx: 'scrollDown,custom,turnUp,turnDown,fade,turnLeft,turnRight,curtainX',blindX
+            fx: 'blindX,blindY,blindZ,cover,fadeZoom,toss',
+            //fx: 'all',
+            easing: 'easeOutBack',
+            timeout: 1000,
+            speed: @ViewData["timeChangeLCD"].ToString(),
+            next: '#cycle_next',
+            prev: '#cycle_prev',
+            pager: '#vtemnav',
+            pagerEvent: 'click',
+            pagerAnchorBuilder: pagerFactory,
+            startingSlide: 0,
+            fit: true,
+            height: @ViewData["Height"].ToString() ,
+            //width: true
+        });
+        function pagerFactory(idx, slide) {
+            return '#vtemnav a:eq(' + idx + ') span';
+        }; 
+    });
+
+    var myVar = setInterval(function () { GetTime() }, 1000);
+    
+    function GetTime() {
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth() + 1;
+        var yyyy = today.getFullYear(); 
+        
+        var date =  (dd < 10? '0'+dd:dd) + '-' + (mm < 10 ? '0'+mm:mm) + '-' + yyyy;
+
+        var hours = today.getHours();
+        var minutes = today.getMinutes();
+        var second = today.getSeconds();
+        var time = (hours < 10 ? '0' + hours : hours) + ':' + (minutes < 10 ? '0' + minutes : minutes) + ':' + (second < 10 ? '0' + second : second);
+        
+        $('[date]').html(date);
+        $('[time]').html(time);
+    }
+
+    function SetAutoScroll(rows, paging, tick , type) {
+        switch (type) {
+            case 1: 
+                if (rows > paging) {
+                    $('#LCDTH_ticker').totemticker({
+                        row_height: $('#tb_pro_collec #LCDTH_ticker ul li').css('height'),
+                        mousestop: false,
+                        speed: 800,
+                        interval: tick,
+                        max_items: paging,
+                        row_move: 1,
+                        type: 'ul'
+                    });
+                }
+                break;
+            case 2:
+                if (rows > paging) {
+                    $('#KanBan_Ticker').totemticker({
+                        row_height: $('#KanBan_Ticker ul li').css('height'),
+                        mousestop: false,
+                        speed: 800,
+                        interval: parseInt(tick),
+                        max_items: parseInt(paging),
+                        row_move: 1,
+                        type: 'ul'
+                    });
+                }
+                break;
+        
+        }
+        
+    }
+
+
+
+    $(function() {
+        // check native support
+        //    $('#support').text($.fullscreen.isNativelySupported() ? 'supports' : 'doesn\'t support');
+
+        // open in fullscreen
+        $('#full').click(function() {
+            $('#slide').fullscreen();
+            $('#full').hide();
+            $('#dis-full').show();
+            return false;
+        });
+
+        // exit fullscreen
+        $('#dis-full').click(function() {
+            $.fullscreen.exit();
+            $('#full').show();
+            $('#dis-full').hide();
+            return false;
+        });
+
+        // document's event
+        $(document).bind('fscreenchange', function(e, state, elem) {
+            // if we currently in fullscreen mode
+            if ($.fullscreen.isFullScreen()) {
+                $('#fullscreen .requestfullscreen').hide();
+                $('#fullscreen .exitfullscreen').show();
+            } else {
+                $('#fullscreen .requestfullscreen').show();
+                $('#fullscreen .exitfullscreen').hide();
+            }
+
+            $('#state').text($.fullscreen.isFullScreen() ? '' : 'not');
+        });
+    });
+     
+</script>

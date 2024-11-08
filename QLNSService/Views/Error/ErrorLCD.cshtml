@@ -1,0 +1,155 @@
+﻿<style>
+    /*#tableError {
+        width: 100%;
+        height: 100%;
+    }
+
+   #tableError .header {
+        width: 100%;
+    }
+
+   #tableError .content {
+        width: 100%;
+    }
+
+    #tableError.title {
+        width: 100%;
+    }
+
+  #tableError  #header {
+        height: 100%;
+        width: 100%;
+    }
+
+  #tableError  #content {
+        height: 100%;
+        width: 100%;
+    }
+
+   #tableError #title {
+        height: 100%;
+        width: 100%;
+    }
+
+   #tableError #header td {
+        text-align: center;
+        line-height: 40px;
+    }
+
+   #tableError #header .logo {
+        vertical-align: middle;
+    }
+
+   #tableError #header .title {
+        vertical-align: middle;
+    }
+
+  #tableError  #header .time {
+        vertical-align: middle;
+    }
+
+   #tableError #content td {
+        border: 2px solid black;
+        text-align: center;
+        line-height: 40px;
+    }
+
+   #tableError #title td {
+        border: 2px solid black;
+        text-align: center;
+        line-height: 40px;
+    }
+
+  #tableError  #content .error {
+        height: 120px;
+    }
+
+   #tableError #content .grouperror {
+        height: 120px;
+    }*/
+</style>
+<script src="~/Scripts/QLNS/ShowLCDNS/LCDError.js"></script>
+<table id="tableError">
+    <tbody>
+        <tr class="header">
+            <td>
+                <table id="header">
+                    <tbody>
+                        <tr>
+                            <td class="logo">
+                                <img src="~/Content/img/logocompany.png" />
+                            </td>
+                            <td class="title" id="lineName">THÔNG TIN CHI TIẾT LỖI</td>
+                            <td class="time">
+                                <span id="date" date></span> <br />
+                                <span id="timeofday" time></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr class="title">
+            <td>
+                <table id="title">
+                    <tbody>
+                        <tr class="lable">
+                            <td columnint="1" id="lable1"></td>
+                            <td columnint="2" id="lable2"></td>
+                            <td columnint="3" id="lable3"></td>
+                            <td columnint="4" id="lable4"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr class="content">
+            <td>
+                <table id="content">
+                    <tbody>
+                        <tr class="error">
+                            <td class="title"></td>
+                            <td class="value"></td>
+                            <td class="value"></td>
+                            <td class="value"></td>
+                        </tr>
+                        <tr class="grouperror">
+                            <td class="title"></td>
+                            <td class="value"></td>
+                            <td class="value"></td>
+                            <td class="value"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+
+
+    </tbody>
+</table>
+@*<script>
+    $(document).ready(function () {
+        $('listLine').attr("Value", getCookie("listLine"));
+    });
+    var myVar = setInterval(function () { GetTimeError() }, 1000);
+    function GetTimeError() {
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth() + 1;
+        var yyyy = today.getFullYear();
+        if (dd < 10) {
+            dd = '0' + dd
+        }
+
+        if (mm < 10) {
+            mm = '0' + mm
+        }
+        var date = 'Ngày ' + dd + '/' + mm + '/' + yyyy;
+        var hours = today.getHours();
+        var minutes = today.getMinutes();
+        var second = today.getSeconds();
+        var time = hours + ':' + minutes + ':' + second;
+        $('#tableError #date').html(date);
+        $('#tableError #timeofday').html(time);
+    }
+</script>*@
